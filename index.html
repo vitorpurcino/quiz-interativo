@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Quiz Interativo para estudo do Curso de Formação de Sargentos Bombeiros Militares (CFSBM 2026) — Fase EAD, Módulo II." />
+  <meta name="theme-color" content="#1e4fba" />
+  <title>Quiz Interativo — CFSBM 2026</title>
+
+  <!-- Favicon SVG embutido -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <main class="container" id="main">
+
+    <!-- ============================================================
+           CABEÇALHO
+           ============================================================ -->
+    <header class="cabecalho">
+      <div class="cabecalho-info">
+        <h1 id="titulo">Quiz Interativo</h1>
+        <p class="subtitulo" id="subtitulo">Carregando matérias…</p>
+      </div>
+
+      <div style="display:flex; align-items:center; gap:10px; position:relative; z-index:1">
+        <!-- Streak Badge -->
+        <div class="streak-badge" id="streakBadge" data-streak="0" title="Sequência de acertos consecutivos"
+          aria-live="polite">
+          🔥 <span id="streakCount">0</span>
+        </div>
+
+        <!-- Botão de tema -->
+        <button class="btn-tema" id="btnTema" type="button" aria-label="Alternar tema claro/escuro"
+          title="Alternar tema">
+          🌓
+        </button>
+      </div>
+    </header>
+
+    <!-- ============================================================
+           MENSAGEM DE ERRO GLOBAL
+           ============================================================ -->
+    <div class="erro" id="avisoErro" role="alert" hidden>
+      <div>
+        <strong>Não foi possível carregar o quiz.</strong>
+        <p id="mensagemErro"></p>
+      </div>
+    </div>
+
+    <!-- ============================================================
+           TELA DE CARREGAMENTO
+           ============================================================ -->
+    <section id="telaCarregando" class="tela" aria-live="polite">
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Carregando matérias e questões…</p>
+    </section>
+
+    <!-- ============================================================
+           TELA PRINCIPAL DO QUIZ
+           ============================================================ -->
+    <section id="telaQuiz" class="tela" hidden>
+
+      <!-- Toolbar: Matéria, Questão, Reiniciar -->
+      <div class="toolbar">
+        <label for="subjectSelect">
+          Matéria
+          <select id="subjectSelect"></select>
+        </label>
+
+        <label for="questionSelect">
+          Questão
+          <select id="questionSelect"></select>
+        </label>
+
+        <button id="encerrarRevisaoBtn" class="btn-cinza" type="button" title="Sair do modo de revisão" hidden>
+          Sair da Revisão
+        </button>
+        <button id="btnModoFoco" class="btn-primario" type="button" title="Ativar Modo Foco">
+          🎯 Modo Foco
+        </button>
+        <button id="reiniciarBtn" class="btn-vermelho" type="button" title="Reiniciar progresso desta matéria">
+          ↺ Reiniciar
+        </button>
+      </div>
+
+      <!-- Status: Contador e Pontuação -->
+      <div class="status">
+        <span id="contadorQuestao">Questão 1 de 1</span>
+        <span id="pontuacao">Acertos: 0 | Erros: 0</span>
+      </div>
+
+      <!-- Barra de Progresso -->
+      <div class="barra-progresso" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+        aria-label="Progresso do quiz">
+        <div class="barra-preenchimento" id="progressBar"></div>
+      </div>
+      <p class="info-questao" id="progressText">0% concluído • 0/0 respondidas</p>
+
+      <!-- Card da questão -->
+      <div class="question-card" id="questionCard">
+        <div class="foco-zoom-container" id="focoZoomContainer">
+          <div class="question-col-esquerda">
+            <!-- Meta: Tema e Dificuldade -->
+            <div class="question-meta">
+              <span id="questionTopic">Tema</span>
+              <span id="questionDifficulty">Dificuldade</span>
+            </div>
+
+            <!-- Texto da Pergunta -->
+            <h2 class="pergunta" id="questionText">Carregando…</h2>
+
+            <!-- Feedback -->
+            <div class="feedback" id="feedbackBox" role="status" tabindex="-1" hidden></div>
+          </div>
+
+          <div class="question-col-direita">
+            <!-- Alternativas -->
+            <div class="alternativas" id="alternativas" role="group" aria-label="Alternativas"></div>
+
+            <!-- Navegação -->
+            <div class="navegacao" id="navegacaoContainer">
+              <button class="btn-vermelho" id="btnSairFoco" type="button" title="Sair do Modo Foco"
+                style="display: none;">Sair do Foco</button>
+              <button class="btn-cinza" id="btnVoltar" type="button" title="Questão anterior (←)">← Anterior</button>
+              <button class="btn-primario" id="btnConfirmar" type="button">Confirmar Resposta</button>
+              <button class="btn-verde" id="btnProxima" type="button" title="Próxima questão (→)">Próxima →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+           TELA DE RESULTADO FINAL
+           ============================================================ -->
+    <section id="telaResultado" class="tela" hidden>
+      <div class="resultado-card">
+        <span class="resultado-icone" id="resultadoIcone">🏆</span>
+        <h2 class="resultado-titulo" id="resultadoTitulo">Matéria Concluída!</h2>
+        <p class="resultado-subtitulo" id="resultadoSubtitulo">Você respondeu todas as questões desta matéria.</p>
+
+        <div class="resultado-stats">
+          <div class="stat-box total">
+            <div class="stat-numero" id="statTotal">0</div>
+            <div class="stat-label">Total</div>
+          </div>
+          <div class="stat-box acertos">
+            <div class="stat-numero" id="statAcertos">0</div>
+            <div class="stat-label">Acertos</div>
+          </div>
+          <div class="stat-box erros">
+            <div class="stat-numero" id="statErros">0</div>
+            <div class="stat-label">Erros</div>
+          </div>
+        </div>
+
+        <div class="resultado-acoes" style="flex-wrap: wrap;">
+          <button class="btn-cinza" id="btnRevisarTodas" type="button">📖 Revisar Todas</button>
+          <button class="btn-cinza" id="btnRevisarErros" type="button">🚨 Revisar Erros</button>
+          <button class="btn-primario" id="btnReiniciarResultado" type="button">↺ Reiniciar Matéria</button>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- /#main -->
+
+  <!-- ============================================================
+         TOAST NOTIFICATIONS
+         ============================================================ -->
+  <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ============================================================
+         MODAL DE CONFIRMAÇÃO
+         ============================================================ -->
+  <div class="modal-overlay hidden" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+    <div class="modal-card">
+      <span class="modal-icone" id="modalIcone">⚠️</span>
+      <h3 class="modal-titulo" id="modalTitulo">Confirmar ação</h3>
+      <p class="modal-texto" id="modalTexto">Tem certeza?</p>
+      <div class="modal-acoes">
+        <button class="btn-cinza" id="modalCancelar" type="button">Cancelar</button>
+        <button class="btn-vermelho" id="modalConfirmar" type="button">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

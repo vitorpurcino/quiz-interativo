@@ -1,0 +1,9 @@
+{
+  "name": "quiz-interativo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node js/server.js",
+    "dev": "node js/server.js"
+  }
+}
