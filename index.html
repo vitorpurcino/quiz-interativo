@@ -151,6 +151,10 @@
             <div class="stat-numero" id="statTotal">0</div>
             <div class="stat-label">Total</div>
           </div>
+          <div class="stat-box respondidas">
+            <div class="stat-numero" id="statRespondidas">0</div>
+            <div class="stat-label">Respondidas</div>
+          </div>
           <div class="stat-box acertos">
             <div class="stat-numero" id="statAcertos">0</div>
             <div class="stat-label">Acertos</div>
@@ -159,12 +163,27 @@
             <div class="stat-numero" id="statErros">0</div>
             <div class="stat-label">Erros</div>
           </div>
+          <div class="stat-box porcentagem">
+            <div class="stat-numero" id="statPorcentagem">0%</div>
+            <div class="stat-label">Aproveitamento</div>
+          </div>
+        </div>
+
+        <!-- Módulo de Revisão -->
+        <div class="revisao-modulo">
+          <div class="revisao-filtros">
+            <button class="btn-filtro active" id="btnFiltroTodas">Todas as Questões</button>
+            <button class="btn-filtro btn-filtro-erros" id="btnFiltroErros">Revisar Apenas Erradas</button>
+          </div>
+          
+          <div class="lista-revisao" id="listaRevisao">
+            <!-- Os cards de revisão serão injetados aqui via JS -->
+          </div>
         </div>
 
         <div class="resultado-acoes" style="flex-wrap: wrap;">
-          <button class="btn-cinza" id="btnRevisarTodas" type="button">📖 Revisar Todas</button>
-          <button class="btn-cinza" id="btnRevisarErros" type="button">🚨 Revisar Erros</button>
-          <button class="btn-primario" id="btnReiniciarResultado" type="button">↺ Reiniciar Matéria</button>
+          <button class="btn-vermelho" id="btnReiniciarResultado" type="button" style="margin-left: 0;">🔄 Reiniciar Matéria</button>
+          <button class="btn-primario" id="btnVoltarMenu" type="button" style="margin-left: auto;">Voltar ao Menu</button>
         </div>
       </div>
     </section>

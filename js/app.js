@@ -76,11 +76,14 @@ const refs = {
   resultadoTitulo:    document.getElementById('resultadoTitulo'),
   resultadoSubtitulo: document.getElementById('resultadoSubtitulo'),
   statTotal:          document.getElementById('statTotal'),
+  statRespondidas:    document.getElementById('statRespondidas'),
   statAcertos:        document.getElementById('statAcertos'),
   statErros:          document.getElementById('statErros'),
-  btnRevisarTodas:    document.getElementById('btnRevisarTodas'),
-  btnRevisarErros:    document.getElementById('btnRevisarErros'),
-  encerrarRevisaoBtn: document.getElementById('encerrarRevisaoBtn'),
+  statPorcentagem:    document.getElementById('statPorcentagem'),
+  btnFiltroTodas:     document.getElementById('btnFiltroTodas'),
+  btnFiltroErros:     document.getElementById('btnFiltroErros'),
+  listaRevisao:       document.getElementById('listaRevisao'),
+  btnVoltarMenu:      document.getElementById('btnVoltarMenu'),
   btnReiniciarResultado:  document.getElementById('btnReiniciarResultado')
 };
 
@@ -571,22 +574,25 @@ function verificarConclusao() {
 }
 
 function mostrarResultado(total, acertos, erros) {
-  const percentual = Math.round((acertos / total) * 100);
+  const progress = getCurrentSubjectProgress();
+  const answers = progress.answers || {};
+  const respondidas = Object.keys(answers).length;
+  const percentual = total > 0 ? Math.round((acertos / total) * 100) : 0;
 
-  let icone   = '📊';
+  let icone   = '🏆';
   let titulo  = 'Matéria Concluída!';
   let subtitulo = '';
 
   if (percentual >= 90) {
-    icone    = '🏆';
+    icone    = '🌟';
     titulo   = 'Excelente! Parabéns!';
     subtitulo = `Você acertou ${percentual}% das questões. Performance excepcional!`;
   } else if (percentual >= 70) {
-    icone    = '🎯';
+    icone    = '👏';
     titulo   = 'Muito Bom!';
     subtitulo = `Você acertou ${percentual}% das questões. Continue estudando!`;
   } else if (percentual >= 50) {
-    icone    = '📖';
+    icone    = '👍';
     titulo   = 'Continue Estudando!';
     subtitulo = `Você acertou ${percentual}% das questões. Revise os conteúdos.`;
   } else {
@@ -599,12 +605,91 @@ function mostrarResultado(total, acertos, erros) {
   refs.resultadoTitulo.textContent   = titulo;
   refs.resultadoSubtitulo.textContent = subtitulo;
   refs.statTotal.textContent         = String(total);
+  refs.statRespondidas.textContent   = String(respondidas);
   refs.statAcertos.textContent       = String(acertos);
   refs.statErros.textContent         = String(erros);
+  refs.statPorcentagem.textContent   = `${percentual}%`;
 
   refs.telaQuiz.hidden      = true;
   refs.telaResultado.hidden = false;
+  
+  renderReviewList('todas');
+  refs.btnFiltroTodas.classList.add('active');
+  refs.btnFiltroErros.classList.remove('active');
 }
+
+/* ============================================================
+   RENDERIZAR LISTA DE REVISÃO
+   ============================================================ */
+function renderReviewList(filter = 'todas') {
+  refs.listaRevisao.innerHTML = '';
+  const progress = getCurrentSubjectProgress();
+  const answers = progress.answers || {};
+
+  state.selectedSubjectData.questions.forEach((question, index) => {
+    const ans = answers[index];
+    let status = 'nao-respondida';
+    let statusIcon = '⏸️';
+    let statusText = 'Não Respondida';
+    
+    if (ans) {
+      if (ans.isCorrect) {
+        status = 'acerto';
+        statusIcon = '✅';
+        statusText = 'Correta';
+      } else {
+        status = 'erro';
+        statusIcon = '❌';
+        statusText = 'Errada';
+      }
+    }
+
+    if (filter === 'erros' && status !== 'erro') {
+      return;
+    }
+
+    const itemDiv = document.createElement('div');
+    itemDiv.className = 'revisao-item';
+    
+    let respostaUsuarioHtml = '';
+    if (ans) {
+      const selectedText = question.options[ans.selected];
+      respostaUsuarioHtml = `
+        <div class="revisao-bloco sua-resposta ${status}">
+          <strong>Sua Resposta:</strong> ${selectedText}
+        </div>
+      `;
+    }
+    
+    const gabaritoText = question.options[question.answer];
+    const explicacao = question.explanation ? `<div style="margin-top: 4px; font-size: 12.5px; opacity: 0.9;">${question.explanation}</div>` : '';
+
+    itemDiv.innerHTML = `
+      <div class="revisao-item-header">
+        <span>Questão ${index + 1}</span>
+        <span class="revisao-status ${status}">${statusIcon} ${statusText}</span>
+      </div>
+      <div class="revisao-pergunta">${question.question}</div>
+      <div class="revisao-respostas">
+        ${respostaUsuarioHtml}
+        <div class="revisao-bloco gabarito">
+          <strong>Gabarito:</strong> ${gabaritoText}
+          ${explicacao}
+        </div>
+      </div>
+      <div class="revisao-item-acoes">
+        <button class="btn-cinza" style="padding: 6px 12px; font-size: 12px;" onclick="window.voltarParaQuestao(${index})">Pular para a Questão</button>
+      </div>
+    `;
+    refs.listaRevisao.appendChild(itemDiv);
+  });
+}
+
+window.voltarParaQuestao = function(index) {
+  changeQuestion(index);
+  refs.telaResultado.hidden = true;
+  refs.telaQuiz.hidden = false;
+};
 
 /* ============================================================
    REINICIAR PROGRESSO
@@ -897,25 +982,20 @@ function iniciarRevisao(filtro) {
   renderQuestion();
 }
 
-refs.btnRevisarTodas.addEventListener('click', () => iniciarRevisao('todas'));
-
-refs.btnRevisarErros.addEventListener('click', () => {
-  const progress = getCurrentSubjectProgress();
-  const answers = progress.answers || {};
-  const temErros = Object.values(answers).some(a => !a.isCorrect);
-  
-  if (!temErros) {
-    mostrarToast('Você não cometeu nenhum erro nesta matéria!', 'sucesso');
-    return;
-  }
-  iniciarRevisao('erros');
+refs.btnFiltroTodas.addEventListener('click', () => {
+  refs.btnFiltroTodas.classList.add('active');
+  refs.btnFiltroErros.classList.remove('active');
+  renderReviewList('todas');
 });
 
-refs.encerrarRevisaoBtn.addEventListener('click', () => {
-  state.modoRevisao = false;
-  refs.encerrarRevisaoBtn.hidden = true;
-  refs.questionSelect.disabled = false;
-  verificarConclusao(); // Retorna à tela de conclusão se todas foram respondidas
+refs.btnFiltroErros.addEventListener('click', () => {
+  refs.btnFiltroErros.classList.add('active');
+  refs.btnFiltroTodas.classList.remove('active');
+  renderReviewList('erros');
+});
+
+refs.btnVoltarMenu.addEventListener('click', () => {
+  window.location.reload();
 });
 
 refs.btnReiniciarResultado.addEventListener('click', resetSubjectProgress);
