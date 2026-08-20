@@ -11,3 +11,7 @@ Afazeres:
  10 - Implementar descrição prévia de alternativas erradas e explicação da resposta correta, bem como, a indicação de fontes de conteúdo que comprovem as informações.
  11 - Corrigir a alternância de opções corretas na questão, evitando manter sempre a mesma alternativa como correta.
  12 - Criar tipos de questões avaliativas diferentes de multiplas escolhas, como V/F, complete o texto, opções I,II,III,IV,V, etc.
+ 14 - Corrigir o tamanho vertical do modal de questões no "Modo Foco"
+ 15 - Inserir modo treino/revisão que permita avançar e retroceder nas questões sem registrar pontos, ao final mostrar o resultado e permitir revisitar as questões erradas.
+ 16 - Inserir modo simulado, com banco de questões e tempo cronometrado, ao final mostrar o resultado e permitir revisitar as questões erradas.
+ 17 - Corrigir Resumo Avaliativo de Questões
