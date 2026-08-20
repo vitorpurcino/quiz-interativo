@@ -84,7 +84,8 @@ const refs = {
   btnFiltroErros:     document.getElementById('btnFiltroErros'),
   listaRevisao:       document.getElementById('listaRevisao'),
   btnVoltarMenu:      document.getElementById('btnVoltarMenu'),
-  btnReiniciarResultado:  document.getElementById('btnReiniciarResultado')
+  btnReiniciarResultado:  document.getElementById('btnReiniciarResultado'),
+  encerrarRevisaoBtn: document.getElementById('encerrarRevisaoBtn')
 };
 
 /* ============================================================
@@ -457,7 +458,7 @@ function updateNavButtons() {
     refs.btnConfirmar.disabled = true;
 
     refs.questionSelect.disabled = true;
-    refs.encerrarRevisaoBtn.hidden = false;
+    if(refs.encerrarRevisaoBtn) refs.encerrarRevisaoBtn.hidden = false;
   } else {
     const total = state.selectedSubjectData?.questions.length || 0;
     refs.btnVoltar.disabled  = state.currentIndex <= 0;
@@ -469,7 +470,7 @@ function updateNavButtons() {
     refs.btnConfirmar.disabled = answered || !state.draftSelection;
 
     refs.questionSelect.disabled = false;
-    refs.encerrarRevisaoBtn.hidden = true;
+    if(refs.encerrarRevisaoBtn) refs.encerrarRevisaoBtn.hidden = true;
   }
 }
 
@@ -627,7 +628,8 @@ function renderReviewList(filter = 'todas') {
   const answers = progress.answers || {};
 
   state.selectedSubjectData.questions.forEach((question, index) => {
-    const ans = answers[index];
+    const key = String(question.id ?? index + 1);
+    const ans = answers[key] || answers[index];
     let status = 'nao-respondida';
     let statusIcon = '⏸️';
     let statusText = 'Não Respondida';
@@ -945,34 +947,46 @@ refs.btnProxima.addEventListener('click', () => {
   }
 });
 
-// Iniciar Revisão
-function iniciarRevisao(filtro) {
-  state.modoRevisao = true;
-  state.filtroRevisao = filtro;
-  state.questoesFiltradas = [];
 
+
+async function iniciarRevisao(filtro) {
   const progress = getCurrentSubjectProgress();
   const answers = progress.answers || {};
+  let questoesFiltradas = [];
 
   state.selectedSubjectData.questions.forEach((question, index) => {
-    const key = questionKey(question);
-    const answer = answers[key];
-    if (!answer) return;
-
+    const key = String(question.id ?? index + 1);
+    const ans = answers[key] || answers[index];
+    
     if (filtro === 'todas') {
-      state.questoesFiltradas.push(index);
+      questoesFiltradas.push(index);
     } else if (filtro === 'erros') {
-      if (!answer.isCorrect) {
-        state.questoesFiltradas.push(index);
+      if (ans && !ans.isCorrect) {
+        questoesFiltradas.push(index);
       }
     }
   });
 
-  if (state.questoesFiltradas.length === 0) {
-    mostrarToast('Nenhuma questão encontrada para este filtro.', 'info');
+  if (questoesFiltradas.length === 0) {
+    if (filtro === 'erros') {
+      mostrarToast('Parabéns! Você não tem erros para revisar.', 'sucesso');
+    } else {
+      mostrarToast('Nenhuma questão para revisar.', 'info');
+    }
     return;
   }
 
+  const confirmed = await mostrarModal(
+    'Revisão',
+    `Você vai revisar ${questoesFiltradas.length} questões. Deseja continuar?`,
+    '📚'
+  );
+
+  if (!confirmed) return;
+
+  state.modoRevisao = true;
+  state.filtroRevisao = filtro;
+  state.questoesFiltradas = questoesFiltradas;
   state.indiceFiltro = 0;
   state.currentIndex = state.questoesFiltradas[0];
   setDraftFromCurrent();
@@ -985,14 +999,25 @@ function iniciarRevisao(filtro) {
 refs.btnFiltroTodas.addEventListener('click', () => {
   refs.btnFiltroTodas.classList.add('active');
   refs.btnFiltroErros.classList.remove('active');
-  renderReviewList('todas');
+  renderReviewList('todas'); // Atualiza a lista por trás
+  iniciarRevisao('todas');
 });
 
 refs.btnFiltroErros.addEventListener('click', () => {
   refs.btnFiltroErros.classList.add('active');
   refs.btnFiltroTodas.classList.remove('active');
-  renderReviewList('erros');
+  renderReviewList('erros'); // Atualiza a lista por trás
+  iniciarRevisao('erros');
 });
+
+if(refs.encerrarRevisaoBtn) {
+  refs.encerrarRevisaoBtn.addEventListener('click', () => {
+    state.modoRevisao = false;
+    refs.encerrarRevisaoBtn.hidden = true;
+    refs.questionSelect.disabled = false;
+    verificarConclusao(); // Retorna à tela de conclusão se todas foram respondidas
+  });
+}
 
 refs.btnVoltarMenu.addEventListener('click', () => {
   window.location.reload();
