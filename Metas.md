@@ -14,4 +14,4 @@ Afazeres:
  14 - Corrigir o tamanho vertical do modal de questões no "Modo Foco"
  15 - Inserir modo treino/revisão que permita avançar e retroceder nas questões sem registrar pontos, ao final mostrar o resultado e permitir revisitar as questões erradas.
  16 - Inserir modo simulado, com banco de questões e tempo cronometrado, ao final mostrar o resultado e permitir revisitar as questões erradas.
- 17 - 
+ 17 - Corrigir Resumo Avaliativo de Questões
