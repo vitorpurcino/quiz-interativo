@@ -14,4 +14,10 @@ Afazeres:
  14 - Corrigir o tamanho vertical do modal de questões no "Modo Foco"
  15 - Inserir modo treino/revisão que permita avançar e retroceder nas questões sem registrar pontos, ao final mostrar o resultado e permitir revisitar as questões erradas.
  16 - Inserir modo simulado, com banco de questões e tempo cronometrado, ao final mostrar o resultado e permitir revisitar as questões erradas.
- 17 - Corrigir Resumo Avaliativo de Questões
+ 17 - Corrigir Resumo Avaliativo de Questões - Mostrar ao lado as alternativas corretas e as que foram assinaladas.
+ 18 - Redistribuir botão "Sair do Foco" no modo foco mobile first.
+ 19 - Ao selecionar o modo de revisão clicando no botão "Revisar Apenas Erradas" abrir uma opção de iniciar revisão.
+ 20 - Remover opção de "Todas as Questões" da tela final de resumo avaliativo.
+ 21 - Corrigir a navegabilidade após finalizar a resposta de todas as questões.
+ 22 - Deixar os botões adaptáveis ao tamanho das telas, smartphones, tablets, computadores.
+ 23 - Escrever o README.md
