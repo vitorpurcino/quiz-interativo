@@ -43,7 +43,6 @@ const refs = {
   mensagemErro:       document.getElementById('mensagemErro'),
   telaCarregando:     document.getElementById('telaCarregando'),
   telaQuiz:           document.getElementById('telaQuiz'),
-  telaResultado:      document.getElementById('telaResultado'),
   subjectSelect:      document.getElementById('subjectSelect'),
   questionSelect:     document.getElementById('questionSelect'),
   reiniciarBtn:       document.getElementById('reiniciarBtn'),
@@ -72,19 +71,6 @@ const refs = {
   modalConfirmar:     document.getElementById('modalConfirmar'),
   streakBadge:        document.getElementById('streakBadge'),
   streakCount:        document.getElementById('streakCount'),
-  resultadoIcone:     document.getElementById('resultadoIcone'),
-  resultadoTitulo:    document.getElementById('resultadoTitulo'),
-  resultadoSubtitulo: document.getElementById('resultadoSubtitulo'),
-  statTotal:          document.getElementById('statTotal'),
-  statRespondidas:    document.getElementById('statRespondidas'),
-  statAcertos:        document.getElementById('statAcertos'),
-  statErros:          document.getElementById('statErros'),
-  statPorcentagem:    document.getElementById('statPorcentagem'),
-  btnFiltroTodas:     document.getElementById('btnFiltroTodas'),
-  btnFiltroErros:     document.getElementById('btnFiltroErros'),
-  listaRevisao:       document.getElementById('listaRevisao'),
-  btnVoltarMenu:      document.getElementById('btnVoltarMenu'),
-  btnReiniciarResultado:  document.getElementById('btnReiniciarResultado'),
   encerrarRevisaoBtn: document.getElementById('encerrarRevisaoBtn')
 };
 
@@ -395,6 +381,7 @@ function renderFeedback() {
 
   const answer = getAnswerRecord(question);
   if (!answer) {
+    refs.feedbackBox.classList.remove('acerto', 'erro');
     refs.feedbackBox.hidden = true;
     refs.feedbackBox.innerHTML = '';
     return;
@@ -418,8 +405,7 @@ function renderFeedback() {
       <span>${isCorrect ? 'Resposta Correta!' : 'Resposta Incorreta'}</span>
     </div>
     <div class="feedback-corpo">
-      ${!isCorrect ? `<p class="feedback-resposta-correta">${corretaLabel}</p>` : ''}
-      <p class="feedback-explicacao">${explanation}</p>
+      <div class="feedback-explicacao">${explanation}</div>
       ${fundamento ? `<div class="feedback-fundamento">📖 ${fundamento}</div>` : ''}
     </div>
   `;
@@ -575,121 +561,12 @@ function verificarConclusao() {
 }
 
 function mostrarResultado(total, acertos, erros) {
-  const progress = getCurrentSubjectProgress();
-  const answers = progress.answers || {};
-  const respondidas = Object.keys(answers).length;
-  const percentual = total > 0 ? Math.round((acertos / total) * 100) : 0;
-
-  let icone   = '🏆';
-  let titulo  = 'Matéria Concluída!';
-  let subtitulo = '';
-
-  if (percentual >= 90) {
-    icone    = '🌟';
-    titulo   = 'Excelente! Parabéns!';
-    subtitulo = `Você acertou ${percentual}% das questões. Performance excepcional!`;
-  } else if (percentual >= 70) {
-    icone    = '👏';
-    titulo   = 'Muito Bom!';
-    subtitulo = `Você acertou ${percentual}% das questões. Continue estudando!`;
-  } else if (percentual >= 50) {
-    icone    = '👍';
-    titulo   = 'Continue Estudando!';
-    subtitulo = `Você acertou ${percentual}% das questões. Revise os conteúdos.`;
-  } else {
-    icone    = '💪';
-    titulo   = 'Não Desista!';
-    subtitulo = `Você acertou ${percentual}% das questões. Revise e tente novamente!`;
-  }
-
-  refs.resultadoIcone.textContent    = icone;
-  refs.resultadoTitulo.textContent   = titulo;
-  refs.resultadoSubtitulo.textContent = subtitulo;
-  refs.statTotal.textContent         = String(total);
-  refs.statRespondidas.textContent   = String(respondidas);
-  refs.statAcertos.textContent       = String(acertos);
-  refs.statErros.textContent         = String(erros);
-  refs.statPorcentagem.textContent   = `${percentual}%`;
-
-  refs.telaQuiz.hidden      = true;
-  refs.telaResultado.hidden = false;
-  
-  renderReviewList('todas');
-  refs.btnFiltroTodas.classList.add('active');
-  refs.btnFiltroErros.classList.remove('active');
-}
-
-/* ============================================================
-   RENDERIZAR LISTA DE REVISÃO
-   ============================================================ */
-function renderReviewList(filter = 'todas') {
-  refs.listaRevisao.innerHTML = '';
-  const progress = getCurrentSubjectProgress();
-  const answers = progress.answers || {};
-
-  state.selectedSubjectData.questions.forEach((question, index) => {
-    const key = String(question.id ?? index + 1);
-    const ans = answers[key] || answers[index];
-    let status = 'nao-respondida';
-    let statusIcon = '⏸️';
-    let statusText = 'Não Respondida';
-    
-    if (ans) {
-      if (ans.isCorrect) {
-        status = 'acerto';
-        statusIcon = '✅';
-        statusText = 'Correta';
-      } else {
-        status = 'erro';
-        statusIcon = '❌';
-        statusText = 'Errada';
-      }
-    }
-
-    if (filter === 'erros' && status !== 'erro') {
-      return;
-    }
-
-    const itemDiv = document.createElement('div');
-    itemDiv.className = 'revisao-item';
-    
-    let respostaUsuarioHtml = '';
-    if (ans) {
-      const selectedText = question.options[ans.selected];
-      respostaUsuarioHtml = `
-        <div class="revisao-bloco sua-resposta ${status}">
-          <strong>Sua Resposta:</strong> ${selectedText}
-        </div>
-      `;
-    }
-    
-    const gabaritoText = question.options[question.answer];
-    const explicacao = question.explanation ? `<div style="margin-top: 4px; font-size: 12.5px; opacity: 0.9;">${question.explanation}</div>` : '';
-
-    itemDiv.innerHTML = `
-      <div class="revisao-item-header">
-        <span>Questão ${index + 1}</span>
-        <span class="revisao-status ${status}">${statusIcon} ${statusText}</span>
-      </div>
-      <div class="revisao-pergunta">${question.question}</div>
-      <div class="revisao-respostas">
-        ${respostaUsuarioHtml}
-        <div class="revisao-bloco gabarito">
-          <strong>Gabarito:</strong> ${gabaritoText}
-          ${explicacao}
-        </div>
-      </div>
-      <div class="revisao-item-acoes">
-        <button class="btn-cinza" style="padding: 6px 12px; font-size: 12px;" onclick="window.voltarParaQuestao(${index})">Pular para a Questão</button>
-      </div>
-    `;
-    refs.listaRevisao.appendChild(itemDiv);
-  });
+  saveProgress();
+  window.location.href = './pages/finalAnalysisQuiz.html';
 }
 
 window.voltarParaQuestao = function(index) {
   changeQuestion(index);
-  refs.telaResultado.hidden = true;
   refs.telaQuiz.hidden = false;
 };
 
@@ -716,7 +593,6 @@ async function resetSubjectProgress() {
   state.modoRevisao     = false;
   renderStreak();
 
-  refs.telaResultado.hidden = true;
   refs.telaQuiz.hidden      = false;
 
   renderQuestion();
@@ -766,7 +642,6 @@ async function loadSubject(subjectId) {
   refs.mensagemErro.textContent = '';
   refs.telaCarregando.hidden  = false;
   refs.telaQuiz.hidden        = true;
-  refs.telaResultado.hidden   = true;
 
   try {
     const subjectUrl = `/api/materias/${encodeURIComponent(subject.id)}`;
@@ -790,12 +665,17 @@ async function loadSubject(subjectId) {
     refs.telaQuiz.hidden        = false;
     renderQuestion();
     saveProgress();
+
+    const reviewTarget = localStorage.getItem('quiz_review_target');
+    if (reviewTarget) {
+      localStorage.removeItem('quiz_review_target');
+      iniciarRevisao(reviewTarget, true);
+    }
   } catch (error) {
     console.error(error);
     refs.avisoErro.hidden      = false;
     refs.mensagemErro.textContent = error.message;
     refs.telaCarregando.hidden = true;
-    refs.telaQuiz.hidden       = true;
   }
 }
 
@@ -875,26 +755,9 @@ refs.reiniciarBtn.addEventListener('click', resetSubjectProgress);
 
 // Modo Foco
 function updateFocoZoom() {
-  if (!document.body.classList.contains('modo-foco-ativo')) {
-    if (refs.focoZoomContainer) refs.focoZoomContainer.style.transform = 'none';
-    return;
+  if (refs.focoZoomContainer) {
+    refs.focoZoomContainer.style.transform = 'none';
   }
-  
-  if (!refs.focoZoomContainer) return;
-  
-  const isMobile = window.innerWidth <= 900;
-  const baseWidth = isMobile ? 400 : 1200;
-  const baseHeight = 800;
-  
-  const paddingX = isMobile ? 20 : 40;
-  const paddingY = isMobile ? 20 : 40;
-  
-  const scaleX = (window.innerWidth - paddingX) / baseWidth;
-  const scaleY = (window.innerHeight - paddingY) / baseHeight;
-  
-  const scale = Math.min(scaleX, scaleY, 1.2);
-  
-  refs.focoZoomContainer.style.transform = `scale(${scale})`;
 }
 
 window.addEventListener('resize', updateFocoZoom);
@@ -949,7 +812,7 @@ refs.btnProxima.addEventListener('click', () => {
 
 
 
-async function iniciarRevisao(filtro) {
+async function iniciarRevisao(filtro, skipModal = false) {
   const progress = getCurrentSubjectProgress();
   const answers = progress.answers || {};
   let questoesFiltradas = [];
@@ -976,13 +839,14 @@ async function iniciarRevisao(filtro) {
     return;
   }
 
-  const confirmed = await mostrarModal(
-    'Revisão',
-    `Você vai revisar ${questoesFiltradas.length} questões. Deseja continuar?`,
-    '📚'
-  );
-
-  if (!confirmed) return;
+  if (!skipModal) {
+    const confirmed = await mostrarModal(
+      'Revisão',
+      `Você vai revisar ${questoesFiltradas.length} questões. Deseja continuar?`,
+      '📚'
+    );
+    if (!confirmed) return;
+  }
 
   state.modoRevisao = true;
   state.filtroRevisao = filtro;
@@ -991,39 +855,12 @@ async function iniciarRevisao(filtro) {
   state.currentIndex = state.questoesFiltradas[0];
   setDraftFromCurrent();
   
-  refs.telaResultado.hidden = true;
+  if (refs.telaResultado) refs.telaResultado.hidden = true;
   refs.telaQuiz.hidden      = false;
   renderQuestion();
 }
 
-refs.btnFiltroTodas.addEventListener('click', () => {
-  refs.btnFiltroTodas.classList.add('active');
-  refs.btnFiltroErros.classList.remove('active');
-  renderReviewList('todas'); // Atualiza a lista por trás
-  iniciarRevisao('todas');
-});
 
-refs.btnFiltroErros.addEventListener('click', () => {
-  refs.btnFiltroErros.classList.add('active');
-  refs.btnFiltroTodas.classList.remove('active');
-  renderReviewList('erros'); // Atualiza a lista por trás
-  iniciarRevisao('erros');
-});
-
-if(refs.encerrarRevisaoBtn) {
-  refs.encerrarRevisaoBtn.addEventListener('click', () => {
-    state.modoRevisao = false;
-    refs.encerrarRevisaoBtn.hidden = true;
-    refs.questionSelect.disabled = false;
-    verificarConclusao(); // Retorna à tela de conclusão se todas foram respondidas
-  });
-}
-
-refs.btnVoltarMenu.addEventListener('click', () => {
-  window.location.reload();
-});
-
-refs.btnReiniciarResultado.addEventListener('click', resetSubjectProgress);
 
 // Fechar modal ao clicar no overlay
 refs.modalOverlay.addEventListener('click', (event) => {
@@ -1097,6 +934,23 @@ function selecionarAlternativaPorTecla(letra) {
   state.draftSelection = letra;
   renderAlternatives();
   updateNavButtons();
+}
+
+if(refs.encerrarRevisaoBtn) {
+  refs.encerrarRevisaoBtn.addEventListener('click', () => {
+    state.modoRevisao = false;
+    refs.encerrarRevisaoBtn.hidden = true;
+    refs.questionSelect.disabled = false;
+    
+    // Força a verificação de conclusão, o que vai nos redirecionar de volta à página final.
+    const progress = getCurrentSubjectProgress();
+    const respondidas = Object.keys(progress.answers || {}).length;
+    const total = state.selectedSubjectData.questions.length;
+    
+    if (respondidas >= total) {
+       mostrarResultado(total, 0, 0); 
+    }
+  });
 }
 
 /* ============================================================

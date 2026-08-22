@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Quiz Interativo para estudo do Curso de Formação de Sargentos Bombeiros Militares (CFSBM 2026) — Resultado Final." />
+  <meta name="theme-color" content="#1e4fba" />
+  <title>Resultado Final — CFSBM 2026</title>
+
+  <!-- Favicon SVG embutido -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+  <main class="container" id="main">
+    <header class="cabecalho">
+      <div class="cabecalho-info">
+        <h1 id="titulo">Análise Final</h1>
+        <p class="subtitulo" id="subtitulo">Confira seu desempenho na matéria concluída.</p>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; position:relative; z-index:1">
+        <button class="btn-tema" id="btnTema" type="button" aria-label="Alternar tema claro/escuro"
+          title="Alternar tema">
+          🌓
+        </button>
+      </div>
+    </header>
+
+    <section id="telaResultado" class="tela">
+      <div class="resultado-card">
+        <span class="resultado-icone" id="resultadoIcone">🏆</span>
+        <h2 class="resultado-titulo" id="resultadoTitulo">Matéria Concluída!</h2>
+        <p class="resultado-subtitulo" id="resultadoSubtitulo">Carregando seus resultados...</p>
+
+        <div class="resultado-stats">
+          <div class="stat-box total">
+            <div class="stat-numero" id="statTotal">0</div>
+            <div class="stat-label">Total</div>
+          </div>
+          <div class="stat-box respondidas">
+            <div class="stat-numero" id="statRespondidas">0</div>
+            <div class="stat-label">Respondidas</div>
+          </div>
+          <div class="stat-box acertos">
+            <div class="stat-numero" id="statAcertos">0</div>
+            <div class="stat-label">Acertos</div>
+          </div>
+          <div class="stat-box erros">
+            <div class="stat-numero" id="statErros">0</div>
+            <div class="stat-label">Erros</div>
+          </div>
+          <div class="stat-box porcentagem">
+            <div class="stat-numero" id="statPorcentagem">0%</div>
+            <div class="stat-label">Aproveitamento</div>
+          </div>
+        </div>
+
+        <!-- Módulo de Revisão -->
+        <div class="revisao-modulo">
+          <div class="revisao-filtros">
+            <button class="btn-filtro active" id="btnFiltroTodas">Todas as Questões</button>
+            <button class="btn-filtro btn-filtro-erros" id="btnFiltroErros">Revisar Apenas Erradas</button>
+          </div>
+
+
+        </div>
+
+        <div class="resultado-acoes" style="flex-wrap: wrap;">
+          <button class="btn-vermelho" id="btnReiniciarResultado" type="button" style="margin-left: 0;">🔄 Reiniciar
+            Matéria</button>
+          <button class="btn-primario" id="btnVoltarMenu" type="button" style="margin-left: auto;">Voltar ao
+            Menu</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/finalAnalysis.js"></script>
+</body>
+
+</html>
