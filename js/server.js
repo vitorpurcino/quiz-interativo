@@ -185,21 +185,17 @@ async function handleUserRegistration(request, response) {
       email,
       usuario,
       senha,
-      criadoEm: new Date().toISOString()
+      criadoEm: new Date().toISOString(),
+      ativo: false // novo cadastro fica inativo por padrão
     };
 
     users.push(novoUsuario);
     writeUsersFile(users);
 
+    // Não retornar 'user' aqui para evitar auto-login; informar que cadastro será analisado
     sendJson(response, {
       success: true,
-      message: 'Cadastro realizado com sucesso.',
-      user: {
-        id: novoUsuario.id,
-        nome: novoUsuario.nome,
-        email: novoUsuario.email,
-        usuario: novoUsuario.usuario
-      }
+      message: 'Cadastro realizado com sucesso. Seu cadastro está sob análise do administrador do sistema. Aguarde para ter o acesso.'
     }, 201);
   } catch (error) {
     console.error('Erro ao registrar usuário:', error.message);
@@ -223,6 +219,12 @@ async function handleUserLogin(request, response) {
 
     if (!usuarioEncontrado || usuarioEncontrado.senha !== senha) {
       sendJson(response, { error: 'Credenciais inválidas.' }, 401);
+      return;
+    }
+
+    // Bloquear login de usuários que ainda não foram ativados
+    if (usuarioEncontrado.ativo === false) {
+      sendJson(response, { error: 'Seu cadastro está sob análise do administrador do sistema. Aguarde para ter o acesso' }, 403);
       return;
     }
 
