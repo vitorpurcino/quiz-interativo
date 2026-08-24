@@ -9,6 +9,28 @@
   <meta name="theme-color" content="#1e4fba" />
   <title>Quiz Interativo — CFSBM 2026</title>
 
+  <script>
+    (() => {
+      const currentPath = window.location.pathname;
+      const isRootRoute = currentPath === '/' || (currentPath.endsWith('/') && !currentPath.endsWith('/index.html'));
+
+      const hasAuthenticatedUser = () => {
+        try {
+          const item = window.localStorage.getItem('quizAuthUser');
+          if (!item) return false;
+          const parsed = JSON.parse(item);
+          return !!parsed && typeof parsed === 'object';
+        } catch (error) {
+          return false;
+        }
+      };
+
+      if (isRootRoute && !hasAuthenticatedUser()) {
+        window.location.replace('./pages/login.html');
+      }
+    })();
+  </script>
+
   <!-- Favicon SVG embutido -->
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>" />

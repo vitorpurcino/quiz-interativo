@@ -23,13 +23,13 @@ const getAuthenticatedUser = () => {
 
 const redirectIfUnauthenticated = () => {
   const currentPath = window.location.pathname;
-  const isRootPage = currentPath === '/';
+  const isRootPage = currentPath === '/' || (currentPath.endsWith('/') && !currentPath.endsWith('/index.html'));
   const isQuizPage = currentPath.endsWith('/index.html');
   const isAuthPage = currentPath.endsWith('/pages/login.html') || currentPath.endsWith('/pages/cadastro.html');
   const user = getAuthenticatedUser();
 
-  if (isRootPage && user) {
-    window.location.replace('./index.html');
+  if (isRootPage && !user) {
+    window.location.replace('./pages/login.html');
     return true;
   }
 
