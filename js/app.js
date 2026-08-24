@@ -39,6 +39,7 @@ const refs = {
   titulo:             document.getElementById('titulo'),
   subtitulo:          document.getElementById('subtitulo'),
   btnTema:            document.getElementById('btnTema'),
+  btnLogout:          document.getElementById('btnLogout'),
   avisoErro:          document.getElementById('avisoErro'),
   mensagemErro:       document.getElementById('mensagemErro'),
   telaCarregando:     document.getElementById('telaCarregando'),
@@ -739,6 +740,18 @@ function applyTheme(theme) {
 refs.btnTema.addEventListener('click', () => {
   applyTheme(state.darkMode ? 'light' : 'dark');
 });
+
+// Sair da conta
+if (refs.btnLogout) {
+  refs.btnLogout.addEventListener('click', () => {
+    if (typeof window.logoutUser === 'function') {
+      window.logoutUser();
+    } else {
+      localStorage.removeItem('quizAuthUser');
+      window.location.href = './pages/login.html';
+    }
+  });
+}
 
 // Seleção de matéria
 refs.subjectSelect.addEventListener('change', (event) => {
