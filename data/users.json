@@ -5,7 +5,8 @@
     "email": "admin@quiz.com",
     "usuario": "admin",
     "senha": "123456",
-    "criadoEm": "2026-08-24T02:01:22.475Z"
+    "criadoEm": "2026-08-24T02:01:22.475Z",
+    "ativo": true
   },
   {
     "id": "user_1787537338877_61d360",
@@ -13,6 +14,7 @@
     "email": "teste@mail.com",
     "usuario": "teste",
     "senha": "123456",
-    "criadoEm": "2026-08-24T02:08:58.877Z"
+    "criadoEm": "2026-08-24T02:08:58.877Z",
+    "ativo": true
   }
 ]
