@@ -1,0 +1,18 @@
+[
+  {
+    "id": "user_1787536882475_70095a",
+    "nome": "Admin Master",
+    "email": "admin@quiz.com",
+    "usuario": "admin",
+    "senha": "123456",
+    "criadoEm": "2026-08-24T02:01:22.475Z"
+  },
+  {
+    "id": "user_1787537338877_61d360",
+    "nome": "teste",
+    "email": "teste@mail.com",
+    "usuario": "teste",
+    "senha": "123456",
+    "criadoEm": "2026-08-24T02:08:58.877Z"
+  }
+]
