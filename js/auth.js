@@ -1,5 +1,14 @@
 const AUTH_KEY = 'quizAuthUser';
 
+// API base para apontar o frontend ao backend hospedado (ex: https://meu-backend.example.com)
+// Caso não seja definido, o código usará paths relativos (mesma origem).
+const API_BASE = (window.API_BASE || '').replace(/\/+$/, '');
+
+function apiUrl(path) {
+  if (!API_BASE) return path;
+  return API_BASE + (path.startsWith('/') ? path : '/' + path);
+}
+
 const getAuthenticatedUser = () => {
   try {
     const item = localStorage.getItem(AUTH_KEY);
@@ -163,7 +172,7 @@ const initAuthForms = () => {
     }
 
     loginForm.addEventListener('submit', async (event) => {
-      await handleAuthSubmit(event, '/api/auth/login', 'Login realizado com sucesso.', '../index.html');
+      await handleAuthSubmit(event, apiUrl('/api/auth/login'), 'Login realizado com sucesso.', '../index.html');
     });
   }
 
@@ -174,7 +183,7 @@ const initAuthForms = () => {
     }
 
     registerForm.addEventListener('submit', async (event) => {
-      await handleAuthSubmit(event, '/api/auth/cadastro', 'Cadastro realizado com sucesso.', './login.html');
+      await handleAuthSubmit(event, apiUrl('/api/auth/cadastro'), 'Cadastro realizado com sucesso.', './login.html');
     });
   }
 };

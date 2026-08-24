@@ -85,10 +85,14 @@ function readSubjectData(subject) {
 }
 
 function sendJson(response, payload, statusCode = 200) {
-  response.writeHead(statusCode, {
+  const headers = {
     'Content-Type': 'application/json; charset=utf-8',
-    'Cache-Control': 'no-store'
-  });
+    'Cache-Control': 'no-store',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type'
+  };
+  response.writeHead(statusCode, headers);
   response.end(JSON.stringify(payload));
 }
 
@@ -244,14 +248,24 @@ function serveStaticFile(response, requestPath) {
   const finalPath = path.join(PUBLIC_DIR, normalizedPath);
 
   if (!finalPath.startsWith(PUBLIC_DIR)) {
-    response.writeHead(403, { 'Content-Type': 'text/plain; charset=utf-8' });
+    response.writeHead(403, {
+      'Content-Type': 'text/plain; charset=utf-8',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type'
+    });
     response.end('Acesso negado.');
     return;
   }
 
   fs.readFile(finalPath, (error, content) => {
     if (error) {
-      response.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+      response.writeHead(404, {
+        'Content-Type': 'text/plain; charset=utf-8',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type'
+      });
       response.end('Arquivo não encontrado.');
       return;
     }
@@ -259,7 +273,10 @@ function serveStaticFile(response, requestPath) {
     const ext = path.extname(finalPath).toLowerCase();
     response.writeHead(200, {
       'Content-Type': MIME_TYPES[ext] || 'application/octet-stream',
-      'Cache-Control': 'no-cache'
+      'Cache-Control': 'no-cache',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type'
     });
     response.end(content);
   });
@@ -268,6 +285,18 @@ function serveStaticFile(response, requestPath) {
 const server = http.createServer((request, response) => {
   const requestUrl = new URL(request.url, `http://${request.headers.host}`);
   const pathname = decodeURIComponent(requestUrl.pathname);
+
+  // CORS preflight
+  if (request.method === 'OPTIONS') {
+    response.writeHead(204, {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Max-Age': 86400
+    });
+    response.end();
+    return;
+  }
 
   if (pathname === '/api/auth/cadastro' && request.method === 'POST') {
     handleUserRegistration(request, response);
