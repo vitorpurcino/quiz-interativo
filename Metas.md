@@ -9,4 +9,3 @@ Afazeres:
  8 - Corrigir Resumo Avaliativo de Questões - Mostrar ao lado as alternativas corretas e as que foram assinaladas.
  9 - Melhorar a distribuição dos conteúdos no modo foco.
  10 - Painel Dashboard de Acerto, Erros, Pontos Fortes e Fracos, Matérias que sou destaque, Matérias ainda não vistas ou não pontuadas.
- 11 - Alterar o Json de usuário para adcionar um validador de ativo por padrão todos cadastram como falsos. Quando o usuário tentar logar exibir a mensagem que o cadastro dele está sob análise.
