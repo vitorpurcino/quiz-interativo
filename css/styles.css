@@ -145,9 +145,10 @@ body::before {
 .container {
   position: relative;
   z-index: 1;
-  max-width: 860px;
+  width: 95%;
+  max-width: 1540px;
   margin: 0 auto;
-  padding: 0 0 60px;
+  padding: 0 0 48px;
   min-height: 100vh;
 }
 
@@ -301,37 +302,55 @@ body::before {
 #telaQuiz, #telaResultado { padding: 0 24px; }
 
 /* ============================================================
+   CONTROLES DO TOPO (TOOLBAR & FILTROS)
+   ============================================================ */
+.controles-topo {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+/* ============================================================
    TOOLBAR
    ============================================================ */
 .toolbar {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
   align-items: flex-end;
-  margin-bottom: 24px;
-  padding: 20px;
+  padding: 16px 20px;
   background: var(--container-bg);
   border: 1px solid var(--borda-suave);
   border-radius: 16px;
   box-shadow: var(--sombra-sm);
 }
 
-.toolbar label {
+.toolbar-campo {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 700;
   color: var(--texto-secundario);
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  flex: 1 1 200px;
+}
+
+.toolbar-materia {
+  flex: 1.8 1 240px;
+  min-width: 220px;
+}
+
+.toolbar-questao {
+  flex: 1 1 140px;
+  min-width: 130px;
 }
 
 .toolbar select {
   width: 100%;
-  min-height: 44px;
-  padding: 10px 36px 10px 14px;
+  min-height: 42px;
+  padding: 8px 36px 8px 14px;
   border: 1.5px solid var(--borda-suave);
   border-radius: 8px;
   background: var(--bg-pagina);
@@ -354,32 +373,217 @@ body::before {
   box-shadow: 0 0 0 3px rgba(var(--primario-rgb), 0.15);
 }
 
-/* ============================================================
-   STATUS
-   ============================================================ */
-.status {
+.toolbar-status-badge {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  padding: 0 2px;
-}
-
-.status span {
+  gap: 8px;
+  background: var(--fundo-suave);
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1.5px solid var(--borda-suave);
   font-size: 13px;
   font-weight: 600;
   color: var(--texto-secundario);
+  white-space: nowrap;
+  min-height: 42px;
+  align-self: flex-end;
+}
+
+.status-badge-divider {
+  color: var(--texto-terciario);
+}
+
+.status-pontuacao {
+  color: var(--primario);
+}
+
+.toolbar-acoes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  align-self: flex-end;
 }
 
 /* ============================================================
-   BARRA DE PROGRESSO
+   PAINEL DE FILTROS DINÂMICOS
    ============================================================ */
+.painel-filtros {
+  padding: 16px 20px;
+  background: var(--container-bg);
+  border: 1px solid var(--borda-suave);
+  border-radius: 16px;
+  box-shadow: var(--sombra-sm);
+  transition: border-color var(--trans-normal), box-shadow var(--trans-normal);
+}
+
+.painel-filtros:focus-within {
+  border-color: rgba(var(--primario-rgb), 0.3);
+}
+
+.filtros-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.filtros-titulo {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--texto-secundario);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filtros-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filtros-badge {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primario);
+  background: rgba(var(--primario-rgb), 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(var(--primario-rgb), 0.2);
+  transition: all var(--trans-rapida);
+}
+
+.btn-limpar-filtros {
+  background: transparent;
+  border: 1px solid var(--borda-suave);
+  color: var(--texto-secundario);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all var(--trans-rapida);
+}
+
+.btn-limpar-filtros:hover {
+  background: var(--erro-bg);
+  border-color: var(--erro-borda);
+  color: var(--erro-texto);
+}
+
+.filtros-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.2fr;
+  gap: 14px;
+}
+
+.filtro-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.filtro-item label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--texto-secundario);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input-com-icone {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.icone-busca {
+  position: absolute;
+  left: 12px;
+  font-size: 14px;
+  pointer-events: none;
+  color: var(--texto-terciario);
+  user-select: none;
+}
+
+.input-com-icone input {
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 12px 8px 36px;
+  border: 1.5px solid var(--borda-suave);
+  border-radius: 8px;
+  background: var(--bg-pagina);
+  color: var(--texto-principal);
+  font-family: var(--fonte-base);
+  font-size: 13.5px;
+  transition: border-color var(--trans-rapida), box-shadow var(--trans-rapida);
+}
+
+.input-com-icone input:focus {
+  outline: none;
+  border-color: var(--borda-foco);
+  box-shadow: 0 0 0 3px rgba(var(--primario-rgb), 0.15);
+}
+
+.input-com-icone input::placeholder {
+  color: var(--texto-terciario);
+  font-size: 13px;
+}
+
+.filtro-item select {
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 34px 8px 12px;
+  border: 1.5px solid var(--borda-suave);
+  border-radius: 8px;
+  background: var(--bg-pagina);
+  color: var(--texto-principal);
+  font-family: var(--fonte-base);
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color var(--trans-rapida), box-shadow var(--trans-rapida);
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.filtro-item select:focus {
+  outline: none;
+  border-color: var(--borda-foco);
+  box-shadow: 0 0 0 3px rgba(var(--primario-rgb), 0.15);
+}
+
+/* ============================================================
+   PROGRESSO WRAPPER
+   ============================================================ */
+.progresso-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 4px;
+}
+
 .barra-progresso {
-  height: 8px;
+  height: 6px;
   background: var(--progresso-bg);
   border-radius: 9999px;
   overflow: hidden;
-  margin-bottom: 8px;
 }
 
 .barra-preenchimento {
@@ -402,7 +606,7 @@ body::before {
 .info-questao {
   font-size: 12px;
   color: var(--texto-terciario);
-  margin-bottom: 20px;
+  margin-bottom: 0;
   font-weight: 500;
 }
 
@@ -1033,15 +1237,53 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 @keyframes entrarDireita { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
 
 /* ============================================================
-   RESPONSIVIDADE
+   RESPONSIVIDADE & LAYOUT DESKTOP
    ============================================================ */
-@media (max-width: 640px) {
-  .cabecalho { padding: 20px; border-radius: 0 0 16px 16px; margin-bottom: 20px; }
-  #telaQuiz, #telaResultado { padding: 0 16px; }
+@media (max-width: 899px) {
+  .cabecalho { padding: 18px 20px; border-radius: 0 0 16px 16px; margin-bottom: 16px; }
+  #telaQuiz, #telaResultado { padding: 0 14px; }
 
-  .toolbar { padding: 16px; flex-direction: column; align-items: stretch; gap: 10px; }
-  .toolbar label { flex: 1 1 100%; }
-  #reiniciarBtn { margin-left: 0; }
+  .toolbar {
+    padding: 14px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .toolbar-materia, .toolbar-questao {
+    flex: 1 1 100%;
+  }
+  .toolbar-status-badge {
+    width: 100%;
+    justify-content: space-between;
+    align-self: stretch;
+  }
+  .toolbar-acoes {
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0;
+  }
+  .toolbar-acoes button {
+    flex: 1;
+  }
+
+  .filtros-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .question-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .question-col-esquerda, .question-col-direita {
+    display: contents;
+  }
+  .question-meta { order: 1; }
+  .pergunta { order: 2; }
+  .alternativas { order: 3; }
+  .feedback { order: 4; }
+  .navegacao { order: 5; }
 
   .navegacao { 
     display: flex; 
@@ -1065,7 +1307,6 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   .resultado-stats { grid-template-columns: 1fr; gap: 10px; }
   .toast-container { left: 16px; right: 16px; bottom: 16px; }
   .toast { max-width: 100%; }
-  .question-card { padding: 20px; }
 }
 
 @media (max-width: 480px) {
@@ -1073,71 +1314,67 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   .pergunta     { font-size: 14px; }
 }
 
-@media (max-width: 899px) {
-  .question-card {
-    display: flex;
-    flex-direction: column;
-  }
-  .question-col-esquerda, .question-col-direita {
-    display: contents;
-  }
-  .question-meta { order: 1; }
-  .pergunta { order: 2; }
-  .alternativas { order: 3; }
-  .feedback { order: 4; }
-  .navegacao { order: 5; }
-}
-
 /* ============================================================
-   OTIMIZACAO PARA DESKTOP (Sem Scroll Vertical)
+   LAYOUT DESKTOP EXPANSIVO (Split-View Horizontal & Alta Eficiência)
    ============================================================ */
 @media (min-width: 900px) {
   .container {
-    max-width: 1100px;
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
+    max-width: 1540px;
+    width: 95%;
+    padding-bottom: 24px;
   }
   
   .cabecalho {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     padding: 16px 32px;
   }
   
-  .toolbar {
-    margin-bottom: 16px;
-    padding: 16px 20px;
-  }
-  
-  .info-questao {
-    margin-bottom: 12px;
+  .controles-topo {
+    margin-bottom: 18px;
   }
 
   .question-card {
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 32px;
+    grid-template-columns: 1fr 1.18fr;
+    gap: 36px;
+    padding: 32px 36px;
     margin-bottom: 16px;
     align-items: start;
   }
 
+  .question-col-esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .question-col-direita {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
   .question-meta {
-    margin-bottom: 16px;
+    margin-bottom: 0;
+  }
+
+  .pergunta {
+    font-size: clamp(16px, 1.25vw, 18.5px);
+    line-height: 1.65;
   }
 
   .alternativas {
     margin-top: 0;
+    gap: 10px;
   }
 
   .feedback {
-    margin-top: 24px;
+    margin-top: 16px;
   }
 
   .navegacao {
     justify-content: flex-end;
-    margin-top: 24px;
+    margin-top: 16px;
   }
   
   #btnVoltar {
@@ -1149,10 +1386,7 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
    MODO FOCO
    ============================================================ */
 body.modo-foco-ativo .cabecalho,
-body.modo-foco-ativo .toolbar,
-body.modo-foco-ativo .status,
-body.modo-foco-ativo .barra-progresso,
-body.modo-foco-ativo .info-questao {
+body.modo-foco-ativo .controles-topo {
   display: none !important;
 }
 

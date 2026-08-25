@@ -1,116 +1,220 @@
 # 📋 Quiz Interativo — CFSBM 2026
 
-Aplicação simples e leve para treinar questões do Curso de Formação de Sargentos Bombeiros Militares (CFSBM 2026) — Fase EAD, Módulo II.
+![Status](https://img.shields.io/badge/Status-Em_Desenvolvimento-blue?style=for-the-badge)
+![Tecnologias](https://img.shields.io/badge/Tecnologias-HTML5_|_CSS3_|_JS_|_Node.js-orange?style=for-the-badge)
+![Licença](https://img.shields.io/badge/Licença-Uso_Livre_para_Estudos-green?style=for-the-badge)
 
-O projeto carrega questões a partir de arquivos JSON locais e fornece uma interface web com gamificação básica (streaks, progressos e revisão de erros) para auxiliar na fixação do conteúdo.
+Aplicação web moderna, interativa e responsiva projetada para o treinamento, fixação e autoavaliação de conteúdos preparatórios do **Curso de Formação de Sargentos Bombeiros Militares (CFSBM 2026) — Módulo II**.
 
----
-
-## 🛠️ Tecnologias
-
-- Frontend: HTML5, CSS3 (Vanilla) e JavaScript (Vanilla)
-- Backend local: Node.js usando apenas módulos nativos (http, fs, path)
-- Dados: arquivos JSON em /json/
-
-O objetivo é manter o projeto simples, sem dependências externas, facilitando execução local e distribuição para estudos.
+O sistema conta com arquitetura de **zero dependências externas no backend**, armazenamento local resiliente, gamificação integrada, filtros dinâmicos em tempo real e controle de acesso com moderação.
 
 ---
 
-## 🚀 Rodando localmente
+## 🎯 Sumário
 
-Requisitos
-- Node.js (versão LTS recomendada)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Funcionalidades Principais](#-funcionalidades-principais)
+- [Estrutura de Diretórios](#-estrutura-de-diretórios)
+- [Como Rodar Localmente](#-como-rodar-localmente)
+- [Ambiente e Configuração de API](#-ambiente-e-configuração-de-api)
+- [API REST do Servidor](#-api-rest-do-servidor)
+- [Controle de Usuários e Moderação](#-controle-de-usuários-e-moderação)
+- [Padrão dos Arquivos JSON de Questões](#-padrão-dos-arquivos-json-de-questões)
+- [Roadmap de Desenvolvimento](#-roadmap-de-desenvolvimento)
 
-Passos
-1. Clone o repositório:
+---
 
-   git clone <repo-url>
-   cd "C:/Projetos Dev/quiz-interativo"
+## 🛠️ Tecnologias Utilizadas
 
-2. Instalar dependências: não há dependências externas obrigatórias; caso haja scripts em package.json, execute:
+- **Frontend**:
+  - **HTML5 & CSS3**: Design System moderno com suporte nativo a Dark/Light Mode, Split-View no Desktop e layout responsivo.
+  - **JavaScript (Vanilla ES6+)**: Lógica reativa sem frameworks pesados, manipulação eficiente do DOM e persistência no `LocalStorage`.
+- **Backend**:
+  - **Node.js Nativo**: Servidor HTTP construído exclusivamente com módulos nativos (`http`, `fs`, `path`, `url`) — *sem necessidade de `npm install` de pacotes externos*.
+- **Armazenamento de Dados**:
+  - `LocalStorage`: Progresso individual do estudante, histórico de acertos/erros, sequências de streaks e preferências de tema.
+  - Arquivos `JSON`: Banco de dados de questões (`/json`) e controle de credenciais (`/data/users.json`).
 
-   npm install
+---
 
-3. Iniciar o servidor:
+## ✨ Funcionalidades Principais
 
+- 🔐 **Autenticação & Moderação**:
+  - Telas de login e cadastro integradas.
+  - Moderação administrativa (novas contas passam por aprovação prévia antes do primeiro acesso).
+- 🔍 **Filtros Dinâmicos em Tempo Real**:
+  - **Busca Global**: Pesquisa por palavras-chave em enunciados, opções, explicações e fundamentos.
+  - **Categorias/Temas**: Filtro extraído dinamicamente com base nas questões da matéria ativa.
+  - **Dificuldade**: Filtragem por níveis *Fácil*, *Médio* ou *Difícil*.
+  - **Contador Dinâmico**: Indicador em tempo real do total de questões filtradas.
+- 🖥️ **Interface Otimizada (Split-View)**:
+  - Distribuição horizontal inteligente em telas desktop (pergunta e feedback à esquerda, alternativas e navegação à direita), eliminando barras de rolagem excessivas.
+- 🎯 **Modo Foco**:
+  - Oculta instantaneamente cabeçalhos, barras de ferramentas e filtros para estudo concentrado em tela cheia.
+- 📚 **Modos de Estudo & Revisão**:
+  - **Modo Padrão**: Navegação livre entre questões com feedback instantâneo e fundamentação bibliográfica.
+  - **Modo Revisão Rápida**: Permite navegar pelas questões da matéria ou focar exclusivamente naquelas respondidas incorretamente.
+  - **Tela de Análise Final (`pages/finalAnalysisQuiz.html`)**: Relatório completo com taxa de aproveitamento (%), gráfico de acertos/erros e revisão das respostas.
+- 🔥 **Gamificação**:
+  - Contador de acertos consecutivos (*Streak*) para incentivar a consistência do estudo.
+- 🌓 **Tema Claro e Escuro**:
+  - Paleta com contraste ajustado e persistência automática no navegador.
+
+---
+
+## 📂 Estrutura de Diretórios
+
+```text
+quiz-interativo/
+├── api-config.js            # Configuração do endpoint base da API (Local / Nuvem)
+├── index.html               # Interface principal do Quiz (Dashboard e Resolução)
+├── package.json             # Scripts de execução do projeto
+├── README.md                # Documentação oficial do projeto
+│
+├── css/
+│   ├── auth.css             # Estilos dedicados às telas de login e cadastro
+│   └── styles.css           # Design system completo, variáveis, layout grid e dark mode
+│
+├── data/
+│   └── users.json           # Base local de usuários cadastrados
+│
+├── js/
+│   ├── app.js               # Lógica central do quiz, filtros, estado e renderização
+│   ├── auth.js              # Gerenciador de login, registro e sessão
+│   ├── finalAnalysis.js     # Lógica e métricas da página de encerramento da matéria
+│   └── server.js            # Servidor HTTP Node.js com endpoints REST e arquivos estáticos
+│
+├── json/
+│   └── combateaincendio.json# Base de questões em formato JSON
+│
+└── pages/
+    ├── cadastro.html        # Página de criação de conta
+    ├── finalAnalysisQuiz.html# Página de relatório e revisão de desempenho final
+    └── login.html           # Página de autenticação de usuários
+```
+
+---
+
+## 🚀 Como Rodar Localmente
+
+### Pré-requisitos
+- [Node.js](https://nodejs.org/) instalado (versão 16.x ou superior recomendada).
+
+### Passo a Passo
+1. Clone este repositório:
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
+   cd quiz-interativo
+   ```
+
+2. Inicie o servidor:
+   ```bash
+   npm start
+   # ou
+   npm run dev
+   # ou
    node js/server.js
+   ```
 
-   (se existir, também é possível usar `npm start` se o script estiver definido)
+3. Acesse no navegador:
+   👉 **`http://localhost:8000`**
 
-4. Abra o navegador em: http://localhost:8000
-
-Observação: o servidor serve os arquivos estáticos e os JSON em /json/ — verifique se a pasta contém arquivos válidos de questões.
-
----
-
-## 📂 Estrutura do projeto
-
-- [index.html](C:/Projetos Dev/quiz-interativo/index.html) — página principal do frontend
-- [js/server.js](C:/Projetos Dev/quiz-interativo/js/server.js) — servidor Node.js que entrega arquivos estáticos e JSON
-- [js/app.js](C:/Projetos Dev/quiz-interativo/js/app.js) — lógica do frontend (navegação, pontuação, feedback)
-- [css/styles.css](C:/Projetos Dev/quiz-interativo/css/styles.css) — estilos da aplicação
-- [json/](C:/Projetos Dev/quiz-interativo/json/) — pasta com arquivos de questões (cada arquivo representa uma disciplina)
-- [Metas.md](C:/Projetos Dev/quiz-interativo/Metas.md) — roadmap e ideias futuras
+> **💡 Usuário de Teste Padrão:**
+> - **Usuário:** `admin`
+> - **Senha:** `123456`
 
 ---
 
-## ✍️ Formato dos arquivos de questões (JSON)
+## ⚙️ Ambiente e Configuração de API
 
-Cada arquivo JSON dentro de /json/ deve conter um array de objetos no formato básico abaixo:
+O arquivo `api-config.js` gerencia o apontamento das requisições:
 
+```javascript
+// Para desenvolvimento local:
+window.API_BASE = 'http://localhost:8000';
+
+// Para produção (ex: hospedagem no Railway):
+window.API_BASE = 'https://cfsbm2026.up.railway.app';
+```
+
+---
+
+## 📡 API REST do Servidor
+
+O servidor nativo `js/server.js` disponibiliza os seguintes endpoints:
+
+### 1. Autenticação
+* **`POST /api/auth/cadastro`**
+  - **Body**: `{ "nome": "...", "email": "...", "usuario": "...", "senha": "..." }`
+  - **Comportamento**: Cria o usuário com `ativo: false` aguardando moderação.
+* **`POST /api/auth/login`**
+  - **Body**: `{ "usuario": "...", "senha": "..." }`
+  - **Retorno**: Dados da sessão caso o usuário esteja ativo (`ativo: true`).
+
+### 2. Matérias e Questões
+* **`GET /api/materias`**
+  - **Retorno**: Lista de arquivos disponíveis na pasta `/json` com metadados (título, descrição, total de questões e slug).
+* **`GET /api/materias/:id`**
+  - **Retorno**: Estrutura completa do arquivo JSON da matéria solicitada.
+
+---
+
+## 👮 Controle de Usuários e Moderação
+
+Por motivos de segurança e controle de acesso:
+1. Quando um novo usuário se cadastra via `pages/cadastro.html`, sua conta é registrada em `data/users.json` com `"ativo": false`.
+2. Ao tentar fazer login, o sistema exibe a mensagem: *"Seu cadastro está sob análise do administrador do sistema. Aguarde para ter o acesso."*
+3. **Para liberar o acesso**, o administrador deve alterar o campo `"ativo": true` correspondente no arquivo `data/users.json`.
+
+---
+
+## ✍️ Padrão dos Arquivos JSON de Questões
+
+Novas matérias podem ser adicionadas criando arquivos `.json` na pasta `/json/`. O parser do sistema possui tratamento de espaços em branco e aceita a seguinte estrutura:
+
+```json
 {
-  "title": "Nome da disciplina",
-  "questions": [
+  "informacoes": {
+    "titulo": "Combate a Incêndio Estrutural",
+    "materia": "Táticas de Combate a Incêndio",
+    "descricao": "Questões de fixação para o Módulo II do CFSBM 2026.",
+    "embaralharQuestoes": false,
+    "mostrarFundamento": true
+  },
+  "questoes": [
     {
       "id": 1,
-      "question": "Pergunta de exemplo?",
-      "options": ["A", "B", "C", "D"],
-      "answer": 0,            // índice da opção correta (0-based)
-      "explanation": "Explicação da resposta correta (opcional)"
+      "titulo": "Capítulo 1 - Fundamentos",
+      "tema": "Conceitos Básicos",
+      "dificuldade": "medio",
+      "pergunta": "Qual método de extinção baseia-se na retirada do calor do material combustível?",
+      "alternativas": [
+        { "letra": "A", "texto": "Resfriamento." },
+        { "letra": "B", "texto": "Abafamento." },
+        { "letra": "C", "texto": "Isolamento." },
+        { "letra": "D", "texto": "Quebra da reação em cadeia." }
+      ],
+      "correta": "A",
+      "explicacao": "O resfriamento reduz a temperatura do combustível abaixo do seu ponto de ignição.",
+      "fundamento": "Manual de Fundamentos de Bombeiros, Item 3.2"
     }
   ]
 }
-
-Ao adicionar novos arquivos, o frontend os detecta automaticamente (desde que o servidor os liste/entregue).
-
----
-
-## ✨ Funcionalidades principais
-
-- Seleção dinâmica de disciplinas com base nos arquivos JSON
-- Feedback imediato com explicação da resposta
-- Modo foco (interface limpa)
-- Streaks de acertos e barra de progresso
-- Revisão das questões erradas ao fim da bateria
-- Tema claro/escuro
+```
 
 ---
 
-## 🤝 Como contribuir
+## 📌 Roadmap de Desenvolvimento
 
-1. Abra uma issue descrevendo o que deseja mudar ou melhorar.
-2. Crie uma branch com um nome claro: `feature/descricao-curta` ou `fix/descricao-curta`.
-3. Faça commits atômicos e descritivos.
-4. Envie um pull request explicando as alterações e como testá-las.
+Conforme planejado em `Metas.md`:
 
-Dicas:
-- Para adicionar questões, coloque um novo arquivo JSON em /json/ seguindo o formato acima.
-- Teste localmente executando `node js/server.js` e acessando `http://localhost:8000`.
-
----
-
-## 🧪 Testes e validação
-
-Não há suíte de testes automática configurada neste projeto. Para validar alterações, execute o servidor local e verifique o comportamento no navegador.
+- [ ] **Modo Simulado / Prova por Temas**: Seleção personalizada de temas e quantidade de questões.
+- [ ] **Modo Prova por Nível**: Geração de baterias de testes calibradas por dificuldade (Fácil, Médio, Difícil).
+- [ ] **Novos Formatos de Questões**: Suporte a *Verdadeiro/Falso*, *Complete as Lacunas* e *Asserções Múltiplas (I, II, III)*.
+- [ ] **Dashboard Analítico na Tela Inicial**: Painel de pontos fortes e fracos por matéria e tópicos ainda não estudados.
 
 ---
 
 ## 📄 Licença
 
-Uso livre para estudos e preparação pessoal. Caso queira publicar este projeto publicamente, defina uma licença no repositório (por exemplo, MIT) e atualize este README.
-
----
-
-## Contato
-
-Para dúvidas ou sugestões, abra uma issue no repositório ou entre em contato com os mantenedores do projeto.
+Projeto desenvolvido para fins didáticos e preparação militar. Livre para adaptação e estudos individuais.
