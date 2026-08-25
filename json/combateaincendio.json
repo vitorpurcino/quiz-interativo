@@ -1,0 +1,794 @@
+{
+	"informacoes ": {
+		"titulo ": "Quiz Interativo - Táticas de Combate a Incêndio Estrutural (Capítulo 1) ",
+		"materia ": "Táticas de Combate a Incêndio Estrutural ",
+		"embaralharQuestoes ": true,
+		"mostrarFundamento ": true,
+		"fonte ": "Apostila CFSBM 2026 - Táticas de Combate a Incêndio Estrutural ",
+		"curso ": "Curso de Formação de Sargentos do Corpo de Bombeiros Militar de Rondônia ",
+		"turma ": "Turma XIX - 2026 ",
+		"ano ": 2026,
+		"descricao ": "Quiz focado no Capítulo 1 - Fundamentos da Tática de Combate a Incêndio. Aborda conceitos de arte, técnica e tática, o ciclo tático, princípios do pensamento tático, dinâmica dos incêndios modernos e o papel do Sargento BM na liderança operacional. "
+	},
+	"questoes ": [
+		{
+			"id ": 1,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.2 Conceitos Fundamentais ",
+			"dificuldade ": "média ",
+			"pergunta ": "Relacione os conceitos fundamentais da tática de combate a incêndio com suas respectivas definições:\n(1) Arte\n(2) Técnica\n(3) Tática\n(4) Estratégia\n\n( ) Corresponde ao conjunto de conhecimentos, processos, métodos e habilidades empregados para realizar determinada atividade de forma padronizada.\n( ) É o emprego organizado dos recursos disponíveis para alcançar objetivos específicos dentro de uma situação operacional.\n( ) É a capacidade de utilizar os meios disponíveis para alcançar determinado resultado, adaptando-se a situações imprevisíveis.\n( ) Corresponde ao processo de planejamento e emprego dos recursos para alcançar objetivos mais amplos da operação. ",
+			"alternativas ": [
+				{ "letra ": "A ", "texto ": "2, 3, 1, 4 " },
+				{ "letra ": "B ", "texto ": "2, 4, 1, 3 " },
+				{ "letra ": "C ", "texto ": "3, 2, 4, 1 " },
+				{ "letra ": "D ", "texto ": "1, 3, 2, 4 " }
+			],
+			"correta ": "A ",
+			"explicacao ": "A Técnica (2) é o conjunto de processos padronizados; a Tática (3) é o emprego organizado para objetivos específicos; a Arte (1) é a capacidade de adaptação; e a Estratégia (4) foca nos objetivos amplos e macro da operação. ",
+			"fundamento ": "Capítulo 1, Seção 1.2 - Conceitos fundamentais (Arte, Técnica, Tática e Estratégia). "
+		},
+		{
+			"id ": 2,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.2.3 e 1.2.4 Tática e Estratégia ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Sobre a relação entre Estratégia e Tática no combate a incêndio, assinale a alternativa CORRETA: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "A estratégia define como os recursos serão empregados no cenário, enquanto a tática estabelece os objetivos gerais da operação. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "A estratégia estabelece o que se pretende alcançar (objetivos gerais), enquanto a tática estabelece como os recursos serão empregados para alcançá-los. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "A tática é uma sequência rígida de procedimentos que não permite adaptação, ao contrário da estratégia. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Estratégia e tática são sinônimos e podem ser utilizadas de forma intercambiável no Sistema de Comando de Incidentes. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "A estratégia estabelece o que se pretende alcançar (preservação da vida, controle, etc.), enquanto a tática estabelece o como, ou seja, o emprego operacional dos recursos no cenário. ",
+			"fundamento ": "Capítulo 1, Seção 1.2.4 - Estratégia e 1.2.3 - Tática. "
+		},
+		{
+			"id ": 3,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.3.1 Ordens ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "No cenário operacional, uma ordem emitida por um Sargento BM deve possuir diversas características para ser eficaz. Assinale a alternativa que apresenta uma característica que NÃO é recomendada para uma ordem operacional: ",
+			"alternativas ": [
+				{ "letra ": "A ", "texto ": "Clara e objetiva. " },
+				{ "letra ": "B ", "texto ": "Compatível com a situação e direcionada ao responsável. " },
+				{
+					"letra ": "C ",
+					"texto ": "Genérica e aberta a múltiplas interpretações para dar autonomia total ao subordinado. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Acompanhada, quando necessário, de informações sobre segurança e prioridade. "
+				}
+			],
+			"correta ": "C ",
+			"explicacao ": "Uma ordem inadequadamente formulada (genérica) pode produzir atrasos, duplicidade de esforços e exposição desnecessária ao risco. Ela deve ser compreensível e direta. ",
+			"fundamento ": "Capítulo 1, Seção 1.3.1 - Ordens. "
+		},
+		{
+			"id ": 4,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.4 Combate a incêndio ",
+			"dificuldade ": "média ",
+			"pergunta ": "O combate a incêndio compreende um conjunto de ações organizadas. De acordo com a apostila, após 'identificar e avaliar a situação', 'estabelecer prioridades' e 'proteger e salvar vidas', qual é a próxima ação fundamental na sequência lógica de enfrentamento? ",
+			"alternativas ": [
+				{ "letra ": "A ", "texto ": "Controlar o desenvolvimento do incêndio. " },
+				{ "letra ": "B ", "texto ": "Reduzir danos secundários. " },
+				{ "letra ": "C ", "texto ": "Confirmar a extinção e controlar reignições. " },
+				{ "letra ": "D ", "texto ": "Extinguir o fogo imediatamente com jatos compactos. " }
+			],
+			"correta ": "A ",
+			"explicacao ": "A sequência de ações do combate inicia com avaliação, prioridades e salvamento, seguindo para o controle do desenvolvimento do incêndio, limitação da propagação e, por fim, a extinção. ",
+			"fundamento ": "Capítulo 1, Seção 1.4 - Combate a incêndio. "
+		},
+		{
+			"id ": 5,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.5.1 O ciclo tático ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "O pensamento tático é representado por um ciclo contínuo essencial para os incêndios estruturais, onde as condições mudam rapidamente. Qual das opções abaixo representa a sequência CORRETA desse ciclo tático? ",
+			"alternativas ": [
+				{ "letra ": "A ", "texto ": "Planejar → Avaliar → Monitorar → Executar → Ajustar → Reavaliar " },
+				{ "letra ": "B ", "texto ": "Executar → Planejar → Avaliar → Reavaliar → Monitorar → Ajustar " },
+				{ "letra ": "C ", "texto ": "Avaliar → Planejar → Executar → Monitorar → Reavaliar → Ajustar " },
+				{ "letra ": "D ", "texto ": "Avaliar → Executar → Planejar → Ajustar → Monitorar → Reavaliar " }
+			],
+			"correta ": "C ",
+			"explicacao ": "O ciclo tático correto é: Avaliar (o cenário) → Planejar (o PAI) → Executar (as ações) → Monitorar (os resultados) → Reavaliar (as condições) → Ajustar (a tática). ",
+			"fundamento ": "Capítulo 1, Seção 1.5.1 - O ciclo tático. "
+		},
+		{
+			"id ": 6,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.6 Estratégia e tática ",
+			"dificuldade ": "média ",
+			"pergunta ": "Diante de um incêndio em uma edificação residencial, o Comandante define como prioridade estratégica a 'preservação da vida'. Para atingir esse objetivo, diversas ações táticas são desenvolvidas. Assinale a alternativa que apresenta estritamente uma AÇÃO TÁTICA derivada dessa estratégia: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Estabelecimento de equipes de busca e proteção das rotas de acesso e saída. "
+				},
+				{ "letra ": "B ", "texto ": "Redução dos danos provocados pelo fogo e fumaça em nível macro. " },
+				{ "letra ": "C ", "texto ": "Preservação da vida e proteção de estruturas e bens. " },
+				{ "letra ": "D ", "texto ": "Prevenção da propagação do fogo para as edificações vizinhas. " }
+			],
+			"correta ": "A ",
+			"explicacao ": "O estabelecimento de equipes de busca e a proteção de rotas são ações concretas (táticas) que materializam o objetivo macro (estratégico) de preservar a vida. As demais alternativas são objetivos estratégicos. ",
+			"fundamento ": "Capítulo 1, Seção 1.6 - Estratégia e tática no combate a incêndios. "
+		},
+		{
+			"id ": 7,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.7 Princípios do pensamento tático ",
+			"dificuldade ": "difícil ",
+			"pergunta ": "Analise as afirmativas abaixo sobre os Princípios do Pensamento Tático:\nI. O princípio da Simplicidade dita que, quanto mais complexa for a situação operacional, maior a importância de planos simples, claros e executáveis.\nII. O princípio da Economia de Recursos significa utilizar o menor número possível de equipamentos e pessoal na cena do incêndio para evitar desperdício financeiro.\nIII. O princípio da Flexibilidade permite adaptar o emprego dos recursos sem perder de vista os objetivos prioritários, caso as condições do incêndio mudem.\n\nEstá(ão) CORRETA(s): ",
+			"alternativas ": [
+				{ "letra ": "A ", "texto ": "Apenas I. " },
+				{ "letra ": "B ", "texto ": "Apenas I e II. " },
+				{ "letra ": "C ", "texto ": "Apenas I e III. " },
+				{ "letra ": "D ", "texto ": "I, II e III. " }
+			],
+			"correta ": "C ",
+			"explicacao ": "A afirmativa II está incorreta. A economia de recursos não significa utilizar menos equipamentos ou pessoal, mas empregar cada recurso onde ele produza maior efeito operacional (racionalidade). ",
+			"fundamento ": "Capítulo 1, Seções 1.7.3 (Simplicidade), 1.7.6 (Economia de recursos) e 1.7.4 (Flexibilidade). "
+		},
+		{
+			"id ": 8,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.7.1 Segurança ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Sobre o princípio da Segurança no pensamento tático, assinale a afirmação CORRETA: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "A preservação da vida é prioridade permanente, e nenhum objetivo material justifica exposição desnecessária a riscos evitáveis. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "A segurança das equipes de emergência é secundária em relação à rapidez na extinção do fogo. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "A segurança deve ser avaliada apenas no momento do adentramento à edificação, não influenciando o deslocamento. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Danos materiais são mais importantes que a segurança, devendo os bombeiros se arriscar para salvar patrimônios de alto valor. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "A preservação da vida (vítimas e bombeiros) constitui prioridade permanente. Nenhum objetivo material justifica exposição desnecessária a riscos que possam ser evitados ou controlados. ",
+			"fundamento ": "Capítulo 1, Seção 1.7.1 - Segurança. "
+		},
+		{
+			"id ": 9,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.8 O papel do Sargento BM ",
+			"dificuldade ": "média ",
+			"pergunta ": "Sobre o papel do Sargento BM na tática de combate a incêndio, analise o seguinte cenário: Uma guarnição está aplicando água e realizando ventilação em um cômodo. O Sargento deve compreender que essas ações: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Devem ser focadas apenas no espaço imediatamente ocupado pela equipe, ignorando o restante da estrutura. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "São isoladas e não produzem efeitos sobre o comportamento geral do incêndio. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Podem produzir efeitos sobre o incêndio que ultrapassam o espaço ocupado pela equipe, devendo estar alinhadas ao plano tático geral. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Devem ser interrompidas caso o Sargento não tenha contato visual direto com o Comandante da operação. "
+				}
+			],
+			"correta ": "C ",
+			"explicacao ": "O Sargento deve desenvolver a capacidade de enxergar além da tarefa individual. A aplicação de água e a ventilação alteram a dinâmica dos gases e do calor em toda a edificação, devendo estar alinhadas ao plano tático geral. ",
+			"fundamento ": "Capítulo 1, Seção 1.8 - O papel do Sargento BM na tática de combate a incêndio. "
+		},
+		{
+			"id ": 10,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.9 Processo de decisão ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "A atuação operacional é um processo permanente de tomada de decisão. Qual das perguntas fundamentais abaixo visa selecionar o método de intervenção mais adequado às circunstâncias? ",
+			"alternativas ": [
+				{ "letra ": "A ", "texto ": "Qual ação produzirá maior efeito? " },
+				{ "letra ": "B ", "texto ": "O que está acontecendo? " },
+				{ "letra ": "C ", "texto ": "Quais são os riscos? " },
+				{ "letra ": "D ", "texto ": "O que precisa ser protegido primeiro? " }
+			],
+			"correta ": "A ",
+			"explicacao ": "A pergunta 'Qual ação produzirá maior efeito?' é a etapa onde o bombeiro seleciona o método de intervenção mais adequado para as circunstâncias avaliadas. ",
+			"fundamento ": "Capítulo 1, Seção 1.9 - Combate a incêndio como processo de decisão. "
+		},
+		{
+			"id ": 11,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.10 Eficiência no combate ",
+			"dificuldade ": "média ",
+			"pergunta ": "A eficiência no combate a incêndio não se resume apenas a extinguir as chamas, mas também a evitar danos secundários. Qual das alternativas abaixo NÃO é considerada um dano secundário ou consequência do emprego inadequado de recursos? ",
+			"alternativas ": [
+				{ "letra ": "A ", "texto ": "Danos provocados pelo excesso de água aplicada sem técnica. " },
+				{ "letra ": "B ", "texto ": "Propagação do incêndio por alterações indevidas na ventilação. " },
+				{
+					"letra ": "C ",
+					"texto ": "Colapso estrutural natural causado exclusivamente pela ação do fogo antes da chegada do socorro. "
+				},
+				{ "letra ": "D ", "texto ": "Exposição desnecessária dos bombeiros e perda de tempo operacional. " }
+			],
+			"correta ": "C ",
+			"explicacao ": "O colapso estrutural causado pelo fogo antes da chegada do socorro é uma consequência direta do incêndio, não um 'dano secundário' causado pelo emprego inadequado de recursos táticos ou excesso de água pela guarnição. ",
+			"fundamento ": "Capítulo 1, Seção 1.10 - Eficiência no combate a incêndio. "
+		},
+		{
+			"id ": 12,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.11 Dinâmica dos incêndios modernos ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "O pensamento tático contemporâneo exige atenção especial à dinâmica dos incêndios modernos. A utilização significativa de materiais sintéticos e polímeros nas edificações atuais favorece: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "A rápida liberação de calor e produção intensa de fumaça, exigindo controle rigoroso das condições de ventilação. "
+				},
+				{ "letra ": "B ", "texto ": "A lenta liberação de calor e a produção de fumaça branca e inofensiva. " },
+				{
+					"letra ": "C ",
+					"texto ": "A diminuição da taxa de liberação de calor (HRR), tornando os incêndios mais fáceis de controlar. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "A extinção natural do fogo por falta de oxigênio em todos os compartimentos. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Materiais sintéticos e polímeros modernos possuem alta carga de incêndio, favorecendo rápida liberação de calor (HRR) e fumaça densa e tóxica, o que torna o controle de fluxo de ar (ventilação) crucial. ",
+			"fundamento ": "Capítulo 1, Seção 1.11 - Considerações sobre a dinâmica dos incêndios modernos. "
+		},
+		{
+			"id ": 13,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.2.1 Arte ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "No ambiente operacional, o conceito de 'Arte' está diretamente relacionado à capacidade do bombeiro de: ",
+			"alternativas ": [
+				{ "letra ": "A ", "texto ": "Seguir estritamente manuais e procedimentos padronizados, sem desvios. " },
+				{
+					"letra ": "B ",
+					"texto ": "Transformar conhecimentos e experiências em decisões adequadas diante de situações que nem sempre podem ser previstas. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Operar equipamentos hidráulicos com base em fórmulas matemáticas exatas. "
+				},
+				{ "letra ": "D ", "texto ": "Memorizar todas as plantas das edificações da área de cobertura. " }
+			],
+			"correta ": "B ",
+			"explicacao ": "A Arte é a habilidade de interpretar a situação e adaptar conhecimentos e experiências às circunstâncias concretas, lidando com o imprevisível. ",
+			"fundamento ": "Capítulo 1, Seção 1.2.1 - Arte. "
+		},
+		{
+			"id ": 14,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.5 Tática de combate ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Para a adequada aplicação da tática, o bombeiro deve realizar uma avaliação da situação. Dentre os fatores a serem considerados, NÃO se inclui: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Preferência pessoal do comandante sobre a marca dos equipamentos de combate. "
+				},
+				{ "letra ": "B ", "texto ": "Intensidade e comportamento do fogo. " },
+				{ "letra ": "C ", "texto ": "Características construtivas da edificação e compartimentação. " },
+				{ "letra ": "D ", "texto ": "Disponibilidade de água, recursos humanos e estabilidade estrutural. " }
+			],
+			"correta ": "A ",
+			"explicacao ": "A avaliação tática deve focar em fatores reais da cena (fogo, estrutura, recursos, vítimas). Preferências pessoais por marcas de equipamentos não influenciam o planejamento tático. ",
+			"fundamento ": "Capítulo 1, Seção 1.5 - Tática de combate a incêndio. "
+		},
+		{
+			"id ": 15,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.7.5 Coordenação ",
+			"dificuldade ": "média ",
+			"pergunta ": "O combate a incêndio é uma atividade coletiva. O princípio da Coordenação estabelece que: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "As ações de busca, ataque e ventilação devem ser executadas de forma independente, sem comunicação entre as equipes para evitar confusão. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Apenas uma equipe deve atuar por vez na cena do incêndio para garantir a segurança. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "As ações de busca, salvamento, ataque, ventilação e apoio devem ser coordenadas para evitar interferências negativas entre as equipes. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "A ventilação tática deve ser feita sempre antes da busca, independentemente da presença de vítimas. "
+				}
+			],
+			"correta ": "C ",
+			"explicacao ": "A coordenação adequada permite que diferentes tarefas (busca, ataque, ventilação) sejam executadas de maneira simultânea e complementar, evitando que uma ação prejudique a outra (ex: ventilação inadequada empurrando fogo para a equipe de busca). ",
+			"fundamento ": "Capítulo 1, Seção 1.7.5 - Coordenação. "
+		},
+		{
+			"id ": 16,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.12 Integração de conhecimentos ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "A tática de combate a incêndio não constitui um conhecimento isolado. Ela depende da integração de diferentes áreas. Qual das áreas abaixo NÃO é citada como parte dessa integração necessária para o Sargento BM interpretar o cenário? ",
+			"alternativas ": [
+				{ "letra ": "A ", "texto ": "Ciência do fogo e comportamento do incêndio. " },
+				{ "letra ": "B ", "texto ": "Hidráulica e técnicas de ventilação. " },
+				{ "letra ": "C ", "texto ": "Programação de software e design de interfaces de rádio. " },
+				{ "letra ": "D ", "texto ": "Gerenciamento de riscos e comunicação operacional. " }
+			],
+			"correta ": "C ",
+			"explicacao ": "A tática integra ciência do fogo, hidráulica, salvamento, ventilação, liderança, etc. Programação de software não faz parte das áreas de conhecimento tático do bombeiro. ",
+			"fundamento ": "Capítulo 1, Seção 1.12 - A tática como integração de conhecimentos. "
+		},
+		{
+			"id ": 17,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.3.2 Instruções ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Qual é a principal diferença entre uma 'ordem' e uma 'instrução' no contexto operacional e de formação do bombeiro militar? ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "A ordem está relacionada à execução de uma ação, enquanto a instrução tem caráter predominantemente educativo e preparatório. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "A ordem tem caráter educativo, enquanto a instrução foca na execução imediata sob fogo. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Ordens são dadas apenas por Oficiais, enquanto instruções são dadas apenas por Praças. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Não há diferença, ambos os termos são usados para determinar a punição de subordinados. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "A ordem visa a execução direta no cenário. A instrução tem caráter educativo, preparando o militar para compreender o que fazer, como fazer e os riscos envolvidos. ",
+			"fundamento ": "Capítulo 1, Seção 1.3.1 - Ordens e 1.3.2 - Instruções. "
+		},
+		{
+			"id ": 18,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.4 Combate a incêndio ",
+			"dificuldade ": "média ",
+			"pergunta ": "Analise as ações do combate a incêndio:\nI. Identificar e avaliar a situação.\nII. Impedir ou limitar a propagação do fogo.\nIII. Reduzir danos secundários.\nIV. Confirmar a extinção e controlar eventuais reignições.\n\nEstas ações representam: ",
+			"alternativas ": [
+				{ "letra ": "A ", "texto ": "As fases exclusivas do rescaldo. " },
+				{
+					"letra ": "B ",
+					"texto ": "O conjunto de ações destinadas ao combate a incêndio, compreendido como um processo contínuo. "
+				},
+				{ "letra ": "C ", "texto ": "Apenas as responsabilidades civis do proprietário do imóvel. " },
+				{ "letra ": "D ", "texto ": "O ciclo de manutenção preventiva de viaturas. " }
+			],
+			"correta ": "B ",
+			"explicacao ": "Essas etapas compõem o conjunto de ações organizadas de enfrentamento que definem o combate a incêndio, devendo ser compreendido como um processo contínuo de avaliação e intervenção. ",
+			"fundamento ": "Capítulo 1, Seção 1.4 - Combate a incêndio. "
+		},
+		{
+			"id ": 19,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.7.2 Objetividade ",
+			"dificuldade ": "média ",
+			"pergunta ": "O princípio da Objetividade dita que as ações devem estar orientadas para objetivos claramente definidos. Para cumprir este princípio, a equipe deve saber todas as alternativas abaixo, EXCETO: ",
+			"alternativas ": [
+				{ "letra ": "A ", "texto ": "Qual é a prioridade e qual ação será executada. " },
+				{ "letra ": "B ", "texto ": "Quem será responsável e quais recursos serão empregados. " },
+				{
+					"letra ": "C ",
+					"texto ": "Qual a história completa de ocorrências anteriores no mesmo endereço nos últimos 10 anos. "
+				},
+				{ "letra ": "D ", "texto ": "Quais condições determinam a interrupção ou alteração da ação. " }
+			],
+			"correta ": "C ",
+			"explicacao ": "A objetividade foca no cenário atual: prioridade, ação, responsável, recursos e gatilhos de interrupção. O histórico de 10 anos não é um fator tático imediato obrigatório para a execução da ação atual. ",
+			"fundamento ": "Capítulo 1, Seção 1.7.2 - Objetividade. "
+		},
+		{
+			"id ": 20,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.13 Síntese do capítulo ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "De acordo com a síntese do Capítulo 1, combater incêndios significa muito mais do que apenas apagar o fogo. Significa: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Aplicar o máximo de água possível até que não haja mais fumaça visível. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Compreender o cenário, estabelecer prioridades, proteger vidas, controlar os riscos e conduzir a ocorrência de forma segura e eficiente. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Seguir o protocolo de entrar pela porta da frente e sair pela porta dos fundos. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Garantir que a viatura seja a primeira a chegar, independentemente das condições de segurança no trajeto. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "A excelência operacional está na capacidade de avaliar, decidir, agir e reavaliar, compreendendo o cenário e protegendo vidas com segurança e eficiência. ",
+			"fundamento ": "Capítulo 1, Seção 1.13 - Síntese do capítulo. "
+		},
+		{
+			"id ": 21,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.2.2 Técnica ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "A técnica fornece ao bombeiro os meios para executar uma ação de maneira segura, eficiente e padronizada. Assinale a alternativa que apresenta um exemplo de conhecimento TÉCNICO no combate a incêndio: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "A capacidade de adaptar a atuação às condições imprevisíveis encontradas no incêndio. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "A definição de prioridades macro para salvar o maior número de vítimas. "
+				},
+				{ "letra ": "C ", "texto ": "O planejamento logístico e administrativo da corporação como um todo. " },
+				{
+					"letra ": "D ",
+					"texto ": "A operação de mangueiras, esguichos e bombas, bem como o controle do fluxo de ar. "
+				}
+			],
+			"correta ": "D ",
+			"explicacao ": "A Técnica envolve processos e habilidades práticas padronizadas, como operar mangueiras, esguichos, aplicar agentes extintores e controlar o fluxo de ar. ",
+			"fundamento ": "Capítulo 1, Seção 1.2.2 - Técnica. "
+		},
+		{
+			"id ": 22,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.5 Tática de combate ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Ao chegar em uma ocorrência, o comandante da operação avalia diversos fatores antes de organizar as equipes. Qual dos fatores abaixo é fundamental avaliar para evitar o colapso da guarnição e a propagação dos gases? ",
+			"alternativas ": [
+				{ "letra ": "A ", "texto ": "O valor venal do imóvel para fins de seguro. " },
+				{
+					"letra ": "B ",
+					"texto ": "A quantidade e características da fumaça, e as condições de ventilação. "
+				},
+				{ "letra ": "C ", "texto ": "O número de seguros contra incêndio contratados pelo proprietário. " },
+				{ "letra ": "D ", "texto ": "A cor da tinta da fachada da edificação. " }
+			],
+			"correta ": "B ",
+			"explicacao ": "A leitura da fumaça (volume, densidade, cor) e das aberturas (condições de ventilação) dita o comportamento do fogo e os riscos de fenômenos súbitos como o flashover. ",
+			"fundamento ": "Capítulo 1, Seção 1.5 - Tática de combate a incêndio. "
+		},
+		{
+			"id ": 23,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.7.4 Flexibilidade ",
+			"dificuldade ": "média ",
+			"pergunta ": "Uma estratégia inicialmente adequada pode deixar de ser eficiente e exigir o princípio da FLEXIBILIDADE após diversas alterações no cenário. Qual das alternativas abaixo NÃO é um motivo citado para alterar a estratégia? ",
+			"alternativas ": [
+				{ "letra ": "A ", "texto ": "Aumento da intensidade do fogo ou mudança do fluxo de ar. " },
+				{ "letra ": "B ", "texto ": "Descoberta de vítimas ou redução da disponibilidade de água. " },
+				{ "letra ": "C ", "texto ": "Manutenção das condições térmicas estáveis e extinção rápida do fogo. " },
+				{
+					"letra ": "D ",
+					"texto ": "Colapso parcial de elementos construtivos ou comprometimento da segurança. "
+				}
+			],
+			"correta ": "C ",
+			"explicacao ": "Se as condições térmicas estão estáveis e a extinção é rápida, a estratégia atual está funcionando. Os outros fatores (mudança de ar, colapso, falta de água) exigem adaptação e flexibilidade tática. ",
+			"fundamento ": "Capítulo 1, Seção 1.7.4 - Flexibilidade. "
+		},
+		{
+			"id ": 24,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.8 Papel do Sargento ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "No nível operacional, o Sargento BM exerce papel fundamental. Dentre as suas atribuições táticas, NÃO se inclui: ",
+			"alternativas ": [
+				{ "letra ": "A ", "texto ": "Liderança de equipes e distribuição de tarefas. " },
+				{ "letra ": "B ", "texto ": "Fiscalização do uso adequado dos equipamentos e controle disciplinar. " },
+				{ "letra ": "C ", "texto ": "Definição exclusiva das leis municipais de prevenção contra incêndio. " },
+				{
+					"letra ": "D ",
+					"texto ": "Transmissão de informações ao comando e avaliação da necessidade de reforço. "
+				}
+			],
+			"correta ": "C ",
+			"explicacao ": "A definição de leis municipais é atribuição do Poder Legislativo, não do Sargento BM em cena. O Sargento foca na liderança tática, segurança e execução do plano de ação. ",
+			"fundamento ": "Capítulo 1, Seção 1.8 - O papel do Sargento BM na tática de combate a incêndio. "
+		},
+		{
+			"id ": 25,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.10 Eficiência ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Segundo o Capítulo 1, a eficiência operacional resulta da combinação de vários fatores. Qual das opções abaixo representa corretamente parte dessa 'fórmula' da eficiência? ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Conhecimento + avaliação + planejamento + técnica + liderança + coordenação + reavaliação. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Força física + volume de água + velocidade da viatura + quantidade de bombeiros. "
+				},
+				{ "letra ": "C ", "texto ": "Antiguidade + hierarquia + obediência cega + uso de jatos compactos. " },
+				{
+					"letra ": "D ",
+					"texto ": "Pressa + improvisação + ausência de planejamento + foco exclusivo no fogo. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "A eficiência operacional é o somatório de conhecimento técnico, avaliação de cenário, planejamento tático, liderança, coordenação de equipes e reavaliação contínua. ",
+			"fundamento ": "Capítulo 1, Seção 1.10 - Eficiência no combate a incêndio. "
+		},
+		{
+			"id  ": 26,
+			"titulo  ": "Capítulo 1  ",
+			"tema  ": "1.9 Processo de decisão  ",
+			"dificuldade  ": "fácil  ",
+			"pergunta  ": "A atuação operacional é um processo permanente de tomada de decisão. Diante de uma ocorrência, o bombeiro deve buscar responder a perguntas fundamentais. Qual pergunta tem o objetivo específico de 'Identificar ameaças às vítimas, aos bombeiros, à estrutura e às áreas vizinhas'?  ",
+			"alternativas  ": [
+				{ "letra  ": "A  ", "texto  ": "O que está acontecendo?  " },
+				{ "letra  ": "B  ", "texto  ": "Quais são os riscos?  " },
+				{ "letra  ": "C  ", "texto  ": "O que precisa ser protegido primeiro?  " },
+				{ "letra  ": "D  ", "texto  ": "A ação está funcionando?  " }
+			],
+			"correta  ": "B  ",
+			"explicacao  ": "A pergunta 'Quais são os riscos?' é a etapa do processo de decisão voltada especificamente para identificar e mapear as ameaças à vida (vítimas e bombeiros), à integridade da estrutura e às áreas vizinhas.  ",
+			"fundamento  ": "Capítulo 1, Seção 1.9 - Combate a incêndio como processo de decisão.  "
+		},
+		{
+			"id  ": 27,
+			"titulo  ": "Capítulo 1  ",
+			"tema  ": "1.9 Processo de decisão  ",
+			"dificuldade  ": "média  ",
+			"pergunta  ": "Durante o combate a um incêndio em uma residência, o Sargento BM percebe que a fumaça que saía pela janela mudou de cor (ficou mais escura) e a velocidade de saída aumentou. Baseado no processo de decisão (Seção 1.9), qual pergunta o Sargento deve fazer a si mesmo e qual a atitude imediata?  ",
+			"alternativas  ": [
+				{
+					"letra  ": "A  ",
+					"texto  ": "'Quais recursos estão disponíveis?' - Solicitar mais viaturas imediatamente e parar o ataque.  "
+				},
+				{
+					"letra  ": "B  ",
+					"texto  ": "'Qual ação produzirá maior efeito?' - Aplicar jato compacto direto nas chamas sem reavaliar o teto.  "
+				},
+				{
+					"letra  ": "C  ",
+					"texto  ": "'As condições mudaram?' - Reavaliar o cenário e adaptar o plano tático imediatamente.  "
+				},
+				{
+					"letra  ": "D  ",
+					"texto  ": "'O que está acontecendo?' - Ignorar a mudança visual e manter o plano original para não perder tempo.  "
+				}
+			],
+			"correta  ": "C  ",
+			"explicacao  ": "A mudança na cor e velocidade da fumaça indica alteração no comportamento do fogo. A pergunta 'As condições mudaram?' exige que o bombeiro reavalie o cenário e adapte o plano, evitando que a equipe seja surpreendida por um fenômeno súbito.  ",
+			"fundamento  ": "Capítulo 1, Seção 1.9 - Combate a incêndio como processo de decisão.  "
+		},
+		{
+			"id  ": 28,
+			"titulo  ": "Capítulo 1  ",
+			"tema  ": "1.11 Dinâmica dos incêndios modernos  ",
+			"dificuldade  ": "fácil  ",
+			"pergunta  ": "O pensamento tático contemporâneo exige que o bombeiro não analise somente onde estão as chamas, mas também o comportamento dos gases e o fluxo de ar. Assinale a alternativa que NÃO corresponde a uma análise exigida pela apostila sobre a dinâmica dos incêndios modernos:  ",
+			"alternativas  ": [
+				{
+					"letra  ": "A  ",
+					"texto  ": "De onde o incêndio recebe oxigênio e para onde os gases quentes estão se deslocando.  "
+				},
+				{
+					"letra  ": "B  ",
+					"texto  ": "Quais caminhos o calor e a fumaça podem percorrer dentro da edificação.  "
+				},
+				{
+					"letra  ": "C  ",
+					"texto  ": "Como a ventilação pode alterar o comportamento do fogo e quais áreas podem estar ocupadas por vítimas.  "
+				},
+				{
+					"letra  ": "D  ",
+					"texto  ": "Qual o tipo de mobiliário e o valor financeiro dos bens móveis presentes no compartimento adjacente.  "
+				}
+			],
+			"correta  ": "D  ",
+			"explicacao  ": "A análise tática do fluxo de ar foca na termodinâmica e no risco à vida (oxigênio, deslocamento de gases, ventilação, vítimas). O valor financeiro do mobiliário não dita o comportamento do fogo nem o fluxo de ar.  ",
+			"fundamento  ": "Capítulo 1, Seção 1.11 - Considerações sobre a dinâmica dos incêndios modernos.  "
+		},
+		{
+			"id  ": 29,
+			"titulo  ": "Capítulo 1  ",
+			"tema  ": "1.11 Dinâmica dos incêndios modernos  ",
+			"dificuldade  ": "difícil  ",
+			"pergunta  ": "Cenário: Uma guarnição chega a um incêndio em apartamento. O Sargento, na pressa de iniciar o ataque, ordena que todas as portas e janelas do pavimento sejam arrombadas e abertas imediatamente para 'clarear o ambiente', antes mesmo de a linha de ataque estar pressurizada e pronta. Segundo a dinâmica dos incêndios modernos, qual é a consequência tática mais grave dessa ação?  ",
+			"alternativas  ": [
+				{
+					"letra  ": "A  ",
+					"texto  ": "A alteração indevida na ventilação pode fornecer oxigênio ao fogo, aumentando sua intensidade e propagando fumaça tóxica e calor para áreas de fuga ou ocupadas por vítimas.  "
+				},
+				{
+					"letra  ": "B  ",
+					"texto  ": "A abertura das portas resfriará o ambiente imediatamente, facilitando o resgate, mas causará danos estruturais irreversíveis.  "
+				},
+				{
+					"letra  ": "C  ",
+					"texto  ": "O excesso de oxigênio causará a extinção súbita das chamas por saturação, gerando apenas vapor d'água inofensivo.  "
+				},
+				{
+					"letra  ": "D  ",
+					"texto  ": "A ventilação prévia é a tática mais recomendada, pois impede o backdraft e garante a segurança da equipe que ainda não montou a linha de ataque.  "
+				}
+			],
+			"correta  ": "A  ",
+			"explicacao  ": "A ventilação descoordenada (sem linha de ataque pronta) alimenta o fogo com oxigênio e cria novos caminhos para a fumaça e o calor, podendo empurrar gases tóxicos para áreas onde há vítimas ou equipes de busca.  ",
+			"fundamento  ": "Capítulo 1, Seção 1.11 - Considerações sobre a dinâmica dos incêndios modernos.  "
+		},
+		{
+			"id  ": 30,
+			"titulo  ": "Capítulo 1  ",
+			"tema  ": "1.5 Tática de combate a incêndio  ",
+			"dificuldade  ": "fácil  ",
+			"pergunta  ": "Para a adequada aplicação da tática, a apostila lista diversos fatores que o bombeiro deve considerar ao avaliar a situação. Qual das alternativas abaixo apresenta APENAS fatores expressamente citados na Seção 1.5 para essa avaliação?  ",
+			"alternativas  ": [
+				{
+					"letra  ": "A  ",
+					"texto  ": "Valor do imóvel, tempo de resposta da viatura e número de seguros contratados.  "
+				},
+				{
+					"letra  ": "B  ",
+					"texto  ": "Compartimentação, condições de acesso, estabilidade estrutural e riscos específicos existentes no local.  "
+				},
+				{
+					"letra  ": "C  ",
+					"texto  ": "Preferência do proprietário, cor da fachada e histórico criminal dos ocupantes.  "
+				},
+				{
+					"letra  ": "D  ",
+					"texto  ": "Idade dos bombeiros da guarnição, marca dos equipamentos e distância do quartel.  "
+				}
+			],
+			"correta  ": "B  ",
+			"explicacao  ": "A avaliação tática deve focar em fatores que influenciam o comportamento do fogo e a segurança: localização, intensidade, fumaça, vítimas, características construtivas, compartimentação, acesso, estabilidade estrutural e riscos específicos.  ",
+			"fundamento  ": "Capítulo 1, Seção 1.5 - Tática de combate a incêndio.  "
+		},
+		{
+			"id  ": 31,
+			"titulo  ": "Capítulo 1  ",
+			"tema  ": "1.5 Tática de combate a incêndio  ",
+			"dificuldade  ": "média  ",
+			"pergunta  ": "Um Comandante de Socorro chega a um incêndio em um galpão industrial. Ele nota as chamas, mas falha em avaliar a 'estabilidade estrutural' e a 'possibilidade de propagação' para os tanques de combustível vizinhos. Ele ordena o ataque interno imediato. Minutos depois, ocorre um colapso parcial do teto e o fogo se alastra para a área de tanques. Qual etapa fundamental do combate a incêndio foi negligenciada, violando a segurança da equipe?  ",
+			"alternativas  ": [
+				{ "letra  ": "A  ", "texto  ": "A fase exclusiva de rescaldo e inspeção final.  " },
+				{ "letra  ": "B  ", "texto  ": "A confirmação da extinção e controle de reignições.  " },
+				{
+					"letra  ": "C  ",
+					"texto  ": "A avaliação da situação e o estabelecimento de prioridades com base nos fatores de risco.  "
+				},
+				{
+					"letra  ": "D  ",
+					"texto  ": "A aplicação de agentes extintores em jatos de neblina de baixa velocidade.  "
+				}
+			],
+			"correta  ": "C  ",
+			"explicacao  ": "O Comandante negligenciou a avaliação inicial da situação (focando na estabilidade e propagação). Sem avaliar esses fatores, o estabelecimento de prioridades e o plano de ação ficam cegos, resultando em perda de controle e risco de vida.  ",
+			"fundamento  ": "Capítulo 1, Seção 1.5 - Tática de combate a incêndio.  "
+		},
+		{
+			"id  ": 32,
+			"titulo  ": "Capítulo 1  ",
+			"tema  ": "1.4 Combate a incêndio  ",
+			"dificuldade  ": "média  ",
+			"pergunta  ": "A ação nº 8 do conjunto de ações destinadas ao combate a incêndio é 'reduzir danos secundários'. Na prática operacional, qual das atitudes abaixo representa a correta execução dessa ação tática?  ",
+			"alternativas  ": [
+				{
+					"letra  ": "A  ",
+					"texto  ": "Controlar a aplicação de água para evitar encharcamento desnecessário de áreas não atingidas e coordenar a ventilação para retirar fumaça sem empurrá-la para cômodos intactos.  "
+				},
+				{
+					"letra  ": "B  ",
+					"texto  ": "Utilizar jatos compactos de alta vazão em todos os cômodos, independentemente da presença de fogo, para garantir que nenhum ponto quente reste.  "
+				},
+				{
+					"letra  ": "C  ",
+					"texto  ": "Arrombar todas as portas e janelas da edificação para facilitar a fuga dos gases, mesmo que isso destrua esquadrias de cômodos que não foram atingidos pelo fogo.  "
+				},
+				{
+					"letra  ": "D  ",
+					"texto  ": "Focar exclusivamente no salvamento de bens materiais de alto valor, deixando o combate às chamas em segundo plano.  "
+				}
+			],
+			"correta  ": "A  ",
+			"explicacao  ": "Reduzir danos secundários significa mitigar os prejuízos causados pela própria operação de combate (excesso de água, destruição desnecessária, propagação de fumaça por ventilação errada).  ",
+			"fundamento  ": "Capítulo 1, Seção 1.4 - Combate a incêndio e Seção 1.10 - Eficiência no combate a incêndio.  "
+		},
+		{
+			"id  ": 33,
+			"titulo  ": "Capítulo 1  ",
+			"tema  ": "1.4 Combate a incêndio  ",
+			"dificuldade  ": "fácil  ",
+			"pergunta  ": "O combate a incêndio compreende 10 ações organizadas. A última ação (nº 10) desse conjunto é fundamental para garantir que a guarnição não deixe o local prematuramente, evitando que o sinistro recomece. Qual é essa ação?  ",
+			"alternativas  ": [
+				{ "letra  ": "A  ", "texto  ": "Impedir ou limitar a propagação do fogo.  " },
+				{ "letra  ": "B  ", "texto  ": "Reduzir danos secundários e proteger estruturas.  " },
+				{ "letra  ": "C  ", "texto  ": "Estabelecer prioridades e proteger e salvar vidas.  " },
+				{ "letra  ": "D  ", "texto  ": "Confirmar a extinção e controlar eventuais reignições.  " }
+			],
+			"correta  ": "D  ",
+			"explicacao  ": "A 10ª ação do combate é confirmar a extinção e controlar eventuais reignições, assegurando que o fogo não voltará a se desenvolver após a saída ou desmobilização das equipes.  ",
+			"fundamento  ": "Capítulo 1, Seção 1.4 - Combate a incêndio.  "
+		},
+		{
+			"id  ": 34,
+			"titulo  ": "Capítulo 1  ",
+			"tema  ": "1.1 Introdução  ",
+			"dificuldade  ": "fácil  ",
+			"pergunta  ": "Segundo a Introdução do Capítulo 1, o êxito de uma operação de combate a incêndio NÃO depende exclusivamente de dois fatores. Assinale a alternativa que apresenta corretamente esses dois fatores que, sozinhos, não garantem o resultado da operação:  ",
+			"alternativas  ": [
+				{ "letra  ": "A  ", "texto  ": "A liderança do Sargento e a comunicação via rádio.  " },
+				{
+					"letra  ": "B  ",
+					"texto  ": "A disponibilidade de equipamentos e a aplicação de determinado agente extintor.  "
+				},
+				{ "letra  ": "C  ", "texto  ": "A avaliação da situação e o estabelecimento de prioridades.  " },
+				{
+					"letra  ": "D  ",
+					"texto  ": "O treinamento da tropa e a utilização do Sistema de Comando de Incidentes.  "
+				}
+			],
+			"correta  ": "B  ",
+			"explicacao  ": "A apostila é clara ao afirmar que o resultado não depende exclusivamente da disponibilidade de equipamentos ou da aplicação de determinado agente extintor, mas sim da capacidade de avaliar, priorizar e coordenar.  ",
+			"fundamento  ": "Capítulo 1, Seção 1.1 - Introdução.  "
+		},
+		{
+			"id  ": 35,
+			"titulo  ": "Capítulo 1  ",
+			"tema  ": "1.1 Introdução  ",
+			"dificuldade  ": "fácil  ",
+			"pergunta  ": "A Introdução do Capítulo 1 destaca que o combate a incêndio é uma atividade de elevada exigência técnica, onde decisões devem ser tomadas em curto espaço de tempo. Em que tipo de ambiente essas decisões frequentemente ocorrem, segundo o texto?  ",
+			"alternativas  ": [
+				{
+					"letra  ": "A  ",
+					"texto  ": "Ambientes controlados, com alta visibilidade, temperatura estável e riscos estruturais previamente mapeados.  "
+				},
+				{
+					"letra  ": "B  ",
+					"texto  ": "Ambientes externos, onde o vento é o único fator de risco e a visibilidade é sempre plena.  "
+				},
+				{
+					"letra  ": "C  ",
+					"texto  ": "Ambientes caracterizados por calor intenso, fumaça, baixa visibilidade, alterações rápidas das condições do incêndio e riscos estruturais.  "
+				},
+				{
+					"letra  ": "D  ",
+					"texto  ": "Ambientes administrativos, onde o risco principal é a burocracia e a falta de equipamentos de escritório.  "
+				}
+			],
+			"correta  ": "C  ",
+			"explicacao  ": "O ambiente operacional de incêndio estrutural é hostil e dinâmico, exigindo que o bombeiro tome decisões sob calor intenso, fumaça, baixa visibilidade e risco de colapso.  ",
+			"fundamento  ": "Capítulo 1, Seção 1.1 - Introdução.  "
+		}
+	]
+}

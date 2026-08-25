@@ -6,6 +6,7 @@ const STORAGE_KEY = 'quiz_interativo_progress_v1';
 const THEME_KEY   = 'quiz_interativo_theme';
 
 const STATIC_SUBJECTS = [
+  'combateaincendio.json',
   'comandoelideranca.json',
   'correspondencias.json',
   'direitopenalmilitar.json',
@@ -58,6 +59,17 @@ applyTheme(state.darkMode ? 'dark' : 'light');
 // ==========================================
 // UTILITÁRIOS E DADOS
 // ==========================================
+function cleanObjectKeys(obj) {
+  if (!obj || typeof obj !== 'object') return obj;
+  if (Array.isArray(obj)) return obj.map(cleanObjectKeys);
+  const cleaned = {};
+  for (const [key, val] of Object.entries(obj)) {
+    const cleanKey = key.trim();
+    cleaned[cleanKey] = typeof val === 'string' ? val.trim() : cleanObjectKeys(val);
+  }
+  return cleaned;
+}
+
 function slugify(text) {
   return String(text)
     .normalize('NFD')
@@ -82,7 +94,8 @@ function loadProgress() {
   }
 }
 
-function normalizeQuestion(question, index) {
+function normalizeQuestion(rawQuestion, index) {
+  const question = cleanObjectKeys(rawQuestion) || {};
   const alternatives = Array.isArray(question.alternativas) ? question.alternativas : [];
   const normalizedAlternatives = alternatives
     .filter((item) => item && typeof item === 'object')
@@ -92,28 +105,36 @@ function normalizeQuestion(question, index) {
     }))
     .filter((item) => item.letter && item.text);
 
+  const statement = String(question.pergunta || question.enunciado || 'Pergunta sem enunciado').trim();
+  const chapterTitle = String(question.titulo || '').trim();
+
   return {
-    id:          question.id ?? index + 1,
-    title:       String(question.pergunta || question.enunciado || 'Pergunta sem enunciado').trim(),
-    topic:       String(question.tema || 'Tema não informado').trim(),
-    difficulty:  String(question.dificuldade || 'Sem nível').trim(),
-    correct:     String(question.correta || question.respostaCorreta || '').trim().toUpperCase(),
-    explanation: String(question.explicacao || question.comentario || '').trim(),
-    fundamento:  String(question.fundamento || '').trim(),
+    id:           question.id ?? index + 1,
+    chapterTitle,
+    title:        statement,
+    statement,
+    topic:        String(question.tema || 'Tema não informado').trim(),
+    difficulty:   String(question.dificuldade || 'Sem nível').trim(),
+    correct:      String(question.correta || question.respostaCorreta || '').trim().toUpperCase(),
+    explanation:  String(question.explicacao || question.comentario || '').trim(),
+    fundamento:   String(question.fundamento || '').trim(),
     alternatives: normalizedAlternatives
   };
 }
 
-function normalizeSubject(payload, fileName) {
-  const config    = payload?.config || {};
-  const questions = Array.isArray(payload?.questoes)
-    ? payload.questoes.map((question, index) => normalizeQuestion(question, index))
-    : [];
+function normalizeSubject(rawPayload, fileName) {
+  const payload = cleanObjectKeys(rawPayload) || {};
+  const info    = payload.informacoes || payload.config || {};
+  const rawQuestions = Array.isArray(payload.questoes) ? payload.questoes : [];
+  const questions = rawQuestions.map((question, index) => normalizeQuestion(question, index));
+
+  const title = String(info.titulo || info.materia || payload.titulo || fileName.replace(/\.json$/i, '')).trim();
+  const subtitle = String(info.descricao || info.subtitulo || payload.subtitulo || 'Questões de estudo').trim();
 
   return {
     id:       slugify(fileName.replace(/\.json$/i, '')),
-    title:    String(config.titulo || payload?.titulo || fileName.replace(/\.json$/i, '')).trim(),
-    subtitle: String(config.subtitulo || payload?.subtitulo || 'Questões de estudo').trim(),
+    title,
+    subtitle,
     questions
   };
 }

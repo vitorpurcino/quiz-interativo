@@ -116,6 +116,46 @@
         </button>
       </div>
 
+      <!-- Painel de Filtros Dinâmicos -->
+      <div class="painel-filtros" id="painelFiltros">
+        <div class="filtros-header">
+          <span class="filtros-titulo">⚡ Filtros Dinâmicos</span>
+          <div class="filtros-info">
+            <span class="filtros-badge" id="filtroContador">Total: 0 questões</span>
+            <button id="btnLimparFiltros" class="btn-limpar-filtros" type="button" title="Limpar todos os filtros" hidden>
+              ✕ Limpar filtros
+            </button>
+          </div>
+        </div>
+
+        <div class="filtros-grid">
+          <div class="filtro-item filtro-busca-item">
+            <label for="filtroBusca">Buscar por Título / Palavra-chave</label>
+            <div class="input-com-icone">
+              <span class="icone-busca" aria-hidden="true">🔍</span>
+              <input type="text" id="filtroBusca" placeholder="Filtrar por título, texto ou capítulo..." autocomplete="off" />
+            </div>
+          </div>
+
+          <div class="filtro-item">
+            <label for="filtroTema">Tema / Categoria</label>
+            <select id="filtroTema">
+              <option value="">Todos os Temas</option>
+            </select>
+          </div>
+
+          <div class="filtro-item">
+            <label for="filtroDificuldade">Nível de Dificuldade</label>
+            <select id="filtroDificuldade">
+              <option value="">Todas as Dificuldades</option>
+              <option value="facil">Fácil</option>
+              <option value="medio">Média</option>
+              <option value="dificil">Difícil</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
       <!-- Status: Contador e Pontuação -->
       <div class="status">
         <span id="contadorQuestao">Questão 1 de 1</span>
