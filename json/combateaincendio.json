@@ -18,10 +18,22 @@
 			"dificuldade ": "média ",
 			"pergunta ": "Relacione os conceitos fundamentais da tática de combate a incêndio com suas respectivas definições:\n(1) Arte\n(2) Técnica\n(3) Tática\n(4) Estratégia\n\n( ) Corresponde ao conjunto de conhecimentos, processos, métodos e habilidades empregados para realizar determinada atividade de forma padronizada.\n( ) É o emprego organizado dos recursos disponíveis para alcançar objetivos específicos dentro de uma situação operacional.\n( ) É a capacidade de utilizar os meios disponíveis para alcançar determinado resultado, adaptando-se a situações imprevisíveis.\n( ) Corresponde ao processo de planejamento e emprego dos recursos para alcançar objetivos mais amplos da operação. ",
 			"alternativas ": [
-				{ "letra ": "A ", "texto ": "2, 3, 1, 4 " },
-				{ "letra ": "B ", "texto ": "2, 4, 1, 3 " },
-				{ "letra ": "C ", "texto ": "3, 2, 4, 1 " },
-				{ "letra ": "D ", "texto ": "1, 3, 2, 4 " }
+				{
+					"letra ": "A ",
+					"texto ": "2, 3, 1, 4 "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "2, 4, 1, 3 "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "3, 2, 4, 1 "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "1, 3, 2, 4 "
+				}
 			],
 			"correta ": "A ",
 			"explicacao ": "A Técnica (2) é o conjunto de processos padronizados; a Tática (3) é o emprego organizado para objetivos específicos; a Arte (1) é a capacidade de adaptação; e a Estratégia (4) foca nos objetivos amplos e macro da operação. ",
@@ -62,8 +74,14 @@
 			"dificuldade ": "fácil ",
 			"pergunta ": "No cenário operacional, uma ordem emitida por um Sargento BM deve possuir diversas características para ser eficaz. Assinale a alternativa que apresenta uma característica que NÃO é recomendada para uma ordem operacional: ",
 			"alternativas ": [
-				{ "letra ": "A ", "texto ": "Clara e objetiva. " },
-				{ "letra ": "B ", "texto ": "Compatível com a situação e direcionada ao responsável. " },
+				{
+					"letra ": "A ",
+					"texto ": "Clara e objetiva. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Compatível com a situação e direcionada ao responsável. "
+				},
 				{
 					"letra ": "C ",
 					"texto ": "Genérica e aberta a múltiplas interpretações para dar autonomia total ao subordinado. "
@@ -84,10 +102,22 @@
 			"dificuldade ": "média ",
 			"pergunta ": "O combate a incêndio compreende um conjunto de ações organizadas. De acordo com a apostila, após 'identificar e avaliar a situação', 'estabelecer prioridades' e 'proteger e salvar vidas', qual é a próxima ação fundamental na sequência lógica de enfrentamento? ",
 			"alternativas ": [
-				{ "letra ": "A ", "texto ": "Controlar o desenvolvimento do incêndio. " },
-				{ "letra ": "B ", "texto ": "Reduzir danos secundários. " },
-				{ "letra ": "C ", "texto ": "Confirmar a extinção e controlar reignições. " },
-				{ "letra ": "D ", "texto ": "Extinguir o fogo imediatamente com jatos compactos. " }
+				{
+					"letra ": "A ",
+					"texto ": "Controlar o desenvolvimento do incêndio. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Reduzir danos secundários. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Confirmar a extinção e controlar reignições. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Extinguir o fogo imediatamente com jatos compactos. "
+				}
 			],
 			"correta ": "A ",
 			"explicacao ": "A sequência de ações do combate inicia com avaliação, prioridades e salvamento, seguindo para o controle do desenvolvimento do incêndio, limitação da propagação e, por fim, a extinção. ",
@@ -100,10 +130,22 @@
 			"dificuldade ": "fácil ",
 			"pergunta ": "O pensamento tático é representado por um ciclo contínuo essencial para os incêndios estruturais, onde as condições mudam rapidamente. Qual das opções abaixo representa a sequência CORRETA desse ciclo tático? ",
 			"alternativas ": [
-				{ "letra ": "A ", "texto ": "Planejar → Avaliar → Monitorar → Executar → Ajustar → Reavaliar " },
-				{ "letra ": "B ", "texto ": "Executar → Planejar → Avaliar → Reavaliar → Monitorar → Ajustar " },
-				{ "letra ": "C ", "texto ": "Avaliar → Planejar → Executar → Monitorar → Reavaliar → Ajustar " },
-				{ "letra ": "D ", "texto ": "Avaliar → Executar → Planejar → Ajustar → Monitorar → Reavaliar " }
+				{
+					"letra ": "A ",
+					"texto ": "Planejar → Avaliar → Monitorar → Executar → Ajustar → Reavaliar "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Executar → Planejar → Avaliar → Reavaliar → Monitorar → Ajustar "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Avaliar → Planejar → Executar → Monitorar → Reavaliar → Ajustar "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Avaliar → Executar → Planejar → Ajustar → Monitorar → Reavaliar "
+				}
 			],
 			"correta ": "C ",
 			"explicacao ": "O ciclo tático correto é: Avaliar (o cenário) → Planejar (o PAI) → Executar (as ações) → Monitorar (os resultados) → Reavaliar (as condições) → Ajustar (a tática). ",
@@ -120,9 +162,18 @@
 					"letra ": "A ",
 					"texto ": "Estabelecimento de equipes de busca e proteção das rotas de acesso e saída. "
 				},
-				{ "letra ": "B ", "texto ": "Redução dos danos provocados pelo fogo e fumaça em nível macro. " },
-				{ "letra ": "C ", "texto ": "Preservação da vida e proteção de estruturas e bens. " },
-				{ "letra ": "D ", "texto ": "Prevenção da propagação do fogo para as edificações vizinhas. " }
+				{
+					"letra ": "B ",
+					"texto ": "Redução dos danos provocados pelo fogo e fumaça em nível macro. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Preservação da vida e proteção de estruturas e bens. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Prevenção da propagação do fogo para as edificações vizinhas. "
+				}
 			],
 			"correta ": "A ",
 			"explicacao ": "O estabelecimento de equipes de busca e a proteção de rotas são ações concretas (táticas) que materializam o objetivo macro (estratégico) de preservar a vida. As demais alternativas são objetivos estratégicos. ",
@@ -135,10 +186,22 @@
 			"dificuldade ": "difícil ",
 			"pergunta ": "Analise as afirmativas abaixo sobre os Princípios do Pensamento Tático:\nI. O princípio da Simplicidade dita que, quanto mais complexa for a situação operacional, maior a importância de planos simples, claros e executáveis.\nII. O princípio da Economia de Recursos significa utilizar o menor número possível de equipamentos e pessoal na cena do incêndio para evitar desperdício financeiro.\nIII. O princípio da Flexibilidade permite adaptar o emprego dos recursos sem perder de vista os objetivos prioritários, caso as condições do incêndio mudem.\n\nEstá(ão) CORRETA(s): ",
 			"alternativas ": [
-				{ "letra ": "A ", "texto ": "Apenas I. " },
-				{ "letra ": "B ", "texto ": "Apenas I e II. " },
-				{ "letra ": "C ", "texto ": "Apenas I e III. " },
-				{ "letra ": "D ", "texto ": "I, II e III. " }
+				{
+					"letra ": "A ",
+					"texto ": "Apenas I. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Apenas I e II. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Apenas I e III. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "I, II e III. "
+				}
 			],
 			"correta ": "C ",
 			"explicacao ": "A afirmativa II está incorreta. A economia de recursos não significa utilizar menos equipamentos ou pessoal, mas empregar cada recurso onde ele produza maior efeito operacional (racionalidade). ",
@@ -207,10 +270,22 @@
 			"dificuldade ": "fácil ",
 			"pergunta ": "A atuação operacional é um processo permanente de tomada de decisão. Qual das perguntas fundamentais abaixo visa selecionar o método de intervenção mais adequado às circunstâncias? ",
 			"alternativas ": [
-				{ "letra ": "A ", "texto ": "Qual ação produzirá maior efeito? " },
-				{ "letra ": "B ", "texto ": "O que está acontecendo? " },
-				{ "letra ": "C ", "texto ": "Quais são os riscos? " },
-				{ "letra ": "D ", "texto ": "O que precisa ser protegido primeiro? " }
+				{
+					"letra ": "A ",
+					"texto ": "Qual ação produzirá maior efeito? "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "O que está acontecendo? "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Quais são os riscos? "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "O que precisa ser protegido primeiro? "
+				}
 			],
 			"correta ": "A ",
 			"explicacao ": "A pergunta 'Qual ação produzirá maior efeito?' é a etapa onde o bombeiro seleciona o método de intervenção mais adequado para as circunstâncias avaliadas. ",
@@ -223,13 +298,22 @@
 			"dificuldade ": "média ",
 			"pergunta ": "A eficiência no combate a incêndio não se resume apenas a extinguir as chamas, mas também a evitar danos secundários. Qual das alternativas abaixo NÃO é considerada um dano secundário ou consequência do emprego inadequado de recursos? ",
 			"alternativas ": [
-				{ "letra ": "A ", "texto ": "Danos provocados pelo excesso de água aplicada sem técnica. " },
-				{ "letra ": "B ", "texto ": "Propagação do incêndio por alterações indevidas na ventilação. " },
+				{
+					"letra ": "A ",
+					"texto ": "Danos provocados pelo excesso de água aplicada sem técnica. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Propagação do incêndio por alterações indevidas na ventilação. "
+				},
 				{
 					"letra ": "C ",
 					"texto ": "Colapso estrutural natural causado exclusivamente pela ação do fogo antes da chegada do socorro. "
 				},
-				{ "letra ": "D ", "texto ": "Exposição desnecessária dos bombeiros e perda de tempo operacional. " }
+				{
+					"letra ": "D ",
+					"texto ": "Exposição desnecessária dos bombeiros e perda de tempo operacional. "
+				}
 			],
 			"correta ": "C ",
 			"explicacao ": "O colapso estrutural causado pelo fogo antes da chegada do socorro é uma consequência direta do incêndio, não um 'dano secundário' causado pelo emprego inadequado de recursos táticos ou excesso de água pela guarnição. ",
@@ -246,7 +330,10 @@
 					"letra ": "A ",
 					"texto ": "A rápida liberação de calor e produção intensa de fumaça, exigindo controle rigoroso das condições de ventilação. "
 				},
-				{ "letra ": "B ", "texto ": "A lenta liberação de calor e a produção de fumaça branca e inofensiva. " },
+				{
+					"letra ": "B ",
+					"texto ": "A lenta liberação de calor e a produção de fumaça branca e inofensiva. "
+				},
 				{
 					"letra ": "C ",
 					"texto ": "A diminuição da taxa de liberação de calor (HRR), tornando os incêndios mais fáceis de controlar. "
@@ -267,7 +354,10 @@
 			"dificuldade ": "fácil ",
 			"pergunta ": "No ambiente operacional, o conceito de 'Arte' está diretamente relacionado à capacidade do bombeiro de: ",
 			"alternativas ": [
-				{ "letra ": "A ", "texto ": "Seguir estritamente manuais e procedimentos padronizados, sem desvios. " },
+				{
+					"letra ": "A ",
+					"texto ": "Seguir estritamente manuais e procedimentos padronizados, sem desvios. "
+				},
 				{
 					"letra ": "B ",
 					"texto ": "Transformar conhecimentos e experiências em decisões adequadas diante de situações que nem sempre podem ser previstas. "
@@ -276,7 +366,10 @@
 					"letra ": "C ",
 					"texto ": "Operar equipamentos hidráulicos com base em fórmulas matemáticas exatas. "
 				},
-				{ "letra ": "D ", "texto ": "Memorizar todas as plantas das edificações da área de cobertura. " }
+				{
+					"letra ": "D ",
+					"texto ": "Memorizar todas as plantas das edificações da área de cobertura. "
+				}
 			],
 			"correta ": "B ",
 			"explicacao ": "A Arte é a habilidade de interpretar a situação e adaptar conhecimentos e experiências às circunstâncias concretas, lidando com o imprevisível. ",
@@ -293,9 +386,18 @@
 					"letra ": "A ",
 					"texto ": "Preferência pessoal do comandante sobre a marca dos equipamentos de combate. "
 				},
-				{ "letra ": "B ", "texto ": "Intensidade e comportamento do fogo. " },
-				{ "letra ": "C ", "texto ": "Características construtivas da edificação e compartimentação. " },
-				{ "letra ": "D ", "texto ": "Disponibilidade de água, recursos humanos e estabilidade estrutural. " }
+				{
+					"letra ": "B ",
+					"texto ": "Intensidade e comportamento do fogo. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Características construtivas da edificação e compartimentação. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Disponibilidade de água, recursos humanos e estabilidade estrutural. "
+				}
 			],
 			"correta ": "A ",
 			"explicacao ": "A avaliação tática deve focar em fatores reais da cena (fogo, estrutura, recursos, vítimas). Preferências pessoais por marcas de equipamentos não influenciam o planejamento tático. ",
@@ -336,10 +438,22 @@
 			"dificuldade ": "fácil ",
 			"pergunta ": "A tática de combate a incêndio não constitui um conhecimento isolado. Ela depende da integração de diferentes áreas. Qual das áreas abaixo NÃO é citada como parte dessa integração necessária para o Sargento BM interpretar o cenário? ",
 			"alternativas ": [
-				{ "letra ": "A ", "texto ": "Ciência do fogo e comportamento do incêndio. " },
-				{ "letra ": "B ", "texto ": "Hidráulica e técnicas de ventilação. " },
-				{ "letra ": "C ", "texto ": "Programação de software e design de interfaces de rádio. " },
-				{ "letra ": "D ", "texto ": "Gerenciamento de riscos e comunicação operacional. " }
+				{
+					"letra ": "A ",
+					"texto ": "Ciência do fogo e comportamento do incêndio. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Hidráulica e técnicas de ventilação. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Programação de software e design de interfaces de rádio. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Gerenciamento de riscos e comunicação operacional. "
+				}
 			],
 			"correta ": "C ",
 			"explicacao ": "A tática integra ciência do fogo, hidráulica, salvamento, ventilação, liderança, etc. Programação de software não faz parte das áreas de conhecimento tático do bombeiro. ",
@@ -380,13 +494,22 @@
 			"dificuldade ": "média ",
 			"pergunta ": "Analise as ações do combate a incêndio:\nI. Identificar e avaliar a situação.\nII. Impedir ou limitar a propagação do fogo.\nIII. Reduzir danos secundários.\nIV. Confirmar a extinção e controlar eventuais reignições.\n\nEstas ações representam: ",
 			"alternativas ": [
-				{ "letra ": "A ", "texto ": "As fases exclusivas do rescaldo. " },
+				{
+					"letra ": "A ",
+					"texto ": "As fases exclusivas do rescaldo. "
+				},
 				{
 					"letra ": "B ",
 					"texto ": "O conjunto de ações destinadas ao combate a incêndio, compreendido como um processo contínuo. "
 				},
-				{ "letra ": "C ", "texto ": "Apenas as responsabilidades civis do proprietário do imóvel. " },
-				{ "letra ": "D ", "texto ": "O ciclo de manutenção preventiva de viaturas. " }
+				{
+					"letra ": "C ",
+					"texto ": "Apenas as responsabilidades civis do proprietário do imóvel. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "O ciclo de manutenção preventiva de viaturas. "
+				}
 			],
 			"correta ": "B ",
 			"explicacao ": "Essas etapas compõem o conjunto de ações organizadas de enfrentamento que definem o combate a incêndio, devendo ser compreendido como um processo contínuo de avaliação e intervenção. ",
@@ -399,13 +522,22 @@
 			"dificuldade ": "média ",
 			"pergunta ": "O princípio da Objetividade dita que as ações devem estar orientadas para objetivos claramente definidos. Para cumprir este princípio, a equipe deve saber todas as alternativas abaixo, EXCETO: ",
 			"alternativas ": [
-				{ "letra ": "A ", "texto ": "Qual é a prioridade e qual ação será executada. " },
-				{ "letra ": "B ", "texto ": "Quem será responsável e quais recursos serão empregados. " },
+				{
+					"letra ": "A ",
+					"texto ": "Qual é a prioridade e qual ação será executada. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Quem será responsável e quais recursos serão empregados. "
+				},
 				{
 					"letra ": "C ",
 					"texto ": "Qual a história completa de ocorrências anteriores no mesmo endereço nos últimos 10 anos. "
 				},
-				{ "letra ": "D ", "texto ": "Quais condições determinam a interrupção ou alteração da ação. " }
+				{
+					"letra ": "D ",
+					"texto ": "Quais condições determinam a interrupção ou alteração da ação. "
+				}
 			],
 			"correta ": "C ",
 			"explicacao ": "A objetividade foca no cenário atual: prioridade, ação, responsável, recursos e gatilhos de interrupção. O histórico de 10 anos não é um fator tático imediato obrigatório para a execução da ação atual. ",
@@ -454,7 +586,10 @@
 					"letra ": "B ",
 					"texto ": "A definição de prioridades macro para salvar o maior número de vítimas. "
 				},
-				{ "letra ": "C ", "texto ": "O planejamento logístico e administrativo da corporação como um todo. " },
+				{
+					"letra ": "C ",
+					"texto ": "O planejamento logístico e administrativo da corporação como um todo. "
+				},
 				{
 					"letra ": "D ",
 					"texto ": "A operação de mangueiras, esguichos e bombas, bem como o controle do fluxo de ar. "
@@ -471,13 +606,22 @@
 			"dificuldade ": "fácil ",
 			"pergunta ": "Ao chegar em uma ocorrência, o comandante da operação avalia diversos fatores antes de organizar as equipes. Qual dos fatores abaixo é fundamental avaliar para evitar o colapso da guarnição e a propagação dos gases? ",
 			"alternativas ": [
-				{ "letra ": "A ", "texto ": "O valor venal do imóvel para fins de seguro. " },
+				{
+					"letra ": "A ",
+					"texto ": "O valor venal do imóvel para fins de seguro. "
+				},
 				{
 					"letra ": "B ",
 					"texto ": "A quantidade e características da fumaça, e as condições de ventilação. "
 				},
-				{ "letra ": "C ", "texto ": "O número de seguros contra incêndio contratados pelo proprietário. " },
-				{ "letra ": "D ", "texto ": "A cor da tinta da fachada da edificação. " }
+				{
+					"letra ": "C ",
+					"texto ": "O número de seguros contra incêndio contratados pelo proprietário. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "A cor da tinta da fachada da edificação. "
+				}
 			],
 			"correta ": "B ",
 			"explicacao ": "A leitura da fumaça (volume, densidade, cor) e das aberturas (condições de ventilação) dita o comportamento do fogo e os riscos de fenômenos súbitos como o flashover. ",
@@ -490,9 +634,18 @@
 			"dificuldade ": "média ",
 			"pergunta ": "Uma estratégia inicialmente adequada pode deixar de ser eficiente e exigir o princípio da FLEXIBILIDADE após diversas alterações no cenário. Qual das alternativas abaixo NÃO é um motivo citado para alterar a estratégia? ",
 			"alternativas ": [
-				{ "letra ": "A ", "texto ": "Aumento da intensidade do fogo ou mudança do fluxo de ar. " },
-				{ "letra ": "B ", "texto ": "Descoberta de vítimas ou redução da disponibilidade de água. " },
-				{ "letra ": "C ", "texto ": "Manutenção das condições térmicas estáveis e extinção rápida do fogo. " },
+				{
+					"letra ": "A ",
+					"texto ": "Aumento da intensidade do fogo ou mudança do fluxo de ar. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Descoberta de vítimas ou redução da disponibilidade de água. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Manutenção das condições térmicas estáveis e extinção rápida do fogo. "
+				},
 				{
 					"letra ": "D ",
 					"texto ": "Colapso parcial de elementos construtivos ou comprometimento da segurança. "
@@ -509,9 +662,18 @@
 			"dificuldade ": "fácil ",
 			"pergunta ": "No nível operacional, o Sargento BM exerce papel fundamental. Dentre as suas atribuições táticas, NÃO se inclui: ",
 			"alternativas ": [
-				{ "letra ": "A ", "texto ": "Liderança de equipes e distribuição de tarefas. " },
-				{ "letra ": "B ", "texto ": "Fiscalização do uso adequado dos equipamentos e controle disciplinar. " },
-				{ "letra ": "C ", "texto ": "Definição exclusiva das leis municipais de prevenção contra incêndio. " },
+				{
+					"letra ": "A ",
+					"texto ": "Liderança de equipes e distribuição de tarefas. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Fiscalização do uso adequado dos equipamentos e controle disciplinar. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Definição exclusiva das leis municipais de prevenção contra incêndio. "
+				},
 				{
 					"letra ": "D ",
 					"texto ": "Transmissão de informações ao comando e avaliação da necessidade de reforço. "
@@ -536,7 +698,10 @@
 					"letra ": "B ",
 					"texto ": "Força física + volume de água + velocidade da viatura + quantidade de bombeiros. "
 				},
-				{ "letra ": "C ", "texto ": "Antiguidade + hierarquia + obediência cega + uso de jatos compactos. " },
+				{
+					"letra ": "C ",
+					"texto ": "Antiguidade + hierarquia + obediência cega + uso de jatos compactos. "
+				},
 				{
 					"letra ": "D ",
 					"texto ": "Pressa + improvisação + ausência de planejamento + foco exclusivo no fogo. "
@@ -553,10 +718,22 @@
 			"dificuldade  ": "fácil  ",
 			"pergunta  ": "A atuação operacional é um processo permanente de tomada de decisão. Diante de uma ocorrência, o bombeiro deve buscar responder a perguntas fundamentais. Qual pergunta tem o objetivo específico de 'Identificar ameaças às vítimas, aos bombeiros, à estrutura e às áreas vizinhas'?  ",
 			"alternativas  ": [
-				{ "letra  ": "A  ", "texto  ": "O que está acontecendo?  " },
-				{ "letra  ": "B  ", "texto  ": "Quais são os riscos?  " },
-				{ "letra  ": "C  ", "texto  ": "O que precisa ser protegido primeiro?  " },
-				{ "letra  ": "D  ", "texto  ": "A ação está funcionando?  " }
+				{
+					"letra  ": "A  ",
+					"texto  ": "O que está acontecendo?  "
+				},
+				{
+					"letra  ": "B  ",
+					"texto  ": "Quais são os riscos?  "
+				},
+				{
+					"letra  ": "C  ",
+					"texto  ": "O que precisa ser protegido primeiro?  "
+				},
+				{
+					"letra  ": "D  ",
+					"texto  ": "A ação está funcionando?  "
+				}
 			],
 			"correta  ": "B  ",
 			"explicacao  ": "A pergunta 'Quais são os riscos?' é a etapa do processo de decisão voltada especificamente para identificar e mapear as ameaças à vida (vítimas e bombeiros), à integridade da estrutura e às áreas vizinhas.  ",
@@ -681,8 +858,14 @@
 			"dificuldade  ": "média  ",
 			"pergunta  ": "Um Comandante de Socorro chega a um incêndio em um galpão industrial. Ele nota as chamas, mas falha em avaliar a 'estabilidade estrutural' e a 'possibilidade de propagação' para os tanques de combustível vizinhos. Ele ordena o ataque interno imediato. Minutos depois, ocorre um colapso parcial do teto e o fogo se alastra para a área de tanques. Qual etapa fundamental do combate a incêndio foi negligenciada, violando a segurança da equipe?  ",
 			"alternativas  ": [
-				{ "letra  ": "A  ", "texto  ": "A fase exclusiva de rescaldo e inspeção final.  " },
-				{ "letra  ": "B  ", "texto  ": "A confirmação da extinção e controle de reignições.  " },
+				{
+					"letra  ": "A  ",
+					"texto  ": "A fase exclusiva de rescaldo e inspeção final.  "
+				},
+				{
+					"letra  ": "B  ",
+					"texto  ": "A confirmação da extinção e controle de reignições.  "
+				},
 				{
 					"letra  ": "C  ",
 					"texto  ": "A avaliação da situação e o estabelecimento de prioridades com base nos fatores de risco.  "
@@ -731,10 +914,22 @@
 			"dificuldade  ": "fácil  ",
 			"pergunta  ": "O combate a incêndio compreende 10 ações organizadas. A última ação (nº 10) desse conjunto é fundamental para garantir que a guarnição não deixe o local prematuramente, evitando que o sinistro recomece. Qual é essa ação?  ",
 			"alternativas  ": [
-				{ "letra  ": "A  ", "texto  ": "Impedir ou limitar a propagação do fogo.  " },
-				{ "letra  ": "B  ", "texto  ": "Reduzir danos secundários e proteger estruturas.  " },
-				{ "letra  ": "C  ", "texto  ": "Estabelecer prioridades e proteger e salvar vidas.  " },
-				{ "letra  ": "D  ", "texto  ": "Confirmar a extinção e controlar eventuais reignições.  " }
+				{
+					"letra  ": "A  ",
+					"texto  ": "Impedir ou limitar a propagação do fogo.  "
+				},
+				{
+					"letra  ": "B  ",
+					"texto  ": "Reduzir danos secundários e proteger estruturas.  "
+				},
+				{
+					"letra  ": "C  ",
+					"texto  ": "Estabelecer prioridades e proteger e salvar vidas.  "
+				},
+				{
+					"letra  ": "D  ",
+					"texto  ": "Confirmar a extinção e controlar eventuais reignições.  "
+				}
 			],
 			"correta  ": "D  ",
 			"explicacao  ": "A 10ª ação do combate é confirmar a extinção e controlar eventuais reignições, assegurando que o fogo não voltará a se desenvolver após a saída ou desmobilização das equipes.  ",
@@ -747,12 +942,18 @@
 			"dificuldade  ": "fácil  ",
 			"pergunta  ": "Segundo a Introdução do Capítulo 1, o êxito de uma operação de combate a incêndio NÃO depende exclusivamente de dois fatores. Assinale a alternativa que apresenta corretamente esses dois fatores que, sozinhos, não garantem o resultado da operação:  ",
 			"alternativas  ": [
-				{ "letra  ": "A  ", "texto  ": "A liderança do Sargento e a comunicação via rádio.  " },
+				{
+					"letra  ": "A  ",
+					"texto  ": "A liderança do Sargento e a comunicação via rádio.  "
+				},
 				{
 					"letra  ": "B  ",
 					"texto  ": "A disponibilidade de equipamentos e a aplicação de determinado agente extintor.  "
 				},
-				{ "letra  ": "C  ", "texto  ": "A avaliação da situação e o estabelecimento de prioridades.  " },
+				{
+					"letra  ": "C  ",
+					"texto  ": "A avaliação da situação e o estabelecimento de prioridades.  "
+				},
 				{
 					"letra  ": "D  ",
 					"texto  ": "O treinamento da tropa e a utilização do Sistema de Comando de Incidentes.  "
@@ -789,6 +990,1826 @@
 			"correta  ": "C  ",
 			"explicacao  ": "O ambiente operacional de incêndio estrutural é hostil e dinâmico, exigindo que o bombeiro tome decisões sob calor intenso, fumaça, baixa visibilidade e risco de colapso.  ",
 			"fundamento  ": "Capítulo 1, Seção 1.1 - Introdução.  "
+		},
+		{
+			"id ": 36,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.1 Introdução ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Segundo a apostila, o êxito de uma operação de combate a incêndio depende principalmente de: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Apenas da disponibilidade de equipamentos modernos e agentes extintores. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Da capacidade de avaliar a situação, estabelecer prioridades, organizar recursos, selecionar métodos e executar ações coordenadas. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Exclusivamente da aplicação de jatos d’água em grande volume. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Da presença de um Oficial de patente superior no local. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "O texto afirma que o resultado está diretamente relacionado à capacidade de avaliar a situação, estabelecer prioridades, organizar recursos, selecionar métodos e executar ações coordenadas, de acordo com a evolução do incêndio. ",
+			"fundamento ": "Capítulo 1, Seção 1.1 - Introdução. "
+		},
+		{
+			"id ": 37,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.2 Conceitos Fundamentais ",
+			"dificuldade ": "média ",
+			"pergunta ": "Relacione corretamente:\n(1) Arte\n(2) Técnica\n(3) Tática\n(4) Estratégia\n\n( ) Capacidade de utilizar os meios disponíveis adaptando-se a situações imprevisíveis.\n( ) Conjunto de conhecimentos, processos, métodos e habilidades empregados de forma padronizada.\n( ) Emprego organizado dos recursos para alcançar objetivos específicos na situação operacional.\n( ) Processo de planejamento e emprego de recursos para objetivos mais amplos da operação. ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "1, 2, 3, 4 "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "2, 1, 4, 3 "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "1, 2, 4, 3 "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "3, 2, 1, 4 "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Arte = adaptação; Técnica = processos padronizados; Tática = emprego organizado para objetivos específicos; Estratégia = objetivos amplos. ",
+			"fundamento ": "Capítulo 1, Seção 1.2 - Conceitos fundamentais. "
+		},
+		{
+			"id ": 38,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.2.3 e 1.2.4 Tática e Estratégia ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Sobre a relação entre Estratégia e Tática, assinale a alternativa CORRETA: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "A tática define os objetivos gerais e a estratégia define como os recursos serão empregados. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "A estratégia estabelece o que se pretende alcançar (objetivos gerais), enquanto a tática estabelece como os recursos serão empregados para alcançá-los. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Estratégia e tática são sinônimos no Sistema de Comando de Incidentes. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "A tática é uma sequência rígida de procedimentos que não permite adaptação. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "A apostila deixa claro: a estratégia estabelece o que se pretende alcançar, enquanto a tática estabelece o como. ",
+			"fundamento ": "Capítulo 1, Seções 1.2.3 e 1.2.4. "
+		},
+		{
+			"id ": 39,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.2.3 Tática ",
+			"dificuldade ": "média ",
+			"pergunta ": "Complete a definição oficial de tática de combate a incêndio apresentada na apostila:\n“A arte de dispor e empregar homens, equipamentos e recursos, mediante avaliação adequada da situação, estabelecendo um plano de ação destinado a alcançar os objetivos operacionais com __________, eficiência e no menor tempo possível.” ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "rapidez "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "segurança "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "agressividade "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "economia "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "A definição literal da apostila inclui “com segurança, eficiência e no menor tempo possível”. ",
+			"fundamento ": "Capítulo 1, Seção 1.2.3 - Tática. "
+		},
+		{
+			"id ": 40,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.3 Ordens e Instruções ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Julgue as afirmativas:\nI. Ordens são determinações destinadas a orientar a atuação dos subordinados e devem ser cumpridas.\nII. Instruções têm caráter predominantemente educativo e preparatório.\nIII. Uma ordem deve ser clara, objetiva, compreensível e compatível com a situação.\nIV. A ordem está diretamente relacionada à execução de uma ação, enquanto a instrução é mais educativa.\n\nAssinale a opção correta: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Apenas I e III estão corretas. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Apenas II e IV estão corretas. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Todas as afirmativas estão corretas. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Apenas I, II e III estão corretas. "
+				}
+			],
+			"correta ": "C ",
+			"explicacao ": "Todas as afirmativas reproduzem fielmente o conteúdo das seções 1.3.1 e 1.3.2. ",
+			"fundamento ": "Capítulo 1, Seção 1.3 - Ordens e instruções. "
+		},
+		{
+			"id ": 41,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.4 Combate a Incêndio ",
+			"dificuldade ": "média ",
+			"pergunta ": "O combate a incêndio compreende um conjunto de ações. Qual das opções abaixo NÃO faz parte da lista de 10 ações apresentadas na apostila? ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Identificar e avaliar a situação. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Proteger e salvar vidas. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Realizar o rescaldo com excesso de água para garantir a extinção total. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Confirmar a extinção e controlar eventuais reignições. "
+				}
+			],
+			"correta ": "C ",
+			"explicacao ": "A apostila lista 10 ações específicas. O rescaldo com excesso de água não consta; pelo contrário, o emprego inadequado de água é citado como dano secundário. ",
+			"fundamento ": "Capítulo 1, Seção 1.4 - Combate a incêndio. "
+		},
+		{
+			"id ": 42,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.5.1 O Ciclo Tático ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "O ciclo tático apresentado na apostila é representado pela sequência contínua: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Planejar → Executar → Avaliar → Monitorar → Ajustar → Reavaliar "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Avaliar → Planejar → Executar → Monitorar → Reavaliar → Ajustar "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Executar → Avaliar → Planejar → Ajustar → Monitorar → Reavaliar "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Reconhecer → Atacar → Controlar → Extinguir → Rescaldar → Desmobilizar "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "A apostila apresenta explicitamente: Avaliar → Planejar → Executar → Monitorar → Reavaliar → Ajustar. ",
+			"fundamento ": "Capítulo 1, Seção 1.5.1 - O ciclo tático. "
+		},
+		{
+			"id ": 43,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.5.1 O Ciclo Tático ",
+			"dificuldade ": "média ",
+			"pergunta ": "Um Sargento BM observa que, após o início do ataque, a intensidade do fogo aumentou e a fumaça mudou de cor. De acordo com o ciclo tático, qual deve ser a próxima ação prioritária? ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Manter o plano original a qualquer custo. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Reavaliar a situação e ajustar o plano se necessário. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Aumentar imediatamente a vazão de água sem nova avaliação. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Retirar todas as equipes e declarar o combate defensivo. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "O ciclo tático é contínuo. A execução produz novos dados; o monitoramento e a reavaliação determinam se a estratégia permanece adequada. ",
+			"fundamento ": "Capítulo 1, Seção 1.5.1 - O ciclo tático. "
+		},
+		{
+			"id ": 44,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.7 Princípios do Pensamento Tático ",
+			"dificuldade ": "média ",
+			"pergunta ": "Sobre os princípios do pensamento tático, analise:\nI. A preservação da vida (vítimas e bombeiros) constitui prioridade permanente.\nII. Quanto mais complexa a situação, maior a importância de planos simples, claros e executáveis.\nIII. A tática deve permitir alterações diante de mudanças nas condições do incêndio.\nIV. Economia de recursos significa utilizar o mínimo possível de equipamentos e pessoal.\n\nEstão corretas: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "I, II e III apenas. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "I, II, III e IV. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "II e IV apenas. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "I e III apenas. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "A IV está incorreta. Economia de recursos significa empregar cada recurso onde ele produza maior efeito operacional, não utilizar menos. ",
+			"fundamento ": "Capítulo 1, Seção 1.7 - Princípios do pensamento tático. "
+		},
+		{
+			"id ": 45,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.7.1 Segurança ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Verdadeiro ou Falso:\n“Nenhum objetivo material deve justificar exposição desnecessária dos bombeiros a riscos que possam ser evitados ou controlados.” ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Verdadeiro "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Falso "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Verdadeiro apenas se houver vítimas confirmadas. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Falso, pois o patrimônio de alto valor justifica risco controlado. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "A afirmativa é literal da seção 1.7.1 Segurança. ",
+			"fundamento ": "Capítulo 1, Seção 1.7.1 - Segurança. "
+		},
+		{
+			"id ": 46,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.8 Papel do Sargento BM ",
+			"dificuldade ": "média ",
+			"pergunta ": "Um Sargento BM deve desenvolver a capacidade de “enxergar além da tarefa individual”. Isso significa que: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Ele deve se preocupar apenas com a sua própria equipe. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "É necessário compreender como a ação local se relaciona com o conjunto da operação. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "O Sargento não deve emitir ordens, apenas executar. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "A aplicação de água e a ventilação não influenciam outras equipes. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "A apostila enfatiza que decisões locais (água, ventilação, abertura de porta) podem produzir efeitos que ultrapassam o espaço da equipe e devem estar alinhadas ao plano tático geral. ",
+			"fundamento ": "Capítulo 1, Seção 1.8 - O papel do Sargento BM. "
+		},
+		{
+			"id ": 47,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.9 Processo de Decisão ",
+			"dificuldade ": "média ",
+			"pergunta ": "Diante de uma ocorrência, o bombeiro deve responder a perguntas fundamentais. Qual sequência melhor representa o processo descrito na apostila? ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "O que está acontecendo? → Quais são os riscos? → O que precisa ser protegido primeiro? → Quais recursos estão disponíveis? → Qual ação produzirá maior efeito? → A ação está funcionando? → As condições mudaram? "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Qual é a vazão necessária? → Onde está a vítima? → Qual esguicho usar? "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Atacar imediatamente → Avaliar depois → Ajustar se sobrar tempo. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Chamar reforço → Esperar o Comandante → Seguir ordens. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "A sequência reproduz exatamente as perguntas fundamentais listadas na seção 1.9. ",
+			"fundamento ": "Capítulo 1, Seção 1.9 - Combate a incêndio como processo de decisão. "
+		},
+		{
+			"id ": 48,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.10 Eficiência ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "A eficiência operacional resulta da combinação entre: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "conhecimento + avaliação + planejamento + técnica + liderança + coordenação + reavaliação. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "apenas vazão alta de água + muitos bombeiros. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "equipamentos modernos + agentes químicos. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "velocidade de deslocamento + agressividade no ataque. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "A fórmula é apresentada literalmente na seção 1.10. ",
+			"fundamento ": "Capítulo 1, Seção 1.10 - Eficiência no combate a incêndio. "
+		},
+		{
+			"id ": 49,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.11 Dinâmica dos Incêndios Modernos ",
+			"dificuldade ": "média ",
+			"pergunta ": "Nos incêndios modernos, o bombeiro não deve analisar somente onde estão as chamas, mas também: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Apenas a cor da fumaça. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "De onde o incêndio recebe oxigênio, para onde os gases quentes se deslocam, quais compartimentos estão envolvidos e quais aberturas existem. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Somente a quantidade de água disponível. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Apenas a presença de vítimas. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "A apostila lista explicitamente esses fatores de análise ampliada. ",
+			"fundamento ": "Capítulo 1, Seção 1.11 - Considerações sobre a dinâmica dos incêndios modernos. "
+		},
+		{
+			"id ": 50,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.13 Síntese ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Complete a frase da síntese do capítulo:\n“Combater incêndios não significa apenas apagar o fogo. Significa compreender o cenário, estabelecer prioridades, proteger vidas, controlar os riscos, empregar adequadamente os recursos e conduzir a ocorrência de forma __________ e eficiente.” ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "rápida "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "segura "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "agressiva "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "econômica "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "A frase literal da apostila usa “segura e eficiente”. ",
+			"fundamento ": "Capítulo 1, Seção 1.13 - Síntese do capítulo. "
+		},
+		{
+			"id ": 51,
+			"titulo ": "Capítulo 2 ",
+			"tema ": "Fundamentos do Comando e Controle ",
+			"dificuldade ": "média ",
+			"pergunta ": "Os quatro pilares fundamentais da atividade de comando de operações de combate a incêndio são: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Ataque, Defesa, Rescaldo e Desmobilização. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Planejamento, Organização, Direção e Controle. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Reconhecimento, Salvamento, Combate e Extinção. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Segurança, Acesso, Confinamento e Extinção. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "A apostila apresenta tabela com os quatro pilares: Planejamento, Organização, Direção e Controle. ",
+			"fundamento ": "Capítulo 2 - Fundamentos do Comando e Controle. "
+		},
+		{
+			"id ": 52,
+			"titulo ": "Capítulo 2 ",
+			"tema ": "Fundamentos do Comando e Controle ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "No pilar “Direção”, a emissão de ordens deve seguir a cadeia de comando e garantir que a mensagem seja: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Clara, objetiva, direta e segura, certificando-se de que foi perfeitamente compreendida. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Longa e detalhada para evitar dúvidas. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Transmitida apenas por rádio em código. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Deixada a critério de cada bombeiro. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Texto literal da tabela do Capítulo 2. ",
+			"fundamento ": "Capítulo 2 - Pilar Direção. "
+		},
+		{
+			"id ": 53,
+			"titulo ": "Capítulo 3 ",
+			"tema ": "Objetivos Gerais e Visão em Túnel ",
+			"dificuldade ": "média ",
+			"pergunta ": "A “Armadilha Mortal: Visão em Túnel (Tunnel Vision)” ocorre quando: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "O Comandante fixa a atenção exclusivamente em um único ponto crítico e perde a consciência situacional global (360°). "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "A equipe se concentra demais na segurança. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Há excesso de comunicação por rádio. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "O incêndio se propaga muito rápido. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Definição literal da apostila. A regra de comando é delegar um responsável tático pelo setor problemático e manter a coordenação global. ",
+			"fundamento ": "Capítulo 3 - Armadilha Mortal: A Visão em Túnel. "
+		},
+		{
+			"id ": 54,
+			"titulo ": "Capítulo 3 ",
+			"tema ": "Filosofia Risco versus Benefício ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "De acordo com a filosofia operacional de Risco versus Benefício: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Arriscar muito para salvar muito; Arriscar pouco para salvar pouco; Não arriscar nada para salvar nada. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Sempre arriscar o máximo para salvar qualquer patrimônio. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Nunca arriscar, independentemente da situação. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Arriscar apenas se houver ordem escrita do Comandante. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "A apostila apresenta exatamente essa trilogia. ",
+			"fundamento ": "Capítulo 3, Seção 3.1 - Filosofia Operacional de Risco versus Benefício. "
+		},
+		{
+			"id ": 55,
+			"titulo ": "Capítulo 3 ",
+			"tema ": "Hierarquia dos Objetivos Primários ",
+			"dificuldade ": "média ",
+			"pergunta ": "A hierarquia correta dos Objetivos Primários, segundo a apostila, é: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "1. Extinção → 2. Confinamento → 3. Salvamento → 4. Segurança "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "1. Segurança → 2. Acesso Adequado → 3. Salvamento → 4. Proteção de Exposição → 5. Confinamento → 6. Extinção "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "1. Salvamento → 2. Segurança → 3. Extinção → 4. Rescaldo "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "1. Acesso → 2. Combate → 3. Ventilação → 4. Rescaldo "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "A ordem é apresentada graficamente e textualmente na apostila. ",
+			"fundamento ": "Capítulo 3, Seção 3.2 - Hierarquia dos Objetivos Primários. "
+		},
+		{
+			"id ": 56,
+			"titulo ": "Capítulo 4 ",
+			"tema ": "As 11 Fases do Combate a Incêndio ",
+			"dificuldade ": "média ",
+			"pergunta ": "Qual das opções apresenta a sequência correta das 11 fases do combate a incêndio? ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Aviso → Deslocamento → Reconhecimento → Planejamento (PAI) → Estabelecimento → Salvamento & Busca → Combate → Controle → Inspeção Final → Rescaldo → Desmobilização "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Reconhecimento → Combate → Rescaldo → Desmobilização "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Aviso → Combate → Controle → Extinção → Rescaldo "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Deslocamento → Ataque → Ventilação → Busca → Rescaldo "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "A sequência completa é apresentada na tabela do Capítulo 4. ",
+			"fundamento ": "Capítulo 4 - As 11 Fases do Combate a Incêndio. "
+		},
+		{
+			"id ": 57,
+			"titulo ": "Capítulo 4 ",
+			"tema ": "As 11 Fases - Reconhecimento e Planejamento ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Na fase de Reconhecimento, a ação crítica do Comandante / Guarnição é: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Varredura rápida (360° no local) para leitura das condições de fumaça, calor, integridade estrutural e fontes hídricas. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Montagem imediata de linhas de ataque. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Evacuação completa da área. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Chamada de reforços sem avaliação prévia. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Texto literal da tabela da fase 3. ",
+			"fundamento ": "Capítulo 4 - Fase 3. Reconhecimento. "
+		},
+		{
+			"id ": 58,
+			"titulo ": "Capítulo 4 ",
+			"tema ": "As 11 Fases - Controle e Rescaldo ",
+			"dificuldade ": "média ",
+			"pergunta ": "Durante a fase de Controle, a apostila recomenda checagem da efetividade tática a cada: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "5 minutos. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "10 minutos. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "15 minutos. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "30 minutos. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "A tabela indica “checagem da efetividade tática a cada 10 minutos”. ",
+			"fundamento ": "Capítulo 4 - Fase 8. Controle. "
+		},
+		{
+			"id ": 59,
+			"titulo ": "Capítulo 5 ",
+			"tema ": "Sistema de Comando de Incidentes (SCI) ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "O Posto de Comando (PC) deve ser instalado: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Obrigatoriamente na chegada da primeira equipe, em local fixo, seguro e com boa visibilidade da cena (preferencialmente na esquina das duas principais faces do prédio). "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Somente após o confinamento do incêndio. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Dentro da zona quente para melhor visualização. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Em qualquer local conveniente para o Comandante. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Definição literal da tabela do Capítulo 5. ",
+			"fundamento ": "Capítulo 5 - Posto de Comando (PC). "
+		},
+		{
+			"id ": 60,
+			"titulo ": "Capítulo 5 ",
+			"tema ": "Setorização Geográfica ",
+			"dificuldade ": "média ",
+			"pergunta ": "Na setorização externa por faces (sentido horário), a Face A (Alfa) corresponde a: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Fachada traseira/posterior da estrutura. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Fachada principal de entrada do prédio e estabelecimento primário de recursos. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Face lateral esquerda do edifício. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Face lateral direita do edifício. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "Face A (Alfa) = fachada principal de entrada. ",
+			"fundamento ": "Capítulo 5, Seção 5.1 - Setorização externa por faces. "
+		},
+		{
+			"id ": 61,
+			"titulo ": "Capítulo 5 ",
+			"tema ": "Setorização Geográfica ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Complete a correspondência correta das faces:\nFace B (Bravo) = __________\nFace C (Charlie) = __________\nFace D (Delta) = __________ ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Lateral esquerda; Traseira; Lateral direita "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Lateral direita; Principal; Traseira "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Traseira; Lateral esquerda; Principal "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Principal; Lateral direita; Lateral esquerda "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Bravo = lateral esquerda; Charlie = traseira; Delta = lateral direita. ",
+			"fundamento ": "Capítulo 5, Seção 5.1 - Setorização externa por faces. "
+		},
+		{
+			"id ": 62,
+			"titulo ": "Capítulo 5 ",
+			"tema ": "Stage Interno em Edifícios Altos ",
+			"dificuldade ": "média ",
+			"pergunta ": "Em edifícios altos, o Stage Interno (divisão interna) deve ser estabelecido: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "No mesmo pavimento do incêndio. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "1 a 2 pavimentos abaixo do andar sinistrado (pavimento seguro e livre de fumaça). "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "No térreo, independentemente da altura. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "No pavimento imediatamente acima do incêndio. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "A apostila determina posicionamento estratégico 1 a 2 pavimentos abaixo. ",
+			"fundamento ": "Capítulo 5, Seção 5.1.1 - Divisão interna em edifícios altos. "
+		},
+		{
+			"id ": 63,
+			"titulo ": "Capítulo 5 ",
+			"tema ": "Stage Interno em Edifícios Altos ",
+			"dificuldade ": "média ",
+			"pergunta ": "A linha de ataque primária em edifícios altos deve ser conectada: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "No hidrante de parede localizado um pavimento abaixo do incêndio. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Diretamente no hidrante do pavimento sinistrado. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Na bomba da viatura no térreo, sem conexão intermediária. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Em qualquer hidrante disponível no prédio. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "A conexão um pavimento abaixo garante proteção da guarnição na escada. ",
+			"fundamento ": "Capítulo 5, Seção 5.1.1 - Divisão interna em edifícios altos. "
+		},
+		{
+			"id ": 64,
+			"titulo ": "Capítulo 6 ",
+			"tema ": "Dez Regras de Sobrevivência ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Qual das regras abaixo NÃO faz parte das Dez Regras de Sobrevivência do Bombeiro? ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Use sempre o cinto de segurança com a viatura em movimento. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Nunca opere sem EPI completo e EPR ajustado. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Trabalhe isolado quando a situação exigir rapidez. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Estabeleça uma Equipe de Intervenção Rápida (EIR/RIT) em prontidão. "
+				}
+			],
+			"correta ": "C ",
+			"explicacao ": "A regra 9 determina trabalho em duplas: ninguém trabalha isolado no combate interior. ",
+			"fundamento ": "Capítulo 6 - Dez Regras de Sobrevivência do Bombeiro. "
+		},
+		{
+			"id ": 65,
+			"titulo ": "Capítulo 6 ",
+			"tema ": "Dez Regras de Sobrevivência ",
+			"dificuldade ": "média ",
+			"pergunta ": "A regra “EPR Limite” significa: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "O visor da máscara de proteção respiratória é o limite extremo da vida do bombeiro. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "O EPR deve ser usado apenas em ambientes com fumaça visível. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "O tempo de ar do EPR é ilimitado se o cilindro estiver cheio. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "O EPR pode ser removido em áreas de baixa concentração de fumaça. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Regra 3 literal: “Lembre-se que o visor da sua máscara de proteção respiratória é o limite extremo da sua vida.” ",
+			"fundamento ": "Capítulo 6 - Regra 3. "
+		},
+		{
+			"id ": 66,
+			"titulo ": "Capítulo 6 ",
+			"tema ": "Dez Regras de Sobrevivência ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Verdadeiro ou Falso:\n“Garanta o suprimento contínuo e a pressurização da linha de ataque antes de adentrar na zona quente.” ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Verdadeiro "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Falso "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Verdadeiro apenas em incêndios de grandes proporções. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Falso, pois a pressurização pode ser feita após a entrada. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Regra 5 literal. ",
+			"fundamento ": "Capítulo 6 - Regra 5. "
+		},
+		{
+			"id ": 67,
+			"titulo ": "Capítulo 7 ",
+			"tema ": "Método B-SAHF ",
+			"dificuldade ": "média ",
+			"pergunta ": "O método de leitura tática do incêndio antes da abertura de portas é o B-SAHF. O que significa cada letra? ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Building, Smoke, Air-track, Heat, Flame "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Burning, Safety, Attack, Hose, Flow "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Backdraft, Smoke, Air, Heat, Fire "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Building, Safety, Access, Heat, Flame "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "B-SAHF = Building (Edificação), Smoke (Fumaça), Air-track (Arrastamento de Ar), Heat (Calor), Flame (Chama). ",
+			"fundamento ": "Capítulo 7 - Leitura Tática do Incêndio — Método B-SAHF. "
+		},
+		{
+			"id ": 68,
+			"titulo ": "Capítulo 7 ",
+			"tema ": "Método B-SAHF ",
+			"dificuldade ": "média ",
+			"pergunta ": "No método B-SAHF, fumaça escura e densa indica: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Incêndio controlado. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Flashover iminente. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Falta de combustível. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Boa ventilação. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "A apostila afirma: fumaça escura e densa = flashover iminente. ",
+			"fundamento ": "Capítulo 7 - Método B-SAHF (Smoke). "
+		},
+		{
+			"id ": 69,
+			"titulo ": "Capítulo 7 ",
+			"tema ": "Passagem de Portas ",
+			"dificuldade ": "média ",
+			"pergunta ": "No procedimento de passagem de portas, a abertura de controle inicial deve ser de no máximo: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "15 cm (6 polegadas). "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "30 cm. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "50 cm. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Abertura total imediata. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Passo 2: abertura de no máximo 6 polegadas / 150 mm. ",
+			"fundamento ": "Capítulo 7, Seção 7.1 - Execução Passo a Passo. "
+		},
+		{
+			"id ": 70,
+			"titulo ": "Capítulo 7 ",
+			"tema ": "Passagem de Portas ",
+			"dificuldade ": "média ",
+			"pergunta ": "Após o resfriamento de proteção (névoa a 45°), a porta deve ser fechada por quanto tempo para estabilização térmica? ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "5 segundos. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "10 segundos. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "15 segundos. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "30 segundos. "
+				}
+			],
+			"correta ": "C ",
+			"explicacao ": "Passo 4: fechamento completo por 15 segundos. ",
+			"fundamento ": "Capítulo 7, Seção 7.1 - Passo 4. "
+		},
+		{
+			"id ": 71,
+			"titulo ": "Capítulo 7 ",
+			"tema ": "Passagem de Portas ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Durante a passagem de portas, a equipe deve posicionar-se: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Em pé, na frente da porta. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Agachada, fora da projeção da abertura (lateral da porta). "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Deitada no chão em frente à porta. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Em qualquer posição, desde que com EPI. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "Passo 1: posicionamento agachado, fora da projeção da abertura. ",
+			"fundamento ": "Capítulo 7, Seção 7.1 - Passo 1. "
+		},
+		{
+			"id ": 72,
+			"titulo ": "Capítulo 8 ",
+			"tema ": "Combate 3D e Dinâmica das Gotículas ",
+			"dificuldade ": "média ",
+			"pergunta ": "No Combate a Incêndio em 3D, o objetivo principal é: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Resfriar a fase gasosa (camada de gases e fumaça combustível no teto) com água em névoa. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Aplicar jato compacto diretamente nas chamas. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Encher o compartimento com água. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Usar apenas espuma. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "O Combate 3D baseia-se no resfriamento da fase gasosa para conter a queima de gases e prevenir flashover. ",
+			"fundamento ": "Capítulo 8 - Técnicas de Jatos d’Água e Combate 3D. "
+		},
+		{
+			"id ": 73,
+			"titulo ": "Capítulo 8 ",
+			"tema ": "Dinâmica das Gotículas ",
+			"dificuldade ": "média ",
+			"pergunta ": "O tamanho ideal de gotícula para resfriamento eficiente da fase gasosa é: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "0,1 mm. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "0,3 mm (300 mícrons). "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "0,8 mm. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Jato compacto (sem fracionamento). "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "Gotículas de 0,3 mm oferecem a máxima superfície de contato com os gases. ",
+			"fundamento ": "Capítulo 8, Seção 8.1 - Dinâmica das Gotículas de Água. "
+		},
+		{
+			"id ": 74,
+			"titulo ": "Capítulo 8 ",
+			"tema ": "Expansão do Vapor ",
+			"dificuldade ": "média ",
+			"pergunta ": "1 litro de água líquida expande-se aproximadamente quantas vezes a 1.000 °C? ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "1.600 vezes. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "3.000 vezes. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "5.900 vezes. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "10.000 vezes. "
+				}
+			],
+			"correta ": "C ",
+			"explicacao ": "A apostila informa: ~1.600 vezes a 100 °C e ~5.900 vezes a 1.000 °C. ",
+			"fundamento ": "Capítulo 8, Seção 8.1 - Expansão Volumétrica do Vapor. "
+		},
+		{
+			"id ": 75,
+			"titulo ": "Capítulo 8 ",
+			"tema ": "Força de Reação do Esguicho ",
+			"dificuldade ": "média ",
+			"pergunta ": "A força de reação máxima recomendada para um operador solo (1 bombeiro) é: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "266 N (60 lbf). "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "333 N (75 lbf). "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "422 N (95 lbf). "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "500 N. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Tabela da seção 8.2: Operador Solo → até 266 N (60 lbf). ",
+			"fundamento ": "Capítulo 8, Seção 8.2 - Força de Reação do Esguicho. "
+		},
+		{
+			"id ": 76,
+			"titulo ": "Capítulo 8 ",
+			"tema ": "Força de Reação do Esguicho ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Para uma dupla de ataque (2 bombeiros), a força de reação máxima recomendada é: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "266 N (60 lbf). "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "333 N (75 lbf). "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "422 N (95 lbf). "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "600 N. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "Tabela: Dupla de Ataque → até 333 N (75 lbf). ",
+			"fundamento ": "Capítulo 8, Seção 8.2. "
+		},
+		{
+			"id ": 77,
+			"titulo ": "Capítulo 8 ",
+			"tema ": "Taxa de Vazão Tática Mínima ",
+			"dificuldade ": "média ",
+			"pergunta ": "A vazão mínima segura de ataque interno, segundo a apostila, é de: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "50 gpm (190 L/min). "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "100 gpm (380 L/min). "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "150 gpm (570 L/min). "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "200 gpm (760 L/min). "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "Qualquer vazão abaixo de 100 gpm (380 L/min) expõe os militares a serem superados em um flashover súbito. ",
+			"fundamento ": "Capítulo 8, Seção 8.3 - Taxa de Vazão Tática Mínima de Segurança. "
+		},
+		{
+			"id ": 78,
+			"titulo ": "Capítulo 8 ",
+			"tema ": "Fórmulas Grimwood ",
+			"dificuldade ": "média ",
+			"pergunta ": "Em condição de queima normal, a fórmula de vazão mínima (Método Grimwood) é: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Área envolvida (m²) × 2 "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Área envolvida (m²) × 4 "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Área envolvida (m²) × 6 "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Área envolvida (m²) × 10 "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "Condição de Queima Normal (TVT): Vazão Mínima (L/min) = Área (m²) × 4. ",
+			"fundamento ": "Capítulo 8, Seção 8.3 - Fórmulas de Campo (Método Grimwood). "
+		},
+		{
+			"id ": 79,
+			"titulo ": "Capítulo 8 ",
+			"tema ": "Fórmulas Grimwood ",
+			"dificuldade ": "média ",
+			"pergunta ": "Em condição de deterioração estrutural ou ação de ventilação por vento, a fórmula de vazão mínima é: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Área (m²) × 4 "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Área (m²) × 5 "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Área (m²) × 6 "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Área (m²) × 8 "
+				}
+			],
+			"correta ": "C ",
+			"explicacao ": "Condição de Deterioração Estrutural ou Ação de Ventilação por Vento: Área × 6. ",
+			"fundamento ": "Capítulo 8, Seção 8.3 - Fórmulas de Campo. "
+		},
+		{
+			"id ": 80,
+			"titulo ": "Capítulo 8 ",
+			"tema ": "Fórmulas Grimwood - Aplicação Prática ",
+			"dificuldade ": "média ",
+			"pergunta ": "Um apartamento com 100 m² de área de incêndio em condição de queima normal exige vazão mínima de: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "200 L/min. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "400 L/min. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "600 L/min. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "800 L/min. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "100 m² × 4 = 400 L/min (exemplo literal da apostila). ",
+			"fundamento ": "Capítulo 8, Seção 8.3 - Exemplo de cálculo. "
+		},
+		{
+			"id ": 81,
+			"titulo ": "Capítulo 8 ",
+			"tema ": "Fórmulas Grimwood - Aplicação Prática ",
+			"dificuldade ": "média ",
+			"pergunta ": "Uma área de 75 m² sob ação de vento exige vazão mínima segura de: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "300 L/min. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "450 L/min. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "600 L/min. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "750 L/min. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "75 m² × 6 = 450 L/min (exemplo literal da apostila). ",
+			"fundamento ": "Capítulo 8, Seção 8.3 - Exemplo de cálculo. "
+		},
+		{
+			"id ": 82,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.6 Estratégia e Tática ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Diante de um incêndio em edificação residencial, a prioridade estratégica da preservação da vida pode ser alcançada por ações táticas como: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Apenas o ataque direto às chamas. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Reconhecimento da edificação, estabelecimento de equipes de busca, proteção de rotas de acesso e saída, controle do incêndio, linhas de ataque, controle da ventilação e localização/retirada de vítimas. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Somente a aplicação de água em grande volume. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Esperar a chegada de mais recursos antes de qualquer ação. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "A apostila lista exatamente essas ações táticas como meio de atingir o objetivo estratégico de preservação da vida. ",
+			"fundamento ": "Capítulo 1, Seção 1.6 - Estratégia e tática no combate a incêndios. "
+		},
+		{
+			"id ": 83,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.7.4 Flexibilidade ",
+			"dificuldade ": "média ",
+			"pergunta ": "Uma estratégia inicialmente adequada pode deixar de ser eficiente após: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Aumento da intensidade do fogo, mudança do fluxo de ar, colapso parcial, descoberta de vítimas, redução de água, alteração da propagação ou comprometimento da segurança. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Apenas se o Comandante mudar de ideia. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Somente após o rescaldo. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Nunca, pois o plano inicial deve ser mantido. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "A apostila lista exatamente esses fatores que exigem flexibilidade. ",
+			"fundamento ": "Capítulo 1, Seção 1.7.4 - Flexibilidade. "
+		},
+		{
+			"id ": 84,
+			"titulo ": "Capítulo 3 ",
+			"tema ": "Hierarquia dos Objetivos Primários ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Verdadeiro ou Falso:\n“A Segurança de toda a operação deve ser sempre o primeiro e mais importante objetivo do Comandante de Socorro.” ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Verdadeiro "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Falso "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Verdadeiro apenas se não houver vítimas. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Falso, pois o salvamento é sempre prioritário. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Afirmação literal do início do Capítulo 3. ",
+			"fundamento ": "Capítulo 3 - Objetivos Gerais do Combate a Incêndio. "
+		},
+		{
+			"id ": 85,
+			"titulo ": "Capítulo 4 ",
+			"tema ": "As 11 Fases - Salvamento & Busca ",
+			"dificuldade ": "média ",
+			"pergunta ": "Na fase de Salvamento & Busca: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "A busca minuciosa deve ocorrer antes de qualquer combate. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "A busca rápida e evacuação de pessoas conscientes ocorre de forma paralela ao combate; a busca minuciosa ocorre após o confinamento. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Não se realiza busca até a extinção total. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "A busca é responsabilidade exclusiva da equipe de resgate externa. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "Texto literal da tabela da fase 6. ",
+			"fundamento ": "Capítulo 4 - Fase 6. Salvamento & Busca. "
+		},
+		{
+			"id ": 86,
+			"titulo ": "Capítulo 5 ",
+			"tema ": "SCI - Área de Espera e Base ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "A Área de Espera (E) tem como função: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Estacionamento ordenado de viaturas adicionais em fila única na lateral da via, mantendo corredor livre para ambulâncias. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Centralização de logística em ocorrências de longa duração. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Local de descanso dos bombeiros dentro da zona quente. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Posto de comando avançado. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Definição da tabela do Capítulo 5. ",
+			"fundamento ": "Capítulo 5 - Área de Espera (E). "
+		},
+		{
+			"id ": 87,
+			"titulo ": "Capítulo 6 ",
+			"tema ": "Dez Regras de Sobrevivência ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "A regra “Permanecer abaixado” orienta o bombeiro a: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Ficar abaixo do plano neutro de calor na entrada, durante o combate e na saída. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Trabalhar sempre deitado. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Evitar o uso de escadas. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Não entrar em ambientes com fumaça. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Regra 6 literal. ",
+			"fundamento ": "Capítulo 6 - Regra 6. "
+		},
+		{
+			"id ": 88,
+			"titulo ": "Capítulo 7 ",
+			"tema ": "Método B-SAHF - Air-track ",
+			"dificuldade ": "média ",
+			"pergunta ": "No método B-SAHF, movimento pulsante de ar nas frestas indica risco agudo de: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Flashover. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Backdraft. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Colapso estrutural. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Falta de combustível. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "Air-track: movimento pulsante indica risco agudo de Backdraft. ",
+			"fundamento ": "Capítulo 7 - Método B-SAHF (Air-track). "
+		},
+		{
+			"id ": 89,
+			"titulo ": "Capítulo 8 ",
+			"tema ": "Combate 3D ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Gotículas menores que 0,2 mm são ineficazes porque: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "São arrastadas facilmente pela convecção e evaporam antes de penetrar na pluma térmica. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "São excessivamente pesadas. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Não evaporam. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Geram excesso de vapor superaquecido. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Texto literal da seção 8.1. ",
+			"fundamento ": "Capítulo 8, Seção 8.1 - Dinâmica das Gotículas. "
+		},
+		{
+			"id ": 90,
+			"titulo ": "Capítulo 8 ",
+			"tema ": "Combate 3D ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Gotículas maiores que 0,6 mm são ineficazes porque: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "São arrastadas pela convecção. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "São excessivamente pesadas, passam pela camada de fumaça sem evaporar e colidem com paredes/chão, gerando excesso de vapor superaquecido. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Evaporam rápido demais. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Não atingem o teto. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "Texto literal da seção 8.1. ",
+			"fundamento ": "Capítulo 8, Seção 8.1 - Dinâmica das Gotículas. "
+		},
+		{
+			"id ": 91,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.2.2 Técnica ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "São exemplos de conhecimentos técnicos no combate a incêndio, EXCETO: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Utilização de EPI. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Operação de mangueiras, esguichos e bombas. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Definição dos objetivos estratégicos da operação. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Técnicas de ventilação e busca e salvamento. "
+				}
+			],
+			"correta ": "C ",
+			"explicacao ": "A definição de objetivos estratégicos pertence à Estratégia, não à Técnica. ",
+			"fundamento ": "Capítulo 1, Seção 1.2.2 - Técnica. "
+		},
+		{
+			"id ": 92,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.7.6 Economia de Recursos ",
+			"dificuldade ": "média ",
+			"pergunta ": "Economia de recursos no combate a incêndio significa: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Utilizar o mínimo possível de equipamentos e pessoal. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Empregar cada recurso onde ele produza maior efeito operacional. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Evitar o uso de linhas de ataque. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Não chamar reforços. "
+				}
+			],
+			"correta ": "B ",
+			"explicacao ": "A apostila esclarece que não significa utilizar menos, mas empregar cada recurso onde produza maior efeito. ",
+			"fundamento ": "Capítulo 1, Seção 1.7.6 - Economia de recursos. "
+		},
+		{
+			"id ": 93,
+			"titulo ": "Capítulo 2 ",
+			"tema ": "Fundamentos do Comando e Controle ",
+			"dificuldade ": "média ",
+			"pergunta ": "No pilar “Controle”, a ação principal é: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Acompanhamento ininterrupto do comportamento do fogo e do progresso das guarnições, efetuando revisões periódicas do PAI e evitando desvios táticos. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Apenas a emissão de ordens. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "A montagem das linhas de mangueira. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "O posicionamento das viaturas. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Texto literal da tabela do Capítulo 2. ",
+			"fundamento ": "Capítulo 2 - Pilar Controle. "
+		},
+		{
+			"id ": 94,
+			"titulo ": "Capítulo 4 ",
+			"tema ": "As 11 Fases - Inspeção Final e Rescaldo ",
+			"dificuldade ": "média ",
+			"pergunta ": "Na fase de Inspeção Final, a ação crítica inclui: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Varredura minuciosa por pontos quentes escondidos em forros e dutos, e preservação estrita do local para fins periciais. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Aplicação de grande volume de água em todas as superfícies. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Desmobilização imediata de todas as equipes. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Abertura de todas as janelas para ventilação total. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Texto literal da tabela da fase 9. ",
+			"fundamento ": "Capítulo 4 - Fase 9. Inspeção Final. "
+		},
+		{
+			"id ": 95,
+			"titulo ": "Capítulo 4 ",
+			"tema ": "As 11 Fases - Rescaldo ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "O Rescaldo é definido como: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Fase ativa de revolvimento do material queimado com aplicação estritamente controlada de água para evitar novos focos. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Aplicação de excesso de água para garantir extinção. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Apenas a retirada de escombros. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "A desmobilização das equipes. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Texto literal da tabela da fase 10. ",
+			"fundamento ": "Capítulo 4 - Fase 10. Rescaldo. "
+		},
+		{
+			"id ": 96,
+			"titulo ": "Capítulo 5 ",
+			"tema ": "SCI - Base ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "A Base (B) é montada em ocorrências de longa duração para: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Centralização de logística: reabastecimento de cilindros, hidratação, reabilitação física e suprimentos. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Posto de comando principal. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Área de espera de viaturas. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Local de ataque direto ao fogo. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Definição literal da tabela do Capítulo 5. ",
+			"fundamento ": "Capítulo 5 - Base (B). "
+		},
+		{
+			"id ": 97,
+			"titulo ": "Capítulo 6 ",
+			"tema ": "Dez Regras de Sobrevivência ",
+			"dificuldade ": "média ",
+			"pergunta ": "A regra de “Trabalho em Duplas” determina que: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Ninguém trabalha isolado no combate interior (parceria). "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "É permitido trabalhar sozinho se o EPI estiver completo. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Apenas o líder pode trabalhar isolado. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "O trabalho em duplas é opcional. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Regra 9 literal. ",
+			"fundamento ": "Capítulo 6 - Regra 9. "
+		},
+		{
+			"id ": 98,
+			"titulo ": "Capítulo 7 ",
+			"tema ": "Passagem de Portas - Passo a Passo ",
+			"dificuldade ": "média ",
+			"pergunta ": "No Passo 3 da passagem de portas, o esguichador projeta uma rajada curta de névoa de água: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "A um ângulo de 45 graus em relação ao solo na parte superior da abertura para resfriar a camada de gases quentes. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Diretamente no piso. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Em jato compacto no centro da porta. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Apenas após a abertura total. "
+				}
+			],
+			"correta ": "A ",
+			"explicacao ": "Texto literal do Passo 3. ",
+			"fundamento ": "Capítulo 7, Seção 7.1 - Passo 3. "
+		},
+		{
+			"id ": 99,
+			"titulo ": "Capítulo 1 ",
+			"tema ": "1.12 Integração de Conhecimentos ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "A tática de combate a incêndio depende da integração de diversas áreas, EXCETO: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "Ciência do fogo e comportamento do incêndio. "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "Hidráulica, técnicas de combate e ventilação. "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "Conhecimento exclusivo de legislação administrativa. "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "Comando e controle, liderança e gerenciamento de riscos. "
+				}
+			],
+			"correta ": "C ",
+			"explicacao ": "A lista da seção 1.12 não inclui legislação administrativa como área de integração tática. ",
+			"fundamento ": "Capítulo 1, Seção 1.12 - A tática como integração de conhecimentos. "
+		},
+		{
+			"id ": 100,
+			"titulo ": "Capítulo 8 ",
+			"tema ": "Força de Reação - Trio de Ataque ",
+			"dificuldade ": "fácil ",
+			"pergunta ": "Para um trio de ataque (3 bombeiros), a força de reação máxima recomendada é: ",
+			"alternativas ": [
+				{
+					"letra ": "A ",
+					"texto ": "266 N (60 lbf). "
+				},
+				{
+					"letra ": "B ",
+					"texto ": "333 N (75 lbf). "
+				},
+				{
+					"letra ": "C ",
+					"texto ": "422 N (95 lbf). "
+				},
+				{
+					"letra ": "D ",
+					"texto ": "500 N. "
+				}
+			],
+			"correta ": "C ",
+			"explicacao ": "Tabela: Trio de Ataque → até 422 N (95 lbf). ",
+			"fundamento ": "Capítulo 8, Seção 8.2 - Força de Reação do Esguicho. "
 		}
 	]
 }
