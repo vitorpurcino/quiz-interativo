@@ -16,5 +16,14 @@
     "senha": "159357",
     "criadoEm": "2026-08-24T02:08:58.877Z",
     "ativo": true
+  },
+  {
+    "id": "user_1787677080024_64dcdb",
+    "nome": "Rafael de Souza",
+    "email": "dsouza@mail.com",
+    "usuario": "dsouza",
+    "senha": "159357",
+    "criadoEm": "2026-08-25T16:58:00.024Z",
+    "ativo": true
   }
 ]
