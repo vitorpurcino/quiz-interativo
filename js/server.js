@@ -48,16 +48,29 @@ function getSubjectFiles() {
     .sort((a, b) => a.localeCompare(b, 'pt-BR'));
 }
 
+function normalizeKeys(obj) {
+  if (!obj || typeof obj !== 'object') return obj;
+  if (Array.isArray(obj)) return obj.map(normalizeKeys);
+  const normalized = {};
+  for (const [k, v] of Object.entries(obj)) {
+    normalized[k.trim()] = (typeof v === 'string') ? v.trim() : normalizeKeys(v);
+  }
+  return normalized;
+}
+
 function getSubjects() {
   return getSubjectFiles()
     .map((fileName) => {
       const absolutePath = path.join(DATA_DIR, fileName);
       try {
         const raw = fs.readFileSync(absolutePath, 'utf8');
-        const parsed = JSON.parse(raw);
-        const title = parsed?.config?.titulo || parsed?.titulo || fileName.replace(/\.json$/i, '');
-        const subtitle = parsed?.config?.subtitulo || parsed?.subtitulo || 'Questões de estudo';
-        const count = Array.isArray(parsed?.questoes) ? parsed.questoes.length : 0;
+        const rawParsed = JSON.parse(raw);
+        const parsed = normalizeKeys(rawParsed);
+        const info = parsed?.informacoes || parsed?.config || {};
+        const title = info.titulo || info.materia || parsed?.titulo || fileName.replace(/\.json$/i, '');
+        const subtitle = info.descricao || info.subtitulo || parsed?.subtitulo || 'Questões de estudo';
+        const questions = Array.isArray(parsed?.questoes) ? parsed.questoes : [];
+        const count = questions.length;
         return {
           id: slugify(fileName.replace(/\.json$/i, '')),
           fileName,

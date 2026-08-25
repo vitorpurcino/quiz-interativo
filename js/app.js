@@ -1,12 +1,13 @@
 /* ============================================================
    QUIZ INTERATIVO — CFSBM 2026
-   app.js — Lógica principal com melhorias de UX
+   app.js — Lógica principal com melhorias de UX e Filtros Dinâmicos
    ============================================================ */
 
 const STORAGE_KEY = 'quiz_interativo_progress_v1';
 const THEME_KEY   = 'quiz_interativo_theme';
 
 const STATIC_SUBJECTS = [
+  'combateaincendio.json',
   'comandoelideranca.json',
   'correspondencias.json',
   'direitopenalmilitar.json',
@@ -22,14 +23,20 @@ const state = {
   subjects:            [],
   selectedSubjectId:   '',
   selectedSubjectData: null,
-  currentIndex:        0,
+  activeQuestions:     [],       // Questões ativas resultantes dos filtros dinâmicos
+  currentIndex:        0,        // Índice atual dentro de activeQuestions
   draftSelection:      null,
   darkMode:            localStorage.getItem(THEME_KEY) === 'dark',
   streak:              0,
   modoRevisao:         false,
   filtroRevisao:       'todas',
-  questoesFiltradas:   [],
-  indiceFiltro:        0
+  questoesFiltradas:   [],       // Índices originais usados pelo modo revisão
+  indiceFiltro:        0,        // Posição no array do modo revisão
+  filtros: {
+    busca: '',
+    tema: '',
+    dificuldade: ''
+  }
 };
 
 /* ============================================================
@@ -44,6 +51,12 @@ const refs = {
   mensagemErro:       document.getElementById('mensagemErro'),
   telaCarregando:     document.getElementById('telaCarregando'),
   telaQuiz:           document.getElementById('telaQuiz'),
+  painelFiltros:      document.getElementById('painelFiltros'),
+  filtroBusca:        document.getElementById('filtroBusca'),
+  filtroTema:         document.getElementById('filtroTema'),
+  filtroDificuldade:  document.getElementById('filtroDificuldade'),
+  filtroContador:     document.getElementById('filtroContador'),
+  btnLimparFiltros:   document.getElementById('btnLimparFiltros'),
   subjectSelect:      document.getElementById('subjectSelect'),
   questionSelect:     document.getElementById('questionSelect'),
   reiniciarBtn:       document.getElementById('reiniciarBtn'),
@@ -129,9 +142,21 @@ function mostrarModal(titulo, texto, icone = '⚠️') {
 }
 
 /* ============================================================
-   NORMALIZAÇÃO DE DADOS
+   UTILITÁRIOS DE LIMPEZA E NORMALIZAÇÃO DE DADOS
    ============================================================ */
-function normalizeQuestion(question, index) {
+function cleanObjectKeys(obj) {
+  if (!obj || typeof obj !== 'object') return obj;
+  if (Array.isArray(obj)) return obj.map(cleanObjectKeys);
+  const cleaned = {};
+  for (const [key, val] of Object.entries(obj)) {
+    const cleanKey = key.trim();
+    cleaned[cleanKey] = typeof val === 'string' ? val.trim() : cleanObjectKeys(val);
+  }
+  return cleaned;
+}
+
+function normalizeQuestion(rawQuestion, index) {
+  const question = cleanObjectKeys(rawQuestion) || {};
   const alternatives = Array.isArray(question.alternativas) ? question.alternativas : [];
   const normalizedAlternatives = alternatives
     .filter((item) => item && typeof item === 'object')
@@ -141,28 +166,42 @@ function normalizeQuestion(question, index) {
     }))
     .filter((item) => item.letter && item.text);
 
+  const statement = String(question.pergunta || question.enunciado || 'Pergunta sem enunciado').trim();
+  const chapterTitle = String(question.titulo || '').trim();
+
   return {
-    id:          question.id ?? index + 1,
-    title:       String(question.pergunta || question.enunciado || 'Pergunta sem enunciado').trim(),
-    topic:       String(question.tema || 'Tema não informado').trim(),
-    difficulty:  String(question.dificuldade || 'Sem nível').trim(),
-    correct:     String(question.correta || question.respostaCorreta || '').trim().toUpperCase(),
-    explanation: String(question.explicacao || question.comentario || '').trim(),
-    fundamento:  String(question.fundamento || '').trim(),
+    id:           question.id ?? index + 1,
+    chapterTitle,
+    title:        statement,
+    statement,
+    topic:        String(question.tema || 'Tema não informado').trim(),
+    difficulty:   String(question.dificuldade || 'Sem nível').trim(),
+    correct:      String(question.correta || question.respostaCorreta || '').trim().toUpperCase(),
+    explanation:  String(question.explicacao || question.comentario || '').trim(),
+    fundamento:   String(question.fundamento || '').trim(),
     alternatives: normalizedAlternatives
   };
 }
 
-function normalizeSubject(payload, fileName) {
-  const config    = payload?.config || {};
-  const questions = Array.isArray(payload?.questoes)
-    ? payload.questoes.map((question, index) => normalizeQuestion(question, index))
-    : [];
+function normalizeSubject(rawPayload, fileName) {
+  const payload = cleanObjectKeys(rawPayload) || {};
+  const info    = payload.informacoes || payload.config || {};
+  const rawQuestions = Array.isArray(payload.questoes) ? payload.questoes : [];
+  const questions = rawQuestions.map((question, index) => normalizeQuestion(question, index));
+
+  const title = String(info.titulo || info.materia || payload.titulo || fileName.replace(/\.json$/i, '')).trim();
+  const subtitle = String(info.descricao || info.subtitulo || payload.subtitulo || 'Questões de estudo').trim();
 
   return {
     id:       slugify(fileName.replace(/\.json$/i, '')),
-    title:    String(config.titulo || payload?.titulo || fileName.replace(/\.json$/i, '')).trim(),
-    subtitle: String(config.subtitulo || payload?.subtitulo || 'Questões de estudo').trim(),
+    title,
+    subtitle,
+    materia:  String(info.materia || '').trim(),
+    fonte:    String(info.fonte || '').trim(),
+    curso:    String(info.curso || '').trim(),
+    turma:    String(info.turma || '').trim(),
+    ano:      info.ano || null,
+    descricao: String(info.descricao || '').trim(),
     questions
   };
 }
@@ -174,6 +213,21 @@ function slugify(text) {
     .replace(/[^a-zA-Z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
     .toLowerCase();
+}
+
+function normalizeSearchText(str) {
+  return String(str || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+}
+
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 }
 
 /* ============================================================
@@ -199,7 +253,14 @@ function saveProgress() {
   const progress = loadProgress();
   progress.currentSubject = state.selectedSubjectId;
   const current = progress.subjects[state.selectedSubjectId] || { answers: {}, currentIndex: 0 };
-  current.currentIndex = state.currentIndex;
+  
+  // Salvar índice original da questão se possível
+  const q = currentQuestion();
+  if (q && state.selectedSubjectData) {
+    const origIndex = state.selectedSubjectData.questions.findIndex(item => item.id === q.id);
+    current.currentIndex = origIndex >= 0 ? origIndex : 0;
+  }
+  
   progress.subjects[state.selectedSubjectId] = current;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
 }
@@ -216,15 +277,21 @@ function getCurrentSubjectProgress() {
 }
 
 /* ============================================================
-   HELPERS DE QUESTÃO
+   HELPERS DE QUESTÃO E FILTROS DINÂMICOS
    ============================================================ */
 function currentQuestion() {
   if (!state.selectedSubjectData || !state.selectedSubjectData.questions.length) return null;
-  return state.selectedSubjectData.questions[state.currentIndex] || null;
+  if (state.modoRevisao) {
+    const origIndex = state.questoesFiltradas[state.indiceFiltro];
+    return state.selectedSubjectData.questions[origIndex] || null;
+  }
+  if (!state.activeQuestions || !state.activeQuestions.length) return null;
+  return state.activeQuestions[state.currentIndex] || null;
 }
 
 function questionKey(question) {
-  return String(question.id ?? state.currentIndex + 1);
+  if (!question) return '';
+  return String(question.id ?? 1);
 }
 
 function getAnswerRecord(question) {
@@ -240,6 +307,112 @@ function setDraftFromCurrent() {
   const answer = getAnswerRecord(question);
   state.draftSelection = answer ? answer.selected : null;
 }
+
+function populateThemeFilter() {
+  if (!refs.filtroTema) return;
+  const currentVal = state.filtros.tema;
+  const questions = state.selectedSubjectData?.questions || [];
+  const themesSet = new Set();
+
+  questions.forEach((q) => {
+    if (q.topic && q.topic !== 'Tema não informado') {
+      themesSet.add(q.topic);
+    }
+  });
+
+  const sortedThemes = Array.from(themesSet).sort((a, b) => a.localeCompare(b, 'pt-BR'));
+
+  refs.filtroTema.innerHTML = '<option value="">Todos os Temas</option>' +
+    sortedThemes.map((t) => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join('');
+
+  if (themesSet.has(currentVal)) {
+    refs.filtroTema.value = currentVal;
+  } else {
+    state.filtros.tema = '';
+    refs.filtroTema.value = '';
+  }
+}
+
+function applyFilters(preserveCurrent = true) {
+  if (!state.selectedSubjectData) {
+    state.activeQuestions = [];
+    return;
+  }
+
+  const allQuestions = state.selectedSubjectData.questions;
+  const buscaTerm = normalizeSearchText(state.filtros.busca);
+  const temaTerm = state.filtros.tema;
+  const difTerm = normalizeSearchText(state.filtros.dificuldade);
+
+  const prevQuestionId = state.activeQuestions[state.currentIndex]?.id;
+
+  state.activeQuestions = allQuestions.filter((q) => {
+    // 1. Filtro por Busca (Título / Capítulo / Enunciado / Tema / Fundamento)
+    if (buscaTerm) {
+      const matchTitle = normalizeSearchText(q.chapterTitle).includes(buscaTerm);
+      const matchStatement = normalizeSearchText(q.statement).includes(buscaTerm);
+      const matchTopic = normalizeSearchText(q.topic).includes(buscaTerm);
+      const matchFundamento = normalizeSearchText(q.fundamento).includes(buscaTerm);
+      const matchExplanation = normalizeSearchText(q.explanation).includes(buscaTerm);
+      if (!matchTitle && !matchStatement && !matchTopic && !matchFundamento && !matchExplanation) {
+        return false;
+      }
+    }
+
+    // 2. Filtro por Tema
+    if (temaTerm && q.topic !== temaTerm) {
+      return false;
+    }
+
+    // 3. Filtro por Dificuldade
+    if (difTerm) {
+      const qDif = normalizeSearchText(q.difficulty);
+      if (difTerm === 'facil' && !qDif.includes('facil') && !qDif.includes('easy') && !qDif.includes('baixo')) return false;
+      if (difTerm === 'medio' && !qDif.includes('medio') && !qDif.includes('media') && !qDif.includes('medium')) return false;
+      if (difTerm === 'dificil' && !qDif.includes('dificil') && !qDif.includes('hard') && !qDif.includes('alto')) return false;
+    }
+
+    return true;
+  });
+
+  // Atualizar contador e botão limpar
+  const isFiltering = Boolean(buscaTerm || temaTerm || difTerm);
+  if (refs.btnLimparFiltros) {
+    refs.btnLimparFiltros.hidden = !isFiltering;
+  }
+
+  if (refs.filtroContador) {
+    if (isFiltering) {
+      refs.filtroContador.textContent = `Exibindo ${state.activeQuestions.length} de ${allQuestions.length} questões`;
+      refs.filtroContador.style.background = 'rgba(var(--primario-rgb), 0.15)';
+      refs.filtroContador.style.borderColor = 'var(--primario)';
+    } else {
+      refs.filtroContador.textContent = `Total: ${allQuestions.length} questões`;
+      refs.filtroContador.style.background = 'rgba(var(--primario-rgb), 0.1)';
+      refs.filtroContador.style.borderColor = 'rgba(var(--primario-rgb), 0.2)';
+    }
+  }
+
+  // Ajustar currentIndex
+  if (preserveCurrent && prevQuestionId !== undefined) {
+    const newIdx = state.activeQuestions.findIndex((q) => q.id === prevQuestionId);
+    state.currentIndex = newIdx >= 0 ? newIdx : 0;
+  } else {
+    state.currentIndex = 0;
+  }
+
+  setDraftFromCurrent();
+}
+
+window.limparTodosFiltros = function() {
+  state.filtros = { busca: '', tema: '', dificuldade: '' };
+  if (refs.filtroBusca) refs.filtroBusca.value = '';
+  if (refs.filtroTema) refs.filtroTema.value = '';
+  if (refs.filtroDificuldade) refs.filtroDificuldade.value = '';
+  applyFilters(false);
+  renderQuestion();
+  mostrarToast('Filtros limpos.', 'info', 2000);
+};
 
 /* ============================================================
    STREAK
@@ -267,9 +440,9 @@ function renderStreak() {
    ============================================================ */
 function getDifficultyClass(difficulty) {
   const d = String(difficulty).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  if (d === 'facil' || d === 'easy' || d === 'baixo') return 'dificil-facil';
-  if (d === 'medio' || d === 'medium' || d === 'medio')  return 'dificil-medio';
-  if (d === 'dificil' || d === 'hard' || d === 'alto')   return 'dificil-dificil';
+  if (d.includes('facil') || d.includes('easy') || d.includes('baixo')) return 'dificil-facil';
+  if (d.includes('medio') || d.includes('media') || d.includes('medium'))  return 'dificil-medio';
+  if (d.includes('dificil') || d.includes('hard') || d.includes('alto'))   return 'dificil-dificil';
   return 'dificil-default';
 }
 
@@ -297,11 +470,34 @@ function renderQuestionOptions() {
 
   const progress = getCurrentSubjectProgress();
 
-  refs.questionSelect.innerHTML = state.selectedSubjectData.questions
+  if (state.modoRevisao) {
+    refs.questionSelect.innerHTML = state.questoesFiltradas
+      .map((qIdx, idx) => {
+        const question = state.selectedSubjectData.questions[qIdx];
+        const key = questionKey(question);
+        const answered = Boolean(progress.answers[key]);
+        const chapterPrefix = question.chapterTitle ? `[${question.chapterTitle}] ` : '';
+        const label = `Revisão ${idx + 1}: Q${question.id} ${chapterPrefix}• ${answered ? 'respondida' : ''}`;
+        return `<option value="${idx}">${label}</option>`;
+      })
+      .join('');
+    refs.questionSelect.value = String(state.indiceFiltro);
+    return;
+  }
+
+  const questionsToRender = state.activeQuestions || [];
+  if (!questionsToRender.length) {
+    refs.questionSelect.innerHTML = '<option value="-1">Nenhuma questão encontrada</option>';
+    refs.questionSelect.value = '-1';
+    return;
+  }
+
+  refs.questionSelect.innerHTML = questionsToRender
     .map((question, index) => {
       const key      = questionKey(question);
       const answered = Boolean(progress.answers[key]);
-      const label    = `${index + 1}${answered ? ' • respondida' : ''}`;
+      const chapterPrefix = question.chapterTitle ? `[${question.chapterTitle}] ` : '';
+      const label    = `Questão ${question.id} ${chapterPrefix}${answered ? ' • respondida' : ''}`;
       return `<option value="${index}">${label}</option>`;
     })
     .join('');
@@ -312,9 +508,9 @@ function renderQuestionOptions() {
 function renderProgress() {
   if (!state.selectedSubjectData) return;
 
-  const total    = state.selectedSubjectData.questions.length;
-  const progress = getCurrentSubjectProgress();
-  const answers  = progress.answers || {};
+  const totalAll   = state.selectedSubjectData.questions.length;
+  const progress   = getCurrentSubjectProgress();
+  const answers    = progress.answers || {};
 
   let acertos = 0;
   let erros   = 0;
@@ -327,12 +523,22 @@ function renderProgress() {
   }
 
   const respondedCount = Object.keys(answers).length;
-  const percentage     = total ? Math.round((respondedCount / total) * 100) : 0;
+  const percentage     = totalAll ? Math.round((respondedCount / totalAll) * 100) : 0;
 
   refs.progressBar.style.width = `${percentage}%`;
   refs.progressBar.parentElement.setAttribute('aria-valuenow', String(percentage));
-  refs.progressText.textContent       = `${percentage}% concluído • ${respondedCount}/${total} respondidas`;
-  refs.contadorQuestao.textContent    = `Questão ${state.currentIndex + 1} de ${total}`;
+  refs.progressText.textContent       = `${percentage}% concluído • ${respondedCount}/${totalAll} respondidas`;
+
+  if (state.modoRevisao) {
+    refs.contadorQuestao.textContent = `Revisão ${state.indiceFiltro + 1} de ${state.questoesFiltradas.length}`;
+  } else if (state.activeQuestions.length !== totalAll) {
+    refs.contadorQuestao.textContent = state.activeQuestions.length > 0
+      ? `Questão ${state.currentIndex + 1} de ${state.activeQuestions.length} (filtradas de ${totalAll})`
+      : `0 questões encontradas (de ${totalAll})`;
+  } else {
+    refs.contadorQuestao.textContent = `Questão ${state.currentIndex + 1} de ${totalAll}`;
+  }
+
   refs.pontuacao.textContent          = `✅ ${acertos}  ❌ ${erros}`;
 }
 
@@ -350,9 +556,9 @@ function renderAlternatives() {
       const isCorrect  = question.correct === option.letter;
       const classes    = ['alternativa'];
 
-      if (isSelected)                                classes.push('selected');
-      if (isAnswered && isCorrect)                   classes.push('correct');
-      if (isAnswered && isSelected && !isCorrect)    classes.push('wrong');
+      if (isSelected)                             classes.push('selected');
+      if (isAnswered && isCorrect)                classes.push('correct');
+      if (isAnswered && isSelected && !isCorrect) classes.push('wrong');
 
       const disabled = isAnswered ? 'disabled' : '';
 
@@ -392,10 +598,6 @@ function renderFeedback() {
   const explanation = question.explanation || 'Nenhuma explicação foi adicionada no JSON desta matéria.';
   const fundamento  = question.fundamento  || '';
 
-  const corretaLabel = question.correct
-    ? `Resposta correta: Alternativa <strong>${question.correct}</strong>`
-    : 'Resposta correta: não informada';
-
   refs.feedbackBox.classList.remove('acerto', 'erro');
   refs.feedbackBox.classList.add(isCorrect ? 'acerto' : 'erro');
   refs.feedbackBox.hidden = false;
@@ -415,17 +617,34 @@ function renderFeedback() {
 function renderQuestion() {
   const question = currentQuestion();
   if (!question) {
-    refs.questionText.textContent = 'Nenhuma questão disponível.';
-    refs.alternativas.innerHTML   = '';
+    const hasFilter = Boolean(state.filtros.busca || state.filtros.tema || state.filtros.dificuldade);
+    refs.questionText.textContent = hasFilter
+      ? 'Nenhuma questão encontrada para os filtros selecionados.'
+      : 'Nenhuma questão disponível.';
+    refs.questionTopic.textContent = 'Filtro ativo';
+    refs.questionDifficulty.textContent = '-';
+    refs.questionDifficulty.className = 'dificil-default';
+    refs.alternativas.innerHTML   = hasFilter
+      ? `<div style="text-align: center; padding: 24px; color: var(--texto-secundario);">
+           <p style="margin-bottom: 12px;">Tente alterar os termos de busca ou limpar os filtros para visualizar as questões.</p>
+           <button type="button" class="btn-primario" onclick="window.limparTodosFiltros()" style="display:inline-flex; align-items:center; gap:6px;">↺ Limpar Filtros</button>
+         </div>`
+      : '';
     refs.feedbackBox.hidden       = true;
+    renderQuestionOptions();
+    renderProgress();
+    updateNavButtons();
     return;
   }
 
   updateHeader();
-  refs.questionText.textContent = question.title;
+  refs.questionText.textContent = question.statement || question.title;
 
   // Tema
-  refs.questionTopic.textContent = question.topic || 'Tema não informado';
+  const topicLabel = question.chapterTitle
+    ? `${question.chapterTitle} • ${question.topic}`
+    : (question.topic || 'Tema não informado');
+  refs.questionTopic.textContent = topicLabel;
 
   // Dificuldade com classe de cor
   refs.questionDifficulty.textContent = question.difficulty || 'Sem nível';
@@ -445,19 +664,27 @@ function updateNavButtons() {
     refs.btnConfirmar.disabled = true;
 
     refs.questionSelect.disabled = true;
-    if(refs.encerrarRevisaoBtn) refs.encerrarRevisaoBtn.hidden = false;
+    if (refs.encerrarRevisaoBtn) refs.encerrarRevisaoBtn.hidden = false;
+    if (refs.painelFiltros) {
+      refs.painelFiltros.style.opacity = '0.5';
+      refs.painelFiltros.style.pointerEvents = 'none';
+    }
   } else {
-    const total = state.selectedSubjectData?.questions.length || 0;
-    refs.btnVoltar.disabled  = state.currentIndex <= 0;
-    refs.btnProxima.disabled = state.currentIndex >= total - 1;
+    if (refs.painelFiltros) {
+      refs.painelFiltros.style.opacity = '1';
+      refs.painelFiltros.style.pointerEvents = 'auto';
+    }
 
-    // Esconder botão de confirmar se já respondeu
+    const total = state.activeQuestions.length;
+    refs.btnVoltar.disabled  = state.currentIndex <= 0;
+    refs.btnProxima.disabled = total === 0 || state.currentIndex >= total - 1;
+
     const question = currentQuestion();
     const answered = question ? Boolean(getAnswerRecord(question)) : false;
-    refs.btnConfirmar.disabled = answered || !state.draftSelection;
+    refs.btnConfirmar.disabled = !question || answered || !state.draftSelection;
 
-    refs.questionSelect.disabled = false;
-    if(refs.encerrarRevisaoBtn) refs.encerrarRevisaoBtn.hidden = true;
+    refs.questionSelect.disabled = total === 0;
+    if (refs.encerrarRevisaoBtn) refs.encerrarRevisaoBtn.hidden = true;
   }
 }
 
@@ -465,15 +692,15 @@ function updateNavButtons() {
    TROCA DE QUESTÃO COM ANIMAÇÃO
    ============================================================ */
 async function changeQuestion(index) {
-  const total = state.selectedSubjectData?.questions.length || 0;
+  const total = state.activeQuestions.length;
   if (!total) return;
 
   const newIndex = Math.max(0, Math.min(index, total - 1));
-  if (newIndex === state.currentIndex) return;
+  if (newIndex === state.currentIndex && refs.questionText.textContent !== 'Carregando…') return;
 
   // Animação de saída
   refs.questionCard.classList.add('saindo');
-  await new Promise((r) => setTimeout(r, 200));
+  await new Promise((r) => setTimeout(r, 150));
   refs.questionCard.classList.remove('saindo');
 
   state.currentIndex = newIndex;
@@ -483,7 +710,7 @@ async function changeQuestion(index) {
 
   // Animação de entrada
   refs.questionCard.classList.add('entrando');
-  setTimeout(() => refs.questionCard.classList.remove('entrando'), 300);
+  setTimeout(() => refs.questionCard.classList.remove('entrando'), 250);
 
   // Verificar conclusão ao chegar na última questão
   verificarConclusao();
@@ -507,8 +734,7 @@ function saveAnsweredQuestion() {
   const progress       = loadProgress();
   const subjectProgress = progress.subjects[state.selectedSubjectId] || { answers: {}, currentIndex: 0 };
   subjectProgress.answers = subjectProgress.answers || {};
-  subjectProgress.currentIndex = state.currentIndex;
-
+  
   const isCorrect = state.draftSelection === question.correct;
   subjectProgress.answers[questionKey(question)] = {
     selected:   state.draftSelection,
@@ -594,7 +820,7 @@ async function resetSubjectProgress() {
   state.modoRevisao     = false;
   renderStreak();
 
-  refs.telaQuiz.hidden      = false;
+  refs.telaQuiz.hidden  = false;
 
   renderQuestion();
   mostrarToast('Progresso reiniciado com sucesso.', 'info');
@@ -638,6 +864,11 @@ async function loadSubject(subjectId) {
   state.selectedSubjectId = subjectId;
   state.modoRevisao       = false;
 
+  // Resetar filtros ao mudar de matéria
+  state.filtros = { busca: '', tema: '', dificuldade: '' };
+  if (refs.filtroBusca) refs.filtroBusca.value = '';
+  if (refs.filtroDificuldade) refs.filtroDificuldade.value = '';
+
   // Ocultar qualquer aviso de erro anterior imediatamente
   refs.avisoErro.hidden       = true;
   refs.mensagemErro.textContent = '';
@@ -650,16 +881,16 @@ async function loadSubject(subjectId) {
     const { payload } = await fetchJsonWithFallback(subjectUrl, staticUrl);
 
     state.selectedSubjectData = normalizeSubject(payload, subject.fileName);
+    populateThemeFilter();
+    applyFilters(false);
 
     const progress = getCurrentSubjectProgress();
-    state.currentIndex = Number.isInteger(progress.currentIndex) ? progress.currentIndex : 0;
+    const savedIndex = Number.isInteger(progress.currentIndex) ? progress.currentIndex : 0;
 
-    if (state.currentIndex >= state.selectedSubjectData.questions.length) {
-      state.currentIndex = 0;
-    }
+    // Se o índice salvo existir na lista ativa de questões, selecionar ele
+    state.currentIndex = (savedIndex >= 0 && savedIndex < state.activeQuestions.length) ? savedIndex : 0;
 
     setDraftFromCurrent();
-    // Garantir que qualquer banner de erro seja ocultado ao carregar com sucesso
     refs.avisoErro.hidden       = true;
     refs.mensagemErro.textContent = '';
     refs.telaCarregando.hidden  = true;
@@ -681,7 +912,6 @@ async function loadSubject(subjectId) {
 }
 
 async function loadSubjects() {
-  // Ocultar aviso de erro ao iniciar
   refs.avisoErro.hidden = true;
   refs.mensagemErro.textContent = '';
 
@@ -691,11 +921,9 @@ async function loadSubjects() {
 
     let subjects;
     try {
-      // Tentar API do servidor, silenciosamente fallback para JSON estático
       const { payload } = await fetchJsonWithFallback(subjectUrl, './json/materias.json');
       subjects = Array.isArray(payload) && payload.length ? payload : staticSubjects;
     } catch {
-      // Se ambas as tentativas falharam, usar lista estática embutida
       subjects = listStaticSubjects();
     }
 
@@ -753,6 +981,42 @@ if (refs.btnLogout) {
   });
 }
 
+// Filtro Busca
+if (refs.filtroBusca) {
+  let debounceTimeout = null;
+  refs.filtroBusca.addEventListener('input', (e) => {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(() => {
+      state.filtros.busca = e.target.value;
+      applyFilters(false);
+      renderQuestion();
+    }, 150);
+  });
+}
+
+// Filtro Tema
+if (refs.filtroTema) {
+  refs.filtroTema.addEventListener('change', (e) => {
+    state.filtros.tema = e.target.value;
+    applyFilters(false);
+    renderQuestion();
+  });
+}
+
+// Filtro Dificuldade
+if (refs.filtroDificuldade) {
+  refs.filtroDificuldade.addEventListener('change', (e) => {
+    state.filtros.dificuldade = e.target.value;
+    applyFilters(false);
+    renderQuestion();
+  });
+}
+
+// Botão Limpar Filtros
+if (refs.btnLimparFiltros) {
+  refs.btnLimparFiltros.addEventListener('click', window.limparTodosFiltros);
+}
+
 // Seleção de matéria
 refs.subjectSelect.addEventListener('change', (event) => {
   loadSubject(event.target.value);
@@ -760,7 +1024,17 @@ refs.subjectSelect.addEventListener('change', (event) => {
 
 // Seleção de questão
 refs.questionSelect.addEventListener('change', (event) => {
-  changeQuestion(Number(event.target.value));
+  const val = Number(event.target.value);
+  if (val >= 0) {
+    if (state.modoRevisao) {
+      state.indiceFiltro = val;
+      state.currentIndex = state.questoesFiltradas[val];
+      setDraftFromCurrent();
+      renderQuestion();
+    } else {
+      changeQuestion(val);
+    }
+  }
 });
 
 // Reiniciar (toolbar)
@@ -803,7 +1077,9 @@ refs.btnVoltar.addEventListener('click', () => {
   if (state.modoRevisao) {
     if (state.indiceFiltro > 0) {
       state.indiceFiltro--;
-      changeQuestion(state.questoesFiltradas[state.indiceFiltro]);
+      state.currentIndex = state.questoesFiltradas[state.indiceFiltro];
+      setDraftFromCurrent();
+      renderQuestion();
     }
   } else {
     if (state.currentIndex > 0) changeQuestion(state.currentIndex - 1);
@@ -815,23 +1091,26 @@ refs.btnProxima.addEventListener('click', () => {
   if (state.modoRevisao) {
     if (state.indiceFiltro < state.questoesFiltradas.length - 1) {
       state.indiceFiltro++;
-      changeQuestion(state.questoesFiltradas[state.indiceFiltro]);
+      state.currentIndex = state.questoesFiltradas[state.indiceFiltro];
+      setDraftFromCurrent();
+      renderQuestion();
     }
   } else {
-    const total = state.selectedSubjectData?.questions.length || 1;
+    const total = state.activeQuestions.length;
     if (state.currentIndex < total - 1) changeQuestion(state.currentIndex + 1);
   }
 });
 
-
-
+/* ============================================================
+   MODO REVISÃO
+   ============================================================ */
 async function iniciarRevisao(filtro, skipModal = false) {
   const progress = getCurrentSubjectProgress();
   const answers = progress.answers || {};
   let questoesFiltradas = [];
 
   state.selectedSubjectData.questions.forEach((question, index) => {
-    const key = String(question.id ?? index + 1);
+    const key = questionKey(question);
     const ans = answers[key] || answers[index];
     
     if (filtro === 'todas') {
@@ -873,7 +1152,23 @@ async function iniciarRevisao(filtro, skipModal = false) {
   renderQuestion();
 }
 
+if (refs.encerrarRevisaoBtn) {
+  refs.encerrarRevisaoBtn.addEventListener('click', () => {
+    state.modoRevisao = false;
+    refs.encerrarRevisaoBtn.hidden = true;
+    refs.questionSelect.disabled = false;
+    applyFilters(false);
+    renderQuestion();
 
+    const progress = getCurrentSubjectProgress();
+    const respondidas = Object.keys(progress.answers || {}).length;
+    const total = state.selectedSubjectData.questions.length;
+    
+    if (respondidas >= total) {
+       mostrarResultado(total, 0, 0); 
+    }
+  });
+}
 
 // Fechar modal ao clicar no overlay
 refs.modalOverlay.addEventListener('click', (event) => {
@@ -886,11 +1181,9 @@ refs.modalOverlay.addEventListener('click', (event) => {
    NAVEGAÇÃO POR TECLADO
    ============================================================ */
 document.addEventListener('keydown', (event) => {
-  // Ignorar se o foco estiver em um input/select/textarea
   const tag = document.activeElement?.tagName?.toLowerCase();
   if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
 
-  // Ignorar se o modal estiver aberto
   if (!refs.modalOverlay.classList.contains('hidden')) return;
 
   switch (event.key) {
@@ -899,7 +1192,9 @@ document.addEventListener('keydown', (event) => {
       if (state.modoRevisao) {
         if (state.indiceFiltro > 0) {
           state.indiceFiltro--;
-          changeQuestion(state.questoesFiltradas[state.indiceFiltro]);
+          state.currentIndex = state.questoesFiltradas[state.indiceFiltro];
+          setDraftFromCurrent();
+          renderQuestion();
         }
       } else {
         if (state.currentIndex > 0) changeQuestion(state.currentIndex - 1);
@@ -911,10 +1206,12 @@ document.addEventListener('keydown', (event) => {
       if (state.modoRevisao) {
         if (state.indiceFiltro < state.questoesFiltradas.length - 1) {
           state.indiceFiltro++;
-          changeQuestion(state.questoesFiltradas[state.indiceFiltro]);
+          state.currentIndex = state.questoesFiltradas[state.indiceFiltro];
+          setDraftFromCurrent();
+          renderQuestion();
         }
       } else {
-        const total = state.selectedSubjectData?.questions.length || 1;
+        const total = state.activeQuestions.length;
         if (state.currentIndex < total - 1) changeQuestion(state.currentIndex + 1);
       }
       break;
@@ -926,7 +1223,6 @@ document.addEventListener('keydown', (event) => {
       }
       break;
 
-    // Teclas A-E para selecionar alternativas
     case 'a': case 'A': selecionarAlternativaPorTecla('A'); break;
     case 'b': case 'B': selecionarAlternativaPorTecla('B'); break;
     case 'c': case 'C': selecionarAlternativaPorTecla('C'); break;
@@ -947,23 +1243,6 @@ function selecionarAlternativaPorTecla(letra) {
   state.draftSelection = letra;
   renderAlternatives();
   updateNavButtons();
-}
-
-if(refs.encerrarRevisaoBtn) {
-  refs.encerrarRevisaoBtn.addEventListener('click', () => {
-    state.modoRevisao = false;
-    refs.encerrarRevisaoBtn.hidden = true;
-    refs.questionSelect.disabled = false;
-    
-    // Força a verificação de conclusão, o que vai nos redirecionar de volta à página final.
-    const progress = getCurrentSubjectProgress();
-    const respondidas = Object.keys(progress.answers || {}).length;
-    const total = state.selectedSubjectData.questions.length;
-    
-    if (respondidas >= total) {
-       mostrarResultado(total, 0, 0); 
-    }
-  });
 }
 
 /* ============================================================
