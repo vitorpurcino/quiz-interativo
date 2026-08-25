@@ -51,7 +51,7 @@
         <p class="subtitulo" id="subtitulo">Carregando matérias…</p>
       </div>
 
-      <div style="display:flex; align-items:center; gap:10px; position:relative; z-index:1">
+      <div style="display:flex; flex-direction: column; align-items:center; gap:10px; position:relative; z-index:1;">
         <!-- Streak Badge -->
         <div class="streak-badge" id="streakBadge" data-streak="0" title="Sequência de acertos consecutivos"
           aria-live="polite">
@@ -132,7 +132,8 @@
             <span class="filtros-titulo">⚡ Filtros Dinâmicos</span>
             <div class="filtros-info">
               <span class="filtros-badge" id="filtroContador">Total: 0 questões</span>
-              <button id="btnLimparFiltros" class="btn-limpar-filtros" type="button" title="Limpar todos os filtros" hidden>
+              <button id="btnLimparFiltros" class="btn-limpar-filtros" type="button" title="Limpar todos os filtros"
+                hidden>
                 ✕ Limpar filtros
               </button>
             </div>
@@ -143,7 +144,8 @@
               <label for="filtroBusca">Buscar por Título / Palavra-chave</label>
               <div class="input-com-icone">
                 <span class="icone-busca" aria-hidden="true">🔍</span>
-                <input type="text" id="filtroBusca" placeholder="Filtrar por título, texto ou capítulo..." autocomplete="off" />
+                <input type="text" id="filtroBusca" placeholder="Filtrar por título, texto ou capítulo..."
+                  autocomplete="off" />
               </div>
             </div>
 
