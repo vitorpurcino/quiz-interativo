@@ -1,2 +1,0 @@
-﻿Session change recorded on 2026-08-24T22:23:01.2972862-04:00
-Note: Applied by an AI assistant using Copilot CLI runtime in VS Code.
