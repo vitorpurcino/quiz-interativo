@@ -93,83 +93,90 @@
            ============================================================ -->
     <section id="telaQuiz" class="tela" hidden>
 
-      <!-- Toolbar: Matéria, Questão, Reiniciar -->
-      <div class="toolbar">
-        <label for="subjectSelect">
-          Matéria
-          <select id="subjectSelect"></select>
-        </label>
+      <!-- Controles e Filtros de Topo -->
+      <div class="controles-topo" id="controlesTopo">
+        <!-- Toolbar: Matéria, Questão, Status e Ações -->
+        <div class="toolbar">
+          <label for="subjectSelect" class="toolbar-campo toolbar-materia">
+            Matéria
+            <select id="subjectSelect"></select>
+          </label>
 
-        <label for="questionSelect">
-          Questão
-          <select id="questionSelect"></select>
-        </label>
+          <label for="questionSelect" class="toolbar-campo toolbar-questao">
+            Questão
+            <select id="questionSelect"></select>
+          </label>
 
-        <button id="encerrarRevisaoBtn" class="btn-cinza" type="button" title="Sair do modo de revisão" hidden>
-          Sair da Revisão
-        </button>
-        <button id="btnModoFoco" class="btn-primario" type="button" title="Ativar Modo Foco">
-          🎯 Modo Foco
-        </button>
-        <button id="reiniciarBtn" class="btn-vermelho" type="button" title="Reiniciar progresso desta matéria">
-          ↺ Reiniciar
-        </button>
-      </div>
+          <div class="toolbar-status-badge">
+            <span class="status-badge-item" id="contadorQuestao">Questão 1 de 1</span>
+            <span class="status-badge-divider" aria-hidden="true">•</span>
+            <span class="status-badge-item status-pontuacao" id="pontuacao">Acertos: 0 | Erros: 0</span>
+          </div>
 
-      <!-- Painel de Filtros Dinâmicos -->
-      <div class="painel-filtros" id="painelFiltros">
-        <div class="filtros-header">
-          <span class="filtros-titulo">⚡ Filtros Dinâmicos</span>
-          <div class="filtros-info">
-            <span class="filtros-badge" id="filtroContador">Total: 0 questões</span>
-            <button id="btnLimparFiltros" class="btn-limpar-filtros" type="button" title="Limpar todos os filtros" hidden>
-              ✕ Limpar filtros
+          <div class="toolbar-acoes">
+            <button id="encerrarRevisaoBtn" class="btn-cinza" type="button" title="Sair do modo de revisão" hidden>
+              Sair da Revisão
+            </button>
+            <button id="btnModoFoco" class="btn-primario" type="button" title="Ativar Modo Foco">
+              🎯 Modo Foco
+            </button>
+            <button id="reiniciarBtn" class="btn-vermelho" type="button" title="Reiniciar progresso desta matéria">
+              ↺ Reiniciar
             </button>
           </div>
         </div>
 
-        <div class="filtros-grid">
-          <div class="filtro-item filtro-busca-item">
-            <label for="filtroBusca">Buscar por Título / Palavra-chave</label>
-            <div class="input-com-icone">
-              <span class="icone-busca" aria-hidden="true">🔍</span>
-              <input type="text" id="filtroBusca" placeholder="Filtrar por título, texto ou capítulo..." autocomplete="off" />
+        <!-- Painel de Filtros Dinâmicos -->
+        <div class="painel-filtros" id="painelFiltros">
+          <div class="filtros-header">
+            <span class="filtros-titulo">⚡ Filtros Dinâmicos</span>
+            <div class="filtros-info">
+              <span class="filtros-badge" id="filtroContador">Total: 0 questões</span>
+              <button id="btnLimparFiltros" class="btn-limpar-filtros" type="button" title="Limpar todos os filtros" hidden>
+                ✕ Limpar filtros
+              </button>
             </div>
           </div>
 
-          <div class="filtro-item">
-            <label for="filtroTema">Tema / Categoria</label>
-            <select id="filtroTema">
-              <option value="">Todos os Temas</option>
-            </select>
-          </div>
+          <div class="filtros-grid">
+            <div class="filtro-item filtro-busca-item">
+              <label for="filtroBusca">Buscar por Título / Palavra-chave</label>
+              <div class="input-com-icone">
+                <span class="icone-busca" aria-hidden="true">🔍</span>
+                <input type="text" id="filtroBusca" placeholder="Filtrar por título, texto ou capítulo..." autocomplete="off" />
+              </div>
+            </div>
 
-          <div class="filtro-item">
-            <label for="filtroDificuldade">Nível de Dificuldade</label>
-            <select id="filtroDificuldade">
-              <option value="">Todas as Dificuldades</option>
-              <option value="facil">Fácil</option>
-              <option value="medio">Média</option>
-              <option value="dificil">Difícil</option>
-            </select>
+            <div class="filtro-item filtro-tema-item">
+              <label for="filtroTema">Tema / Categoria</label>
+              <select id="filtroTema">
+                <option value="">Todos os Temas</option>
+              </select>
+            </div>
+
+            <div class="filtro-item filtro-dificuldade-item">
+              <label for="filtroDificuldade">Nível de Dificuldade</label>
+              <select id="filtroDificuldade">
+                <option value="">Todas as Dificuldades</option>
+                <option value="facil">Fácil</option>
+                <option value="medio">Média</option>
+                <option value="dificil">Difícil</option>
+              </select>
+            </div>
           </div>
+        </div>
+
+        <!-- Barra de Progresso Integrada -->
+        <div class="progresso-wrapper">
+          <div class="barra-progresso" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+            aria-label="Progresso do quiz">
+            <div class="barra-preenchimento" id="progressBar"></div>
+          </div>
+          <p class="info-questao" id="progressText">0% concluído • 0/0 respondidas</p>
         </div>
       </div>
 
-      <!-- Status: Contador e Pontuação -->
-      <div class="status">
-        <span id="contadorQuestao">Questão 1 de 1</span>
-        <span id="pontuacao">Acertos: 0 | Erros: 0</span>
-      </div>
-
-      <!-- Barra de Progresso -->
-      <div class="barra-progresso" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
-        aria-label="Progresso do quiz">
-        <div class="barra-preenchimento" id="progressBar"></div>
-      </div>
-      <p class="info-questao" id="progressText">0% concluído • 0/0 respondidas</p>
-
-      <!-- Card da questão -->
+      <!-- Card da questão (Split View no Desktop) -->
       <div class="question-card" id="questionCard">
         <div class="foco-zoom-container" id="focoZoomContainer">
           <div class="question-col-esquerda">

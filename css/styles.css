@@ -145,9 +145,10 @@ body::before {
 .container {
   position: relative;
   z-index: 1;
-  max-width: 860px;
+  width: 95%;
+  max-width: 1540px;
   margin: 0 auto;
-  padding: 0 0 60px;
+  padding: 0 0 48px;
   min-height: 100vh;
 }
 
@@ -301,37 +302,55 @@ body::before {
 #telaQuiz, #telaResultado { padding: 0 24px; }
 
 /* ============================================================
+   CONTROLES DO TOPO (TOOLBAR & FILTROS)
+   ============================================================ */
+.controles-topo {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+/* ============================================================
    TOOLBAR
    ============================================================ */
 .toolbar {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
   align-items: flex-end;
-  margin-bottom: 24px;
-  padding: 20px;
+  padding: 16px 20px;
   background: var(--container-bg);
   border: 1px solid var(--borda-suave);
   border-radius: 16px;
   box-shadow: var(--sombra-sm);
 }
 
-.toolbar label {
+.toolbar-campo {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 700;
   color: var(--texto-secundario);
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  flex: 1 1 200px;
+}
+
+.toolbar-materia {
+  flex: 1.8 1 240px;
+  min-width: 220px;
+}
+
+.toolbar-questao {
+  flex: 1 1 140px;
+  min-width: 130px;
 }
 
 .toolbar select {
   width: 100%;
-  min-height: 44px;
-  padding: 10px 36px 10px 14px;
+  min-height: 42px;
+  padding: 8px 36px 8px 14px;
   border: 1.5px solid var(--borda-suave);
   border-radius: 8px;
   background: var(--bg-pagina);
@@ -354,12 +373,43 @@ body::before {
   box-shadow: 0 0 0 3px rgba(var(--primario-rgb), 0.15);
 }
 
+.toolbar-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--fundo-suave);
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1.5px solid var(--borda-suave);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--texto-secundario);
+  white-space: nowrap;
+  min-height: 42px;
+  align-self: flex-end;
+}
+
+.status-badge-divider {
+  color: var(--texto-terciario);
+}
+
+.status-pontuacao {
+  color: var(--primario);
+}
+
+.toolbar-acoes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  align-self: flex-end;
+}
+
 /* ============================================================
    PAINEL DE FILTROS DINÂMICOS
    ============================================================ */
 .painel-filtros {
-  margin-bottom: 24px;
-  padding: 18px 20px;
+  padding: 16px 20px;
   background: var(--container-bg);
   border: 1px solid var(--borda-suave);
   border-radius: 16px;
@@ -377,7 +427,7 @@ body::before {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .filtros-titulo {
@@ -431,14 +481,15 @@ body::before {
 
 .filtros-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 12px;
+  grid-template-columns: 2fr 1.2fr 1.2fr;
+  gap: 14px;
 }
 
 .filtro-item {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-width: 0;
 }
 
 .filtro-item label {
@@ -447,12 +498,16 @@ body::before {
   color: var(--texto-secundario);
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .input-com-icone {
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .icone-busca {
@@ -514,38 +569,21 @@ body::before {
   box-shadow: 0 0 0 3px rgba(var(--primario-rgb), 0.15);
 }
 
-@media (max-width: 768px) {
-  .filtros-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ============================================================
-   STATUS
+   PROGRESSO WRAPPER
    ============================================================ */
-.status {
+.progresso-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  padding: 0 2px;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 4px;
 }
 
-.status span {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--texto-secundario);
-}
-
-/* ============================================================
-   BARRA DE PROGRESSO
-   ============================================================ */
 .barra-progresso {
-  height: 8px;
+  height: 6px;
   background: var(--progresso-bg);
   border-radius: 9999px;
   overflow: hidden;
-  margin-bottom: 8px;
 }
 
 .barra-preenchimento {
@@ -568,7 +606,7 @@ body::before {
 .info-questao {
   font-size: 12px;
   color: var(--texto-terciario);
-  margin-bottom: 20px;
+  margin-bottom: 0;
   font-weight: 500;
 }
 
@@ -1199,15 +1237,53 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 @keyframes entrarDireita { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
 
 /* ============================================================
-   RESPONSIVIDADE
+   RESPONSIVIDADE & LAYOUT DESKTOP
    ============================================================ */
-@media (max-width: 640px) {
-  .cabecalho { padding: 20px; border-radius: 0 0 16px 16px; margin-bottom: 20px; }
-  #telaQuiz, #telaResultado { padding: 0 16px; }
+@media (max-width: 899px) {
+  .cabecalho { padding: 18px 20px; border-radius: 0 0 16px 16px; margin-bottom: 16px; }
+  #telaQuiz, #telaResultado { padding: 0 14px; }
 
-  .toolbar { padding: 16px; flex-direction: column; align-items: stretch; gap: 10px; }
-  .toolbar label { flex: 1 1 100%; }
-  #reiniciarBtn { margin-left: 0; }
+  .toolbar {
+    padding: 14px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .toolbar-materia, .toolbar-questao {
+    flex: 1 1 100%;
+  }
+  .toolbar-status-badge {
+    width: 100%;
+    justify-content: space-between;
+    align-self: stretch;
+  }
+  .toolbar-acoes {
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0;
+  }
+  .toolbar-acoes button {
+    flex: 1;
+  }
+
+  .filtros-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .question-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .question-col-esquerda, .question-col-direita {
+    display: contents;
+  }
+  .question-meta { order: 1; }
+  .pergunta { order: 2; }
+  .alternativas { order: 3; }
+  .feedback { order: 4; }
+  .navegacao { order: 5; }
 
   .navegacao { 
     display: flex; 
@@ -1231,7 +1307,6 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   .resultado-stats { grid-template-columns: 1fr; gap: 10px; }
   .toast-container { left: 16px; right: 16px; bottom: 16px; }
   .toast { max-width: 100%; }
-  .question-card { padding: 20px; }
 }
 
 @media (max-width: 480px) {
@@ -1239,71 +1314,67 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   .pergunta     { font-size: 14px; }
 }
 
-@media (max-width: 899px) {
-  .question-card {
-    display: flex;
-    flex-direction: column;
-  }
-  .question-col-esquerda, .question-col-direita {
-    display: contents;
-  }
-  .question-meta { order: 1; }
-  .pergunta { order: 2; }
-  .alternativas { order: 3; }
-  .feedback { order: 4; }
-  .navegacao { order: 5; }
-}
-
 /* ============================================================
-   OTIMIZACAO PARA DESKTOP (Sem Scroll Vertical)
+   LAYOUT DESKTOP EXPANSIVO (Split-View Horizontal & Alta Eficiência)
    ============================================================ */
 @media (min-width: 900px) {
   .container {
-    max-width: 1100px;
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
+    max-width: 1540px;
+    width: 95%;
+    padding-bottom: 24px;
   }
   
   .cabecalho {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     padding: 16px 32px;
   }
   
-  .toolbar {
-    margin-bottom: 16px;
-    padding: 16px 20px;
-  }
-  
-  .info-questao {
-    margin-bottom: 12px;
+  .controles-topo {
+    margin-bottom: 18px;
   }
 
   .question-card {
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 32px;
+    grid-template-columns: 1fr 1.18fr;
+    gap: 36px;
+    padding: 32px 36px;
     margin-bottom: 16px;
     align-items: start;
   }
 
+  .question-col-esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .question-col-direita {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
   .question-meta {
-    margin-bottom: 16px;
+    margin-bottom: 0;
+  }
+
+  .pergunta {
+    font-size: clamp(16px, 1.25vw, 18.5px);
+    line-height: 1.65;
   }
 
   .alternativas {
     margin-top: 0;
+    gap: 10px;
   }
 
   .feedback {
-    margin-top: 24px;
+    margin-top: 16px;
   }
 
   .navegacao {
     justify-content: flex-end;
-    margin-top: 24px;
+    margin-top: 16px;
   }
   
   #btnVoltar {
@@ -1315,10 +1386,7 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
    MODO FOCO
    ============================================================ */
 body.modo-foco-ativo .cabecalho,
-body.modo-foco-ativo .toolbar,
-body.modo-foco-ativo .status,
-body.modo-foco-ativo .barra-progresso,
-body.modo-foco-ativo .info-questao {
+body.modo-foco-ativo .controles-topo {
   display: none !important;
 }
 
