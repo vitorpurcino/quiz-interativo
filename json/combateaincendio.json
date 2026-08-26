@@ -1,7 +1,8 @@
 {
 	"informacoes ": {
-		"titulo ": "Quiz Interativo - Táticas de Combate a Incêndio Estrutural (Capítulo 1) ",
-		"materia ": "Táticas de Combate a Incêndio Estrutural ",
+		"titulo ": "Quiz - Táticas de Combate a Incêndio Estrutural",
+		"materia ": "Táticas de Combate a Incêndio Estrutural",
+		"nome": "Combate a Incêndio",
 		"embaralharQuestoes ": true,
 		"mostrarFundamento ": true,
 		"fonte ": "Apostila CFSBM 2026 - Táticas de Combate a Incêndio Estrutural ",
