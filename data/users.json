@@ -25,5 +25,14 @@
     "senha": "159357",
     "criadoEm": "2026-08-25T16:58:00.024Z",
     "ativo": true
+  },
+  {
+    "id": "user_1787748409582_71982f",
+    "nome": "Godoi",
+    "email": "godoi@mail.com",
+    "usuario": "godoi",
+    "senha": "159357",
+    "criadoEm": "2026-08-26T12:46:49.582Z",
+    "ativo": false
   }
 ]
