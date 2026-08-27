@@ -258,21 +258,7 @@ async function handleUserLogin(request, response) {
 }
 
 function serveStaticFile(response, requestPath) {
-  // Roteamento: redirecionar rotas amigas para a pasta pages
-  const routeMap = {
-    '/dashboard.html': '/pages/dashboard.html',
-    '/login.html': '/pages/login.html',
-    '/cadastro.html': '/pages/cadastro.html',
-    '/finalAnalysisQuiz.html': '/pages/finalAnalysisQuiz.html'
-  };
-
   let safePath = requestPath === '/' ? '/pages/login.html' : requestPath;
-  
-  // Aplicar mapeamento de rotas
-  if (routeMap[safePath]) {
-    safePath = routeMap[safePath];
-  }
-
   const normalizedPath = path.normalize(safePath).replace(/^\/+/, '');
   const finalPath = path.join(PUBLIC_DIR, normalizedPath);
 
