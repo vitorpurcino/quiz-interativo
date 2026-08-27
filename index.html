@@ -51,7 +51,7 @@
         <p class="subtitulo" id="subtitulo">Carregando matérias…</p>
       </div>
 
-      <div style="display:flex; align-items:center; gap:10px; position:relative; z-index:1">
+      <div class="cabecalho-acoes">
         <!-- Streak Badge -->
         <div class="streak-badge" id="streakBadge" data-streak="0" title="Sequência de acertos consecutivos"
           aria-live="polite">
@@ -59,9 +59,9 @@
         </div>
 
         <!-- Dashboard -->
-        <button class="btn-cinza" id="btnDashboard" type="button" aria-label="Abrir Dashboard de desempenho"
+        <button class="btn-cinza btn-dashboard" id="btnDashboard" type="button" aria-label="Abrir Dashboard de desempenho"
           title="Dashboard de desempenho" onclick="window.location.href='./pages/dashboard.html'">
-          📊 Dashboard
+          📊 Gráficos
         </button>
 
         <button class="btn-cinza" id="btnLogout" type="button" aria-label="Sair da conta" title="Sair da conta">
