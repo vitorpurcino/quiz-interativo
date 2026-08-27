@@ -42,6 +42,10 @@ O sistema conta com arquitetura de **zero dependências externas no backend**, a
 - 🔐 **Autenticação & Moderação**:
   - Telas de login e cadastro integradas.
   - Moderação administrativa (novas contas passam por aprovação prévia antes do primeiro acesso).
+  - Após o login, o usuário é direcionado automaticamente para o Dashboard de Desempenho.
+- 📊 **Dashboard de Desempenho**:
+  - Visão analítica do progresso, acertos, erros, desempenho por matéria e dificuldade.
+  - Histórico de estudos e identificação de pontos fortes e fracos.
 - 🔍 **Filtros Dinâmicos em Tempo Real**:
   - **Busca Global**: Pesquisa por palavras-chave em enunciados, opções, explicações e fundamentos.
   - **Categorias/Temas**: Filtro extraído dinamicamente com base nas questões da matéria ativa.
@@ -67,7 +71,7 @@ O sistema conta com arquitetura de **zero dependências externas no backend**, a
 ```text
 quiz-interativo/
 ├── api-config.js            # Configuração do endpoint base da API (Local / Nuvem)
-├── index.html               # Interface principal do Quiz (Dashboard e Resolução)
+├── index.html               # Interface principal do Quiz e resolução de questões
 ├── package.json             # Scripts de execução do projeto
 ├── README.md                # Documentação oficial do projeto
 │
@@ -89,6 +93,7 @@ quiz-interativo/
 │
 └── pages/
     ├── cadastro.html        # Página de criação de conta
+    ├── dashboard.html       # Dashboard de desempenho após o login
     ├── finalAnalysisQuiz.html# Página de relatório e revisão de desempenho final
     └── login.html           # Página de autenticação de usuários
 ```
@@ -118,6 +123,9 @@ quiz-interativo/
 
 3. Acesse no navegador:
    👉 **`http://localhost:8000`**
+
+4. Faça login com uma conta ativa. Após a autenticação, você será direcionado para `pages/dashboard.html`.
+   A partir do Dashboard, use **Voltar ao Quiz** para acessar a resolução de questões.
 
 > **💡 Usuário de Teste Padrão:**
 > - **Usuário:** `admin`
