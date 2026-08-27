@@ -1,38 +1,38 @@
 [
-  {
-    "id": "user_1787536882475_70095a",
-    "nome": "Admin Master",
-    "email": "admin@quiz.com",
-    "usuario": "admin",
-    "senha": "123456",
-    "criadoEm": "2026-08-24T02:01:22.475Z",
-    "ativo": true
-  },
-  {
-    "id": "user_1787537338877_61d360",
-    "nome": "Manganaro",
-    "email": "manganaro@mail.com",
-    "usuario": "manganaro",
-    "senha": "159357",
-    "criadoEm": "2026-08-24T02:08:58.877Z",
-    "ativo": true
-  },
-  {
-    "id": "user_1787677080024_64dcdb",
-    "nome": "Rafael de Souza",
-    "email": "dsouza@mail.com",
-    "usuario": "dsouza",
-    "senha": "159357",
-    "criadoEm": "2026-08-25T16:58:00.024Z",
-    "ativo": true
-  },
-  {
-    "id": "user_1787748409582_71982f",
-    "nome": "Godoi",
-    "email": "godoi@mail.com",
-    "usuario": "godoi",
-    "senha": "159357",
-    "criadoEm": "2026-08-26T12:46:49.582Z",
-    "ativo": true
-  }
+	{
+		"id": "user_1787536882475_70095a",
+		"nome": "Admin Master",
+		"email": "admin@quiz.com",
+		"usuario": "admin",
+		"senha": "123456",
+		"criadoEm": "2026-08-24T02:01:22.475Z",
+		"ativo": true
+	},
+	{
+		"id": "user_1787537338877_61d360",
+		"nome": "Manganaro",
+		"email": "manganaro@mail.com",
+		"usuario": "manganaro",
+		"senha": "159357",
+		"criadoEm": "2026-08-24T02:08:58.877Z",
+		"ativo": true
+	},
+	{
+		"id": "user_1787677080024_64dcdb",
+		"nome": "Rafael de Souza",
+		"email": "dsouza@mail.com",
+		"usuario": "dsouza",
+		"senha": "159357",
+		"criadoEm": "2026-08-25T16:58:00.024Z",
+		"ativo": true
+	},
+	{
+		"id": "user_1787748409582_71982f",
+		"nome": "Godoi",
+		"email": "godoi@mail.com",
+		"usuario": "godoi",
+		"senha": "159357",
+		"criadoEm": "2026-08-26T12:46:49.582Z",
+		"ativo": true
+	}
 ]
