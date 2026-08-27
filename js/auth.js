@@ -57,7 +57,7 @@ const showAlreadyLoggedInMessage = () => {
   setMessage(messageEl, `Você já está logado como ${displayName}. Redirecionando...`, 'success');
 
   setTimeout(() => {
-    window.location.replace('./dashboard.html');
+    window.location.replace('./pages/dashboard.html');
   }, 1200);
 
   return true;
@@ -172,7 +172,7 @@ const initAuthForms = () => {
     }
 
     loginForm.addEventListener('submit', async (event) => {
-      await handleAuthSubmit(event, apiUrl('/api/auth/login'), 'Login realizado com sucesso.', './dashboard.html');
+      await handleAuthSubmit(event, apiUrl('/api/auth/login'), 'Login realizado com sucesso.', './pages/dashboard.html');
     });
   }
 
