@@ -629,32 +629,34 @@ function renderAlternatives() {
   const selectedLetter = state.draftSelection || (answer ? answer.selected : null);
   const isAnswered     = Boolean(answer);
 
-  refs.alternativas.innerHTML = question.alternatives
-    .map((option) => {
-      const isSelected = selectedLetter === option.letter;
-      const isCorrect  = question.correct === option.letter;
-      const classes    = ['alternativa'];
+  while (refs.alternativas.firstChild) refs.alternativas.removeChild(refs.alternativas.firstChild);
 
-      if (isSelected)                             classes.push('selected');
-      if (isAnswered && isCorrect)                classes.push('correct');
-      if (isAnswered && isSelected && !isCorrect) classes.push('wrong');
+  for (const option of question.alternatives) {
+    const isSelected = selectedLetter === option.letter;
+    const isCorrect  = question.correct === option.letter;
 
-      const disabled = isAnswered ? 'disabled' : '';
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'alternativa';
+    btn.dataset.letter = option.letter;
+    btn.setAttribute('aria-pressed', isSelected ? 'true' : 'false');
+    if (isSelected) btn.classList.add('selected');
+    if (isAnswered && isCorrect) btn.classList.add('correct');
+    if (isAnswered && isSelected && !isCorrect) btn.classList.add('wrong');
+    if (isAnswered) btn.disabled = true;
 
-      return `
-        <button
-          type="button"
-          class="${classes.join(' ')}"
-          data-letter="${option.letter}"
-          aria-pressed="${isSelected ? 'true' : 'false'}"
-          ${disabled}
-        >
-          <span class="alternativa-letra">${option.letter}</span>
-          <span class="alternativa-texto">${option.text}</span>
-        </button>
-      `;
-    })
-    .join('');
+    const letraEl = document.createElement('span');
+    letraEl.className = 'alternativa-letra';
+    letraEl.textContent = option.letter;
+    btn.appendChild(letraEl);
+
+    const textoEl = document.createElement('span');
+    textoEl.className = 'alternativa-texto';
+    textoEl.textContent = option.text;
+    btn.appendChild(textoEl);
+
+    refs.alternativas.appendChild(btn);
+  }
 }
 
 function renderFeedback() {
@@ -727,12 +729,25 @@ function renderQuestion() {
     refs.questionTopic.textContent = 'Filtro ativo';
     refs.questionDifficulty.textContent = '-';
     refs.questionDifficulty.className = 'dificil-default';
-    refs.alternativas.innerHTML   = hasFilter
-      ? `<div style="text-align: center; padding: 24px; color: var(--texto-secundario);">
-           <p style="margin-bottom: 12px;">Tente alterar os termos de busca ou limpar os filtros para visualizar as questões.</p>
-           <button type="button" class="btn-primario" onclick="window.limparTodosFiltros()" style="display:inline-flex; align-items:center; gap:6px;">↺ Limpar Filtros</button>
-         </div>`
-      : '';
+    refs.alternativas.innerHTML   = '';
+    if (hasFilter) {
+      const vazio = document.createElement('div');
+      vazio.className = 'alternativas-vazio';
+      const p = document.createElement('p');
+      p.textContent = 'Tente alterar os termos de busca ou limpar os filtros para visualizar as questões.';
+      vazio.appendChild(p);
+      const btnLimpar = document.createElement('button');
+      btnLimpar.type = 'button';
+      btnLimpar.className = 'btn-primario btn-com-icone';
+      btnLimpar.addEventListener('click', () => window.limparTodosFiltros());
+      const btnIcone = document.createElement('span');
+      btnIcone.className = 'btn-icone';
+      btnIcone.innerHTML = window.Icon('refresh');
+      btnLimpar.appendChild(btnIcone);
+      btnLimpar.appendChild(document.createTextNode('Limpar Filtros'));
+      vazio.appendChild(btnLimpar);
+      refs.alternativas.appendChild(vazio);
+    }
     refs.feedbackBox.hidden       = true;
     renderQuestionOptions();
     renderProgress();

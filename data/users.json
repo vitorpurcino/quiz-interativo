@@ -1,38 +1,38 @@
 [
-	{
-		"id": "user_1787536882475_70095a",
-		"nome": "Admin Master",
-		"email": "admin@quiz.com",
-		"usuario": "admin",
-		"senha": "123456",
-		"criadoEm": "2026-08-24T02:01:22.475Z",
-		"ativo": true
-	},
-	{
-		"id": "user_1787537338877_61d360",
-		"nome": "Manganaro",
-		"email": "manganaro@mail.com",
-		"usuario": "manganaro",
-		"senha": "159357",
-		"criadoEm": "2026-08-24T02:08:58.877Z",
-		"ativo": true
-	},
-	{
-		"id": "user_1787677080024_64dcdb",
-		"nome": "Rafael de Souza",
-		"email": "dsouza@mail.com",
-		"usuario": "dsouza",
-		"senha": "159357",
-		"criadoEm": "2026-08-25T16:58:00.024Z",
-		"ativo": true
-	},
-	{
-		"id": "user_1787748409582_71982f",
-		"nome": "Godoi",
-		"email": "godoi@mail.com",
-		"usuario": "godoi",
-		"senha": "159357",
-		"criadoEm": "2026-08-26T12:46:49.582Z",
-		"ativo": true
-	}
+  {
+    "id": "user_1787536882475_70095a",
+    "nome": "Admin Master",
+    "email": "admin@quiz.com",
+    "usuario": "admin",
+    "criadoEm": "2026-08-24T02:01:22.475Z",
+    "ativo": true,
+    "senhaHash": "scrypt$e9091ab0678cd58a959173974c629807$3148f44d316132c7d7e4168333631cd37256b741bb5588cd31b2fdc7d4c961704d3f91d77bb5a6b3e1bf5e3d274072a626dbc9baced8841f7a3f6b59cb5b47fc"
+  },
+  {
+    "id": "user_1787537338877_61d360",
+    "nome": "Manganaro",
+    "email": "manganaro@mail.com",
+    "usuario": "manganaro",
+    "criadoEm": "2026-08-24T02:08:58.877Z",
+    "ativo": true,
+    "senhaHash": "scrypt$95c9737771dca89c07e096e9a6cff522$544946ec788482ed1f0f32b61cc69f181956d567b0e419d47c217e62febba40216990e4f1a7c9378472f0630fa9293a290aa10b04a3f3c47268014c81b12b30b"
+  },
+  {
+    "id": "user_1787677080024_64dcdb",
+    "nome": "Rafael de Souza",
+    "email": "dsouza@mail.com",
+    "usuario": "dsouza",
+    "criadoEm": "2026-08-25T16:58:00.024Z",
+    "ativo": true,
+    "senhaHash": "scrypt$13b9fdb5399e66efbefeac1a64528b8c$4599c1b0f82483a5e97b8dbf7a78232f1d707edb78fcc9377dfac09e9169df990b925d5cd5c41e9be5e8f964b585447d1654ab0453f3c105da01457d283ceb3d"
+  },
+  {
+    "id": "user_1787748409582_71982f",
+    "nome": "Godoi",
+    "email": "godoi@mail.com",
+    "usuario": "godoi",
+    "criadoEm": "2026-08-26T12:46:49.582Z",
+    "ativo": true,
+    "senhaHash": "scrypt$409f8f1f9338f9cd203a17995d39b785$fb4e819522167d83dddf2f58bbd04cdf12914928f628e23030d585c5436f112d4d295bb4a9e1a2d67ec158b83e619f8b3b958af0141504718e49dfe4b62731f3"
+  }
 ]

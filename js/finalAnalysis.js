@@ -272,20 +272,45 @@ function mostrarModal({ titulo, texto, icone, confirmar = 'Confirmar', cancelar 
     overlay.className = 'modal-overlay';
     overlay.setAttribute('role', 'dialog');
     overlay.setAttribute('aria-modal', 'true');
-    overlay.innerHTML = `
-      <div class="modal-card">
-        <span class="modal-icone">${icone || ''}</span>
-        <h3 class="modal-titulo">${titulo}</h3>
-        <p class="modal-texto">${texto}</p>
-        <div class="modal-acoes">
-          <button class="btn-cinza" data-action="cancel" type="button">${cancelar}</button>
-          <button class="btn-vermelho" data-action="confirm" type="button">${confirmar}</button>
-        </div>
-      </div>
-    `;
+
+    const card = document.createElement('div');
+    card.className = 'modal-card';
+
+    const iconeEl = document.createElement('span');
+    iconeEl.className = 'modal-icone';
+    if (icone) iconeEl.innerHTML = icone;
+
+    const tituloEl = document.createElement('h3');
+    tituloEl.className = 'modal-titulo';
+    tituloEl.textContent = titulo || '';
+
+    const textoEl = document.createElement('p');
+    textoEl.className = 'modal-texto';
+    textoEl.textContent = texto || '';
+
+    const acoesEl = document.createElement('div');
+    acoesEl.className = 'modal-acoes';
+    const btnCancelar = document.createElement('button');
+    btnCancelar.className = 'btn-cinza';
+    btnCancelar.type = 'button';
+    btnCancelar.dataset.action = 'cancel';
+    btnCancelar.textContent = cancelar;
+    const btnConfirmar = document.createElement('button');
+    btnConfirmar.className = 'btn-vermelho';
+    btnConfirmar.type = 'button';
+    btnConfirmar.dataset.action = 'confirm';
+    btnConfirmar.textContent = confirmar;
+    acoesEl.appendChild(btnCancelar);
+    acoesEl.appendChild(btnConfirmar);
+
+    card.appendChild(iconeEl);
+    card.appendChild(tituloEl);
+    card.appendChild(textoEl);
+    card.appendChild(acoesEl);
+    overlay.appendChild(card);
     document.body.appendChild(overlay);
-    const focusEl = overlay.querySelector('[data-action="confirm"]');
-    if (focusEl) focusEl.focus();
+
+    btnConfirmar.focus();
 
     const close = (result) => {
       overlay.remove();
@@ -295,8 +320,8 @@ function mostrarModal({ titulo, texto, icone, confirmar = 'Confirmar', cancelar 
     overlay.addEventListener('click', (e) => {
       if (e.target === overlay) close(false);
     });
-    overlay.querySelector('[data-action="cancel"]').addEventListener('click', () => close(false));
-    overlay.querySelector('[data-action="confirm"]').addEventListener('click', () => close(true));
+    btnCancelar.addEventListener('click', () => close(false));
+    btnConfirmar.addEventListener('click', () => close(true));
     overlay.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') close(false);
     });

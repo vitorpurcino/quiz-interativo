@@ -818,6 +818,16 @@ body::before {
   color: var(--erro-texto);
 }
 
+.alternativas-vazio {
+  text-align: center;
+  padding: 24px;
+  color: var(--texto-secundario);
+}
+
+.alternativas-vazio p {
+  margin-bottom: 12px;
+}
+
 .feedback-titulo {
   display: flex;
   align-items: center;
