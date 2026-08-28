@@ -1,3 +1,14 @@
-// Arquivo gerado automaticamente para apontar o frontend ao backend hospedado (Railway)
-// Substitua a URL se necessário — não inclua barra final
+// Configuração de ambiente — URL base da API
 window.API_BASE = 'https://cfsbm2026.up.railway.app';
+
+// Lista canônica de matérias (arquivos JSON em /json).
+// Single source of truth — usado por app.js e pages/dashboard.html
+window.STATIC_SUBJECTS = [
+  'combateaincendio.json',
+  'comandoelideranca.json',
+  'correspondencias.json',
+  'direitopenalmilitar.json',
+  'fundamentojuridicos.json',
+  'licitacoes.json',
+  'segurancaincedio.json'
+];

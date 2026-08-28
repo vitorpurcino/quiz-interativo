@@ -5,15 +5,17 @@
 const STORAGE_KEY = 'quiz_interativo_progress_v1';
 const THEME_KEY   = 'quiz_interativo_theme';
 
-const STATIC_SUBJECTS = [
-  'combateaincendio.json',
-  'comandoelideranca.json',
-  'correspondencias.json',
-  'direitopenalmilitar.json',
-  'fundamentojuridicos.json',
-  'licitacoes.json',
-  'segurancaincedio.json'
-];
+const STATIC_SUBJECTS = (window.STATIC_SUBJECTS && Array.isArray(window.STATIC_SUBJECTS) && window.STATIC_SUBJECTS.length)
+  ? window.STATIC_SUBJECTS
+  : [
+      'combateaincendio.json',
+      'comandoelideranca.json',
+      'correspondencias.json',
+      'direitopenalmilitar.json',
+      'fundamentojuridicos.json',
+      'licitacoes.json',
+      'segurancaincedio.json'
+    ];
 
 let state = {
   darkMode: localStorage.getItem(THEME_KEY) === 'dark',
@@ -46,7 +48,7 @@ function applyTheme(theme) {
   document.documentElement.classList.toggle('dark', isDark);
   state.darkMode = isDark;
   localStorage.setItem(THEME_KEY, isDark ? 'dark' : 'light');
-  if (refs.btnTema) refs.btnTema.textContent = isDark ? '☀️' : '🌓';
+  if (refs.btnTema) refs.btnTema.innerHTML = isDark ? window.Icon('sun') : window.Icon('moon');
 }
 
 if (refs.btnTema) {
@@ -181,7 +183,7 @@ async function init() {
 function calcularEstatisticas() {
   const total = state.selectedSubjectData.questions.length;
   const answers = state.progress.answers || {};
-  
+
   let acertos = 0;
   let erros = 0;
   let respondidas = 0;
@@ -191,28 +193,28 @@ function calcularEstatisticas() {
     if (ans.isCorrect) acertos++;
     else erros++;
   }
-  
+
   const percentual = total > 0 ? Math.round((acertos / total) * 100) : 0;
 
-  let icone = '🎯';
+  let icone = window.Icon('target');
   let titulo = 'Matéria Concluída!';
   let subtitulo = 'Você respondeu todas as questões.';
 
   if (percentual === 100) {
-    icone = '🏆';
+    icone = window.Icon('trophy');
     titulo = 'Perfeito!';
     subtitulo = 'Você gabaritou todas as questões desta matéria. Excelente trabalho!';
   } else if (percentual >= 70) {
-    icone = '🎉';
+    icone = window.Icon('party');
     titulo = 'Muito Bem!';
     subtitulo = `Você acertou ${percentual}% das questões. Continue assim!`;
   } else {
-    icone = '💪';
+    icone = window.Icon('muscle');
     titulo = 'Não Desista!';
     subtitulo = `Você acertou ${percentual}% das questões. Revise e tente novamente!`;
   }
 
-  refs.resultadoIcone.textContent = icone;
+  refs.resultadoIcone.innerHTML = icone;
   refs.resultadoTitulo.textContent = titulo;
   refs.resultadoSubtitulo.textContent = subtitulo;
   refs.statTotal.textContent = String(total);
@@ -241,19 +243,69 @@ refs.btnVoltarMenu.addEventListener('click', () => {
   window.location.href = '../index.html';
 });
 
-refs.btnReiniciarResultado.addEventListener('click', () => {
-  if(confirm("Tem certeza que deseja reiniciar o progresso desta matéria?")) {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) {
-      const parsed = JSON.parse(raw);
-      if (parsed.subjects && parsed.subjects[parsed.currentSubject]) {
-        parsed.subjects[parsed.currentSubject] = { answers: {}, currentIndex: 0 };
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(parsed));
-      }
+refs.btnReiniciarResultado.addEventListener('click', async () => {
+  const confirmed = await mostrarModal({
+    titulo: 'Reiniciar Matéria?',
+    texto: 'Isso apagará todas as respostas salvas para esta matéria. A ação não pode ser desfeita.',
+    icone: window.Icon('trash'),
+    confirmar: 'Sim, reiniciar',
+    cancelar: 'Cancelar'
+  });
+  if (!confirmed) return;
+  const raw = localStorage.getItem(STORAGE_KEY);
+  if (raw) {
+    const parsed = JSON.parse(raw);
+    if (parsed.subjects && parsed.subjects[parsed.currentSubject]) {
+      parsed.subjects[parsed.currentSubject] = { answers: {}, currentIndex: 0 };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(parsed));
     }
-    window.location.href = '../index.html';
   }
+  window.location.href = '../index.html';
 });
 
+// ==========================================
+// MODAL DE CONFIRMAÇÃO
+// ==========================================
+function mostrarModal({ titulo, texto, icone, confirmar = 'Confirmar', cancelar = 'Cancelar' }) {
+  return new Promise((resolve) => {
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.innerHTML = `
+      <div class="modal-card">
+        <span class="modal-icone">${icone || ''}</span>
+        <h3 class="modal-titulo">${titulo}</h3>
+        <p class="modal-texto">${texto}</p>
+        <div class="modal-acoes">
+          <button class="btn-cinza" data-action="cancel" type="button">${cancelar}</button>
+          <button class="btn-vermelho" data-action="confirm" type="button">${confirmar}</button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    const focusEl = overlay.querySelector('[data-action="confirm"]');
+    if (focusEl) focusEl.focus();
+
+    const close = (result) => {
+      overlay.remove();
+      resolve(result);
+    };
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) close(false);
+    });
+    overlay.querySelector('[data-action="cancel"]').addEventListener('click', () => close(false));
+    overlay.querySelector('[data-action="confirm"]').addEventListener('click', () => close(true));
+    overlay.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close(false);
+    });
+  });
+}
+
 // Start
-init();
+(function startup() {
+  const refreshSlot = document.querySelector('#btnReiniciarResultado .btn-icone');
+  if (refreshSlot) refreshSlot.innerHTML = window.Icon('refresh');
+  init();
+})();

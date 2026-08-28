@@ -1,8 +1,7 @@
 /* ============================================================
    QUIZ INTERATIVO - CFSBM 2026 - Design System Completo
+   Google Fonts: importar via <link rel="stylesheet"> no <head> (performance)
    ============================================================ */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 /* ============================================================
    TOKENS - MODO CLARO
@@ -72,12 +71,12 @@ html.dark {
   --acento-rgb:        251, 191, 36;
   --bg-pagina:         #0a0f1e;
   --bg-card:           #111827;
-  --bg-header:         linear-gradient(135deg, #0d1b3e 0%, #111827 60%, #1a2640 100%);
-  --texto-principal:   #f1f5f9;
+  --bg-header:         linear-gradient(135deg, #050a18 0%, #0a1228 60%, #111c3f 100%);
+  --texto-principal:   #e2e8f0;
   --texto-secundario:  #94a3b8;
   --texto-terciario:   #64748b;
   --borda:             #1e293b;
-  --borda-foco:        #3b82f6;
+  --borda-foco:        #60a5fa;
   --sombra-xs:         0 1px 2px rgba(0, 0, 0, 0.30);
   --sombra-sm:         0 2px 8px rgba(0, 0, 0, 0.40);
   --sombra-md:         0 4px 16px rgba(0, 0, 0, 0.50);
@@ -92,7 +91,7 @@ html.dark {
   --erro-texto:        #fca5a5;
   --erro-icone:        #f87171;
   --selecionada-bg:    #1e3a5f;
-  --selecionada-borda: #3b82f6;
+  --selecionada-borda: #60a5fa;
   --selecionada-texto: #93c5fd;
   --facil-bg:          #052e16;
   --facil-texto:       #86efac;
@@ -105,8 +104,8 @@ html.dark {
   --dificil-borda:     #dc2626;
   --progresso-bg:      #1e293b;
   --progresso-fill:    linear-gradient(90deg, #2563eb, #3b82f6, #60a5fa);
-  --container-bg:      #111827;
-  --container-texto:   #f1f5f9;
+  --container-bg:      #0f172a;
+  --container-texto:   #e2e8f0;
   --fundo-suave:       #1e293b;
   --borda-suave:       #1e293b;
 }
@@ -239,7 +238,6 @@ body::before {
 .btn-tema:hover {
   background: rgba(255, 255, 255, 0.22);
   border-color: rgba(255, 255, 255, 0.45);
-  transform: rotate(15deg) scale(1.05);
 }
 
 /* ============================================================
@@ -725,7 +723,6 @@ body::before {
 
 .alternativa:not(:disabled):hover {
   border-color: var(--primario);
-  transform: translateX(4px);
   box-shadow: var(--sombra-sm), -3px 0 0 var(--primario);
 }
 
@@ -859,7 +856,12 @@ body::before {
   line-height: 1.55;
   width: 100%;
   box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
 }
+.feedback-fundamento-icone { display: inline-flex; align-items: center; flex-shrink: 0; color: var(--primario); }
+.feedback-fundamento-icone svg { width: 14px; height: 14px; }
 
 html.dark .feedback-fundamento { background: rgba(255, 255, 255, 0.06); }
 
@@ -888,7 +890,7 @@ button {
 }
 
 button:active:not(:disabled) { transform: scale(0.97); }
-button:disabled { opacity: 0.45; cursor: not-allowed; }
+button:disabled { opacity: 0.55; cursor: not-allowed; }
 
 .btn-primario {
   flex: 1;
@@ -902,7 +904,6 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 
 .btn-primario:not(:disabled):hover {
   box-shadow: 0 6px 24px rgba(var(--primario-rgb), 0.45);
-  transform: translateY(-1px);
 }
 
 .btn-verde {
@@ -916,7 +917,6 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 
 .btn-verde:not(:disabled):hover {
   box-shadow: 0 6px 20px rgba(22, 163, 74, 0.45);
-  transform: translateY(-1px);
 }
 
 .btn-cinza {
@@ -965,7 +965,6 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
   background: linear-gradient(135deg, #b91c1c, #991b1b);
   box-shadow: 0 6px 20px rgba(220, 38, 38, 0.40);
   color: white;
-  transform: translateY(-1px);
 }
 
 /* ============================================================
@@ -1226,6 +1225,83 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 .tela[hidden] { display: none !important; }
 
 :focus-visible { outline: 3px solid rgba(var(--primario-rgb), 0.6); outline-offset: 2px; }
+
+/* ============================================================
+   ÍCONES SVG INLINE (substitutos de emoji)
+   ============================================================ */
+.btn-icone, .streak-icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.btn-icone svg, .streak-icone svg { display: block; }
+.btn-tema { display: inline-flex; align-items: center; justify-content: center; }
+.btn-tema svg { display: block; }
+
+.filtros-titulo { display: inline-flex; align-items: center; }
+.filtros-titulo .btn-icone { color: var(--acento); }
+
+.input-com-icone .icone-busca { display: inline-flex; align-items: center; color: var(--texto-terciario); }
+.input-com-icone .icone-busca svg { width: 16px; height: 16px; }
+
+.streak-badge { display: inline-flex; align-items: center; }
+.streak-badge .streak-icone { color: white; margin-right: 4px; }
+.streak-badge .streak-icone svg { width: 14px; height: 14px; }
+
+.feedback-icone { display: inline-flex; align-items: center; }
+.feedback-icone svg { width: 20px; height: 20px; }
+.feedback.acerto .feedback-icone { color: var(--acerto-icone); }
+.feedback.erro .feedback-icone { color: var(--erro-icone); }
+
+.modal-icone { display: inline-flex; align-items: center; justify-content: center; color: var(--erro-icone); }
+.modal-icone svg { width: 40px; height: 40px; }
+
+.toast-icone { display: inline-flex; align-items: center; }
+.toast-icone svg { width: 18px; height: 18px; }
+.toast.sucesso .toast-icone { color: var(--acerto-icone); }
+.toast.erro .toast-icone { color: var(--erro-icone); }
+.toast.info .toast-icone { color: var(--primario); }
+
+.resultado-icone { display: inline-flex; align-items: center; justify-content: center; }
+.resultado-icone svg { width: 64px; height: 64px; color: var(--primario); }
+
+/* ============================================================
+   SKIP LINK (Acessibilidade WCAG 2.4.1)
+   ============================================================ */
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  z-index: 10000;
+  padding: 10px 16px;
+  background: var(--primario);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: var(--sombra-md);
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  left: 16px;
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   PREFERS-REDUCED-MOTION (Acessibilidade WCAG 2.1)
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .barra-preenchimento::after { display: none; }
+}
 
 /* ============================================================
    ANIMACOES

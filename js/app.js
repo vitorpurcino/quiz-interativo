@@ -6,15 +6,17 @@
 const STORAGE_KEY = 'quiz_interativo_progress_v1';
 const THEME_KEY   = 'quiz_interativo_theme';
 
-const STATIC_SUBJECTS = [
-  'combateaincendio.json',
-  'comandoelideranca.json',
-  'correspondencias.json',
-  'direitopenalmilitar.json',
-  'fundamentojuridicos.json',
-  'licitacoes.json',
-  'segurancaincedio.json'
-];
+const STATIC_SUBJECTS = (window.STATIC_SUBJECTS && Array.isArray(window.STATIC_SUBJECTS) && window.STATIC_SUBJECTS.length)
+  ? window.STATIC_SUBJECTS
+  : [
+      'combateaincendio.json',
+      'comandoelideranca.json',
+      'correspondencias.json',
+      'direitopenalmilitar.json',
+      'fundamentojuridicos.json',
+      'licitacoes.json',
+      'segurancaincedio.json'
+    ];
 
 /* ============================================================
    ESTADO DA APLICAÇÃO
@@ -92,14 +94,20 @@ const refs = {
    TOAST NOTIFICATIONS
    ============================================================ */
 function mostrarToast(mensagem, tipo = 'info', duracao = 3500) {
-  const icones = { sucesso: '✅', erro: '❌', info: 'ℹ️' };
+  const icones = { sucesso: 'check', erro: 'x', info: 'listChecks' };
   const toast = document.createElement('div');
   toast.className = `toast ${tipo}`;
   toast.setAttribute('role', 'status');
-  toast.innerHTML = `
-    <span class="toast-icone">${icones[tipo] || icones.info}</span>
-    <span>${mensagem}</span>
-  `;
+
+  const iconeEl = document.createElement('span');
+  iconeEl.className = 'toast-icone';
+  iconeEl.innerHTML = window.Icon(icones[tipo] || icones.info);
+
+  const textoEl = document.createElement('span');
+  textoEl.textContent = String(mensagem);
+
+  toast.appendChild(iconeEl);
+  toast.appendChild(textoEl);
 
   refs.toastContainer.appendChild(toast);
 
@@ -112,11 +120,11 @@ function mostrarToast(mensagem, tipo = 'info', duracao = 3500) {
 /* ============================================================
    MODAL DE CONFIRMAÇÃO CUSTOMIZADO
    ============================================================ */
-function mostrarModal(titulo, texto, icone = '⚠️') {
+function mostrarModal(titulo, texto, icone = 'warning') {
   return new Promise((resolve) => {
-    refs.modalIcone.textContent  = icone;
+    refs.modalIcone.innerHTML = window.Icon(icone) || '';
     refs.modalTitulo.textContent = titulo;
-    refs.modalTexto.textContent  = texto;
+    refs.modalTexto.textContent = texto;
     refs.modalOverlay.classList.remove('hidden');
     refs.modalConfirmar.focus();
 
@@ -140,6 +148,77 @@ function mostrarModal(titulo, texto, icone = '⚠️') {
     refs.modalCancelar.addEventListener('click', cancelar);
   });
 }
+
+/* ============================================================
+   INJEÇÃO DE ÍCONES SVG (substituição de emojis)
+   ============================================================ */
+function injetarIcones() {
+  const map = {
+    btnDashboard: 'chart',
+    btnLogout: 'power',
+    btnTema: 'moon',
+    btnModoFoco: 'target',
+    btnSairFoco: 'x',
+    reiniciarBtn: 'refresh',
+    encerrarRevisaoBtn: 'x',
+    btnLimparFiltros: 'x',
+    iconeBusca: 'search',
+    filtrosTitulo: 'zap',
+    streakBadgeIcon: 'flame'
+  };
+
+  document.querySelectorAll('[data-icone]').forEach((el) => {
+    const nome = el.getAttribute('data-icone');
+    if (nome && window.Icon(nome)) el.innerHTML = window.Icon(nome);
+  });
+
+  const setIcon = (id, name) => {
+    const el = document.getElementById(id);
+    if (el && window.Icon(name)) el.innerHTML = window.Icon(name);
+  };
+
+  setIcon('btnDashboard', 'chart');
+  setIcon('btnLogout', 'power');
+  setIcon('btnModoFoco', 'target');
+  setIcon('reiniciarBtn', 'refresh');
+  setIcon('encerrarRevisaoBtn', 'x');
+  setIcon('btnLimparFiltros', 'x');
+  setIcon('iconeBusca', 'search');
+
+  const filtrosTitulo = document.querySelector('.filtros-titulo');
+  if (filtrosTitulo) {
+    const icone = document.createElement('span');
+    icone.className = 'btn-icone';
+    icone.setAttribute('aria-hidden', 'true');
+    icone.innerHTML = window.Icon('zap');
+    filtrosTitulo.prepend(icone);
+  }
+
+  const streakBadge = document.getElementById('streakBadge');
+  if (streakBadge) {
+    const icone = document.createElement('span');
+    icone.className = 'streak-icone';
+    icone.setAttribute('aria-hidden', 'true');
+    icone.innerHTML = window.Icon('flame');
+    streakBadge.prepend(icone);
+  }
+
+  const applyThemeBtn = (isDark) => {
+    const el = document.getElementById('btnTema');
+    if (el) el.innerHTML = isDark ? window.Icon('sun') : window.Icon('moon');
+  };
+  applyThemeBtn(document.documentElement.classList.contains('dark'));
+
+  // Sobrescreve o handler de tema
+  const btnTema = document.getElementById('btnTema');
+  if (btnTema) {
+    btnTema.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      applyThemeBtn(isDark);
+    });
+  }
+}
+injetarIcones();
 
 /* ============================================================
    UTILITÁRIOS DE LIMPEZA E NORMALIZAÇÃO DE DADOS
@@ -431,7 +510,7 @@ function renderStreak() {
   refs.streakCount.textContent    = state.streak;
 
   if (state.streak >= 3) {
-    refs.streakBadge.title = `🔥 ${state.streak} acertos consecutivos!`;
+    refs.streakBadge.title = `${state.streak} acertos consecutivos!`;
   }
 }
 
@@ -602,16 +681,40 @@ function renderFeedback() {
   refs.feedbackBox.classList.add(isCorrect ? 'acerto' : 'erro');
   refs.feedbackBox.hidden = false;
 
-  refs.feedbackBox.innerHTML = `
-    <div class="feedback-titulo">
-      <span class="feedback-icone">${isCorrect ? '✅' : '❌'}</span>
-      <span>${isCorrect ? 'Resposta Correta!' : 'Resposta Incorreta'}</span>
-    </div>
-    <div class="feedback-corpo">
-      <div class="feedback-explicacao">${explanation}</div>
-      ${fundamento ? `<div class="feedback-fundamento">📖 ${fundamento}</div>` : ''}
-    </div>
-  `;
+  while (refs.feedbackBox.firstChild) refs.feedbackBox.removeChild(refs.feedbackBox.firstChild);
+
+  const tituloEl = document.createElement('div');
+  tituloEl.className = 'feedback-titulo';
+  const iconeEl = document.createElement('span');
+  iconeEl.className = 'feedback-icone';
+  iconeEl.innerHTML = isCorrect ? window.Icon('check') : window.Icon('x');
+  const tituloTexto = document.createElement('span');
+  tituloTexto.textContent = isCorrect ? 'Resposta Correta!' : 'Resposta Incorreta';
+  tituloEl.appendChild(iconeEl);
+  tituloEl.appendChild(tituloTexto);
+
+  const corpoEl = document.createElement('div');
+  corpoEl.className = 'feedback-corpo';
+  const explicacaoEl = document.createElement('div');
+  explicacaoEl.className = 'feedback-explicacao';
+  explicacaoEl.textContent = explanation;
+  corpoEl.appendChild(explicacaoEl);
+
+  if (fundamento) {
+    const fundEl = document.createElement('div');
+    fundEl.className = 'feedback-fundamento';
+    const bookIcon = document.createElement('span');
+    bookIcon.className = 'feedback-fundamento-icone';
+    bookIcon.innerHTML = window.Icon('book');
+    const fundText = document.createElement('span');
+    fundText.textContent = ' ' + fundamento;
+    fundEl.appendChild(bookIcon);
+    fundEl.appendChild(fundText);
+    corpoEl.appendChild(fundEl);
+  }
+
+  refs.feedbackBox.appendChild(tituloEl);
+  refs.feedbackBox.appendChild(corpoEl);
 }
 
 function renderQuestion() {
@@ -751,8 +854,8 @@ function saveAnsweredQuestion() {
 
   // Toast de feedback rápido
   if (isCorrect) {
-    if (state.streak >= 5) mostrarToast(`🔥 ${state.streak} acertos seguidos! Incrível!`, 'sucesso');
-    else if (state.streak >= 3) mostrarToast(`🔥 Sequência de ${state.streak}! Continue assim!`, 'sucesso');
+    if (state.streak >= 5) mostrarToast(`${state.streak} acertos seguidos! Incrível!`, 'sucesso');
+    else if (state.streak >= 3) mostrarToast(`Sequência de ${state.streak}! Continue assim!`, 'sucesso');
   }
 
   renderQuestion();
@@ -804,7 +907,7 @@ async function resetSubjectProgress() {
   const confirmed = await mostrarModal(
     'Reiniciar Matéria?',
     'Isso apagará todas as respostas salvas para esta matéria. A ação não pode ser desfeita.',
-    '🗑️'
+    'trash'
   );
 
   if (!confirmed) return;
@@ -957,7 +1060,7 @@ function applyTheme(theme) {
   document.documentElement.classList.toggle('dark', isDark);
   state.darkMode = isDark;
   localStorage.setItem(THEME_KEY, isDark ? 'dark' : 'light');
-  refs.btnTema.textContent = isDark ? '☀️' : '🌓';
+  if (refs.btnTema) refs.btnTema.innerHTML = isDark ? window.Icon('sun') : window.Icon('moon');
 }
 
 /* ============================================================
@@ -1135,7 +1238,7 @@ async function iniciarRevisao(filtro, skipModal = false) {
     const confirmed = await mostrarModal(
       'Revisão',
       `Você vai revisar ${questoesFiltradas.length} questões. Deseja continuar?`,
-      '📚'
+      'book'
     );
     if (!confirmed) return;
   }

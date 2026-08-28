@@ -98,8 +98,9 @@ html.dark .auth-message {
   border-radius: 18px;
   background: linear-gradient(135deg, #1e4fba, #3b82f6);
   box-shadow: 0 16px 30px rgba(30, 79, 186, 0.24);
-  font-size: 28px;
+  color: #fff;
 }
+.auth-badge svg { width: 30px; height: 30px; }
 
 .auth-overline {
   margin: 0;
@@ -151,6 +152,7 @@ html.dark .auth-message {
 .password-toggle:hover {
   background: rgba(148, 163, 184, 0.08);
 }
+.password-toggle svg { display: block; }
 
 .field {
   display: grid;
@@ -204,7 +206,6 @@ html.dark .auth-message {
 
 .auth-submit:hover,
 .btn-primary:hover {
-  transform: translateY(-1px);
   box-shadow: 0 16px 28px rgba(30, 79, 186, 0.28);
 }
 

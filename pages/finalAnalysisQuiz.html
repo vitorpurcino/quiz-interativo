@@ -10,14 +10,18 @@
   <title>Resultado Final — CFSBM 2026</title>
 
   <!-- Favicon SVG embutido -->
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231e4fba' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9H4.5a2.5 2.5 0 0 1 0-5H6'/><path d='M18 9h1.5a2.5 2.5 0 0 0 0-5H18'/><path d='M4 22h16'/><path d='M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22'/><path d='M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22'/><path d='M18 2H6v7a6 6 0 0 0 12 0V2Z'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap">
 
   <!-- CSS -->
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 
 <body>
+
   <main class="container" id="main">
     <header class="cabecalho">
       <div class="cabecalho-info">
@@ -27,14 +31,13 @@
       <div style="display:flex; align-items:center; gap:10px; position:relative; z-index:1">
         <button class="btn-tema" id="btnTema" type="button" aria-label="Alternar tema claro/escuro"
           title="Alternar tema">
-          🌓
         </button>
       </div>
     </header>
 
     <section id="telaResultado" class="tela">
       <div class="resultado-card">
-        <span class="resultado-icone" id="resultadoIcone">🏆</span>
+        <span class="resultado-icone" id="resultadoIcone" aria-hidden="true"></span>
         <h2 class="resultado-titulo" id="resultadoTitulo">Matéria Concluída!</h2>
         <p class="resultado-subtitulo" id="resultadoSubtitulo">Carregando seus resultados...</p>
 
@@ -72,8 +75,9 @@
         </div>
 
         <div class="resultado-acoes" style="flex-wrap: wrap;">
-          <button class="btn-vermelho" id="btnReiniciarResultado" type="button" style="margin-left: 0;">🔄 Reiniciar
-            Matéria</button>
+          <button class="btn-vermelho" id="btnReiniciarResultado" type="button" style="margin-left: 0;">
+            <span class="btn-icone" aria-hidden="true"></span> Reiniciar Matéria
+          </button>
           <button class="btn-primario" id="btnVoltarMenu" type="button" style="margin-left: auto;">Voltar ao
             Menu</button>
         </div>
@@ -81,6 +85,7 @@
     </section>
   </main>
 
+  <script src="../js/icons.js"></script>
   <script src="../js/finalAnalysis.js"></script>
 </body>
 
