@@ -1,0 +1,1883 @@
+{
+	"informacoes": {
+		"titulo": "Quiz - Atendimento a Ocorrências de Tentativa de Suicídio",
+		"materia": "Psicologia Aplicada e Atendimento Operacional do Corpo de Bombeiros",
+		"nome": "Negociador de Crise",
+		"embaralharQuestoes": true,
+		"mostrarFundamento": true,
+		"fonte": "PROPOSTA DE CAPACITAÇÃO AO EFETIVO DO CORPO DE BOMBEIROS PARA O ATENDIMENTO A OCORRÊNCIAS DE TENTATIVA DE SUICÍDIO (Cap PM Diógenes Martins Munhoz, APMAB, 2016)",
+		"curso": "Curso de Aperfeiçoamento de Oficiais / Formação de Praças do Corpo de Bombeiros",
+		"turma": "Turma Especializada em Gestão de Crise e Saúde Mental",
+		"ano": 2026,
+		"descricao": "Banco de questões focado na fundamentação teórica, epidemiologia, patologias associadas e protocolos de abordagem técnica e tática para tentativas de suicídio, baseado estritamente na monografia de referência da APMAB."
+	},
+	"questoes": [
+		{
+			"id": 1,
+			"titulo": "Introdução e Epidemiologia",
+			"tema": "1. O Suicídio no Brasil e no Mundo",
+			"dificuldade": "fácil",
+			"pergunta": "De acordo com os dados da Organização Mundial da Saúde (OMS) citados no texto, referente ao ano de 2012, qual era a posição do Brasil em números absolutos de suicídio e qual a média diária de óbitos no país?",
+			"alternativas": [
+				{ "letra": "A", "texto": "133ª posição, com uma média de 12 suicídios por dia." },
+				{ "letra": "B", "texto": "8ª posição, com uma média de 26 suicídios por dia." },
+				{ "letra": "C", "texto": "73ª posição, com uma média de 32 suicídios por dia." },
+				{ "letra": "D", "texto": "15ª posição, com uma média de 40 suicídios por dia." }
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma explicitamente na Introdução que, em 2012, o Brasil passou a ocupar a 8ª posição no mundo em números absolutos de suicídio, e que atualmente (na época do estudo) vinte e seis pessoas cometem suicídio no Brasil por dia.",
+			"fundamento": "Introdução, p. 13."
+		},
+		{
+			"id": 2,
+			"titulo": "História do Suicídio",
+			"tema": "1.1 O Suicídio e a História",
+			"dificuldade": "média",
+			"pergunta": "Um Tenente, ao ministrar uma aula teórica, precisa explicar a origem etimológica e os marcos históricos do termo 'suicídio'. Assinale a alternativa que apresenta a informação CORRETA, estritamente conforme o texto.",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "O termo deriva do grego 'sui' (alma) e 'caedes' (sacrifício), sendo introduzido por Hipócrates em 400 a.C."
+				},
+				{
+					"letra": "B",
+					"texto": "A palavra foi adotada na França pelo abade Prevost em 1897, ano em que Durkheim publicou 'Le Suicide'."
+				},
+				{
+					"letra": "C",
+					"texto": "O vocábulo deriva do latim 'sui' (si mesmo) e 'caedes' (ação de matar), sendo atribuído por alguns pesquisadores a Sir Thomas Browne, que o publicou em 1643."
+				},
+				{
+					"letra": "D",
+					"texto": "O termo foi cunhado por Émile Durkheim no século XIX, para descrever o suicídio anômico nas sociedades industriais."
+				}
+			],
+			"correta": "C",
+			"explicacao": "O texto cita que o vocabulário 'suicídio' seria derivado do latim a partir das palavras 'sui' (si mesmo) e 'caedes' (ação de matar), e que alguns pesquisadores atribuem a origem do termo a Sir Thomas Browne, em seu livro 'Religio Medici', em 1643.",
+			"fundamento": "Capítulo 1.1, p. 14."
+		},
+		{
+			"id": 3,
+			"titulo": "Epidemiologia e Fatores de Risco",
+			"tema": "1.2 O Suicídio como Epidemiologia Mundial",
+			"dificuldade": "fácil",
+			"pergunta": "Durante uma ocorrência, um socorrista lembra dos dados estatísticos estudados sobre a associação entre transtornos mentais e suicídio. Conforme o texto, qual é o percentual de casos consumados e de tentativas associados a transtornos mentais?",
+			"alternativas": [
+				{ "letra": "A", "texto": "90% dos casos consumados e 40% das tentativas." },
+				{ "letra": "B", "texto": "50% dos casos consumados e 50% das tentativas." },
+				{ "letra": "C", "texto": "75% dos casos consumados e 25% das tentativas." },
+				{ "letra": "D", "texto": "100% dos casos consumados e 60% das tentativas." }
+			],
+			"correta": "A",
+			"explicacao": "O texto afirma categoricamente na Introdução: 'Cerca de 90% dos casos e 40% das tentativas de suicídio estão associados a transtornos mentais, principalmente depressão e abuso de substâncias psicoativas'.",
+			"fundamento": "Introdução, p. 13."
+		},
+		{
+			"id": 4,
+			"titulo": "Epidemiologia por Gênero e Faixa Etária",
+			"tema": "1.2 O Suicídio como Epidemiologia Mundial",
+			"dificuldade": "média",
+			"pergunta": "Sobre as estatísticas de suicídio relacionadas a gênero e faixa etária, analise os itens abaixo:\nI. Entre os chamados 'sobreviventes de si mesmos' (tentativas não consumadas), os homens são maioria absoluta (80%).\nII. Para cada pessoa que consegue se suicidar, ocorreram cerca de 20 tentativas anteriores.\nIII. Na faixa etária entre 15 e 29 anos, o suicídio é a segunda causa principal de mortalidade em todo o mundo, depois dos acidentes de trânsito.\n\nEstá correto o que se afirma em:",
+			"alternativas": [
+				{ "letra": "A", "texto": "I, apenas." },
+				{ "letra": "B", "texto": "I e II, apenas." },
+				{ "letra": "C", "texto": "II e III, apenas." },
+				{ "letra": "D", "texto": "I, II e III." }
+			],
+			"correta": "C",
+			"explicacao": "O item I está incorreto. O texto afirma que, no grupo dos 'sobreviventes de si mesmos', as mulheres são maioria (80%), ou seja, os homens são mais letais, mas as mulheres tentam mais. Os itens II e III estão corretos conforme o texto (p. 17 e 18).",
+			"fundamento": "Capítulo 1.2, p. 17-18."
+		},
+		{
+			"id": 5,
+			"titulo": "Cenário Prático: Faixa Etária",
+			"tema": "1.2 O Suicídio como Epidemiologia Mundial",
+			"dificuldade": "difícil",
+			"pergunta": "Um Sargento do Corpo de Bombeiros é acionado para atender um jovem de 22 anos que está no parapeito de um viaduto. Considerando os dados da OMS apresentados no estudo, qual é a relevância estatística dessa faixa etária que deve reforçar a urgência e a seriedade da abordagem?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "É a faixa etária com a maior taxa absoluta de suicídios consumados no mundo, superando os idosos."
+				},
+				{
+					"letra": "B",
+					"texto": "O suicídio é a segunda causa de morte entre jovens de 15 a 29 anos em todo o mundo, sendo um grupo de risco destacado."
+				},
+				{
+					"letra": "C",
+					"texto": "Jovens dessa idade raramente possuem intenção real de morte, tratando-se apenas de um gesto para chamar a atenção, conforme a Tabela 1 da OMS."
+				},
+				{
+					"letra": "D",
+					"texto": "Estatisticamente, jovens de 15 a 29 anos representam menos de 1% das tentativas de suicídio no Brasil."
+				}
+			],
+			"correta": "B",
+			"explicacao": "O texto destaca que, na faixa etária entre 15 e 29 anos de idade, o suicídio responde por 8,5% das mortes em todo o mundo, o que a torna a segunda causa principal de mortalidade, depois dos acidentes de trânsito.",
+			"fundamento": "Capítulo 1.2, p. 17-18."
+		},
+		{
+			"id": 6,
+			"titulo": "Fundamentação Teórica: Letalidade",
+			"tema": "2.1 Com relação à Letalidade do Método",
+			"dificuldade": "fácil",
+			"pergunta": "O texto classifica os métodos suicidas em relação à letalidade. Qual das alternativas abaixo descreve corretamente os 'Métodos Potencialmente Letais'?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "São aqueles que não importam em riscos para a vida, como ingerir alguns comprimidos de ácido acetilsalicílico."
+				},
+				{
+					"letra": "B",
+					"texto": "São aqueles que necessariamente conduziriam à morte, a menos que haja intervenção terapêutica oportuna, como disparos de arma de fogo na cabeça."
+				},
+				{
+					"letra": "C",
+					"texto": "São os que são capazes de provocar a morte, principalmente se houver circunstâncias agravantes, como o corte de antebraços com lesão dos vasos ou precipitar-se de alturas."
+				},
+				{
+					"letra": "D",
+					"texto": "São métodos que, sem serem capazes de provocar a morte, podem ocasionar sintomas de intoxicação leve, como ingerir dez comprimidos de benzodiazepínico."
+				}
+			],
+			"correta": "C",
+			"explicacao": "A definição literal de 'Métodos potencialmente letais' no texto é: 'os que são capazes de provocar a morte, principalmente se houver circunstâncias agravantes, como o corte de antebraços com lesão dos vasos, ingestão de substâncias tóxicas em quantidades limites, precipitar-se de alturas'.",
+			"fundamento": "Capítulo 2.1, p. 27."
+		},
+		{
+			"id": 7,
+			"titulo": "Cenário Prático: Graus de Intenção",
+			"tema": "2.1.2 Com relação à intenção de morrer",
+			"dificuldade": "difícil",
+			"pergunta": "Um militar chega ao local e encontra uma vítima que cortou as veias e os tendões do braço, mas, imediatamente após o ato, a própria vítima ligou para o SAMU e informou o ocorrido, demonstrando ambivalência. De acordo com a classificação de graus de risco apresentada no texto, como essa tentativa deve ser classificada?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Grau I: gesto suicida sem qualquer dano físico de gravidade." },
+				{
+					"letra": "B",
+					"texto": "Grau II: ato que requer atenção médica, mas sem risco significativo para a vida."
+				},
+				{
+					"letra": "C",
+					"texto": "Grau III: ato suicida com moderada ou severa autolesão, potencialmente fatal, mas com ambivalência."
+				},
+				{
+					"letra": "D",
+					"texto": "Grau IV: ato suicida com intenção inequívoca de acabar com a vida, sem busca por auxílio."
+				}
+			],
+			"correta": "C",
+			"explicacao": "O texto define o Grau III exatamente como: 'é o ato suicida com moderada ou severa autolesão, potencialmente fatal, mas com ambivalência, como cortar as veias e os tendões, e logo a seguir procurar ajuda médica'.",
+			"fundamento": "Capítulo 2.1.2, p. 29."
+		},
+		{
+			"id": 8,
+			"titulo": "Fundamentação Teórica: Durkheim",
+			"tema": "2.2 O Suicídio segundo Émile Durkheim",
+			"dificuldade": "média",
+			"pergunta": "Durante uma análise crítica de uma ocorrência em um país que passou por uma brusca crise econômica e ruptura de valores sociais, gerando desorientação individual e sentimento de falta de significação da vida, qual tipo de suicídio, segundo Émile Durkheim, melhor descreve esse fenômeno?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Suicídio Egoísta." },
+				{ "letra": "B", "texto": "Suicídio Altruísta." },
+				{ "letra": "C", "texto": "Suicídio Anômico." },
+				{ "letra": "D", "texto": "Suicídio Fatalista." }
+			],
+			"correta": "C",
+			"explicacao": "O texto define o Suicídio Anômico como aquele que 'Baseia-se na ruptura do equilíbrio entre a sociedade e o indivíduo. O deslocamento dos valores sociais leva à desorientação individual e a um sentimento de falta de significação da vida'.",
+			"fundamento": "Capítulo 2.2, p. 29-30."
+		},
+		{
+			"id": 9,
+			"titulo": "Patologias da Mente: Depressão",
+			"tema": "2.3.1 Depressão",
+			"dificuldade": "média",
+			"pergunta": "Sobre a depressão e sua relação com o suicídio, assinale a alternativa CORRETA conforme os dados apresentados no texto.",
+			"alternativas": [
+				{ "letra": "A", "texto": "Após um primeiro episódio depressivo, o risco de um segundo é de 100%." },
+				{
+					"letra": "B",
+					"texto": "A mortalidade por suicídio é de 8% em pacientes internados devido a depressão com risco de suicídio."
+				},
+				{
+					"letra": "C",
+					"texto": "A depressão não possui caráter recorrente, sendo um episódio único na maioria dos casos."
+				},
+				{
+					"letra": "D",
+					"texto": "O suicídio tardio (após um ano da avaliação) está mais associado a ataques de pânico e insônia do que à desesperança grave."
+				}
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma: 'O suicídio é a consequência mais trágica da depressão: 8% de mortalidade em pacientes que já foram internados devido a depressão com risco de suicídio'. O risco de segundo episódio é de 50%, e o suicídio tardio está associado à desesperança grave.",
+			"fundamento": "Capítulo 2.3.1, p. 30-31."
+		},
+		{
+			"id": 10,
+			"titulo": "Patologias da Mente: Transtorno Bipolar",
+			"tema": "2.3.2 Transtorno Bipolar",
+			"dificuldade": "difícil",
+			"pergunta": "Um Cabo do CB atende uma ocorrência envolvendo um paciente diagnosticado com Transtorno Bipolar. Sobre a letalidade das tentativas de suicídio nesse transtorno, o texto estabelece uma comparação específica com a população geral. Qual é essa comparação?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "A letalidade é a mesma da população geral: um suicídio para cada 20 tentativas."
+				},
+				{
+					"letra": "B",
+					"texto": "A letalidade é menor, pois os pacientes bipolares buscam mais ajuda profissional durante as crises."
+				},
+				{
+					"letra": "C",
+					"texto": "A letalidade é maior: um suicídio para cada dez tentativas, enquanto na população geral é um para cada 20 tentativas."
+				},
+				{
+					"letra": "D",
+					"texto": "A letalidade é de 15%, sendo 10 vezes maior do que a observada na população geral."
+				}
+			],
+			"correta": "C",
+			"explicacao": "O texto declara explicitamente: 'A letalidade das tentativas de suicídio também é maior (um suicídio para cada dez tentativas) do que na população em geral (um suicídio para cada 20 tentativas)'.",
+			"fundamento": "Capítulo 2.3.2, p. 31-32."
+		},
+		{
+			"id": 11,
+			"titulo": "Cenário Prático: Patologias",
+			"tema": "2.3.4 Transtornos da Personalidade",
+			"dificuldade": "difícil",
+			"pergunta": "Ao avaliar o histórico de um paciente que tenta o suicídio pela terceira vez, o socorrista descobre que ele possui um padrão persistente de experiência interna e comportamento que se desvia acentuadamente das expectativas culturais, com instabilidade afetiva e impulsividade. O texto cita que, entre os transtornos de personalidade, este é o que mais se associa ao suicídio, listando atos de autoagressão em seus critérios diagnósticos. Estamos falando do transtorno:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Narcisista." },
+				{ "letra": "B", "texto": "Antissocial." },
+				{ "letra": "C", "texto": "Histriônico." },
+				{ "letra": "D", "texto": "Borderline." }
+			],
+			"correta": "D",
+			"explicacao": "O texto afirma: 'Entre os transtornos da personalidade, o tipo borderline é o que mais se associa ao suicídio e às tentativas de suicídio. É também o único que lista, entre os critérios diagnósticos, a ocorrência de atos suicidas e de autoagressão'.",
+			"fundamento": "Capítulo 2.3.4, p. 33."
+		},
+		{
+			"id": 12,
+			"titulo": "Patologias da Mente: Esquizofrenia",
+			"tema": "2.3.6 Outros transtornos mentais",
+			"dificuldade": "fácil",
+			"pergunta": "Qual é o risco relativo de suicídio em pessoas que sofrem de esquizofrenia, quando comparado ao encontrado na população geral, segundo os estudos citados no texto?",
+			"alternativas": [
+				{ "letra": "A", "texto": "2 vezes maior." },
+				{ "letra": "B", "texto": "5 vezes maior." },
+				{ "letra": "C", "texto": "12 vezes maior." },
+				{ "letra": "D", "texto": "20 vezes maior." }
+			],
+			"correta": "C",
+			"explicacao": "O texto informa que cerca de 5% das pessoas que sofrem de esquizofrenia cometem suicídio, 'o que representa um risco 12 vezes maior do que o encontrado na população geral'.",
+			"fundamento": "Capítulo 2.3.6, p. 34."
+		},
+		{
+			"id": 13,
+			"titulo": "Graus de Risco segundo a OMS",
+			"tema": "2.4 Graus de Risco segundo a OMS",
+			"dificuldade": "média",
+			"pergunta": "Observe a classificação da OMS (Tabela 1). Se um paciente apresenta 'Ideias suicidas E transtornos psiquiátricos OU fatores estressores graves OU agitação E tentativas prévias', classificando-se no Nível 6 de risco, qual é a ação recomendada pelo protocolo?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Escutar com empatia e perguntar sobre pensamentos suicidas." },
+				{ "letra": "B", "texto": "Explorar as possibilidades e identificar apoio." },
+				{ "letra": "C", "texto": "Encaminhar para um psiquiatra." },
+				{
+					"letra": "D",
+					"texto": "Ficar com o paciente (para prevenir o acesso aos meios letais) e hospitalizar."
+				}
+			],
+			"correta": "D",
+			"explicacao": "Na Tabela 1, para o Risco 6, a ação prescrita é: 'Ficar com o paciente (para prevenir o acesso aos meios letais)' e 'Hospitalizar'.",
+			"fundamento": "Capítulo 2.4, Tabela 1, p. 36-37."
+		},
+		{
+			"id": 14,
+			"titulo": "Cenário Prático: Abordagem Técnica",
+			"tema": "3.1 Atendimento às Ocorrências",
+			"dificuldade": "difícil",
+			"pergunta": "Um Tenente está orientando seus subordinados sobre as 4 regras vitais de uma abordagem. Um dos soldados, durante um simulado, começa a discutir e tentar impor sua lógica pessoal sobre a vida, entrando em uma disputa de posições com o 'suicida'. Qual regra fundamental está sendo violada e qual deve ser o foco correto?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Viola a 1ª regra. O foco deve ser apenas nas pessoas envolvidas e em seus dramas pessoais, ignorando o problema central."
+				},
+				{
+					"letra": "B",
+					"texto": "Viola a 2ª regra. A abordagem não é conflito, confronto ou disputa de posições; a energia deve ser concentrada em criar uma terceira via e consolidar um vínculo."
+				},
+				{
+					"letra": "C",
+					"texto": "Viola a 3ª regra. O profissional deve usar a resistência ativa para dominar fisicamente a situação imediatamente."
+				},
+				{
+					"letra": "D",
+					"texto": "Viola a 4ª regra. O profissional deve demonstrar desconfiança ostensiva para que a vítima perceba a seriedade da situação."
+				}
+			],
+			"correta": "B",
+			"explicacao": "A segunda regra fundamental citada no texto é: 'estar com a mente aberta para entender que tal abordagem não é conflito, não é confronto e não é disputa de posições. A energia deve ser concentrada em uma terceira via... que faça com que essas partes criem e consolidem um vínculo duradouro'.",
+			"fundamento": "Capítulo 3.1, p. 43."
+		},
+		{
+			"id": 15,
+			"titulo": "Modelo de Primeiros Socorros em Saúde Mental",
+			"tema": "3.1 Atendimento às Ocorrências",
+			"dificuldade": "média",
+			"pergunta": "O texto cita o modelo de primeiros socorros em saúde mental estabelecido por Kitchener & Jorm (2002b). Qual das alternativas abaixo NÃO faz parte das 5 estratégias desse modelo?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Avaliar risco de suicídio ou dano." },
+				{ "letra": "B", "texto": "Ouvir sem julgamentos." },
+				{
+					"letra": "C",
+					"texto": "Garantir imediatamente a contenção física e o uso de força letal se necessário."
+				},
+				{
+					"letra": "D",
+					"texto": "Encorajar a pessoa a conseguir ajuda profissional e estratégias de autoajuda."
+				}
+			],
+			"correta": "C",
+			"explicacao": "O modelo de Kitchener & Jorm consiste em: 1) avaliar risco de suicídio ou dano; 2) ouvir sem julgamentos; 3) reassegurar e informar; 4) encorajar a pessoa a conseguir ajuda profissional; e 5) encorajar estratégias de autoajuda. A contenção física letal não faz parte desse modelo de primeiros socorros em saúde mental.",
+			"fundamento": "Capítulo 3.1, p. 44."
+		},
+		{
+			"id": 16,
+			"titulo": "Realidade Operacional do CB: Pesquisa",
+			"tema": "3.1.4 Fonte de conhecimento",
+			"dificuldade": "difícil",
+			"pergunta": "De acordo com a pesquisa de amostragem realizada com 285 integrantes do Corpo de Bombeiros da região metropolitana de SP, qual foi a principal fonte de conhecimento apontada pelo efetivo para aprender a abordar um suicida?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Cursos de especialização formal na Escola Superior de Bombeiros (76,8%)." },
+				{
+					"letra": "B",
+					"texto": "Pesquisando por conta própria em literaturas de psicologia e psiquiatria (49,8%)."
+				},
+				{ "letra": "C", "texto": "Com colegas mais experientes (76,8%)." },
+				{ "letra": "D", "texto": "Palestras em âmbito externo à corporação (45,1%)." }
+			],
+			"correta": "C",
+			"explicacao": "A Figura 16 e o texto demonstram que 76,8% do efetivo pesquisado adquiriu conhecimento para abordar um suicida 'Com colegas mais experientes', o que o autor aponta como um dado alarmante que reforça a necessidade de padronização.",
+			"fundamento": "Capítulo 3.1.4, p. 50-51."
+		},
+		{
+			"id": 17,
+			"titulo": "Cenário Prático: Glorificação de Sítio",
+			"tema": "3.1.7 A glorificação de sítio",
+			"dificuldade": "média",
+			"pergunta": "Ao ser acionado para uma ponte na Marginal Tietê, o Comandante da guarnição lembra que, na semana anterior, houve outra tentativa de suicídio no mesmo local, que gerou grande comoção social e cobertura da mídia. Ele alerta a equipe sobre um fenômeno empírico que faz com que esses locais sejam repetidos por futuros tentantes. Como o texto denomina esse fenômeno?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Efeito Durkheim." },
+				{ "letra": "B", "texto": "Glorificação de sítio." },
+				{ "letra": "C", "texto": "Síndrome de Estocolmo Operacional." },
+				{ "letra": "D", "texto": "Ressonância de Método." }
+			],
+			"correta": "B",
+			"explicacao": "O texto define o fenômeno conhecido empiricamente como 'glorificação de sítio', onde locais escolhidos por suicidas que geraram comoção social tendem a ser repetidos por futuros tentantes naquela determinada região.",
+			"fundamento": "Capítulo 3.1.7, p. 53."
+		},
+		{
+			"id": 18,
+			"titulo": "Atual Capacitação do Efetivo",
+			"tema": "3.2 Atual Capacitação do Efetivo do CB",
+			"dificuldade": "fácil",
+			"pergunta": "O texto apresenta tabelas com a carga horária atual dedicada ao tema 'tentativas de suicídio' nos cursos do Corpo de Bombeiros. Qual é a carga horária prevista no 'Módulo especializado de formação de soldado'?",
+			"alternativas": [
+				{ "letra": "A", "texto": "02 horas-aula." },
+				{ "letra": "B", "texto": "04 horas-aula." },
+				{ "letra": "C", "texto": "06 horas-aula." },
+				{ "letra": "D", "texto": "08 horas-aula." }
+			],
+			"correta": "B",
+			"explicacao": "A Tabela 2 mostra que o Módulo especializado de formação de soldado possui 02 horas-aula de Conceito e causas + 02 horas-aula de Atendimento a crise, totalizando 04 horas-aula.",
+			"fundamento": "Capítulo 3.2.1, Tabela 2, p. 57."
+		},
+		{
+			"id": 19,
+			"titulo": "Cenário Prático: Preparação do Efetivo",
+			"tema": "3.1.6 Preparação técnica e tática",
+			"dificuldade": "difícil",
+			"pergunta": "Um recém-formado questiona seu instrutor sobre a sensação de preparo da tropa. O instrutor, baseando-se nos dados da pesquisa apresentada na monografia, explica que a autoafirmação do profissional está ligada à sua preparação. O que os dados da pesquisa (Figura 18) revelam sobre como os bombeiros se sentem em relação a essa preparação?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "A grande maioria (77,9%) NÃO se considera preparada para atender a tentativas de suicídio."
+				},
+				{
+					"letra": "B",
+					"texto": "A maioria (71,6%) se sente totalmente preparada devido aos cursos de salvamento terrestre."
+				},
+				{
+					"letra": "C",
+					"texto": "Metade da tropa (50%) se sente preparada, enquanto a outra metade considera o tema irrelevante."
+				},
+				{
+					"letra": "D",
+					"texto": "Apenas 5,1% se sentem despreparados, indicando um alto índice de confiança da corporação."
+				}
+			],
+			"correta": "A",
+			"explicacao": "A Figura 18 e o texto afirmam que 77,9% dos pesquisados responderam 'NÃO' à pergunta se se sentem preparados para abordar suicidas, o que o autor considera prejudicial tanto para os bombeiros quanto para o tentante.",
+			"fundamento": "Capítulo 3.1.6, p. 52-53."
+		},
+		{
+			"id": 20,
+			"titulo": "Proposta de Curso Modular",
+			"tema": "4. Proposta Curso Modular",
+			"dificuldade": "média",
+			"pergunta": "A proposta final do estudo é um curso modular para especializar o profissional de forma rápida e precisa. Qual é a carga horária total e a divisão principal das atividades práticas e teóricas propostas neste currículo?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Total de 43 horas-aula, divididas em: Abordagem Técnica (16h), Abordagem Tática (8h) e Cenários (16h), além de 3h de avaliação."
+				},
+				{
+					"letra": "B",
+					"texto": "Total de 80 horas-aula, divididas igualmente entre teoria (40h) e prática em cenários (40h)."
+				},
+				{
+					"letra": "C",
+					"texto": "Total de 20 horas-aula, focadas exclusivamente em Abordagem Técnica (10h) e Mitos e Verdades (10h)."
+				},
+				{
+					"letra": "D",
+					"texto": "Total de 43 horas-aula, sendo 30h de Abordagem Tática e 13h de Fisiopatologia."
+				}
+			],
+			"correta": "A",
+			"explicacao": "O Apêndice A detalha a Grade Curricular do Curso de Abordagem a Tentativas de Suicídio: Abordagem Técnica (16h), Abordagem Tática (8h), Cenários (16h), totalizando 40h de matérias + 3h de avaliação, somando 43 horas-aula (equivalentes a 1 semana).",
+			"fundamento": "Apêndice A, p. 68."
+		},
+		{
+			"id": 21,
+			"titulo": "Cenário Prático: Fases da Abordagem",
+			"tema": "4.1.9 Fases da abordagem técnica",
+			"dificuldade": "difícil",
+			"pergunta": "Durante um cenário prático do curso modular, o aluno deve aplicar as fases de uma abordagem técnica. De acordo com o plano didático da matéria 'Abordagem Técnica' (UD-03), quais são as fases que o militar deve conhecer e aplicar?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Confronto verbal, negociação financeira, contenção física e transporte." },
+				{ "letra": "B", "texto": "Aproximação, silêncio inicial, início do diálogo e paráfrase resumida." },
+				{
+					"letra": "C",
+					"texto": "Identificação do problema, isolamento da área, uso de força letal e resgate."
+				},
+				{
+					"letra": "D",
+					"texto": "Análise de risco, espera por equipe especializada, negociação passiva e retirada da guarnição."
+				}
+			],
+			"correta": "B",
+			"explicacao": "No Plano Didático da Matéria 01 (Abordagem Técnica), UD-03, o conteúdo programático lista explicitamente: 'Conhecer e aplicar as fases de uma abordagem técnica, sendo elas aproximação, silêncio inicial, início do diálogo e paráfrase resumida'.",
+			"fundamento": "Apêndice A, Plano Didático de Matéria 01, UD-03, p. 75."
+		},
+		{
+			"id": 22,
+			"titulo": "Mitos e Verdades",
+			"tema": "2.7 Mitos e verdades que envolvem o assunto",
+			"dificuldade": "fácil",
+			"pergunta": "Sobre os mitos e verdades que envolvem o comportamento suicida, assinale a alternativa que apresenta uma VERDADE, conforme o estudo.",
+			"alternativas": [
+				{ "letra": "A", "texto": "Quem ameaça se matar, não o faz; é apenas uma forma de chamar a atenção." },
+				{
+					"letra": "B",
+					"texto": "O suicídio ocorre sem aviso prévio, sendo um ato totalmente impulsivo e imprevisível na maioria dos casos."
+				},
+				{
+					"letra": "C",
+					"texto": "Muitas pessoas que se suicidam procuram um médico no mês anterior, ou seja, o suicídio muitas vezes manda avisos de sua intenção."
+				},
+				{
+					"letra": "D",
+					"texto": "Perguntar diretamente sobre pensamentos suicidas aumenta o risco e a chance de a pessoa cometer o ato."
+				}
+			],
+			"correta": "C",
+			"explicacao": "O texto desmistifica a ideia de que o suicídio não manda avisos, afirmando: 'Não é uma verdade que o suicídio não manda avisos de sua intenção, já que muitas pessoas (50-70%) que se suicidam procuram um médico no mês anterior'.",
+			"fundamento": "Capítulo 1.2, p. 17 e Capítulo 2.7."
+		},
+		{
+			"id": 23,
+			"titulo": "Cenário Prático: Necropsia Psicológica",
+			"tema": "2.3 Patologias da Mente",
+			"dificuldade": "difícil",
+			"pergunta": "Após um óbito por suicídio, uma equipe de pesquisa decide aplicar uma estratégia específica para coletar, de forma padronizada, uma série de informações sobre a pessoa falecida, visando detectar alguma alteração patológica de origem mental. Como o texto denomina essa estratégia de pesquisa?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Avaliação Psiquiátrica Retrospectiva." },
+				{ "letra": "B", "texto": "Necropsia Psicológica." },
+				{ "letra": "C", "texto": "Análise de Risco de Durkheim." },
+				{ "letra": "D", "texto": "Investigação de Cena de Crime (ICC) Psicológica." }
+			],
+			"correta": "B",
+			"explicacao": "O texto define: 'E, por fim, há uma estratégia de pesquisa que coleta, de forma padronizada, uma série de informações sobre a pessoa falecida, denominada necropsia psicológica, que visa detectar alguma alteração patológica de origem mental na pessoa que consumou o suicídio'.",
+			"fundamento": "Capítulo 2.3, p. 30."
+		},
+		{
+			"id": 24,
+			"titulo": "Atendimento e Negociação",
+			"tema": "3.1 Atendimento às Ocorrências",
+			"dificuldade": "média",
+			"pergunta": "O texto define 'Negociação' no contexto de atendimento a tentativas de suicídio (TAE) com base em Wood (2008) e Hancerli (2008). Qual é essa definição?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Um processo coercitivo onde o negociador impõe sua vontade para salvar a vítima a qualquer custo."
+				},
+				{
+					"letra": "B",
+					"texto": "Um processo voluntário de interação interpessoal, que faz uso da comunicação com a intenção de alcançar um acordo entre as partes que apresentam conflitos entre eles."
+				},
+				{
+					"letra": "C",
+					"texto": "Uma técnica de distração para ganhar tempo até a chegada da equipe tática de contenção física."
+				},
+				{
+					"letra": "D",
+					"texto": "A capacidade de oferecer benefícios financeiros ou jurídicos ao suicida em troca de sua rendição."
+				}
+			],
+			"correta": "B",
+			"explicacao": "A definição literal no texto é: 'Negociação é definida como um processo voluntário de interação interpessoal, que faz uso da comunicação com a intenção de alcançar um acordo entre as partes que apresentam conflitos entre eles'.",
+			"fundamento": "Capítulo 3.1, p. 44."
+		},
+		{
+			"id": 25,
+			"titulo": "Cenário Prático: Transtornos por uso de álcool",
+			"tema": "2.3.3 Transtornos decorrentes do uso de álcool",
+			"dificuldade": "difícil",
+			"pergunta": "Um bombeiro atende um homem de 40 anos, visivelmente intoxicado, que ameaça se jogar de uma ponte. O histórico do indivíduo aponta para uso crônico e nocivo de bebidas alcoólicas. De acordo com o texto, qual é o risco de suicídio ao longo da vida para pessoas nessa condição, e qual o efeito da substância no ato?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "O risco é de 5%, e o álcool atua como um inibidor, diminuindo a impulsividade e a letalidade do ato."
+				},
+				{
+					"letra": "B",
+					"texto": "O risco chega a 15% (cerca de 6 vezes maior que a população geral), e a substância prejudica a crítica, aumenta a impulsividade e eleva o grau de letalidade das tentativas."
+				},
+				{
+					"letra": "C",
+					"texto": "O risco é de 33%, e o álcool é encontrado no sangue de 100% das vítimas necropsiadas."
+				},
+				{
+					"letra": "D",
+					"texto": "O risco é igual ao da população geral, pois o suicídio sob efeito de álcool é considerado um acidente, não uma tentativa intencional."
+				}
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma: 'Em pessoas que fazem uso nocivo de bebidas alcoólicas, o risco de suicídio ao longo da vida chega a 15%. Esse índice é cerca de 6 vezes maior do que observado na população geral. O uso abusivo de álcool... prejudica a crítica e aumenta a impulsividade, além de elevar o grau de letalidade das tentativas de suicídio'.",
+			"fundamento": "Capítulo 2.3.3, p. 32."
+		},
+		{
+			"id": 26,
+			"titulo": "Realidade Nacional",
+			"tema": "1.3 Realidade Nacional",
+			"dificuldade": "fácil",
+			"pergunta": "De acordo com os dados do Mapa da Violência (2002 a 2012) citados no texto, qual é a posição relativa do Brasil em um ranking de 172 países, considerando a taxa de suicídios por 100 mil habitantes?",
+			"alternativas": [
+				{ "letra": "A", "texto": "133ª posição, com índice de 5,8 mortes por 100 mil habitantes." },
+				{ "letra": "B", "texto": "8ª posição, com índice de 11,4 mortes por 100 mil habitantes." },
+				{ "letra": "C", "texto": "73ª posição, com índice de 3,44 mortes por 100 mil habitantes." },
+				{ "letra": "D", "texto": "15ª posição, com índice de 4,68 mortes por 100 mil habitantes." }
+			],
+			"correta": "A",
+			"explicacao": "O texto afirma que, em números relativos, o Brasil ocupa a 133ª posição em um ranking de 172 países, com uma taxa de 5,8 mortes por 100 mil habitantes, abaixo da média mundial de 11,4.",
+			"fundamento": "Capítulo 1.3, p. 22."
+		},
+		{
+			"id": 27,
+			"titulo": "Realidade Nacional",
+			"tema": "1.3 Realidade Nacional",
+			"dificuldade": "média",
+			"pergunta": "Segundo o pesquisador Júlio Jacobo (Mapa da Violência, 2014), qual foi a taxa de crescimento de suicídios em todo o país entre 2002 e 2012, e como ela se compara ao crescimento da população brasileira no mesmo período?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Crescimento de 11,1%, inferior ao crescimento da população (33,6%)." },
+				{ "letra": "B", "texto": "Crescimento de 33,6%, superior ao crescimento da população (11,1%)." },
+				{
+					"letra": "C",
+					"texto": "Crescimento de 24,5%, igual ao aumento dos mortos em acidentes de trânsito."
+				},
+				{ "letra": "D", "texto": "Crescimento de 77,7%, concentrado exclusivamente na região Sul." }
+			],
+			"correta": "B",
+			"explicacao": "O texto cita que a taxa de crescimento de suicídios no país foi de 33,6%, superior ao crescimento da população brasileira (11,1%) e ao aumento de homicídios (2,1%).",
+			"fundamento": "Capítulo 1.3, p. 22."
+		},
+		{
+			"id": 28,
+			"titulo": "Realidade Nacional",
+			"tema": "1.3 Realidade Nacional",
+			"dificuldade": "difícil",
+			"pergunta": "Na década de 2002-2012, o aumento dos suicídios se deu com maior intensidade em qual região do país, e qual foi o percentual de aumento registrado?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Região Sul, com aumento de 77,7%." },
+				{ "letra": "B", "texto": "Região Sudeste, com aumento de 51,7%." },
+				{ "letra": "C", "texto": "Região Norte, com aumento de 77,7%." },
+				{ "letra": "D", "texto": "Região Nordeste, com aumento de 35,8%." }
+			],
+			"correta": "C",
+			"explicacao": "O texto especifica que o aumento se deu com maior intensidade na região Norte (77,7%), seguido das regiões Nordeste (51,7%), Sudeste (35,8%), Centro-Oeste (16,3%) e Sul (15,2%).",
+			"fundamento": "Capítulo 1.3, p. 22."
+		},
+		{
+			"id": 29,
+			"titulo": "Realidade em São Paulo",
+			"tema": "1.4 Realidade na Cidade de São Paulo",
+			"dificuldade": "média",
+			"pergunta": "Um oficial analisa os dados do estudo de Daniel Hideki Bando (2008) sobre os padrões espaciais do suicídio na cidade de São Paulo. Qual foi a conclusão desse estudo em relação aos bairros de maior renda?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Apresentam as menores taxas de suicídio (3,3 ocorrências para 100 mil habitantes)."
+				},
+				{
+					"letra": "B",
+					"texto": "Apresentam as maiores taxas de suicídio (6,3 ocorrências para 100 mil habitantes)."
+				},
+				{ "letra": "C", "texto": "Não apresentam correlação entre renda e taxas de suicídio." },
+				{ "letra": "D", "texto": "Apresentam taxas iguais às da Zona Sul (Campo Limpo, Capão Redondo, etc.)." }
+			],
+			"correta": "B",
+			"explicacao": "O estudo de Bando (2008) relata que bairros de maior renda (como Alto de Pinheiros, Morumbi, Itaim Bibi, etc.) concentram as maiores taxas de suicídio da cidade: 6,3 ocorrências para 100 mil habitantes.",
+			"fundamento": "Capítulo 1.4, p. 24."
+		},
+		{
+			"id": 30,
+			"titulo": "Realidade em São Paulo",
+			"tema": "1.4 Realidade na Cidade de São Paulo",
+			"dificuldade": "difícil",
+			"pergunta": "O estudo de Daniel Hideki Bando (2008) sobre a realidade do suicídio em São Paulo se contrapõe a qual outro estudo citado no texto, que afirmava o antônimo desta situação (maior incidência na classe baixa)?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Estudo de Neury José Botega (2015)." },
+				{ "letra": "B", "texto": "Estudo de Sueli Andruccioli Felix (2002)." },
+				{ "letra": "C", "texto": "Estudo de Marcelo Feijó Mello (2016)." },
+				{ "letra": "D", "texto": "Estudo de Émile Durkheim (2002)." }
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma explicitamente que o estudo de Bando (2008) se contrapõe ao estudo de Sueli Andruccioli (2002), que relatava que a maioria dos suicídios no Brasil provinha da classe baixa.",
+			"fundamento": "Capítulo 1.4, p. 24."
+		},
+		{
+			"id": 31,
+			"titulo": "Realidade em São Paulo",
+			"tema": "1.4 Realidade na Cidade de São Paulo",
+			"dificuldade": "fácil",
+			"pergunta": "Segundo dados do Pro-Aim da Prefeitura de São Paulo citados no texto, qual é a posição do suicídio entre as causas de morte de mulheres jovens (15 a 29 anos) na cidade de São Paulo?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Primeira causa, à frente dos homicídios." },
+				{ "letra": "B", "texto": "Segunda maior causa, atrás apenas dos homicídios." },
+				{
+					"letra": "C",
+					"texto": "Quarta causa, atrás de homicídios, acidentes de trânsito e doenças cardiovasculares."
+				},
+				{ "letra": "D", "texto": "Décima causa, sendo considerada estatisticamente irrelevante." }
+			],
+			"correta": "B",
+			"explicacao": "O texto cita que o suicídio é a segunda maior causa de morte entre mulheres de 15 a 29 anos na cidade de São Paulo, ficando atrás apenas dos homicídios.",
+			"fundamento": "Capítulo 1.4, p. 23-24."
+		},
+		{
+			"id": 32,
+			"titulo": "Epidemiologia por Gênero",
+			"tema": "1.2 O Suicídio como Epidemiologia Mundial",
+			"dificuldade": "média",
+			"pergunta": "Sobre as estatísticas de suicídio relacionadas ao gênero, o texto apresenta um paradoxo. Assinale a alternativa que descreve corretamente esse paradoxo conforme os dados da OMS (2012).",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Mulheres cometem mais suicídios consumados (15 para cada 100 mil), mas homens tentam mais (80% dos sobreviventes)."
+				},
+				{
+					"letra": "B",
+					"texto": "Homens cometem mais suicídios (15 para cada 100 mil), mas as mulheres são maioria (80%) entre os 'sobreviventes de si mesmos'."
+				},
+				{ "letra": "C", "texto": "Homens e mulheres possuem taxas idênticas de tentativas e consumações." },
+				{
+					"letra": "D",
+					"texto": "Mulheres são mais letais nos métodos escolhidos, resultando em maior número de óbitos."
+				}
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma que há mais suicídios entre os homens (15 para cada 100 mil) do que entre as mulheres (8 para cada 100 mil), mas, no grupo dos 'sobreviventes de si mesmos', as mulheres são maioria (80%).",
+			"fundamento": "Capítulo 1.2, p. 19."
+		},
+		{
+			"id": 33,
+			"titulo": "Cenário Prático: Grupos de Risco",
+			"tema": "1.2 O Suicídio como Epidemiologia Mundial",
+			"dificuldade": "difícil",
+			"pergunta": "Um psicólogo é chamado para apoiar a equipe do CB em uma ocorrência com um adolescente de 16 anos e um idoso de 75 anos, ambos alvos de bullying e discriminação social. De acordo com o texto, como a experiência de vida diferencia a reação desses dois grupos de risco?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "O idoso tem menos conhecimento do que é letal, realizando geralmente tentativas, enquanto o jovem sabe exatamente o que está fazendo."
+				},
+				{
+					"letra": "B",
+					"texto": "O jovem tem menos conhecimento do que é letal, realizando geralmente tentativas, enquanto o idoso já viveu bastante e sabe exatamente o que está fazendo."
+				},
+				{
+					"letra": "C",
+					"texto": "Ambos possuem a mesma estrutura emocional para lidar com os danos da discriminação."
+				},
+				{
+					"letra": "D",
+					"texto": "O preconceito é a principal razão direta e única do suicídio, anulando a importância da experiência de vida."
+				}
+			],
+			"correta": "B",
+			"explicacao": "O texto cita o psiquiatra Carlos Estellita-Lins, afirmando que o que difere os grupos é a experiência de vida: o jovem tem menos conhecimento do que é letal (realizando tentativas), enquanto o idoso sabe exatamente o que está fazendo.",
+			"fundamento": "Capítulo 1.2, p. 18-19."
+		},
+		{
+			"id": 34,
+			"titulo": "Epidemiologia Mundial",
+			"tema": "1.2 O Suicídio como Epidemiologia Mundial",
+			"dificuldade": "fácil",
+			"pergunta": "De acordo com Marcelo Feijó Mello (2016), citado no texto, quantas pessoas se matam todos os anos no mundo?",
+			"alternativas": [
+				{ "letra": "A", "texto": "500 mil pessoas." },
+				{ "letra": "B", "texto": "804 mil pessoas." },
+				{ "letra": "C", "texto": "1 milhão de pessoas." },
+				{ "letra": "D", "texto": "1,5 milhão de pessoas." }
+			],
+			"correta": "C",
+			"explicacao": "O texto cita Marcelo Feijó Mello (2016) afirmando que '1 milhão de pessoas se matam todos os anos no mundo'.",
+			"fundamento": "Capítulo 1.3, p. 22."
+		},
+		{
+			"id": 35,
+			"titulo": "Impacto do Suicídio",
+			"tema": "1.2 O Suicídio como Epidemiologia Mundial",
+			"dificuldade": "média",
+			"pergunta": "Para cada caso consumado de suicídio, estima-se que entre 5 e 6 pessoas próximas ao falecido experimentam consequências emocionais, sociais e econômicas. Em uma conta conservadora, quantas pessoas por ano no mundo precisam reconstruir suas vidas após um suicídio de alguém próximo?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Quase 1 milhão de pessoas." },
+				{ "letra": "B", "texto": "Quase 5 milhões de pessoas." },
+				{ "letra": "C", "texto": "Quase 10 milhões de pessoas." },
+				{ "letra": "D", "texto": "Quase 20 milhões de pessoas." }
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma: 'Em uma conta conservadora, estamos citando quase 5 milhões de pessoas por ano no mundo que precisam reconstruir suas vidas depois que alguém próximo se suicidou'.",
+			"fundamento": "Capítulo 1.2, p. 19."
+		},
+		{
+			"id": 36,
+			"titulo": "Fundamentação Teórica",
+			"tema": "2. Fundamentação Teórica do Fenômeno Suicida",
+			"dificuldade": "fácil",
+			"pergunta": "De acordo com o sistema tripartite do Instituto Nacional de Saúde Mental (NIMH) dos Estados Unidos, citado no texto, o comportamento suicida se divide em:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Ideação suicida, tentativa de suicídio e suicídio." },
+				{ "letra": "B", "texto": "Gesto suicida, parassuicídio e suicídio consumado." },
+				{ "letra": "C", "texto": "Métodos violentos, métodos não violentos e métodos inócuos." },
+				{ "letra": "D", "texto": "Suicídio egoísta, altruísta e anômico." }
+			],
+			"correta": "A",
+			"explicacao": "O texto afirma que o NIMH elaborou um sistema tripartite que se divide em: ideação suicida, tentativa de suicídio e suicídio.",
+			"fundamento": "Capítulo 2, p. 26."
+		},
+		{
+			"id": 37,
+			"titulo": "Letalidade do Método",
+			"tema": "2.1 Com relação à Letalidade do Método",
+			"dificuldade": "média",
+			"pergunta": "O texto alerta para um erro estratégico cometido por profissionais de saúde não familiarizados com o tratamento de potenciais suicidas. Qual é esse erro?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Considerar os métodos violentos como 'suaves' e não letais." },
+				{
+					"letra": "B",
+					"texto": "Considerar os métodos não violentos como 'suaves' e não letais, minimizando as tentativas feitas por esses métodos."
+				},
+				{ "letra": "C", "texto": "Acreditar que a ingestão de venenos agrícolas é um método inócuo." },
+				{ "letra": "D", "texto": "Superestimar o risco de métodos como a inalação de monóxido de carbono." }
+			],
+			"correta": "B",
+			"explicacao": "O texto alerta que considerar os métodos não violentos como 'suaves' e não letais pode acarretar um erro estratégico, levando à minimização das tentativas feitas por métodos não violentos (como ingestão de medicamentos), que são os mais comuns de morte em países emergentes como o Brasil.",
+			"fundamento": "Capítulo 2, p. 26."
+		},
+		{
+			"id": 38,
+			"titulo": "Letalidade do Método",
+			"tema": "2.1 Com relação à Letalidade do Método",
+			"dificuldade": "difícil",
+			"pergunta": "Qual das alternativas abaixo descreve corretamente a definição de 'Métodos letais' conforme a classificação apresentada no texto?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "São aqueles que não importam em riscos para a vida ou para a saúde do indivíduo."
+				},
+				{
+					"letra": "B",
+					"texto": "São os que são capazes de provocar a morte, principalmente se houver circunstâncias agravantes."
+				},
+				{
+					"letra": "C",
+					"texto": "São aqueles que, sem serem capazes de provocar a morte, podem ocasionar sintomas de intoxicação."
+				},
+				{
+					"letra": "D",
+					"texto": "São aqueles que necessariamente conduziriam à morte, a menos que haja intervenção terapêutica oportuna e eficaz."
+				}
+			],
+			"correta": "D",
+			"explicacao": "A definição literal de 'Métodos letais' no texto é: 'aqueles que necessariamente conduziriam à morte, a menos que haja intervenção terapêutica oportuna e eficaz'.",
+			"fundamento": "Capítulo 2.1, p. 27."
+		},
+		{
+			"id": 39,
+			"titulo": "Cenário Prático: Circunstâncias",
+			"tema": "2.1.1 Com relação às circunstâncias em que se realiza o ato suicida",
+			"dificuldade": "média",
+			"pergunta": "Um indivíduo realiza um ato suicida em um local público, próximo a pessoas que sabidamente vão impedir uma consequência mais grave, e anuncia previamente sua intenção. De acordo com a classificação do texto, qual é a gravidade das circunstâncias?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Gravidade nula." },
+				{ "letra": "B", "texto": "Gravidade baixa." },
+				{ "letra": "C", "texto": "Gravidade alta." },
+				{ "letra": "D", "texto": "Gravidade severa." }
+			],
+			"correta": "A",
+			"explicacao": "O texto define 'Gravidade nula' como quando o ato ocorre em circunstâncias que de nenhuma maneira poderiam contribuir para o suicídio, como em locais públicos ou com anúncio prévio e disponibilidade de recursos terapêuticos.",
+			"fundamento": "Capítulo 2.1.1, p. 27-28."
+		},
+		{
+			"id": 40,
+			"titulo": "Circunstâncias do Ato",
+			"tema": "2.1.1 Com relação às circunstâncias em que se realiza o ato suicida",
+			"dificuldade": "difícil",
+			"pergunta": "Quando todas as circunstâncias favorecem de forma significativa a consumação do suicídio, como realizar o ato em um local isolado, com poucas possibilidades de ser descoberto ou sem possibilidade de assistência médica imediata, como o texto classifica essa gravidade?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Gravidade nula." },
+				{ "letra": "B", "texto": "Gravidade baixa." },
+				{ "letra": "C", "texto": "Gravidade alta." },
+				{ "letra": "D", "texto": "Gravidade moderada." }
+			],
+			"correta": "C",
+			"explicacao": "O texto define 'Gravidade alta' como quando todas as circunstâncias favorecem de forma significativa a consumação do suicídio (local isolado, sem comunicação ou assistência imediata).",
+			"fundamento": "Capítulo 2.1.1, p. 28."
+		},
+		{
+			"id": 41,
+			"titulo": "Intenção de Morrer",
+			"tema": "2.1.2 Com relação à intenção de morrer",
+			"dificuldade": "fácil",
+			"pergunta": "De acordo com a classificação de graus de intenção de morrer, o que caracteriza o 'GRAU I'?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Ato suicida com intenção inequívoca de acabar com a vida." },
+				{ "letra": "B", "texto": "Ato suicida com moderada ou severa autolesão, mas com ambivalência." },
+				{
+					"letra": "C",
+					"texto": "Ato suicida que requer atenção médica, mas sem risco significativo para a vida."
+				},
+				{ "letra": "D", "texto": "Gesto suicida, sem qualquer dano físico de gravidade." }
+			],
+			"correta": "D",
+			"explicacao": "O texto define o GRAU I como 'gesto suicida', sem qualquer dano físico de gravidade, como ferir-se superficialmente ou começar a ingerir pílulas na presença de quem pode evitar isso.",
+			"fundamento": "Capítulo 2.1.2, p. 29."
+		},
+		{
+			"id": 42,
+			"titulo": "Cenário Prático: Intenção",
+			"tema": "2.1.2 Com relação à intenção de morrer",
+			"dificuldade": "difícil",
+			"pergunta": "Uma guarnição é acionada para atender um indivíduo que se precipitou de um local muito elevado, em área afastada de possível auxílio médico. Não houve intervenção de terceiros que pudesse evitar o ato. De acordo com a classificação de graus de intenção, como esse ato deve ser classificado?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Grau I: gesto suicida sem dano físico." },
+				{ "letra": "B", "texto": "Grau II: ato que requer atenção médica sem risco significativo." },
+				{ "letra": "C", "texto": "Grau III: ato com moderada autolesão e ambivalência." },
+				{ "letra": "D", "texto": "Grau IV: ato com intenção inequívoca de acabar com a vida." }
+			],
+			"correta": "D",
+			"explicacao": "O texto define o GRAU IV como o ato suicida com intenção inequívoca de acabar com a vida, exemplificando com 'precipitar-se de locais muito elevados, ingerir doses letais de medicamentos em locais afastados de possível auxílio médico'.",
+			"fundamento": "Capítulo 2.1.2, p. 29."
+		},
+		{
+			"id": 43,
+			"titulo": "Teoria de Durkheim",
+			"tema": "2.2 O Suicídio segundo Émile Durkheim",
+			"dificuldade": "fácil",
+			"pergunta": "Segundo Émile Durkheim, qual tipo de suicídio surge quando existe um transtorno na integração do indivíduo com a sua coletividade social e um excesso de individualização?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Suicídio Egoísta." },
+				{ "letra": "B", "texto": "Suicídio Altruísta." },
+				{ "letra": "C", "texto": "Suicídio Anômico." },
+				{ "letra": "D", "texto": "Suicídio Fatalista." }
+			],
+			"correta": "A",
+			"explicacao": "O texto define o Suicídio Egoísta como aquele que surge quando existe um transtorno na integração do indivíduo com a coletividade e um excesso de individualização, carecendo de vínculos que o mantenham preso à vida.",
+			"fundamento": "Capítulo 2.2, p. 29."
+		},
+		{
+			"id": 44,
+			"titulo": "Teoria de Durkheim",
+			"tema": "2.2 O Suicídio segundo Émile Durkheim",
+			"dificuldade": "média",
+			"pergunta": "No suicídio altruísta, segundo a obra de Émile Durkheim citada no texto, qual é a relação entre o 'eu' e a sociedade?",
+			"alternativas": [
+				{ "letra": "A", "texto": "O 'eu' é totalmente independente da sociedade." },
+				{
+					"letra": "B",
+					"texto": "O 'eu' não pertence ao indivíduo por estar exclusivamente integrado à sociedade com a qual ele se fusiona."
+				},
+				{ "letra": "C", "texto": "O 'eu' está em ruptura total com os valores sociais." },
+				{ "letra": "D", "texto": "O 'eu' busca a individualização extrema para se proteger da coletividade." }
+			],
+			"correta": "B",
+			"explicacao": "O texto define o suicídio altruísta como o tipo em que o 'eu' não pertence ao indivíduo por estar exclusivamente integrado à sociedade com a qual ele se fusiona, sendo literalmente pedido pela sociedade.",
+			"fundamento": "Capítulo 2.2, p. 29-30."
+		},
+		{
+			"id": 45,
+			"titulo": "Teoria de Durkheim",
+			"tema": "2.2 O Suicídio segundo Émile Durkheim",
+			"dificuldade": "difícil",
+			"pergunta": "O texto cita um exemplo específico de Suicídio Anômico relacionado a países da cortina de ferro. Qual país é mencionado como exemplo dessa regra, figurando entre os países com as maiores taxas de suicídio do mundo?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Polônia." },
+				{ "letra": "B", "texto": "Romênia." },
+				{ "letra": "C", "texto": "Hungria." },
+				{ "letra": "D", "texto": "Alemanha Oriental." }
+			],
+			"correta": "C",
+			"explicacao": "O texto cita explicitamente a Hungria como exemplo de Suicídio Anômico, figurando entre os países com as maiores taxas de suicídio do mundo devido à ruptura do equilíbrio entre sociedade e indivíduo.",
+			"fundamento": "Capítulo 2.2, p. 30."
+		},
+		{
+			"id": 46,
+			"titulo": "Patologias: Depressão",
+			"tema": "2.3.1 Depressão",
+			"dificuldade": "fácil",
+			"pergunta": "De acordo com o texto, após um primeiro episódio depressivo, qual é o risco de um segundo episódio?",
+			"alternativas": [
+				{ "letra": "A", "texto": "17%." },
+				{ "letra": "B", "texto": "50%." },
+				{ "letra": "C", "texto": "70 a 80%." },
+				{ "letra": "D", "texto": "100%." }
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma: 'A depressão tem um caráter recorrente: após um primeiro episódio depressivo, o risco de um segundo é de 50%'.",
+			"fundamento": "Capítulo 2.3.1, p. 31."
+		},
+		{
+			"id": 47,
+			"titulo": "Patologias: Depressão",
+			"tema": "2.3.1 Depressão",
+			"dificuldade": "média",
+			"pergunta": "Qual é a taxa de mortalidade por suicídio em pacientes que já foram internados devido a depressão com risco de suicídio, conforme citado no texto?",
+			"alternativas": [
+				{ "letra": "A", "texto": "2%." },
+				{ "letra": "B", "texto": "4%." },
+				{ "letra": "C", "texto": "8%." },
+				{ "letra": "D", "texto": "15%." }
+			],
+			"correta": "C",
+			"explicacao": "O texto especifica: '8% de mortalidade em pacientes que já foram internados devido a depressão com risco de suicídio'.",
+			"fundamento": "Capítulo 2.3.1, p. 31."
+		},
+		{
+			"id": 48,
+			"titulo": "Patologias: Depressão",
+			"tema": "2.3.1 Depressão",
+			"dificuldade": "difícil",
+			"pergunta": "O texto diferencia as características dos pacientes deprimidos que se suicidam dentro de um ano da avaliação daqueles que se matam tardiamente (após um ano). O que é observado com mais frequência no segundo grupo (suicídio tardio)?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Ataques de pânico e insônia." },
+				{ "letra": "B", "texto": "Abuso de álcool e anedonia grave." },
+				{ "letra": "C", "texto": "Desesperança grave, ideação suicida e história de tentativa de suicídio." },
+				{ "letra": "D", "texto": "Diminuição da concentração e ansiedade psíquica." }
+			],
+			"correta": "C",
+			"explicacao": "O texto afirma que, no segundo grupo (suicídio tardio), observa-se desesperança grave, ideação suicida e história de tentativa de suicídio.",
+			"fundamento": "Capítulo 2.3.1, p. 31."
+		},
+		{
+			"id": 49,
+			"titulo": "Cenário Prático: Transtorno Bipolar",
+			"tema": "2.3.2 Transtorno bipolar",
+			"dificuldade": "média",
+			"pergunta": "Um Cabo do CB atende um paciente com diagnóstico de Transtorno Bipolar. O texto cita que o risco de suicídio entre pacientes com esse transtorno é de 5%. Como esse risco se compara ao da população geral?",
+			"alternativas": [
+				{ "letra": "A", "texto": "É 2 vezes maior do que se observa na população geral." },
+				{ "letra": "B", "texto": "É 5 vezes maior do que se observa na população geral." },
+				{ "letra": "C", "texto": "É 10 vezes maior do que se observa na população geral." },
+				{ "letra": "D", "texto": "É 12 vezes maior do que se observa na população geral." }
+			],
+			"correta": "C",
+			"explicacao": "O texto afirma: 'O risco de suicídio entre pacientes com transtorno bipolar é de 5%, 10 vezes maior do que se observa na população geral'.",
+			"fundamento": "Capítulo 2.3.2, p. 31."
+		},
+		{
+			"id": 50,
+			"titulo": "Patologias: Transtorno Bipolar",
+			"tema": "2.3.2 Transtorno bipolar",
+			"dificuldade": "difícil",
+			"pergunta": "De acordo com o texto, as pessoas que sofrem de transtorno bipolar tipo 2 permanecem cerca de 50% do tempo da vida deprimidas. Qual é a porcentagem de tempo que permanecem em estados mistos?",
+			"alternativas": [
+				{ "letra": "A", "texto": "1%." },
+				{ "letra": "B", "texto": "2%." },
+				{ "letra": "C", "texto": "5%." },
+				{ "letra": "D", "texto": "10%." }
+			],
+			"correta": "B",
+			"explicacao": "O texto detalha que pacientes com transtorno bipolar tipo 2 permanecem cerca de 50% do tempo deprimidas, 1% com sintomas de hipomania e 2% em estados mistos.",
+			"fundamento": "Capítulo 2.3.2, p. 32."
+		},
+		{
+			"id": 51,
+			"titulo": "Patologias: Uso de Álcool",
+			"tema": "2.3.3 Transtornos decorrentes do uso de álcool",
+			"dificuldade": "fácil",
+			"pergunta": "Em pessoas que fazem uso nocivo de bebidas alcoólicas, o risco de suicídio ao longo da vida chega a qual porcentagem?",
+			"alternativas": [
+				{ "letra": "A", "texto": "5%." },
+				{ "letra": "B", "texto": "8%." },
+				{ "letra": "C", "texto": "15%." },
+				{ "letra": "D", "texto": "25%." }
+			],
+			"correta": "C",
+			"explicacao": "O texto afirma: 'Em pessoas que fazem uso nocivo de bebidas alcoólicas, o risco de suicídio ao longo da vida chega a 15%'.",
+			"fundamento": "Capítulo 2.3.3, p. 32."
+		},
+		{
+			"id": 52,
+			"titulo": "Patologias: Uso de Álcool",
+			"tema": "2.3.3 Transtornos decorrentes do uso de álcool",
+			"dificuldade": "média",
+			"pergunta": "Estudos de necropsia psicológica revelam que a substância álcool foi encontrada no sangue de qual parcela das vítimas de suicídio necropsiadas, conforme citado no texto?",
+			"alternativas": [
+				{ "letra": "A", "texto": "De um terço da metade das vítimas." },
+				{ "letra": "B", "texto": "De 100% das vítimas." },
+				{ "letra": "C", "texto": "De 75% das vítimas." },
+				{ "letra": "D", "texto": "De 25% das vítimas." }
+			],
+			"correta": "A",
+			"explicacao": "O texto cita textualmente: 'A substância foi encontrada no sangue de um terço da metade das vítimas de suicídio necropsiadas'.",
+			"fundamento": "Capítulo 2.3.3, p. 32."
+		},
+		{
+			"id": 53,
+			"titulo": "Patologias: Transtornos de Personalidade",
+			"tema": "2.3.4 Transtornos da personalidade",
+			"dificuldade": "difícil",
+			"pergunta": "Sobre o transtorno de personalidade borderline, o texto apresenta estatísticas alarmantes. Assinale a alternativa que contém os percentuais corretos de tentativas e consumação de suicídio nesses pacientes.",
+			"alternativas": [
+				{ "letra": "A", "texto": "50% tentam o suicídio; 5% se suicidam." },
+				{ "letra": "B", "texto": "75% tentam o suicídio; 10% se suicidam." },
+				{ "letra": "C", "texto": "90% tentam o suicídio; 15% se suicidam." },
+				{ "letra": "D", "texto": "100% tentam o suicídio; 20% se suicidam." }
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma: 'Cerca de 75% dos pacientes borderline tentam o suicídio; 10% se suicidam'.",
+			"fundamento": "Capítulo 2.3.4, p. 33."
+		},
+		{
+			"id": 54,
+			"titulo": "Cenário Prático: Personalidade Narcisista",
+			"tema": "2.3.4 Transtornos da personalidade",
+			"dificuldade": "média",
+			"pergunta": "Um militar analisa um caso de homicídio seguido de suicídio (o homem mata a parceira e depois se mata). De acordo com o texto, qual tipo de transtorno de personalidade é frequentemente encontrado nesses casos, devido à incapacidade de tolerar um rompimento amoroso, sentido como humilhação?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Personalidade Borderline." },
+				{ "letra": "B", "texto": "Personalidade Antissocial." },
+				{ "letra": "C", "texto": "Personalidade Histriônica." },
+				{ "letra": "D", "texto": "Personalidade Narcisista." }
+			],
+			"correta": "D",
+			"explicacao": "O texto afirma: 'A personalidade narcisista é encontrada em alguns homens que matam a parceira, ou ex-parceira e, em seguida, se suicidam. Há, nesses casos, a incapacidade de tolerar um rompimento amoroso, sentindo como humilhação e agressão ao narcísico'.",
+			"fundamento": "Capítulo 2.3.4, p. 33."
+		},
+		{
+			"id": 55,
+			"titulo": "Patologias: Delirium",
+			"tema": "2.3.5 Delirium",
+			"dificuldade": "fácil",
+			"pergunta": "O Delirium é uma condição neuropsiquiátrica aguda bastante frequente em hospitais gerais. De acordo com o texto, em qual porcentagem de pacientes internados ele é encontrado?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Cerca de 5%." },
+				{ "letra": "B", "texto": "Cerca de 10%." },
+				{ "letra": "C", "texto": "Cerca de 25%." },
+				{ "letra": "D", "texto": "Cerca de 50%." }
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma que o delirium é bastante frequente em hospitais gerais, encontrado em cerca de 10% dos pacientes internados.",
+			"fundamento": "Capítulo 2.3.5, p. 34."
+		},
+		{
+			"id": 56,
+			"titulo": "Patologias: Esquizofrenia",
+			"tema": "2.3.6 Outros transtornos mentais",
+			"dificuldade": "média",
+			"pergunta": "Sobre a esquizofrenia, o texto afirma que cerca de 5% das pessoas que sofrem dessa condição cometem suicídio. Quando a prevenção do suicídio deve ser intensificada nesses pacientes?",
+			"alternativas": [
+				{ "letra": "A", "texto": "No período de internação prolongada." },
+				{ "letra": "B", "texto": "No período de pós-alta, principalmente ao longo do primeiro mês." },
+				{ "letra": "C", "texto": "Apenas quando há sintomas positivos ativos." },
+				{ "letra": "D", "texto": "Após 5 anos do diagnóstico." }
+			],
+			"correta": "B",
+			"explicacao": "O texto recomenda: 'A prevenção do suicídio deve-se intensificar no período de pós-alta, principalmente ao longo do primeiro mês'.",
+			"fundamento": "Capítulo 2.3.6, p. 34."
+		},
+		{
+			"id": 57,
+			"titulo": "Patologias: Anorexia Nervosa",
+			"tema": "2.3.6 Outros transtornos mentais",
+			"dificuldade": "difícil",
+			"pergunta": "Uma metanálise de nove estudos, citada no texto, mostrou qual risco de morbidade por suicídio na anorexia nervosa quando comparado à população geral?",
+			"alternativas": [
+				{ "letra": "A", "texto": "2 vezes maior." },
+				{ "letra": "B", "texto": "5 vezes maior." },
+				{ "letra": "C", "texto": "8 vezes maior." },
+				{ "letra": "D", "texto": "12 vezes maior." }
+			],
+			"correta": "C",
+			"explicacao": "O texto cita uma metanálise (pompili et al; 2003) que mostrou que o risco de morbidade por suicídio na anorexia nervosa é 8 vezes maior do que o da população geral.",
+			"fundamento": "Capítulo 2.3.6, p. 35."
+		},
+		{
+			"id": 58,
+			"titulo": "Patologias: Transtorno Delirante",
+			"tema": "2.3.6 Outros transtornos mentais",
+			"dificuldade": "média",
+			"pergunta": "Em pacientes que sofrem de transtorno delirante crônico, a porcentagem dos que manifestam comportamento suicida aproxima-se do observado na esquizofrenia. Qual é essa faixa percentual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Entre 1% e 5%." },
+				{ "letra": "B", "texto": "Entre 8% e 21%." },
+				{ "letra": "C", "texto": "Entre 30% e 40%." },
+				{ "letra": "D", "texto": "Entre 50% e 60%." }
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma que, no transtorno delirante, a porcentagem dos que manifestam comportamento suicida aproxima-se do observado na esquizofrenia, entre 8 e 21%.",
+			"fundamento": "Capítulo 2.3.6, p. 34."
+		},
+		{
+			"id": 59,
+			"titulo": "Graus de Risco OMS",
+			"tema": "2.4 Graus de Risco segundo a OMS",
+			"dificuldade": "fácil",
+			"pergunta": "De acordo com a Tabela 1 (Classificação quanto ao risco para cometimento de suicídio da OMS), qual é a ação recomendada para o Nível 0 de risco?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Escutar com empatia." },
+				{ "letra": "B", "texto": "Explorar as possibilidades, identificar apoio." },
+				{ "letra": "C", "texto": "Nenhuma ação específica listada na tabela para este nível." },
+				{ "letra": "D", "texto": "Hospitalizar." }
+			],
+			"correta": "C",
+			"explicacao": "Na Tabela 1, o Risco 0 (Nenhum sintoma) não possui ações de avaliação ou ação listadas nas colunas correspondentes, diferentemente dos níveis 1 a 6.",
+			"fundamento": "Capítulo 2.4, Tabela 1, p. 36."
+		},
+		{
+			"id": 60,
+			"titulo": "Graus de Risco OMS",
+			"tema": "2.4 Graus de Risco segundo a OMS",
+			"dificuldade": "média",
+			"pergunta": "Na classificação da OMS, se um paciente apresenta 'Ideação suicida vaga', classificando-se no Nível 3 de risco, qual é a ação recomendada?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Escutar com empatia." },
+				{ "letra": "B", "texto": "Explorar as possibilidades, identificar apoio." },
+				{ "letra": "C", "texto": "Encaminhar para um psiquiatra." },
+				{ "letra": "D", "texto": "Ficar com o paciente e hospitalizar." }
+			],
+			"correta": "B",
+			"explicacao": "Na Tabela 1, para o Risco 3 (Ideação suicida vaga), a ação prescrita é: 'Explorar as possibilidades, identificar apoio'.",
+			"fundamento": "Capítulo 2.4, Tabela 1, p. 36."
+		},
+		{
+			"id": 61,
+			"titulo": "Cenário Prático: Graus de Risco OMS",
+			"tema": "2.4 Graus de Risco segundo a OMS",
+			"dificuldade": "difícil",
+			"pergunta": "Um paciente apresenta ideias suicidas E transtornos psiquiátricos, mas NÃO apresenta fatores estressores graves, agitação ou tentativas prévias. De acordo com a Tabela 1 da OMS, em qual nível de risco ele se enquadra e qual a ação recomendada?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Nível 4: Explorar as possibilidades, identificar suporte." },
+				{ "letra": "B", "texto": "Nível 5: Encaminhar para um psiquiatra." },
+				{ "letra": "C", "texto": "Nível 6: Ficar com o paciente e hospitalizar." },
+				{ "letra": "D", "texto": "Nível 3: Avaliar a intenção e explorar possibilidades." }
+			],
+			"correta": "B",
+			"explicacao": "O Nível 5 é definido como 'Ideias suicidas E transtornos psiquiátricos OU fatores estressores graves'. A ação é 'Encaminhar para um psiquiatra'. O Nível 6 exige a presença adicional de agitação E tentativas prévias.",
+			"fundamento": "Capítulo 2.4, Tabela 1, p. 36-37."
+		},
+		{
+			"id": 62,
+			"titulo": "Fases da Tentativa",
+			"tema": "2.5 Tentativas de Suicídio e suas Fases",
+			"dificuldade": "média",
+			"pergunta": "Em 1992, a Organização Mundial da Saúde (OMS) definiu a tentativa de suicídio (parassuicídio). Qual das características abaixo faz parte dessa definição literal?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Ato de resultados fatais com intervenção de terceiros." },
+				{
+					"letra": "B",
+					"texto": "Ato de resultados não fatais no qual o indivíduo intencionalmente inicia um comportamento não habitual, sem a intervenção de outros."
+				},
+				{ "letra": "C", "texto": "Simples intenção de morte externada verbalmente." },
+				{ "letra": "D", "texto": "Comportamento habitual de automutilação com consentimento da vítima." }
+			],
+			"correta": "B",
+			"explicacao": "A definição literal da OMS (1992) citada no texto é: 'ato de resultados não fatais no qual o indivíduo intencionalmente inicia um comportamento não habitual, sem a intervenção de outros...'.",
+			"fundamento": "Capítulo 2.5, p. 37."
+		},
+		{
+			"id": 63,
+			"titulo": "Fases da Tentativa",
+			"tema": "2.5 Tentativas de Suicídio e suas Fases",
+			"dificuldade": "difícil",
+			"pergunta": "O texto afirma que o comportamento não habitual da tentativa de suicídio nem sempre estará relacionado a uma ação, mas às vezes a uma omissão ou a um processo de autodestruição contínua. Qual exemplo é dado no texto para ilustrar essa omissão?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Pessoas com doenças crônicas que negligenciam o tratamento." },
+				{ "letra": "B", "texto": "Indivíduos que ingerem excesso de medicamentos de uma só vez." },
+				{ "letra": "C", "texto": "Pessoas que se precipitam de locais elevados." },
+				{ "letra": "D", "texto": "Indivíduos que realizam cortes superficiais nos pulsos." }
+			],
+			"correta": "A",
+			"explicacao": "O texto cita como exemplos de processo de autodestruição contínua ou omissão: 'pessoas com doenças crônicas que negligenciam o tratamento ou o policial com problemas que se expõe ao risco como forma de se martirizar'.",
+			"fundamento": "Capítulo 2.5, p. 38."
+		},
+		{
+			"id": 64,
+			"titulo": "Reincidências",
+			"tema": "2.5 Tentativas de Suicídio e suas Fases",
+			"dificuldade": "fácil",
+			"pergunta": "Segundo o sociólogo Émile Durkheim, citado no texto, qual porcentagem de pessoas que tentam o suicídio tornam a tentá-lo outras vezes, normalmente empregando métodos cada vez com maior letalidade?",
+			"alternativas": [
+				{ "letra": "A", "texto": "30%." },
+				{ "letra": "B", "texto": "50%." },
+				{ "letra": "C", "texto": "70%." },
+				{ "letra": "D", "texto": "90%." }
+			],
+			"correta": "C",
+			"explicacao": "O texto afirma: 'Segundo o sociólogo Émile Durkheim, 70% das pessoas que tentam o suicídio tornam a tentá-lo outras vezes, porém, normalmente empregando métodos cada vez com maior letalidade'.",
+			"fundamento": "Capítulo 1.2, p. 20 (citado novamente no contexto de atendimento, p. 59)."
+		},
+		{
+			"id": 65,
+			"titulo": "Comportamento Suicida",
+			"tema": "2.5 Tentativas de Suicídio e suas Fases",
+			"dificuldade": "média",
+			"pergunta": "De acordo com o gráfico sobre o comportamento suicida na população brasileira ao longo da vida (Botega et al., 2005), qual porcentagem de pessoas no Brasil pensou, em algum momento, em tirar a própria vida?",
+			"alternativas": [
+				{ "letra": "A", "texto": "7%." },
+				{ "letra": "B", "texto": "17%." },
+				{ "letra": "C", "texto": "27%." },
+				{ "letra": "D", "texto": "37%." }
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma, ao comentar o gráfico, que '17% das pessoas no Brasil pensaram, em algum momento, em tirar a própria vida'.",
+			"fundamento": "Capítulo 2.5, p. 38-39."
+		},
+		{
+			"id": 66,
+			"titulo": "Letalidade entre Tentativas",
+			"tema": "2.5 Tentativas de Suicídio e suas Fases",
+			"dificuldade": "difícil",
+			"pergunta": "Observando a Figura 8 (Letalidade entre as tentativas de suicídio), qual transtorno apresenta o maior percentual de letalidade entre as tentativas, conforme os dados apresentados?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Depressivos (17%)." },
+				{ "letra": "B", "texto": "Esquizofrênicos (21%)." },
+				{ "letra": "C", "texto": "Alcoolistas (29%)." },
+				{ "letra": "D", "texto": "Transtorno Bipolar (33%)." }
+			],
+			"correta": "D",
+			"explicacao": "A Figura 8 e sua legenda mostram a seguinte ordem de letalidade entre as tentativas: Transtorno Bipolar 33%, Alcoolistas 29%, Esquizofrênicos 21%, Depressivos 17%.",
+			"fundamento": "Capítulo 2.5, Figura 8, p. 38."
+		},
+		{
+			"id": 67,
+			"titulo": "Mitos e Verdades",
+			"tema": "2.7 Mitos e verdades que envolvem o assunto",
+			"dificuldade": "fácil",
+			"pergunta": "Sobre os mitos e verdades, o texto desmistifica a crença de que o suicídio não manda avisos. Qual dado é apresentado para comprovar que isso é um mito?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Muitas pessoas (50-70%) que se suicidam procuram um médico no mês anterior."
+				},
+				{ "letra": "B", "texto": "O suicídio ocorre sempre de forma totalmente impulsiva e sem planejamento." },
+				{ "letra": "C", "texto": "Apenas 10% das pessoas deixam bilhetes de despedida." },
+				{ "letra": "D", "texto": "O suicídio é sempre um ato de covardia, sem aviso prévio à família." }
+			],
+			"correta": "A",
+			"explicacao": "O texto afirma: 'Não é uma verdade que o suicídio não manda avisos de sua intenção, já que muitas pessoas (50-70%) que se suicidam procuram um médico no mês anterior'.",
+			"fundamento": "Capítulo 1.2, p. 17 e Capítulo 2.7."
+		},
+		{
+			"id": 68,
+			"titulo": "Abordagem Aberta: Mídia",
+			"tema": "2.6 Abordagem aberta sobre o assunto",
+			"dificuldade": "média",
+			"pergunta": "De acordo com as orientações do manual do Ministério da Saúde/OPAS para a imprensa, qual é a primeira regra listada no texto para abordar o assunto suicídio na mídia?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Divulgar informações sobre onde conseguir ajuda." },
+				{ "letra": "B", "texto": "Evitar repetição de histórias sobre suicídio." },
+				{
+					"letra": "C",
+					"texto": "Dar visibilidade à relação que existe entre suicídio e transtornos mentais."
+				},
+				{ "letra": "D", "texto": "Evitar a 'glamourização' ou a glorificação de quem comete o suicídio." }
+			],
+			"correta": "B",
+			"explicacao": "A primeira orientação listada no texto (item 1) é: 'Evitar repetição de histórias sobre suicídio: a frequência com que o assunto aparece em destaque na mídia pode impactar negativamente os grupos de risco'.",
+			"fundamento": "Capítulo 2.6, p. 40."
+		},
+		{
+			"id": 69,
+			"titulo": "Abordagem Aberta: Mídia",
+			"tema": "2.6 Abordagem aberta sobre o assunto",
+			"dificuldade": "difícil",
+			"pergunta": "O manual de orientação para a imprensa cita que é comum publicar apenas depoimentos que enaltecem aspectos positivos de quem se matou. Qual número de regra corresponde à 'Calibragem correta das informações sobre quem se matou'?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Regra 5." },
+				{ "letra": "B", "texto": "Regra 7." },
+				{ "letra": "C", "texto": "Regra 9." },
+				{ "letra": "D", "texto": "Regra 10." }
+			],
+			"correta": "B",
+			"explicacao": "O texto lista como regra 7: 'Calibragem correta das informações sobre quem se matou: é comum publicar apenas os depoimentos de parentes e amigos que enaltecem os aspectos positivos de quem se matou'.",
+			"fundamento": "Capítulo 2.6, p. 40."
+		},
+		{
+			"id": 70,
+			"titulo": "Cenário Prático: Mídia",
+			"tema": "2.6 Abordagem aberta sobre o assunto",
+			"dificuldade": "média",
+			"pergunta": "Um repórter pergunta a um Oficial do CB detalhes específicos sobre o método utilizado por uma vítima em uma tentativa de suicídio. Com base na regra 9 do manual citado no texto, qual deve ser a postura em relação a esses detalhes?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Fornecer todos os detalhes para que a população saiba como o resgate foi feito."
+				},
+				{
+					"letra": "B",
+					"texto": "Fornecer poucos detalhes, pois descrever detalhadamente o método pode levar à imitação do comportamento suicida."
+				},
+				{
+					"letra": "C",
+					"texto": "Recusar-se a falar qualquer coisa sobre o ocorrido, mantendo silêncio total."
+				},
+				{ "letra": "D", "texto": "Inventar um método diferente para proteger a identidade da vítima." }
+			],
+			"correta": "B",
+			"explicacao": "A regra 9 do manual cita: 'Fornecer poucos detalhes sobre o método utilizado: descrever detalhadamente o método usado no suicídio pode levar à imitação do comportamento suicida'.",
+			"fundamento": "Capítulo 2.6, p. 41."
+		},
+		{
+			"id": 71,
+			"titulo": "Abordagem Aberta: CVV",
+			"tema": "2.6 Abordagem aberta sobre o assunto",
+			"dificuldade": "fácil",
+			"pergunta": "O texto menciona o Centro de Valorização da Vida (CVV) como um órgão que pode ser divulgado para obter auxílio. Desde que ano o Brasil possui o CVV?",
+			"alternativas": [
+				{ "letra": "A", "texto": "1950." },
+				{ "letra": "B", "texto": "1962." },
+				{ "letra": "C", "texto": "1980." },
+				{ "letra": "D", "texto": "1996." }
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma: 'O Brasil possui, desde 1962, o Centro de Valorização da Vida (CVV)...'.",
+			"fundamento": "Capítulo 2.6, p. 41."
+		},
+		{
+			"id": 72,
+			"titulo": "Abordagem Aberta: CVV",
+			"tema": "2.6 Abordagem aberta sobre o assunto",
+			"dificuldade": "média",
+			"pergunta": "De acordo com os dados apresentados no texto sobre o CVV, quantas ligações por ano esse órgão registra, em média?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Cerca de 100 mil ligações por ano." },
+				{ "letra": "B", "texto": "Cerca de 400 mil ligações por ano." },
+				{ "letra": "C", "texto": "Cerca de 800 mil ligações por ano." },
+				{ "letra": "D", "texto": "Cerca de 1 milhão de ligações por ano." }
+			],
+			"correta": "C",
+			"explicacao": "O texto informa que o CVV 'registra cerca de 800 mil ligações por ano, ou seja, uma ligação a cada 40 segundos'.",
+			"fundamento": "Capítulo 2.6, p. 41."
+		},
+		{
+			"id": 73,
+			"titulo": "Mitos e Verdades",
+			"tema": "2.7 Mitos e verdades que envolvem o assunto",
+			"dificuldade": "difícil",
+			"pergunta": "O texto define 'estigma' no contexto da doença mental e do comportamento suicida. Qual é essa definição?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Um processo em que pessoas são levadas a se sentirem envergonhadas, excluídas e discriminadas."
+				},
+				{ "letra": "B", "texto": "Um conjunto de leis punitivas aplicadas aos familiares do suicida." },
+				{ "letra": "C", "texto": "Uma condição médica que impede o indivíduo de buscar ajuda profissional." },
+				{ "letra": "D", "texto": "Um mito popular que afirma que o suicídio é contagioso." }
+			],
+			"correta": "A",
+			"explicacao": "O texto define: 'O estigma resulta de um processo em que pessoas são levadas a se sentirem envergonhadas, excluídas e discriminadas'.",
+			"fundamento": "Capítulo 2.7, p. 41."
+		},
+		{
+			"id": 74,
+			"titulo": "Negociação",
+			"tema": "3.1 Atendimento às Ocorrências",
+			"dificuldade": "média",
+			"pergunta": "Como o texto define 'Negociação' no contexto de atendimento a crises, com base em Wood (2008) e Hancerli (2008)?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Um processo coercitivo de imposição de autoridade para cessar o ato suicida."
+				},
+				{
+					"letra": "B",
+					"texto": "Um processo voluntário de interação interpessoal, que faz uso da comunicação com a intenção de alcançar um acordo entre as partes que apresentam conflitos."
+				},
+				{
+					"letra": "C",
+					"texto": "Uma técnica de distração para ganhar tempo até a chegada de reforço tático."
+				},
+				{
+					"letra": "D",
+					"texto": "A capacidade de oferecer benefícios materiais em troca da rendição da vítima."
+				}
+			],
+			"correta": "B",
+			"explicacao": "A definição literal no texto é: 'Negociação é definida como um processo voluntário de interação interpessoal, que faz uso da comunicação com a intenção de alcançar um acordo entre as partes que apresentam conflitos entre eles'.",
+			"fundamento": "Capítulo 3.1, p. 44."
+		},
+		{
+			"id": 75,
+			"titulo": "Regras Vitais de Abordagem",
+			"tema": "3.1 Atendimento às Ocorrências",
+			"dificuldade": "fácil",
+			"pergunta": "Qual é a primeira regra vital em uma abordagem, conforme citado no texto com base em doutrinas de Botega e Humberto Corrêa?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Identificar o real foco do problema, direcionando esforços para ele e não nas pessoas envolvidas."
+				},
+				{ "letra": "B", "texto": "Nunca confrontar o suicida, mesmo que ele esteja armado." },
+				{
+					"letra": "C",
+					"texto": "Garantir que a abordagem seja sempre uma disputa de posições para mostrar autoridade."
+				},
+				{ "letra": "D", "texto": "Utilizar a força letal como primeira opção em caso de hesitação da vítima." }
+			],
+			"correta": "A",
+			"explicacao": "O texto afirma: 'a primeira regra vital em uma abordagem consiste na identificação do real foco do problema, direcionando todos os esforços em sua direção e não nas pessoas envolvidas'.",
+			"fundamento": "Capítulo 3.1, p. 43."
+		},
+		{
+			"id": 76,
+			"titulo": "Regras Vitais de Abordagem",
+			"tema": "3.1 Atendimento às Ocorrências",
+			"dificuldade": "difícil",
+			"pergunta": "A terceira regra importante da abordagem está embasada na concepção de uma abordagem do tipo 'ganha-ganha'. O que é necessário usar para que isso aconteça, segundo o texto?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Técnicas de resistência ativa e imposição de voz." },
+				{
+					"letra": "B",
+					"texto": "Técnicas de não resistência, incentivando a resiliência (absorção de impacto sem deformação)."
+				},
+				{ "letra": "C", "texto": "Técnicas de negociação financeira e troca de favores." },
+				{ "letra": "D", "texto": "Técnicas de isolamento total da vítima sem qualquer comunicação." }
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma que, para uma abordagem 'ganha-ganha', 'é necessário usar técnicas de não resistência, incentivando a resiliência, que é a capacidade de sofrer uma pressão e resistir sem alterar a forma original... absorção de impacto sem deformação'.",
+			"fundamento": "Capítulo 3.1, p. 43."
+		},
+		{
+			"id": 77,
+			"titulo": "Regras Vitais de Abordagem",
+			"tema": "3.1 Atendimento às Ocorrências",
+			"dificuldade": "média",
+			"pergunta": "A quarta regra indispensável em uma abordagem consiste na utilização de princípios e critérios definidos. O texto alerta que a honestidade não pode ser confundida com:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Transparência e clareza." },
+				{ "letra": "B", "texto": "Empatia e escuta ativa." },
+				{ "letra": "C", "texto": "Ingenuidade ou excesso de segurança." },
+				{ "letra": "D", "texto": "Resiliência e absorção de impacto." }
+			],
+			"correta": "C",
+			"explicacao": "O texto alerta: 'Vale dizer que a honestidade deve ser valorizada, mas não pode ser confundida com ingenuidade ou excesso de segurança, tanto em si mesmo quanto em relação à outra parte'.",
+			"fundamento": "Capítulo 3.1, p. 43-44."
+		},
+		{
+			"id": 78,
+			"titulo": "Pesquisa Operacional: Tempo de Serviço",
+			"tema": "3.1.1 Tempo de serviço",
+			"dificuldade": "difícil",
+			"pergunta": "De acordo com a Figura 13 (Tempo de serviço do Corpo de Bombeiros) apresentada no texto, qual é a porcentagem de profissionais pesquisados que possuem de 10 a 20 anos de tempo de serviço?",
+			"alternativas": [
+				{ "letra": "A", "texto": "12,30%." },
+				{ "letra": "B", "texto": "24,50%." },
+				{ "letra": "C", "texto": "42%." },
+				{ "letra": "D", "texto": "21,20%." }
+			],
+			"correta": "C",
+			"explicacao": "A Figura 13 mostra a distribuição: Até 05 anos (24,50%), De 05 a 10 anos (12,30%), De 10 a 20 anos (42%), Acima de 20 anos (21,20%).",
+			"fundamento": "Capítulo 3.1.1, Figura 13, p. 48."
+		},
+		{
+			"id": 79,
+			"titulo": "Pesquisa Operacional: Quantidade de Atendimentos",
+			"tema": "3.1.2 Quantidade de tentativas de suicídio que atendem durante um ano",
+			"dificuldade": "média",
+			"pergunta": "Conforme a Figura 14, qual é a porcentagem de bombeiros pesquisados que atendem acima de 10 tentativas de suicídio durante um ano?",
+			"alternativas": [
+				{ "letra": "A", "texto": "22,10%." },
+				{ "letra": "B", "texto": "27,70%." },
+				{ "letra": "C", "texto": "50,20%." },
+				{ "letra": "D", "texto": "76,80%." }
+			],
+			"correta": "C",
+			"explicacao": "A Figura 14 mostra: Abaixo de 05 tentativas (22,10%), Entre 05 e 10 tentativas (27,70%), Acima de 10 tentativas (50,20%).",
+			"fundamento": "Capítulo 3.1.2, Figura 14, p. 49."
+		},
+		{
+			"id": 80,
+			"titulo": "Pesquisa Operacional: Especialização",
+			"tema": "3.1.3 Especialização neste tipo de ocorrência",
+			"dificuldade": "fácil",
+			"pergunta": "De acordo com a Figura 15, qual é a porcentagem de bombeiros pesquisados que afirmaram ter recebido palestras em âmbito externo à corporação sobre o assunto?",
+			"alternativas": [
+				{ "letra": "A", "texto": "5,10%." },
+				{ "letra": "B", "texto": "45,10%." },
+				{ "letra": "C", "texto": "49,80%." },
+				{ "letra": "D", "texto": "76,80%." }
+			],
+			"correta": "C",
+			"explicacao": "A Figura 15 detalha: Nenhum tipo de especialização (5,10%), Palestras em âmbito interno (45,10%), Palestras em âmbito externo à corporação (49,80%).",
+			"fundamento": "Capítulo 3.1.3, Figura 15, p. 50."
+		},
+		{
+			"id": 81,
+			"titulo": "Pesquisa Operacional: Fonte de Conhecimento",
+			"tema": "3.1.4 Fonte de conhecimento",
+			"dificuldade": "média",
+			"pergunta": "Um dado alarmante da pesquisa (Figura 16) mostra como o efetivo adquiriu conhecimento para abordar um suicida. Qual foi a fonte majoritária, e qual seu percentual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Cursos de especialização formal (76,8%)." },
+				{ "letra": "B", "texto": "Com colegas mais experientes (76,8%)." },
+				{ "letra": "C", "texto": "Pesquisando por conta própria (49,8%)." },
+				{ "letra": "D", "texto": "Em tentativas durante as ocorrências (13,2%)." }
+			],
+			"correta": "B",
+			"explicacao": "A Figura 16 mostra que 76,8% adquiriram conhecimento 'Com colegas mais experientes', 13,2% 'Em tentativas durante as ocorrências' e 10% 'Pesquisando por conta própria'.",
+			"fundamento": "Capítulo 3.1.4, Figura 16, p. 51."
+		},
+		{
+			"id": 82,
+			"titulo": "Pesquisa Operacional: Padronização",
+			"tema": "3.1.5 Padronização de técnica",
+			"dificuldade": "difícil",
+			"pergunta": "Quando questionados sobre a existência de uma técnica padronizada para o atendimento a tentativas de suicídio, qual foi o resultado da pesquisa apresentado na Figura 17?",
+			"alternativas": [
+				{ "letra": "A", "texto": "71,60% afirmaram que SIM, existe técnica padronizada." },
+				{ "letra": "B", "texto": "71,60% afirmaram que NÃO, não existe técnica padronizada." },
+				{ "letra": "C", "texto": "100% afirmaram que SIM, seguindo o manual de salvamento terrestre." },
+				{ "letra": "D", "texto": "50% afirmaram que SIM e 50% que NÃO." }
+			],
+			"correta": "B",
+			"explicacao": "A Figura 17 mostra que 71,60% responderam 'NÃO' à existência de uma técnica para o atendimento deste tipo de ocorrência.",
+			"fundamento": "Capítulo 3.1.5, Figura 17, p. 52."
+		},
+		{
+			"id": 83,
+			"titulo": "Pesquisa Operacional: Preparo",
+			"tema": "3.1.6 Preparação técnica e tática",
+			"dificuldade": "fácil",
+			"pergunta": "De acordo com a Figura 18, qual é a porcentagem de bombeiros que NÃO se sentem preparados para abordar suicidas?",
+			"alternativas": [
+				{ "letra": "A", "texto": "22,1%." },
+				{ "letra": "B", "texto": "28,4%." },
+				{ "letra": "C", "texto": "71,6%." },
+				{ "letra": "D", "texto": "77,9%." }
+			],
+			"correta": "D",
+			"explicacao": "A Figura 18 mostra que 77,9% dos bombeiros pesquisados responderam 'NÃO' à pergunta se se sentem preparados para abordar suicidas.",
+			"fundamento": "Capítulo 3.1.6, Figura 18, p. 53."
+		},
+		{
+			"id": 84,
+			"titulo": "Cenário Prático: Glorificação de Sítio",
+			"tema": "3.1.7 A glorificação de sítio",
+			"dificuldade": "média",
+			"pergunta": "O fenômeno da 'glorificação de sítio' está diretamente ligado ao fato de que locais escolhidos por suicidas tendem a ser repetidos. Qual condição, segundo o texto, faz com que esses locais sejam 'glorificados'?",
+			"alternativas": [
+				{ "letra": "A", "texto": "O local possuir uma estrutura física que facilita o acesso." },
+				{
+					"letra": "B",
+					"texto": "A escolha ter gerado algum tipo de comoção social durante o atendimento àquela ocorrência."
+				},
+				{ "letra": "C", "texto": "O local ser isolado e sem câmeras de segurança." },
+				{ "letra": "D", "texto": "A presença constante de equipes do Corpo de Bombeiros no local." }
+			],
+			"correta": "B",
+			"explicacao": "O texto explica que esses locais tendem a ser repetidos e 'glorificados' se a escolha anterior 'tenha gerado algum tipo de comoção social durante o atendimento àquela ocorrência'.",
+			"fundamento": "Capítulo 3.1.7, p. 53."
+		},
+		{
+			"id": 85,
+			"titulo": "Estatística CB-SP",
+			"tema": "3.1 Atendimento às Ocorrências",
+			"dificuldade": "difícil",
+			"pergunta": "Segundo dados do anuário estatístico do Corpo de Bombeiros de São Paulo citados no texto, quantos atendimentos a tentativas de suicídio foram realizados no ano de 2013, e qual a posição dessa ocorrência em termos de frequência?",
+			"alternativas": [
+				{ "letra": "A", "texto": "2.512 atendimentos, 25ª posição." },
+				{ "letra": "B", "texto": "4.497 atendimentos, 18ª posição." },
+				{ "letra": "C", "texto": "4.837 atendimentos, 10ª posição." },
+				{ "letra": "D", "texto": "3.757 atendimentos, 30ª posição." }
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma: 'o Corpo de Bombeiros de São Paulo... realizou 4.497 atendimentos a tentativas de suicídio no ano de 2013, colocando-os, naquele período, na 18ª posição dentre 111 ocorrências cadastradas'.",
+			"fundamento": "Introdução, p. 13 e Capítulo 3.1, p. 45."
+		},
+		{
+			"id": 86,
+			"titulo": "Capacitação Atual: Soldado",
+			"tema": "3.2.1 Módulo especializado de formação de soldado",
+			"dificuldade": "fácil",
+			"pergunta": "De acordo com a Tabela 2, qual é a carga horária total atual do módulo especializado de soldados para tentativas de suicídio?",
+			"alternativas": [
+				{ "letra": "A", "texto": "2 horas-aula." },
+				{ "letra": "B", "texto": "4 horas-aula." },
+				{ "letra": "C", "texto": "6 horas-aula." },
+				{ "letra": "D", "texto": "8 horas-aula." }
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma que a carga horária dos cursos é insuficiente, 'restringindo-se ao no máximo 8 horas-aula, de acordo com o curso em vigor, podendo variar até 4 horas-aula', sendo o módulo de soldado um dos que possui carga reduzida (Tabela 2 detalha blocos de 2h).",
+			"fundamento": "Capítulo 3.2, p. 57 e Tabela 2."
+		},
+		{
+			"id": 87,
+			"titulo": "Capacitação Atual: Sargentos",
+			"tema": "3.2.2 Curso de bombeiro para sargentos",
+			"dificuldade": "média",
+			"pergunta": "Conforme a Tabela 3, qual é a carga horária atual do curso de bombeiros para sargentos dedicada a 'Características dos suicidas, postura do socorrista, cuidados durante o atendimento'?",
+			"alternativas": [
+				{ "letra": "A", "texto": "02 horas-aula." },
+				{ "letra": "B", "texto": "04 horas-aula." },
+				{ "letra": "C", "texto": "06 horas-aula." },
+				{ "letra": "D", "texto": "08 horas-aula." }
+			],
+			"correta": "D",
+			"explicacao": "A Tabela 3 mostra explicitamente que o assunto 'Características dos suicidas, postura do socorrista, cuidados durante o atendimento' possui carga horária de 08 horas-aula.",
+			"fundamento": "Capítulo 3.2.2, Tabela 3, p. 57."
+		},
+		{
+			"id": 88,
+			"titulo": "Capacitação Atual: Oficiais",
+			"tema": "3.2.3 Curso de bombeiro para oficiais",
+			"dificuldade": "fácil",
+			"pergunta": "De acordo com a Tabela 4, qual é a carga horária atual do curso de bombeiros para oficiais para tentativas de suicídio?",
+			"alternativas": [
+				{ "letra": "A", "texto": "04 horas-aula." },
+				{ "letra": "B", "texto": "06 horas-aula." },
+				{ "letra": "C", "texto": "08 horas-aula." },
+				{ "letra": "D", "texto": "10 horas-aula." }
+			],
+			"correta": "B",
+			"explicacao": "A Tabela 4 indica que a carga horária para 'Características dos suicidas, postura do socorrista, cuidados durante o atendimento' no curso de oficiais é de 06 horas-aula.",
+			"fundamento": "Capítulo 3.2.3, Tabela 4, p. 58."
+		},
+		{
+			"id": 89,
+			"titulo": "Capacitação Atual: Salvamento Terrestre",
+			"tema": "3.2.4 Curso de salvamento terrestre",
+			"dificuldade": "média",
+			"pergunta": "O texto aponta que o único curso que aborda este tema de forma mais específica é o Curso de Especialização de Salvamento Terrestre. Qual é a principal limitação desse curso mencionada pelo autor?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Ele possui carga horária excessiva, retirando muito o profissional da operação."
+				},
+				{
+					"letra": "B",
+					"texto": "Ele é reservado a um público diminuto, não obstante comporem o trem de socorro as guarnições de Comando de Área, Salvamento, Resgate e Suporte Avançado."
+				},
+				{ "letra": "C", "texto": "Ele não aborda aspectos táticos, apenas teóricos." },
+				{ "letra": "D", "texto": "Ele é ministrado apenas para oficiais, excluindo praças." }
+			],
+			"correta": "B",
+			"explicacao": "O texto afirma: 'o único curso que aborda este tema é o Curso de Especialização de Salvamento Terrestre, portanto, reservado a um público diminuto, não obstante comporem o trem de socorro... as guarnições de Comando de Área, Salvamento, Resgate e Suporte Avançado a Vida'.",
+			"fundamento": "Capítulo 3.2, p. 56."
+		},
+		{
+			"id": 90,
+			"titulo": "Proposta Curso Modular",
+			"tema": "4. Proposta Curso Modular",
+			"dificuldade": "fácil",
+			"pergunta": "Qual é a duração total proposta para o Curso de Abordagem a Tentativas de Suicídio, conforme o Apêndice A?",
+			"alternativas": [
+				{ "letra": "A", "texto": "20 horas-aula, equivalentes a 3 dias." },
+				{ "letra": "B", "texto": "40 horas-aula, equivalentes a 1 semana." },
+				{ "letra": "C", "texto": "43 horas-aula, equivalentes a 1 semana." },
+				{ "letra": "D", "texto": "80 horas-aula, equivalentes a 2 semanas." }
+			],
+			"correta": "C",
+			"explicacao": "O Apêndice A, item 1.1, estabelece: 'Quarenta e três (43) horas-aula, equivalentes a uma (01) semana'.",
+			"fundamento": "Apêndice A, p. 68."
+		},
+		{
+			"id": 91,
+			"titulo": "Proposta Curso Modular: Grade",
+			"tema": "4. Proposta Curso Modular",
+			"dificuldade": "difícil",
+			"pergunta": "Na Grade Curricular proposta (Apêndice A), como as 40 horas de matérias curriculares são distribuídas entre as áreas profissionais?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Abordagem Técnica (20h), Abordagem Tática (10h), Cenários (10h)." },
+				{ "letra": "B", "texto": "Abordagem Técnica (16h), Abordagem Tática (8h), Cenários (16h)." },
+				{ "letra": "C", "texto": "Abordagem Técnica (10h), Abordagem Tática (10h), Cenários (20h)." },
+				{ "letra": "D", "texto": "Abordagem Técnica (8h), Abordagem Tática (16h), Cenários (16h)." }
+			],
+			"correta": "B",
+			"explicacao": "A Grade Curricular no Apêndice A lista: Abordagem Técnica (16h), Abordagem Tática (08h) e Cenários (16h), somando 40h de matérias (mais 3h de avaliação, totalizando 43h).",
+			"fundamento": "Apêndice A, p. 68."
+		},
+		{
+			"id": 92,
+			"titulo": "Plano Didático: Abordagem Técnica",
+			"tema": "4.1.2 a 4.1.6 Objetivos Particulares",
+			"dificuldade": "média",
+			"pergunta": "Dentre os objetivos particulares da matéria 'Abordagem Técnica' (UD-01), qual das alternativas abaixo é citada explicitamente no plano didático?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Realizar técnicas de contenção física e imobilização de suicidas." },
+				{
+					"letra": "B",
+					"texto": "Conhecer as estatísticas de tentativas e suicídios no mundo, Brasil e relacionadas aos atendimentos do CB-SP."
+				},
+				{
+					"letra": "C",
+					"texto": "Aprender a ministrar medicamentos psiquiátricos em ambiente pré-hospitalar."
+				},
+				{ "letra": "D", "texto": "Realizar interrogatório policial para identificar a causa da tentativa." }
+			],
+			"correta": "B",
+			"explicacao": "O item 3.1.1.5 do Plano Didático da Matéria 01 estabelece como objetivo: 'Conhecer as estatísticas de tentativas e suicídios no mundo, Brasil e relacionadas aos atendimentos do Corpo de Bombeiros do Estado de SP'.",
+			"fundamento": "Apêndice A, Plano Didático de Matéria 01, p. 73."
+		},
+		{
+			"id": 93,
+			"titulo": "Plano Didático: Mitos e Abordagem",
+			"tema": "4.1.7 a 4.1.10 Objetivos Particulares",
+			"dificuldade": "fácil",
+			"pergunta": "A Unidade Didática 02 (UD-02) da matéria 'Abordagem Técnica' tem como foco principal:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Mitos sobre o suicídio e abordagem técnica." },
+				{ "letra": "B", "texto": "Técnica vertical de atendimento ao suicida." },
+				{ "letra": "C", "texto": "Ação tática envolvendo riscos diversos." },
+				{ "letra": "D", "texto": "Gerenciamento de emergências em alturas." }
+			],
+			"correta": "A",
+			"explicacao": "O Plano Didático da Matéria 01 lista a UD-02 como: 'Mitos sobre o suicídio e abordagem técnica', com carga horária de 04 horas.",
+			"fundamento": "Apêndice A, Plano Didático de Matéria 01, p. 73."
+		},
+		{
+			"id": 94,
+			"titulo": "Plano Didático: Fases da Abordagem",
+			"tema": "4.1.9 Fases da abordagem técnica",
+			"dificuldade": "difícil",
+			"pergunta": "No conteúdo programático da UD-03 (Fases da Abordagem e Gerenciamento), o texto lista quatro fases específicas de uma abordagem técnica que o aluno deve conhecer e aplicar. Quais são elas?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Confronto, negociação, contenção e resgate." },
+				{ "letra": "B", "texto": "Aproximação, silêncio inicial, início do diálogo e paráfrase resumida." },
+				{ "letra": "C", "texto": "Identificação, isolamento, abordagem e transporte." },
+				{ "letra": "D", "texto": "Avaliação, planejamento, execução e revisão." }
+			],
+			"correta": "B",
+			"explicacao": "O conteúdo programático da UD-03 especifica: 'Conhecer e aplicar as fases de uma abordagem técnica, sendo elas aproximação, silêncio inicial, início do diálogo e paráfrase resumida'.",
+			"fundamento": "Apêndice A, Plano Didático de Matéria 01, p. 75."
+		},
+		{
+			"id": 95,
+			"titulo": "Plano Didático: Abordagem Tática",
+			"tema": "4.2 Abordagem Tática",
+			"dificuldade": "média",
+			"pergunta": "A Unidade Didática 01 da matéria 'Abordagem Tática' tem como objetivo proporcionar conhecimentos sobre:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Ação tática envolvendo riscos diversos (fogo e armas)." },
+				{ "letra": "B", "texto": "Visualização e entendimento da execução da técnica vertical." },
+				{ "letra": "C", "texto": "Breve teoria sobre técnica vertical de atendimento ao suicida." },
+				{ "letra": "D", "texto": "Gerenciamento de crises em ambientes hospitalares." }
+			],
+			"correta": "C",
+			"explicacao": "O Plano Didático da Matéria 02 (Abordagem Tática) lista a UD-01 como: 'Breve teoria sobre técnica vertical de atendimento ao suicida', com carga horária de 02 horas.",
+			"fundamento": "Apêndice A, Plano Didático de Matéria 02, p. 76."
+		},
+		{
+			"id": 96,
+			"titulo": "Plano Didático: Riscos Diversos",
+			"tema": "4.2.3 Ação Tática envolvendo riscos diversos",
+			"dificuldade": "difícil",
+			"pergunta": "Na UD-03 da matéria 'Abordagem Tática', o aluno deve ser capacitado a efetuar a devida prevenção em quais casos específicos de risco?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Afogamento e desabamento." },
+				{ "letra": "B", "texto": "Explosão ambiental e autoimolação." },
+				{ "letra": "C", "texto": "Acidentes com produtos perigosos e resgate em espaço confinado." },
+				{ "letra": "D", "texto": "Salvamento em enchentes e atendimento a múltiplas vítimas." }
+			],
+			"correta": "B",
+			"explicacao": "O item 3.2.1 do Plano Didático de Abordagem Tática especifica: 'Efetuar a devida prevenção nos casos de explosão ambiental' e 'Efetuar a devida prevenção nos casos de autoimolação'.",
+			"fundamento": "Apêndice A, Plano Didático de Matéria 02, p. 77."
+		},
+		{
+			"id": 97,
+			"titulo": "Cenários Práticos: Armas Letais",
+			"tema": "4.3.2 Armas Letais",
+			"dificuldade": "média",
+			"pergunta": "No módulo de Cenários, referente a Armas Letais, o texto estabelece uma diretriz clara sobre a atuação do Corpo de Bombeiros em situações que envolvam armas de fogo. Qual é essa diretriz?",
+			"alternativas": [
+				{ "letra": "A", "texto": "O CB deve atuar prioritariamente, neutralizando a ameaça com força letal." },
+				{
+					"letra": "B",
+					"texto": "O CB deve identificar situações nas quais não deverá atuar, passando a respectiva ocorrência para o policiamento especializado."
+				},
+				{ "letra": "C", "texto": "O CB deve negociar a entrega da arma, independentemente do risco." },
+				{ "letra": "D", "texto": "O CB deve realizar o resgate aéreo imediato para evitar o confronto." }
+			],
+			"correta": "B",
+			"explicacao": "O Plano Didático da Matéria 03 (Cenários), UD-02, tem como objetivo: 'Identificar e conhecer as situações que envolvam armas de fogo e nas quais o Corpo de Bombeiros não deve atuar, deixando tais cenários a encargo do policiamento especializado'.",
+			"fundamento": "Apêndice A, Plano Didático de Matéria 03, p. 81."
+		},
+		{
+			"id": 98,
+			"titulo": "Cenários Práticos: Explosão e Autoimolação",
+			"tema": "4.3.3 Explosão ambiental e autoimolação",
+			"dificuldade": "fácil",
+			"pergunta": "Nos cenários que envolvem riscos de explosão ambiental e autoimolação, o texto destaca a necessidade de atuação com a utilização correta de qual equipamento?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Equipamentos de comunicação via satélite." },
+				{ "letra": "B", "texto": "EPIs (Equipamentos de Proteção Individual) de incêndio." },
+				{ "letra": "C", "texto": "Colete balístico nível III-A." },
+				{ "letra": "D", "texto": "Máscara autônoma de mergulho." }
+			],
+			"correta": "B",
+			"explicacao": "A tabela de conteúdo programático da UD-03 (Cenários) lista como Material Didático para os assuntos de explosão ambiental e autoimolação: 'EPI Incêndio'.",
+			"fundamento": "Apêndice A, Plano Didático de Matéria 03, p. 81."
+		},
+		{
+			"id": 99,
+			"titulo": "Prescrições Gerais: Tempo",
+			"tema": "5.1 Distribuição do Tempo",
+			"dificuldade": "média",
+			"pergunta": "De acordo com as Prescrições Gerais do curso proposto, qual é a duração de cada tempo de aula?",
+			"alternativas": [
+				{ "letra": "A", "texto": "30 minutos." },
+				{ "letra": "B", "texto": "45 minutos." },
+				{ "letra": "C", "texto": "50 minutos." },
+				{ "letra": "D", "texto": "60 minutos." }
+			],
+			"correta": "B",
+			"explicacao": "O item 5.1.1.1 das Prescrições Gerais estabelece: 'Cada tempo de aula terá duração de 45 (quarenta e cinco) minutos'.",
+			"fundamento": "Apêndice A, p. 69."
+		},
+		{
+			"id": 100,
+			"titulo": "Avaliação do Processo Educacional",
+			"tema": "5.3 Avaliação do Processo Educacional",
+			"dificuldade": "difícil",
+			"pergunta": "Conforme as regras de avaliação do curso proposto, qual é a média final mínima necessária para aprovação e qual é a faixa de nota correspondente ao conceito 'Bom'?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Média mínima 6,0; Conceito 'Bom' de 6,0 a 7,9." },
+				{ "letra": "B", "texto": "Média mínima 7,0; Conceito 'Bom' de 7,0 a 8,4." },
+				{ "letra": "C", "texto": "Média mínima 7,0; Conceito 'Bom' de 7,0 a 9,5." },
+				{ "letra": "D", "texto": "Média mínima 8,0; Conceito 'Bom' de 8,0 a 9,0." }
+			],
+			"correta": "B",
+			"explicacao": "O texto estabelece que o aluno será desligado se não atingir a média total de 7,0 pontos. A tabela de conceitos correlaciona a nota 7,0 a 8,4 com o conceito 'Bom'.",
+			"fundamento": "Apêndice A, p. 71."
+		}
+	]
+}
