@@ -77,6 +77,7 @@ quiz-interativo/
 │
 ├── css/
 │   ├── auth.css             # Estilos dedicados às telas de login e cadastro
+│   ├── dashboard.css        # Estilos exclusivos do Dashboard de desempenho
 │   └── styles.css           # Design system completo, variáveis, layout grid e dark mode
 │
 ├── data/
@@ -85,11 +86,14 @@ quiz-interativo/
 ├── js/
 │   ├── app.js               # Lógica central do quiz, filtros, estado e renderização
 │   ├── auth.js              # Gerenciador de login, registro e sessão
+│   ├── dashboard.js         # Lógica e gráficos do Dashboard de desempenho
 │   ├── finalAnalysis.js     # Lógica e métricas da página de encerramento da matéria
+│   ├── icons.js             # Catálogo de ícones SVG inline (Lucide) usado pelos botões
 │   └── server.js            # Servidor HTTP Node.js com endpoints REST e arquivos estáticos
 │
 ├── json/
-│   └── combateaincendio.json# Base de questões em formato JSON
+│   ├── combateaincendio.json# Base de questões — Combate a Incêndio
+│   └── negociador.json      # Base de questões — Negociação
 │
 └── pages/
     ├── cadastro.html        # Página de criação de conta
