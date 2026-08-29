@@ -174,7 +174,9 @@ function injetarIcones() {
 
   const setIcon = (id, name) => {
     const el = document.getElementById(id);
-    if (el && window.Icon(name)) el.innerHTML = window.Icon(name);
+    if (!el || !window.Icon(name)) return;
+    const slot = el.querySelector('.btn-icone') || el;
+    slot.innerHTML = window.Icon(name);
   };
 
   setIcon('btnDashboard', 'chart');
