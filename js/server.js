@@ -14,6 +14,30 @@ const USERS_FILE = path.join(USERS_DATA_DIR, 'users.json');
 const SCRYPT_N = 16384;
 const SCRYPT_KEYLEN = 64;
 
+const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || '*')
+  .split(',')
+  .map((o) => o.trim())
+  .filter(Boolean);
+
+function isOriginAllowed(origin) {
+  if (!origin) return false;
+  if (ALLOWED_ORIGINS.includes('*')) return true;
+  return ALLOWED_ORIGINS.includes(origin);
+}
+
+function applyCorsHeaders(request, response) {
+  const origin = request.headers.origin;
+  if (!origin) return;
+
+  if (isOriginAllowed(origin)) {
+    response.setHeader('Access-Control-Allow-Origin', ALLOWED_ORIGINS.includes('*') ? '*' : origin);
+    response.setHeader('Vary', 'Origin');
+    response.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    response.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    response.setHeader('Access-Control-Max-Age', '600');
+  }
+}
+
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
@@ -136,10 +160,15 @@ function readSubjectData(subject) {
   return JSON.parse(raw);
 }
 
-function sendJson(response, payload, statusCode = 200) {
+function sendJson(request, response, payload, statusCode = 200) {
+  applyCorsHeaders(request, response);
   response.writeHead(statusCode, {
     'Content-Type': 'application/json; charset=utf-8',
-    ...API_SECURITY_HEADERS
+    ...API_SECURITY_HEADERS,
+    'Access-Control-Allow-Origin': response.getHeader('Access-Control-Allow-Origin') || '',
+    'Access-Control-Allow-Methods': response.getHeader('Access-Control-Allow-Methods') || '',
+    'Access-Control-Allow-Headers': response.getHeader('Access-Control-Allow-Headers') || '',
+    Vary: response.getHeader('Vary') || ''
   });
   response.end(JSON.stringify(payload));
 }
@@ -266,7 +295,7 @@ async function handleUserRegistration(request, response) {
 
     const validationError = validateRegistrationInput({ nome, email, usuario, senha });
     if (validationError) {
-      sendJson(response, { error: validationError }, 400);
+      sendJson(request, response, { error: validationError }, 400);
       return;
     }
 
@@ -275,7 +304,7 @@ async function handleUserRegistration(request, response) {
     const usuarioJaExiste = users.some((user) => user.usuario?.toLowerCase() === usuario.toLowerCase());
 
     if (emailJaExiste || usuarioJaExiste) {
-      sendJson(response, { error: 'E-mail ou usuário já cadastrado.' }, 409);
+      sendJson(request, response, { error: 'E-mail ou usuário já cadastrado.' }, 409);
       return;
     }
 
@@ -292,13 +321,13 @@ async function handleUserRegistration(request, response) {
     users.push(novoUsuario);
     writeUsersFile(users);
 
-    sendJson(response, {
+    sendJson(request, response, {
       success: true,
       message: 'Cadastro realizado com sucesso. Seu cadastro está sob análise do administrador do sistema. Aguarde para ter o acesso.'
     }, 201);
   } catch (error) {
     console.error('Erro ao registrar usuário:', error.message);
-    sendJson(response, { error: 'Não foi possível cadastrar o usuário.' }, 400);
+    sendJson(request, response, { error: 'Não foi possível cadastrar o usuário.' }, 400);
   }
 }
 
@@ -309,7 +338,7 @@ async function handleUserLogin(request, response) {
     const senha = String(body.senha || '');
 
     if (!usuario || !senha) {
-      sendJson(response, { error: 'Informe usuário e senha.' }, 400);
+      sendJson(request, response, { error: 'Informe usuário e senha.' }, 400);
       return;
     }
 
@@ -322,16 +351,16 @@ async function handleUserLogin(request, response) {
     }
 
     if (!usuarioEncontrado || !senhaOk) {
-      sendJson(response, { error: 'Credenciais inválidas.' }, 401);
+      sendJson(request, response, { error: 'Credenciais inválidas.' }, 401);
       return;
     }
 
     if (usuarioEncontrado.ativo === false) {
-      sendJson(response, { error: 'Seu cadastro está sob análise do administrador do sistema. Aguarde para ter o acesso' }, 403);
+      sendJson(request, response, { error: 'Seu cadastro está sob análise do administrador do sistema. Aguarde para ter o acesso' }, 403);
       return;
     }
 
-    sendJson(response, {
+    sendJson(request, response, {
       success: true,
       message: 'Login realizado com sucesso.',
       user: {
@@ -343,7 +372,7 @@ async function handleUserLogin(request, response) {
     });
   } catch (error) {
     console.error('Erro ao autenticar usuário:', error.message);
-    sendJson(response, { error: 'Não foi possível autenticar o usuário.' }, 400);
+    sendJson(request, response, { error: 'Não foi possível autenticar o usuário.' }, 400);
   }
 }
 
@@ -393,18 +422,22 @@ const server = http.createServer(async (request, response) => {
   const pathname = decodeURIComponent(requestUrl.pathname);
   const method = request.method || 'GET';
 
-  if (pathname.startsWith('/api/auth/')) {
+  if (pathname.startsWith('/api/')) {
     if (method === 'OPTIONS') {
+      applyCorsHeaders(request, response);
       response.writeHead(204, API_SECURITY_HEADERS);
       response.end();
       return;
     }
+  }
+
+  if (pathname.startsWith('/api/auth/')) {
     if (method !== 'POST') {
-      sendJson(response, { error: 'Método não permitido.' }, 405);
+      sendJson(request, response, { error: 'Método não permitido.' }, 405);
       return;
     }
     if (!consumeRateLimit(clientIp(request))) {
-      sendJson(response, { error: 'Muitas tentativas. Tente novamente em alguns minutos.' }, 429);
+      sendJson(request, response, { error: 'Muitas tentativas. Tente novamente em alguns minutos.' }, 429);
       return;
     }
     if (pathname === '/api/auth/cadastro') {
@@ -415,41 +448,31 @@ const server = http.createServer(async (request, response) => {
       await handleUserLogin(request, response);
       return;
     }
-    sendJson(response, { error: 'Rota não encontrada.' }, 404);
+    sendJson(request, response, { error: 'Rota não encontrada.' }, 404);
     return;
   }
 
   if (pathname === '/api/materias') {
-    if (method === 'OPTIONS') {
-      response.writeHead(204, API_SECURITY_HEADERS);
-      response.end();
-      return;
-    }
-    sendJson(response, getSubjects());
+    sendJson(request, response, getSubjects());
     return;
   }
 
   const subjectMatch = pathname.match(/^\/api\/materias\/([^/]+)$/i);
   if (subjectMatch) {
-    if (method === 'OPTIONS') {
-      response.writeHead(204, API_SECURITY_HEADERS);
-      response.end();
-      return;
-    }
     const subjectId = decodeURIComponent(subjectMatch[1]);
     const subject = getSubjectById(subjectId);
 
     if (!subject) {
-      sendJson(response, { error: 'Matéria não encontrada.' }, 404);
+      sendJson(request, response, { error: 'Matéria não encontrada.' }, 404);
       return;
     }
 
     try {
       const data = readSubjectData(subject);
-      sendJson(response, data);
+      sendJson(request, response, data);
     } catch (error) {
       console.error(`Erro ao ler ${subject.fileName}:`, error.message);
-      sendJson(response, { error: 'Não foi possível carregar a matéria.' }, 500);
+      sendJson(request, response, { error: 'Não foi possível carregar a matéria.' }, 500);
     }
     return;
   }

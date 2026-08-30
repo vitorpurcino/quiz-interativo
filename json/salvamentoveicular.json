@@ -1,0 +1,2821 @@
+{
+	"informacoes": {
+		"titulo": "Quiz - Salvamento Veicular",
+		"materia": "Salvamento Veicular Leve",
+		"nome": "Salvamento Veicular",
+		"embaralharQuestoes": true,
+		"mostrarFundamento": true,
+		"fonte": "Manual do Participante - Curso de Salvamento Veicular Leve - 1ª Edição - CONASV / LIGABOM - 2025",
+		"curso": "Curso de Salvamento Veicular Leve - Corpos de Bombeiros Militares do Brasil",
+		"turma": "Formação Padronizada CONASV",
+		"ano": 2025,
+		"descricao": "Quiz abrangente sobre todo o conteúdo do Manual de Salvamento Veicular Leve. Cobre conceitos básicos, segurança, anatomia veicular, tecnologias de segurança (SRS), desencarceradores, estabilização, técnicas de desencarceramento, avaliação e extração de vítimas, e tática operacional com composição de equipes. Inclui questões de memorização, aplicação e cenários operacionais."
+	},
+	"questoes": [
+		{
+			"id": 1,
+			"titulo": "Capítulo 1 - Introdução",
+			"tema": "Finalidade e Objetivos",
+			"dificuldade": "fácil",
+			"pergunta": "Qual é a finalidade do Curso de Salvamento Veicular segundo o Manual do Participante?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Formar especialistas em combate a incêndio estrutural." },
+				{
+					"letra": "B",
+					"texto": "Proporcionar aos participantes uma metodologia e as técnicas para melhorar o atendimento em sinistros de trânsito envolvendo veículos leves."
+				},
+				{
+					"letra": "C",
+					"texto": "Capacitar exclusivamente no uso de ferramentas hidráulicas de alta pressão."
+				},
+				{ "letra": "D", "texto": "Treinar equipes para atendimento de produtos perigosos em vias públicas." }
+			],
+			"correta": "B",
+			"explicacao": "A finalidade é claramente definida como proporcionar metodologia e técnicas para melhorar o atendimento em sinistros de trânsito envolvendo veículos leves.",
+			"fundamento": "Capítulo 1 - Introdução - Finalidade do Curso de Salvamento Veicular."
+		},
+		{
+			"id": 2,
+			"titulo": "Capítulo 1 - Introdução",
+			"tema": "Objetivo Geral de Desempenho",
+			"dificuldade": "fácil",
+			"pergunta": "Ao término do curso, o aluno será capaz de realizar o atendimento aos simulacros de ocorrências de presos em ferragens atentando para quais fatores de avaliação?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "1) Estabilizar o cenário da ocorrência; 2) Escolher e empregar a tática e técnica de desencarceramento adequada ao caso."
+				},
+				{ "letra": "B", "texto": "1) Realizar triagem START; 2) Transportar a vítima em menos de 5 minutos." },
+				{ "letra": "C", "texto": "1) Desconectar a bateria; 2) Aplicar colar cervical." },
+				{ "letra": "D", "texto": "1) Isolar a área fria; 2) Utilizar apenas ferramentas elétricas." }
+			],
+			"correta": "A",
+			"explicacao": "O Objetivo Geral de Desempenho estabelece exatamente esses dois fatores de avaliação: estabilizar o cenário e escolher/empregar a tática e técnica adequadas.",
+			"fundamento": "Capítulo 1 - Introdução - Objetivo Geral de Desempenho."
+		},
+		{
+			"id": 3,
+			"titulo": "Capítulo 2 - Conceitos Básicos",
+			"tema": "Procedimento Operacional Padrão",
+			"dificuldade": "fácil",
+			"pergunta": "O POP para Acidentes de Trânsito com Vítima Presa nas Ferragens sistematiza o trabalho em quantas etapas básicas?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Três etapas." },
+				{ "letra": "B", "texto": "Cinco etapas." },
+				{ "letra": "C", "texto": "Quatro etapas." },
+				{ "letra": "D", "texto": "Seis etapas." }
+			],
+			"correta": "C",
+			"explicacao": "O POP sistematiza o trabalho em quatro etapas básicas: 1. Preparação e Segurança do Local; 2. Acesso; 3. Técnicas de Desencarceramento; 4. Técnicas de Extração.",
+			"fundamento": "Capítulo 2 - Conceitos Básicos - Procedimento Operacional Padrão."
+		},
+		{
+			"id": 4,
+			"titulo": "Capítulo 2 - Conceitos Básicos",
+			"tema": "Terminologia",
+			"dificuldade": "fácil",
+			"pergunta": "Complete a lacuna: “Sempre retirar as ________ da vítima, e nunca a vítima das ________!”",
+			"alternativas": [
+				{ "letra": "A", "texto": "ferragens / ferragens" },
+				{ "letra": "B", "texto": "portas / colunas" },
+				{ "letra": "C", "texto": "airbags / estruturas" },
+				{ "letra": "D", "texto": "vidros / chapas" }
+			],
+			"correta": "A",
+			"explicacao": "A regra de ouro do desencarceramento é: Sempre retirar as ferragens da vítima, e nunca a vítima das ferragens!",
+			"fundamento": "Capítulo 2 - Conceitos Básicos - Desencarceramento."
+		},
+		{
+			"id": 5,
+			"titulo": "Capítulo 2 - Conceitos Básicos",
+			"tema": "Sinistro de Trânsito",
+			"dificuldade": "médio",
+			"pergunta": "Assinale a alternativa CORRETA sobre a definição de Sinistro de Trânsito adotada no Manual:",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Evento que resulte apenas em dano material ao veículo, independentemente de movimento."
+				},
+				{
+					"letra": "B",
+					"texto": "Todo evento que resulte em dano ao veículo ou à sua carga, e/ou em lesões a pessoas e/ou animais, e que possa trazer dano material ou prejuízos ao trânsito, à via ou ao meio ambiente, em que pelo menos uma das partes está em movimento nas vias terrestres ou em áreas abertas ao público."
+				},
+				{
+					"letra": "C",
+					"texto": "Qualquer colisão envolvendo veículos automotores em vias públicas, com ou sem vítimas."
+				},
+				{ "letra": "D", "texto": "Ocorrência de trânsito exclusivamente com vítimas presas em ferragens." }
+			],
+			"correta": "B",
+			"explicacao": "A definição é a da ABNT (NBR 10697 revisada) e reforçada pela Lei 14.599/23, que substituiu o termo “acidente de trânsito” por “sinistro de trânsito”.",
+			"fundamento": "Capítulo 2 - Conceitos Básicos - Terminologia - Sinistro de Trânsito."
+		},
+		{
+			"id": 6,
+			"titulo": "Capítulo 2 - Conceitos Básicos",
+			"tema": "Tipos de Sinistros",
+			"dificuldade": "médio",
+			"pergunta": "Sobre os veículos tombados, é CORRETO afirmar:",
+			"alternativas": [
+				{ "letra": "A", "texto": "São os mais estáveis e sua estabilização é a mais simples." },
+				{
+					"letra": "B",
+					"texto": "São os mais instáveis, por isso sua estabilização requer maior atenção e será mais difícil. Porém a técnica de desencarceramento é a mais rápida."
+				},
+				{ "letra": "C", "texto": "Não necessitam de técnica de desencarceramento para retirada da vítima." },
+				{
+					"letra": "D",
+					"texto": "A estabilização é desnecessária se o veículo estiver sobre uma das laterais."
+				}
+			],
+			"correta": "B",
+			"explicacao": "O Manual afirma que os veículos tombados são os mais instáveis, exigindo maior atenção na estabilização, mas a técnica de desencarceramento é a mais rápida. Há o alerta: “Não se retira uma vítima de um veículo tombado sem se utilizar uma técnica de desencarceramento!”",
+			"fundamento": "Capítulo 2 - Conceitos Básicos - Tipos de Sinistros de Trânsito - Tombamento."
+		},
+		{
+			"id": 7,
+			"titulo": "Capítulo 2 - Conceitos Básicos",
+			"tema": "Período de Ouro e 10 minutos de Platina",
+			"dificuldade": "médio",
+			"pergunta": "O que são os “10 minutos de Platina” segundo o Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "O tempo máximo para a chegada da Unidade de Suporte Avançado." },
+				{ "letra": "B", "texto": "O intervalo entre o sinistro e a chegada ao hospital." },
+				{
+					"letra": "C",
+					"texto": "Inicia-se com a chegada das equipes de emergência, onde elas terão 10 minutos para, com segurança, estabilizar os veículos, acessar as vítimas usando técnicas de desencarceramento, estabilizá-las e, utilizando técnicas de extração, retirá-las deixando-as prontas para serem transportadas até a unidade hospitalar."
+				},
+				{ "letra": "D", "texto": "O tempo destinado exclusivamente à avaliação primária da vítima." }
+			],
+			"correta": "C",
+			"explicacao": "A definição literal dos 10 minutos de Platina é exatamente essa: tempo a partir da chegada das equipes para estabilizar, acessar, desencarcerar, estabilizar a vítima e extrair.",
+			"fundamento": "Capítulo 2 - Conceitos Básicos - 10 minutos de Platina."
+		},
+		{
+			"id": 8,
+			"titulo": "Capítulo 3 - Segurança",
+			"tema": "EPI",
+			"dificuldade": "fácil",
+			"pergunta": "Quais itens compõem o Equipamento de Proteção Individual básico para ações de Salvamento Veicular segundo o Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Capacete simples, luvas de procedimento e botas." },
+				{
+					"letra": "B",
+					"texto": "Capacete com viseira “full face” e óculos de proteção, Mascarilha de Proteção Respiratória, Lanterna + apito, Jaqueta, Cinto com ferramentas, Luvas de Salvamento e 3 pares de Luvas de Procedimento, Calça e Botas."
+				},
+				{ "letra": "C", "texto": "Apenas capacete, jaqueta e luvas de salvamento." },
+				{ "letra": "D", "texto": "Máscara facial completa, roupa de aproximação e luvas de vaqueta." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual lista explicitamente todos esses itens como composição do EPI para Salvamento Veicular.",
+			"fundamento": "Capítulo 3 - Segurança - Equipamento de Proteção Individual."
+		},
+		{
+			"id": 9,
+			"titulo": "Capítulo 3 - Segurança",
+			"tema": "Riscos",
+			"dificuldade": "médio",
+			"pergunta": "Classifique os riscos a seguir conforme o Manual:\nI. Cortes em superfícies expostas\nII. Incêndio e airbags acionados\nIII. Agravamento de lesões e movimentação inadequada\n\nAs classificações corretas são, respectivamente:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Individual, Coletivo, à Vítima." },
+				{ "letra": "B", "texto": "Coletivo, Individual, à Vítima." },
+				{ "letra": "C", "texto": "à Vítima, Coletivo, Individual." },
+				{ "letra": "D", "texto": "Individual, à Vítima, Coletivo." }
+			],
+			"correta": "A",
+			"explicacao": "Riscos individuais incluem cortes, acidentes com ferramentas etc.; riscos coletivos incluem incêndio, airbags, atropelamento etc.; riscos à vítima incluem cortes por vidros, agravamento de lesões e movimentação inadequada.",
+			"fundamento": "Capítulo 3 - Segurança - Riscos."
+		},
+		{
+			"id": 10,
+			"titulo": "Capítulo 3 - Segurança",
+			"tema": "Sinalização e Estacionamento",
+			"dificuldade": "médio",
+			"pergunta": "De acordo com o POP de Estacionamento de Viaturas, o 1º cone deve ser colocado a quantos metros da viatura e os demais a cada quantos metros?",
+			"alternativas": [
+				{ "letra": "A", "texto": "10 m da viatura e demais a cada 15 m." },
+				{ "letra": "B", "texto": "20 m da viatura e demais a cada 5 m." },
+				{ "letra": "C", "texto": "15 m da viatura e demais a cada 10 m, sendo 1 a cada 10 km/h da via." },
+				{ "letra": "D", "texto": "5 m da viatura e demais a cada 10 m." }
+			],
+			"correta": "C",
+			"explicacao": "O Manual determina: 1º cone a 15 m da viatura e demais a cada 10 m, sendo 1 a cada 10 km/h da via.",
+			"fundamento": "Capítulo 3 - Segurança - Sinalização e Estacionamento."
+		},
+		{
+			"id": 11,
+			"titulo": "Capítulo 3 - Segurança",
+			"tema": "Zonas de Atuação",
+			"dificuldade": "médio",
+			"pergunta": "Sobre a Área Quente, é CORRETO afirmar:",
+			"alternativas": [
+				{ "letra": "A", "texto": "É o terceiro círculo de atuação, delimitado por fita zebrada." },
+				{
+					"letra": "B",
+					"texto": "Primeira área de atuação; somente os envolvidos nas ações de salvamento; uso obrigatório do EPI; raio imaginário de 3 a 5 m para cada veículo."
+				},
+				{
+					"letra": "C",
+					"texto": "Local onde se arma a Lona de Materiais e onde se limita a zona de descarte."
+				},
+				{ "letra": "D", "texto": "Engloba todos os veículos e tem raio de 5 a 10 m." }
+			],
+			"correta": "B",
+			"explicacao": "A Área Quente é definida exatamente com essas características no Manual.",
+			"fundamento": "Capítulo 3 - Segurança - Isolamento e Áreas de Atuação."
+		},
+		{
+			"id": 12,
+			"titulo": "Capítulo 3 - Segurança",
+			"tema": "Posicionamento de Viaturas",
+			"dificuldade": "difícil",
+			"pergunta": "Em um cenário de sinistro em via de mão dupla, a equipe posiciona a viatura pesada a 45° em relação à via. Qual o principal objetivo dessa manobra segundo o Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Facilitar o acesso rápido da Unidade de Resgate ao hospital." },
+				{
+					"letra": "B",
+					"texto": "Criar a chamada “barreira de sacrifício”, formada principalmente por viaturas pesadas, para garantir a proteção física das equipes."
+				},
+				{ "letra": "C", "texto": "Permitir que o motorista observe melhor o fluxo de trânsito." },
+				{ "letra": "D", "texto": "Reduzir o consumo de combustível durante a operação." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual explica que o posicionamento a 45° cria a “barreira de sacrifício” para proteção física das equipes. A Unidade de Resgate é a exceção e se posiciona à frente do sinistro.",
+			"fundamento": "Capítulo 3 - Segurança - Posicionamento das viaturas."
+		},
+		{
+			"id": 13,
+			"titulo": "Capítulo 4 - Anatomia Veicular",
+			"tema": "Terminologia",
+			"dificuldade": "fácil",
+			"pergunta": "Na divisão vertical do veículo, quais são as três linhas principais identificadas no Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Dianteira, Traseira e Lateral." },
+				{ "letra": "B", "texto": "Teto, Linha Média e Piso." },
+				{ "letra": "C", "texto": "Coluna A, Coluna B e Coluna C." },
+				{ "letra": "D", "texto": "Motorista, Passageiro e Central." }
+			],
+			"correta": "B",
+			"explicacao": "A divisão vertical é composta por Teto, Linha Média e Piso.",
+			"fundamento": "Capítulo 4 - Anatomia Veicular - Terminologia Veicular."
+		},
+		{
+			"id": 14,
+			"titulo": "Capítulo 4 - Anatomia Veicular",
+			"tema": "Colunas",
+			"dificuldade": "fácil",
+			"pergunta": "As colunas do veículo são nomeadas a partir de qual referência?",
+			"alternativas": [
+				{ "letra": "A", "texto": "A partir da coluna do para-brisas traseiro." },
+				{ "letra": "B", "texto": "A partir da coluna do para-brisas dianteiro." },
+				{ "letra": "C", "texto": "A partir da coluna central do veículo." },
+				{ "letra": "D", "texto": "De forma aleatória conforme o fabricante." }
+			],
+			"correta": "B",
+			"explicacao": "As colunas são nomeadas com sequência de letras a partir da coluna do para-brisas dianteiro (A, B, C, D...).",
+			"fundamento": "Capítulo 4 - Anatomia Veicular - Componentes dos Veículos - Colunas."
+		},
+		{
+			"id": 15,
+			"titulo": "Capítulo 4 - Anatomia Veicular",
+			"tema": "Tipos de Vidros",
+			"dificuldade": "médio",
+			"pergunta": "Sobre os vidros laminados, assinale a alternativa CORRETA:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Ao sofrer danos, quebram-se em pequenas partes arredondadas." },
+				{
+					"letra": "B",
+					"texto": "São formados por duas camadas de vidro unidas por uma fina camada do polímero PVB e, ao sofrer danos, mantêm o vidro danificado aderido. Localizam-se nos para-brisas dianteiros de todos os veículos fabricados a partir da década de 90."
+				},
+				{ "letra": "C", "texto": "São encontrados exclusivamente em veículos blindados." },
+				{ "letra": "D", "texto": "Não exigem proteção respiratória durante o corte." }
+			],
+			"correta": "B",
+			"explicacao": "Definição e localização literais do Manual. Há o alerta de uso de máscara filtrante devido à suspensão de vidro particulado.",
+			"fundamento": "Capítulo 4 - Anatomia Veicular - Para-brisas - Vidros Laminados."
+		},
+		{
+			"id": 16,
+			"titulo": "Capítulo 4 - Anatomia Veicular",
+			"tema": "Vidros Blindados",
+			"dificuldade": "difícil",
+			"pergunta": "Em um veículo com para-brisas blindado, qual técnica específica deve ser utilizada para a remoção?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Quebra controlada com punção nas extremidades inferiores." },
+				{ "letra": "B", "texto": "Corte direto com serra-sabre em toda a extensão." },
+				{
+					"letra": "C",
+					"texto": "Técnica de afastamento da coluna “A” (corte de cerca de 10 cm da coluna “A”, posicionar ponteiras do alargador ou combinada e abrir)."
+				},
+				{ "letra": "D", "texto": "Remoção manual após desconexão da bateria." }
+			],
+			"correta": "C",
+			"explicacao": "O Manual determina a técnica de afastamento da coluna “A” para vidros blindados, com os procedimentos descritos.",
+			"fundamento": "Capítulo 4 - Anatomia Veicular e Capítulo 8 - Técnicas de Desencarceramento - Vidros Blindados."
+		},
+		{
+			"id": 17,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "Segurança Ativa e Passiva",
+			"dificuldade": "fácil",
+			"pergunta": "Qual a diferença fundamental entre Segurança Ativa e Segurança Passiva?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Segurança Ativa evita situações de risco e acidentes; Segurança Passiva minimiza os efeitos do sinistro após a colisão."
+				},
+				{ "letra": "B", "texto": "Segurança Ativa é composta por airbags; Segurança Passiva por freios ABS." },
+				{ "letra": "C", "texto": "Não há diferença; os termos são sinônimos." },
+				{ "letra": "D", "texto": "Segurança Ativa é estática; Segurança Passiva é dinâmica." }
+			],
+			"correta": "A",
+			"explicacao": "Definição literal: Segurança Ativa controla o veículo para evitar situações de risco; Segurança Passiva ajuda a minimizar os efeitos do sinistro após a colisão.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Tipos de Segurança."
+		},
+		{
+			"id": 18,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "SRS",
+			"dificuldade": "fácil",
+			"pergunta": "Quais componentes formam o Sistema de Retenção Suplementar (SRS)?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas Airbags e cintos de segurança." },
+				{ "letra": "B", "texto": "Airbags, Pré-tensionadores de cinto, ROPS e WHIPS." },
+				{ "letra": "C", "texto": "Freios ABS, Controle de Tração e Airbags." },
+				{ "letra": "D", "texto": "Colunas de aço e para-brisas laminados." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual lista explicitamente: Airbags, Pré-tensionadores de cinto, ROPS e WHIPS como componentes do SRS.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Segurança Passiva Dinâmica."
+		},
+		{
+			"id": 19,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "Airbags",
+			"dificuldade": "médio",
+			"pergunta": "Os airbags são acionados através da combinação de quais três fatores?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Velocidade mínima de 20 km/h, impacto lateral e abertura de portas." },
+				{ "letra": "B", "texto": "Velocidade Mínima de 40 km/h; Desaceleração Brusca; Impacto." },
+				{ "letra": "C", "texto": "Qualquer velocidade acima de 10 km/h, freada e colisão traseira." },
+				{ "letra": "D", "texto": "Apenas impacto frontal acima de 60 km/h." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual estabelece os três fatores: Velocidade Mínima de 40 km/h, Desaceleração Brusca e Impacto.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Acionamento dos Airbags."
+		},
+		{
+			"id": 20,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "Cuidados com Airbags",
+			"dificuldade": "difícil",
+			"pergunta": "Em um cenário operacional, a equipe identifica a presença de cilindros infladores de airbags laterais nas colunas “B” e “C”. Qual o principal risco e a medida obrigatória antes de iniciar os cortes?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Risco de queima; medida: molhar a área com água." },
+				{
+					"letra": "B",
+					"texto": "Risco de projeção de pedaços, grande estampido e ruptura de lâminas das ferramentas (pressão de 3000 a 6000 psi); medida: explorar o veículo e identificar onde os acionadores estão antes de iniciar o desencarceramento, além de desconectar a bateria."
+				},
+				{ "letra": "C", "texto": "Risco de liberação de gás tóxico; medida: usar apenas máscara de escape." },
+				{ "letra": "D", "texto": "Não há risco significativo se o airbag já tiver sido acionado." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual destaca o risco dos cilindros infladores (3000 a 6000 psi) e a necessidade de exploração/identificação antes dos cortes, além da desconexão da bateria.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Cuidados com Airbags e Exploração/Identificação."
+		},
+		{
+			"id": 21,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "Pré-tensionadores e WHIPS",
+			"dificuldade": "difícil",
+			"pergunta": "Analise as afirmativas:\nI. Os pré-tensionadores de cinto atuam na diminuição do efeito chicote e são acionados por dispositivo pirotécnico.\nII. O WHIPS é composto por assentos flexíveis que acompanham o deslocamento do ocupante para diminuir lesões na coluna cervical.\nIII. O único risco do WHIPS é a possibilidade de movimentação indesejada da vítima durante as manobras de extração.\n\nEstá CORRETO o que se afirma em:",
+			"alternativas": [
+				{ "letra": "A", "texto": "I e II apenas." },
+				{ "letra": "B", "texto": "II e III apenas." },
+				{ "letra": "C", "texto": "I e III apenas." },
+				{ "letra": "D", "texto": "I, II e III." }
+			],
+			"correta": "D",
+			"explicacao": "Todas as afirmativas estão de acordo com o conteúdo do Manual sobre Pré-tensionadores e WHIPS.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Pré-Tensionadores de Cinto e WHIPS."
+		},
+		{
+			"id": 22,
+			"titulo": "Capítulo 6 - Desencarceradores",
+			"tema": "Ferramentas Hidráulicas",
+			"dificuldade": "fácil",
+			"pergunta": "Qual ferramenta hidráulica possui as funções de corte, alargamento, compressão e até tração, sendo recomendada para as Unidades de Resgate?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Cortador." },
+				{ "letra": "B", "texto": "Alargador." },
+				{ "letra": "C", "texto": "Ferramenta Combinada." },
+				{ "letra": "D", "texto": "Extensor." }
+			],
+			"correta": "C",
+			"explicacao": "A Ferramenta Combinada é descrita como versátil (corte, alargamento, compressão e tração) e recomendada para as Unidades de Resgate.",
+			"fundamento": "Capítulo 6 - Desencarceradores - Ferramenta Combinada."
+		},
+		{
+			"id": 23,
+			"titulo": "Capítulo 6 - Desencarceradores",
+			"tema": "Cortadores",
+			"dificuldade": "médio",
+			"pergunta": "Sobre o manuseio correto dos Cortadores, assinale a alternativa INCORRETA:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Posicionar sempre que possível a 90° do objeto cortado." },
+				{
+					"letra": "B",
+					"texto": "Buscar envolver o objeto com toda a lâmina, buscando a base das lâminas para maior força."
+				},
+				{ "letra": "C", "texto": "Preferir cortar com as pontas das lâminas para maior precisão." },
+				{
+					"letra": "D",
+					"texto": "Interromper o trabalho caso a ferramenta comece a torcer ou separar as lâminas."
+				}
+			],
+			"correta": "C",
+			"explicacao": "O Manual orienta evitar cortar com as pontas das lâminas. As demais são regras corretas de manuseio.",
+			"fundamento": "Capítulo 6 - Desencarceradores - Cortadores - Manuseio correto."
+		},
+		{
+			"id": 24,
+			"titulo": "Capítulo 6 - Desencarceradores",
+			"tema": "Serra Sabre",
+			"dificuldade": "médio",
+			"pergunta": "Qual a principal utilização da Serra Sabre no desencarceramento e qual a classificação ideal de lâmina para metais?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Corte de vidro laminado, colunas e cortes de alívio; lâmina ideal 14 tpi." },
+				{ "letra": "B", "texto": "Apenas corte de madeira; lâmina 8 tpi." },
+				{ "letra": "C", "texto": "Somente corte de para-brisas temperados; lâmina 24 tpi." },
+				{ "letra": "D", "texto": "Corte de cilindros de ar comprimido; lâmina 6 tpi." }
+			],
+			"correta": "A",
+			"explicacao": "O Manual indica o uso principal para corte de vidro laminado, colunas e cortes de alívio, com lâmina ideal para metais de 14 tpi.",
+			"fundamento": "Capítulo 6 - Desencarceradores - Serra Sabre."
+		},
+		{
+			"id": 25,
+			"titulo": "Capítulo 7 - Estabilização",
+			"tema": "Princípios",
+			"dificuldade": "fácil",
+			"pergunta": "Quais são os três princípios básicos da estabilização veicular?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Estabilizar a vítima e o veículo da maneira encontrada; Preencher todo o espaço entre o veículo e o chão; Ajustar e verificar a estabilização conforme necessário."
+				},
+				{
+					"letra": "B",
+					"texto": "Elevar o veículo o máximo possível; Remover todas as rodas; Fixar com correntes."
+				},
+				{
+					"letra": "C",
+					"texto": "Utilizar apenas escoras metálicas; Desconectar a bateria antes; Isolar a área fria."
+				},
+				{
+					"letra": "D",
+					"texto": "Estabilizar apenas a vítima; Ignorar o veículo se estiver estável; Usar apenas calços nº 4."
+				}
+			],
+			"correta": "A",
+			"explicacao": "Os três princípios são listados literalmente no Manual.",
+			"fundamento": "Capítulo 7 - Estabilização - Estabilização veicular."
+		},
+		{
+			"id": 26,
+			"titulo": "Capítulo 7 - Estabilização",
+			"tema": "Materiais",
+			"dificuldade": "médio",
+			"pergunta": "Qual a função principal do Calço nº 1?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Largura mínima para giro de KED e aumentar a altura dos calços." },
+				{ "letra": "B", "texto": "Base para o Extensor e aumentar a altura dos calços." },
+				{ "letra": "C", "texto": "Preencher espaço entre chão e veículo." },
+				{ "letra": "D", "texto": "Altura mínima para giro de KED." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual identifica o Calço nº 1 como “Base para o Extensor / Aumentar a altura dos calços”.",
+			"fundamento": "Capítulo 7 - Estabilização - Materiais - Calços de madeira."
+		},
+		{
+			"id": 27,
+			"titulo": "Capítulo 7 - Estabilização",
+			"tema": "Cenário Prático",
+			"dificuldade": "difícil",
+			"pergunta": "Uma equipe chega a um sinistro com veículo na posição normal. Após a estabilização inicial em quatro pontos, durante o desencarceramento o painel é deslocado. Qual procedimento deve ser adotado em relação à estabilização?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Manter a estabilização original sem alterações." },
+				{
+					"letra": "B",
+					"texto": "Ajustar e verificar a estabilização conforme necessário, calçando constantemente os espaços conquistados."
+				},
+				{ "letra": "C", "texto": "Remover todos os calços para facilitar o trabalho das ferramentas." },
+				{ "letra": "D", "texto": "Elevar o veículo com o extensor sem calçar." }
+			],
+			"correta": "B",
+			"explicacao": "Um dos princípios é “Ajustar e verificar a estabilização conforme necessário”. Durante o uso de extensores deve-se sempre escorar ou calçar os espaços conquistados.",
+			"fundamento": "Capítulo 7 - Estabilização - Princípios e uso de Extensores."
+		},
+		{
+			"id": 28,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Quebra Controlada de Vidros",
+			"dificuldade": "médio",
+			"pergunta": "Para a remoção de vidros temperados, qual o procedimento correto?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Uso da serra-sabre em toda a extensão." },
+				{
+					"letra": "B",
+					"texto": "Remoção através do uso de punção quebra-vidros, nas extremidades inferiores, com força moderada."
+				},
+				{ "letra": "C", "texto": "Afastamento da coluna “A”." },
+				{ "letra": "D", "texto": "Corte com ferramenta combinada." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual especifica o uso de punção quebra-vidros nas extremidades inferiores com força moderada para vidros temperados.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Quebra Controlada de Vidros - Vidros Temperados."
+		},
+		{
+			"id": 29,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Remoção de Portas",
+			"dificuldade": "médio",
+			"pergunta": "Na remoção de portas, sempre que possível deve-se retirar primeiro a porta de qual lado?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Do lado da vítima prioritária." },
+				{ "letra": "B", "texto": "Do lado oposto da vítima." },
+				{ "letra": "C", "texto": "Qualquer lado, desde que seja a porta dianteira." },
+				{ "letra": "D", "texto": "Apenas as portas traseiras." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual determina: “Sempre que possível, deve ser retirada primeiro a porta do lado oposto da vítima.”",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Remoção de Portas."
+		},
+		{
+			"id": 30,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Rebatimento Total de Teto",
+			"dificuldade": "difícil",
+			"pergunta": "Qual é a técnica considerada a regra geral das ocorrências de presos em ferragens e quais os principais passos?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Rebatimento Parcial: corte apenas das colunas “A” e “B”." },
+				{
+					"letra": "B",
+					"texto": "Rebatimento Total de Teto: Quebra controlada dos vidros; Remoção das portas; Corte das colunas “A” entre nível médio e superior; Corte das colunas “B” o mais rente ao teto possível; Cortes de alívio imediatamente antes das últimas colunas; Rebater o teto; Conter com amarração; Proteger as ferragens."
+				},
+				{ "letra": "C", "texto": "Retirada de Teto: apenas levantar e mover o teto sem cortes de alívio." },
+				{ "letra": "D", "texto": "Rebatimento Lateral: exclusivo para veículos na posição normal." }
+			],
+			"correta": "B",
+			"explicacao": "O Rebatimento Total de Teto é explicitamente a regra geral, com os passos detalhados no Manual.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Rebatimento Total de Teto."
+		},
+		{
+			"id": 31,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Cenário Prático - Tombamento",
+			"dificuldade": "difícil",
+			"pergunta": "Uma equipe atende um veículo tombado sobre a lateral esquerda. Qual técnica de desencarceramento deve ser empregada e qual o alerta importante do Manual?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Rebatimento Total de Teto; pode-se extrair a vítima sem criação de espaço se ela estiver consciente."
+				},
+				{
+					"letra": "B",
+					"texto": "Rebatimento Lateral: cortes das colunas “A”, “B” e “C” com a porta, cortes de alívio na junção teto/coluna e dobrar o teto. Alerta: Não se extrai vítimas em veículos tombados sem realizar boa criação de espaço!"
+				},
+				{ "letra": "C", "texto": "Rebatimento tipo “Ostra”; a estabilização é desnecessária." },
+				{ "letra": "D", "texto": "Apenas remoção de portas; o teto não precisa ser trabalhado." }
+			],
+			"correta": "B",
+			"explicacao": "Para veículos tombados a técnica é o Rebatimento Lateral, com o alerta explícito de não extrair sem boa criação de espaço.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Rebatimento Lateral."
+		},
+		{
+			"id": 32,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Cenário Prático - Capotamento",
+			"dificuldade": "difícil",
+			"pergunta": "Em um veículo capotado (sobre o teto), qual técnica é indicada e quais os passos principais?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Rebatimento Total de Teto convencional." },
+				{
+					"letra": "B",
+					"texto": "Rebatimento tipo “Ostra”: Remoção das portas; posicionar extensores entre teto e assoalho (rente às colunas “A” e “C”); acionar até fixação; retirar coluna “B”; acionar extensores simultaneamente até conseguir o espaço; corte de alívio se necessário."
+				},
+				{ "letra": "C", "texto": "Apenas elevação de painel." },
+				{ "letra": "D", "texto": "Técnica da terceira porta." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual descreve o Rebatimento tipo “Ostra” especificamente para veículos capotados, com os passos listados.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Rebatimento Tipo “Ostra”."
+		},
+		{
+			"id": 33,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Rebatimento de Painel",
+			"dificuldade": "difícil",
+			"pergunta": "Quando as vítimas da parte dianteira estão presas pelas pernas devido à deformação do painel, qual a técnica regra geral e um cuidado importante?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Elevação de Painel; deve-se fazer o corte de alívio a 45°." },
+				{
+					"letra": "B",
+					"texto": "Rebatimento de Painel e Volante: Corte das colunas “A”; corte de alívio a 45° na base da coluna “A”; posicionar extensor com plataforma na base da coluna “B”; extensão do painel; calçamento constante. Cuidado: o acionamento do extensor deve ficar sempre para fora do veículo e não cortar a coluna “B” antes."
+				},
+				{ "letra": "C", "texto": "Apenas remoção de portas." },
+				{ "letra": "D", "texto": "Rebatimento Angulado do teto." }
+			],
+			"correta": "B",
+			"explicacao": "A técnica de Rebatimento de Painel e Volante é a regra geral para esse caso, com os cuidados descritos no Manual.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Rebatimento de Painel e Volante."
+		},
+		{
+			"id": 34,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Graus de Encarceramento",
+			"dificuldade": "médio",
+			"pergunta": "Relacione o tipo de encarceramento à sua descrição:\nI. Encarceramento Mecânico\nII. Encarceramento Físico Tipo 1\nIII. Encarceramento Físico Tipo 2\n\n( ) Vítimas apresentam lesões devido às estruturas do veículo estarem em contato com ou terem penetrado em seu corpo.\n( ) Vítimas, embora possam não apresentar lesões, estão impossibilitadas de sair pelos próprios meios devido à deformação do veículo.\n( ) Vítimas apresentam lesões que exigem criação de espaço adicional para cuidados de emergência e extração controlada.\n\nA sequência correta é:",
+			"alternativas": [
+				{ "letra": "A", "texto": "III, I, II" },
+				{ "letra": "B", "texto": "II, III, I" },
+				{ "letra": "C", "texto": "I, II, III" },
+				{ "letra": "D", "texto": "III, II, I" }
+			],
+			"correta": "A",
+			"explicacao": "Conforme tabela do Manual: Tipo 2 = estruturas em contato/penetrando; Mecânico = impossibilidade de sair por deformação; Tipo 1 = lesões que exigem espaço adicional.",
+			"fundamento": "Capítulo 9 - Considerações com o Paciente - Grau de Encarceramento."
+		},
+		{
+			"id": 35,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Avaliação da Vítima",
+			"dificuldade": "fácil",
+			"pergunta": "Qual a sequência da avaliação primária adotada no Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "ABCDE clássico." },
+				{
+					"letra": "B",
+					"texto": "XABCDE (Hemorragias Exsanguinantes, Vias Aéreas e estabilização da coluna cervical, Respiração, Circulação, Neurológico, Exposição)."
+				},
+				{ "letra": "C", "texto": "Apenas vias aéreas e circulação." },
+				{ "letra": "D", "texto": "START seguido de SAMPLE." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual adota a abordagem XABCDE com os componentes descritos.",
+			"fundamento": "Capítulo 9 - Considerações com o Paciente - Avaliação da Vítima."
+		},
+		{
+			"id": 36,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Classificação de Vítimas e Planos",
+			"dificuldade": "difícil",
+			"pergunta": "Uma vítima apresenta instabilidade hemodinâmica e alterações neurológicas graves que não podem ser resolvidas no local. Qual a classificação e o plano de extração indicado?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Vítima estável – Extração Controlada (Plano Principal)." },
+				{ "letra": "B", "texto": "Vítima crítica – Extração Imediata." },
+				{
+					"letra": "C",
+					"texto": "Vítima instável – Extração Rápida (Plano Emergencial), com cerca de 10 minutos para a retirada."
+				},
+				{ "letra": "D", "texto": "Vítima mecânica – Aguardar suporte avançado sem extração." }
+			],
+			"correta": "C",
+			"explicacao": "Vítimas instáveis (instabilidade em X, A, B, C ou D) exigem plano emergencial com extração rápida em torno de 10 minutos.",
+			"fundamento": "Capítulo 9 - Considerações com o Paciente - Vítimas instáveis e Planos."
+		},
+		{
+			"id": 37,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Cenário Prático - Extração",
+			"dificuldade": "difícil",
+			"pergunta": "Em um cenário com vítima estável, sentada, sem contraindicações, a equipe opta pela Retirada Controlada pelo Ângulo Zero. Quais os requisitos mínimos e o objetivo principal?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Mínimo 2 socorristas; priorizar velocidade sobre alinhamento da coluna." },
+				{
+					"letra": "B",
+					"texto": "Mínimo 3 socorristas; retirar com o menor ângulo de movimentação possível, mantendo estabilização manual da cabeça e movimento em monobloco."
+				},
+				{ "letra": "C", "texto": "Apenas 1 socorrista com KED; permitir giros da coluna." },
+				{ "letra": "D", "texto": "Qualquer número de socorristas; usar apenas a pegada do socorrista." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual exige no mínimo 3 socorristas para a Retirada Controlada pelo Ângulo Zero, com o objetivo de menor ângulo de movimentação e monobloco.",
+			"fundamento": "Capítulo 9 - Técnicas de Extração - Retirada Controlada Pelo Ângulo Zero."
+		},
+		{
+			"id": 38,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Uso do KED",
+			"dificuldade": "difícil",
+			"pergunta": "Assinale a alternativa que apresenta uma contraindicação ao uso do KED segundo o Manual:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Vítima estável e sentada, sem obesidade ou gestação." },
+				{
+					"letra": "B",
+					"texto": "Vítima com trauma de tórax, trauma pélvico ou de fêmur; vítimas instáveis ou críticas; obesidade/gestação que impeça o envolvimento; vítimas muito altas."
+				},
+				{ "letra": "C", "texto": "Qualquer vítima em veículo na posição normal." },
+				{ "letra": "D", "texto": "Vítimas em encarceramento mecânico leve." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual lista explicitamente as contraindicações do KED, incluindo traumas específicos, instabilidade, obesidade/gestação e altura inadequada.",
+			"fundamento": "Capítulo 9 - Técnicas de Extração - Uso do K.E.D."
+		},
+		{
+			"id": 39,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Trem de Socorro",
+			"dificuldade": "fácil",
+			"pergunta": "Qual a composição mínima do “trem de socorro” para atendimento de vítima presa em ferragem?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas Unidade de Resgate e Auto Bomba." },
+				{
+					"letra": "B",
+					"texto": "Auto Comando; Auto Bomba ou similar; Unidade de Resgate (uma para cada vítima); Unidade de Suporte Avançado."
+				},
+				{ "letra": "C", "texto": "Somente Auto Comando e Unidade de Resgate." },
+				{ "letra": "D", "texto": "Auto Bomba, MOB e Aeronave." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual lista exatamente essa composição mínima do trem de socorro.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Trem de Socorro."
+		},
+		{
+			"id": 40,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Funções da Equipe",
+			"dificuldade": "médio",
+			"pergunta": "Quem é o responsável por autorizar e coordenar a estabilização, definir a vítima prioritária, o lado de acesso e a técnica a ser empregada, além de executar as vozes de comando “ESTABILIZAÇÃO LIBERADA”, “ACESSO LIBERADO” e “DESENCARCERAMENTO LIBERADO”?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Nº 04 – Comandante do Resgate." },
+				{ "letra": "B", "texto": "Nº 02 – Auxiliar do Socorro." },
+				{ "letra": "C", "texto": "Nº 01 – Comandante do Socorro." },
+				{ "letra": "D", "texto": "Nº 03 – Motorista do Socorro." }
+			],
+			"correta": "C",
+			"explicacao": "Todas essas atribuições pertencem ao Nº 01 – Comandante do Socorro.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Composição da Equipe e suas Funções - Nº 01."
+		},
+		{
+			"id": 41,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Funções da Equipe - Cenário",
+			"dificuldade": "difícil",
+			"pergunta": "Durante a fase de Preparação e Segurança, o Nº 03 (Motorista do Socorro) deve realizar várias ações. Qual das alternativas descreve corretamente uma de suas atribuições?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Realizar a análise primária da vítima e aplicar colar cervical." },
+				{
+					"letra": "B",
+					"texto": "Estacionar a viatura em 45°, com as rodas para fora e sinais luminosos acesos; sinalizar o local com cones; isolar com fita zebrada; levar materiais para a lona; posicionar a lona de materiais; aguardar a ordem de “DESENCARCERAMENTO LIBERADO!” para desconectar a bateria."
+				},
+				{
+					"letra": "C",
+					"texto": "Operar exclusivamente a ferramenta hidráulica durante todo o desencarceramento."
+				},
+				{ "letra": "D", "texto": "Coordenar a extração e transmitir sinais vitais à Central." }
+			],
+			"correta": "B",
+			"explicacao": "As atribuições listadas pertencem ao Nº 03 – Motorista do Socorro na fase de Preparação e Segurança.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Nº 03 – Motorista do Socorro."
+		},
+		{
+			"id": 42,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Funções da Equipe - APH",
+			"dificuldade": "difícil",
+			"pergunta": "O Nº 04 – Comandante do Resgate, após acessar o interior do veículo, deve realizar algumas ações específicas. Quais são elas?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas estabilizar a cervical e aguardar o desencarceramento." },
+				{
+					"letra": "B",
+					"texto": "Puxar freio de mão, retirar a chave do veículo, abaixar os vidros manuais, destravar as portas e proteger o airbag; buscar realizar no menor tempo possível a avaliação da vítima."
+				},
+				{ "letra": "C", "texto": "Desconectar a bateria e operar a serra-sabre." },
+				{ "letra": "D", "texto": "Posicionar a lona de materiais e isolar a área fria." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual descreve exatamente essas ações do Comandante do Resgate ao acessar o interior do veículo.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Nº 04 – Comandante do Resgate - Acesso."
+		},
+		{
+			"id": 43,
+			"titulo": "Capítulo 2 e 9 - Integração",
+			"tema": "Período de Ouro e Extração",
+			"dificuldade": "difícil",
+			"pergunta": "Verdadeiro ou Falso:\nO Período de Ouro é o intervalo de tempo entre o momento do sinistro e a chegada ao hospital. Durante esse período, as equipes de resgate devem priorizar a estabilização da vítima, controlando hemorragias ameaçadoras e obstrução das vias aéreas. A avaliação da vítima deve ser checada durante todo o atendimento; caso haja piora, parte-se para o Plano Emergencial.",
+			"alternativas": [
+				{ "letra": "A", "texto": "Verdadeiro." },
+				{ "letra": "B", "texto": "Falso – o Período de Ouro inicia apenas com a chegada das equipes." },
+				{ "letra": "C", "texto": "Falso – a piora da vítima não altera o plano definido inicialmente." },
+				{ "letra": "D", "texto": "Falso – hemorragias não são prioridade no Período de Ouro." }
+			],
+			"correta": "A",
+			"explicacao": "Todas as informações estão de acordo com as definições e orientações dos Capítulos 2 e 9.",
+			"fundamento": "Capítulos 2 e 9 - Período de Ouro e Avaliação contínua da vítima."
+		},
+		{
+			"id": 44,
+			"titulo": "Capítulo 5 e 8 - Integração",
+			"tema": "SRS e Cortes",
+			"dificuldade": "difícil",
+			"pergunta": "Antes de iniciar os cortes das colunas em um rebatimento de teto, qual procedimento obrigatório relacionado aos SRS deve ser realizado?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas ventilação do veículo." },
+				{
+					"letra": "B",
+					"texto": "Verificar a presença de cilindros de airbags e barras de aço de reforço; explorar e identificar os acionadores; desconectar a bateria."
+				},
+				{ "letra": "C", "texto": "Nenhum procedimento especial, pois os airbags já terão sido acionados." },
+				{ "letra": "D", "texto": "Aplicar proteção de airbag apenas após os cortes." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual enfatiza a verificação de cilindros e barras de reforço antes dos cortes, além da exploração/identificação e desconexão da bateria.",
+			"fundamento": "Capítulos 5 e 8 - Cuidados com Airbags e Rebatimento Total de Teto."
+		},
+		{
+			"id": 45,
+			"titulo": "Capítulo 3 e 7 - Integração",
+			"tema": "Segurança e Estabilização",
+			"dificuldade": "médio",
+			"pergunta": "Complete a lacuna com o texto literal do Manual:\n“Somente após a estabilização do veículo, dos riscos específicos e proteção da vítima, é que se inicia o ________.”",
+			"alternativas": [
+				{ "letra": "A", "texto": "transporte da vítima" },
+				{ "letra": "B", "texto": "desencarceramento" },
+				{ "letra": "C", "texto": "isolamento da área fria" },
+				{ "letra": "D", "texto": "acionamento da Unidade de Suporte Avançado" }
+			],
+			"correta": "B",
+			"explicacao": "Frase literal do Manual no Capítulo de Estabilização.",
+			"fundamento": "Capítulo 7 - Estabilização - Estabilização de Riscos."
+		},
+		{
+			"id": 46,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Técnica da Terceira Porta",
+			"dificuldade": "difícil",
+			"pergunta": "Em um veículo de duas portas com vítimas no banco traseiro, qual técnica deve ser empregada e qual o princípio para facilitar a dobra?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Rebatimento Total de Teto; quanto menores os cortes, melhor." },
+				{
+					"letra": "B",
+					"texto": "Técnica da Terceira Porta: cortar a coluna “B” o mais rente ao teto; corte reto descendo do canto inferior direito do para-brisas; corte reto na base da coluna “B” paralelo ao trilho do assoalho; dobrar a “orelha”. Princípio: Quanto maior os cortes retos, maior será a quebra de resistência e maior a facilidade de dobrar a terceira porta."
+				},
+				{ "letra": "C", "texto": "Apenas remoção da porta dianteira." },
+				{ "letra": "D", "texto": "Rebatimento Angulado exclusivo." }
+			],
+			"correta": "B",
+			"explicacao": "Descrição completa da Técnica da Terceira Porta e o princípio de que cortes retos maiores facilitam a dobra.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Técnica da Terceira Porta."
+		},
+		{
+			"id": 47,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Extração em Capotamento",
+			"dificuldade": "difícil",
+			"pergunta": "Em veículos capotados, quando a vítima está presa no cinto, qual particularidade da extração é citada no Manual?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "A vítima deve ser removida sempre pela lateral, mantendo a cabeça alinhada."
+				},
+				{
+					"letra": "B",
+					"texto": "Esta extração será a única oportunidade onde se leva a vítima com a cabeça lateralizada em relação ao corpo. Assim que removida do veículo, se reposiciona em DDH."
+				},
+				{ "letra": "C", "texto": "Não se deve cortar o cinto em hipótese alguma." },
+				{ "letra": "D", "texto": "A extração deve aguardar a chegada do suporte avançado." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual destaca essa particularidade exclusiva da extração de vítimas presas no cinto em veículos capotados.",
+			"fundamento": "Capítulo 9 - Técnicas de Extração - Veículos Capotados."
+		},
+		{
+			"id": 48,
+			"titulo": "Capítulo 6 e 8 - Integração",
+			"tema": "Ferramentas e Técnicas",
+			"dificuldade": "médio",
+			"pergunta": "Para a execução dos cortes de alívio no teto durante o rebatimento, qual ferramenta é apontada como a melhor opção e por quê?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Ferramenta Combinada, por ser mais potente." },
+				{
+					"letra": "B",
+					"texto": "Serra Sabre, pois realiza o corte de modo mais rápido e pode ser utilizada enquanto outro bombeiro utiliza a ferramenta hidráulica."
+				},
+				{ "letra": "C", "texto": "Alargador, por criar espaço simultaneamente." },
+				{ "letra": "D", "texto": "Extensor, para elevar o teto antes do corte." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual recomenda a serra-sabre para cortes de alívio no teto pela velocidade e possibilidade de trabalho simultâneo.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Rebatimento Parcial / Cortes de alívio."
+		},
+		{
+			"id": 49,
+			"titulo": "Capítulo 1 e 10 - Integração",
+			"tema": "Avaliações e Equipe",
+			"dificuldade": "médio",
+			"pergunta": "Além do rendimento mínimo nas avaliações (prova teórica, demonstração prática e simulacro), qual outra condição é exigida para aprovação no curso?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Participação em pelo menos 75% das aulas." },
+				{ "letra": "B", "texto": "100% de presença em todas as aulas." },
+				{ "letra": "C", "texto": "Entrega de monografia sobre o tema." },
+				{ "letra": "D", "texto": "Aprovação apenas na prova teórica." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual exige 100% de presença, além do rendimento mínimo nas avaliações.",
+			"fundamento": "Capítulo 1 - Introdução - Avaliações e condições de aprovação."
+		},
+		{
+			"id": 50,
+			"titulo": "Capítulo 3 - Segurança",
+			"tema": "Cenário Prático - Riscos",
+			"dificuldade": "difícil",
+			"pergunta": "Em um atendimento, a equipe identifica: fios energizados próximos, vazamento de combustível, superfícies cortantes e instabilidade do veículo. De acordo com a classificação de riscos do Manual, quais desses são predominantemente riscos coletivos?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas superfícies cortantes." },
+				{ "letra": "B", "texto": "Fios energizados, vazamento de combustível e instabilidade do veículo." },
+				{ "letra": "C", "texto": "Somente o vazamento de combustível." },
+				{ "letra": "D", "texto": "Nenhum, todos são riscos individuais." }
+			],
+			"correta": "B",
+			"explicacao": "Riscos coletivos listados incluem: trânsito, público curioso, vazamento de fluidos e combustível, carga perigosa, instabilidade do veículo, colisão contra poste de eletricidade, SRS, etc. Superfícies cortantes são mais relacionadas a riscos individuais ou à vítima.",
+			"fundamento": "Capítulo 3 - Segurança - Riscos Coletivos e exemplos ilustrados."
+		},
+		{
+			"id": 51,
+			"titulo": "Capítulo 1 - Introdução",
+			"tema": "Objetivos de Capacitação",
+			"dificuldade": "fácil",
+			"pergunta": "Ao finalizar o curso, o participante será capaz de demonstrar diversas capacidades. Qual das alternativas abaixo NÃO está listada entre os Objetivos de Capacitação do Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Nomear as partes principais de um veículo leve." },
+				{ "letra": "B", "texto": "Diferenciar os três tipos básicos de veículos." },
+				{ "letra": "C", "texto": "Realizar atendimento de produtos perigosos em rodovias." },
+				{ "letra": "D", "texto": "Citar e executar a estabilização do veículo nas diversas posições." }
+			],
+			"correta": "C",
+			"explicacao": "O atendimento a produtos perigosos não está listado entre os Objetivos de Capacitação do Curso de Salvamento Veicular Leve. Os demais itens fazem parte da lista oficial.",
+			"fundamento": "Capítulo 1 - Introdução - Objetivos de Capacitação."
+		},
+		{
+			"id": 52,
+			"titulo": "Capítulo 1 - Introdução",
+			"tema": "Regras Gerais",
+			"dificuldade": "médio",
+			"pergunta": "De acordo com as Regras Gerais do curso, em todas as atividades práticas os alunos deverão:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Portar apenas capacete e luvas de procedimento." },
+				{
+					"letra": "B",
+					"texto": "Portar o EPI adequado e deixar em condições de pronto uso uma bolsa com material de APH e uma prancha longa para eventuais acidentes."
+				},
+				{ "letra": "C", "texto": "Utilizar apenas roupa de educação física." },
+				{ "letra": "D", "texto": "Dispensar o uso de EPI se a atividade for em local controlado." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual determina expressamente que os alunos deverão portar o EPI adequado e manter bolsa de APH e prancha longa em condições de pronto uso.",
+			"fundamento": "Capítulo 1 - Introdução - Regras gerais."
+		},
+		{
+			"id": 53,
+			"titulo": "Capítulo 2 - Conceitos Básicos",
+			"tema": "Procedimentos de Encerramento",
+			"dificuldade": "médio",
+			"pergunta": "Quais são os dois procedimentos de Encerramento da Ocorrência descritos no POP?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Descontaminação e Relatório Final." },
+				{
+					"letra": "B",
+					"texto": "Deixar o Local em Segurança e Coletar Dados; e Avaliação (reunião de feedback)."
+				},
+				{ "letra": "C", "texto": "Apenas a entrega da vítima ao hospital." },
+				{ "letra": "D", "texto": "Limpeza das ferramentas e reabastecimento da viatura." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual descreve: 1) Deixar o Local em Segurança e Coletar Dados; 2) Avaliação (reunião para feedback dos membros sobre a atuação e desafios enfrentados).",
+			"fundamento": "Capítulo 2 - Conceitos Básicos - Procedimentos de Encerramento da Ocorrência."
+		},
+		{
+			"id": 54,
+			"titulo": "Capítulo 4 - Anatomia Veicular",
+			"tema": "Classificação dos Veículos",
+			"dificuldade": "fácil",
+			"pergunta": "Os veículos estão divididos em quantos grupos básicos de acordo com seu peso e tamanho, segundo o Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Dois grupos: leves e pesados." },
+				{ "letra": "B", "texto": "Três grupos: leves, médios e pesados." },
+				{ "letra": "C", "texto": "Quatro grupos: Leves, Médios, Pesados e Especiais." },
+				{ "letra": "D", "texto": "Cinco grupos, incluindo motocicletas." }
+			],
+			"correta": "C",
+			"explicacao": "O Manual classifica os veículos em quatro grupos básicos: Leves, Médios, Pesados e Especiais.",
+			"fundamento": "Capítulo 4 - Anatomia Veicular - Classificação dos Veículos."
+		},
+		{
+			"id": 55,
+			"titulo": "Capítulo 4 - Anatomia Veicular",
+			"tema": "Níveis das Colunas",
+			"dificuldade": "fácil",
+			"pergunta": "Quais são os três níveis das colunas identificados no Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Anterior, Médio e Posterior." },
+				{ "letra": "B", "texto": "Superior, Média e Base." },
+				{ "letra": "C", "texto": "Alta, Intermediária e Baixa." },
+				{ "letra": "D", "texto": "Teto, Linha Média e Piso." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual apresenta os níveis das colunas como: Superior, Média e Base.",
+			"fundamento": "Capítulo 4 - Anatomia Veicular - Níveis das colunas."
+		},
+		{
+			"id": 56,
+			"titulo": "Capítulo 4 - Anatomia Veicular",
+			"tema": "Vidros Laminados - Vantagens",
+			"dificuldade": "médio",
+			"pergunta": "Quais são as vantagens dos vidros laminados listadas no Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Quebram-se em partes arredondadas e são mais baratos." },
+				{
+					"letra": "B",
+					"texto": "Evita o lançamento de estilhaços sobre os ocupantes; Maior proteção em capotamentos; Condutor não perde a visão total após o choque; Dificulta a ejeção de ocupantes."
+				},
+				{ "letra": "C", "texto": "São utilizados apenas em veículos antigos." },
+				{ "letra": "D", "texto": "Não necessitam de proteção respiratória durante o corte." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual lista exatamente essas quatro vantagens dos vidros laminados.",
+			"fundamento": "Capítulo 4 - Anatomia Veicular - Vidros Laminados - Vantagens."
+		},
+		{
+			"id": 57,
+			"titulo": "Capítulo 4 - Anatomia Veicular",
+			"tema": "Policarbonato",
+			"dificuldade": "médio",
+			"pergunta": "Sobre o policarbonato, assinale a alternativa CORRETA:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Quebra-se em pequenas partes arredondadas." },
+				{
+					"letra": "B",
+					"texto": "Possui grande resistência à deformidade, não estilhaça nem se rompe após choques e é encontrado em alguns modelos mais modernos. Para sua retirada pode ser utilizada a serra-sabre."
+				},
+				{ "letra": "C", "texto": "É o tipo padrão de para-brisas dianteiro desde a década de 90." },
+				{ "letra": "D", "texto": "Exige a técnica de afastamento da coluna “A”." }
+			],
+			"correta": "B",
+			"explicacao": "Definição e técnica de retirada literais do Manual sobre o policarbonato.",
+			"fundamento": "Capítulo 4 - Anatomia Veicular - Policarbonato."
+		},
+		{
+			"id": 58,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "Segurança Passiva Estática",
+			"dificuldade": "médio",
+			"pergunta": "A Segurança Passiva Estática é basicamente a capacidade do veículo de:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Evitar o acidente por meio de freios ABS e controle de tração." },
+				{
+					"letra": "B",
+					"texto": "Absorver a energia do impacto e deformar-se de modo programado, evitando danos à célula de sobrevivência, através do uso de aços de reforço (Boron, HSLA etc.)."
+				},
+				{ "letra": "C", "texto": "Acionar airbags e pré-tensionadores após a colisão." },
+				{ "letra": "D", "texto": "Proteger apenas os ocupantes traseiros." }
+			],
+			"correta": "B",
+			"explicacao": "Definição literal da Segurança Passiva Estática no Manual.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Segurança Passiva Estática."
+		},
+		{
+			"id": 59,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "Tipos de Airbags",
+			"dificuldade": "fácil",
+			"pergunta": "Quais tipos de airbags podem ser encontrados nos veículos modernos, segundo o Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas frontal do motorista e do passageiro." },
+				{
+					"letra": "B",
+					"texto": "Airbag Frontal (Motorista e Passageiro), Lateral de Porta, Lateral de Assento, Lateral de Cortina, Lateral Tubular, de Joelho, para Pés e para Pedestres."
+				},
+				{ "letra": "C", "texto": "Somente airbags laterais de cortina." },
+				{ "letra": "D", "texto": "Airbags apenas nas colunas “B” e “C”." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual lista todos esses tipos de airbags encontrados nos veículos modernos.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Tipos de Airbags."
+		},
+		{
+			"id": 60,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "Distâncias de Segurança - Airbags",
+			"dificuldade": "médio",
+			"pergunta": "Quais são as distâncias recomendadas de segurança em relação aos airbags?",
+			"alternativas": [
+				{ "letra": "A", "texto": "10, 20 e 30 cm." },
+				{ "letra": "B", "texto": "30, 60 e 90 cm." },
+				{ "letra": "C", "texto": "50, 100 e 150 cm." },
+				{ "letra": "D", "texto": "Não há distâncias específicas recomendadas." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual orienta manter as distâncias recomendadas de 30, 60 e 90 cm em relação aos airbags.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Cuidados com Airbags."
+		},
+		{
+			"id": 61,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "ROPS",
+			"dificuldade": "médio",
+			"pergunta": "O que é o ROPS e em quais veículos é utilizado?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Sistema de freios antibloqueio utilizado em todos os veículos modernos." },
+				{
+					"letra": "B",
+					"texto": "Roll Over Protection System – sistema de segurança utilizado para proteção em capotamentos, nos veículos conversíveis e sem teto, formado por barras ou arcos de aço ativados durante o capotamento."
+				},
+				{ "letra": "C", "texto": "Sistema de airbags laterais de cortina." },
+				{ "letra": "D", "texto": "Dispositivo de pré-tensionamento do cinto de segurança." }
+			],
+			"correta": "B",
+			"explicacao": "Definição e aplicação literais do ROPS no Manual.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - ROPS."
+		},
+		{
+			"id": 62,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "Pré-tensionadores",
+			"dificuldade": "difícil",
+			"pergunta": "Sobre os tipos de pré-tensionadores de cinto, assinale a alternativa CORRETA:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Existe apenas o tipo carretel, localizado na base da coluna “B”." },
+				{
+					"letra": "B",
+					"texto": "Tipo Carretel (mais comum, localizado geralmente na base da coluna “B”) e Tipo Fivela (localizado no plug do cinto, acionado por pistão de baixa pressão)."
+				},
+				{ "letra": "C", "texto": "Ambos os tipos são acionados exclusivamente por ar comprimido." },
+				{ "letra": "D", "texto": "Não há diferença de localização entre os tipos." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual descreve os dois tipos (Carretel e Fivela) com suas respectivas localizações e características de acionamento.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Pré-Tensionadores de Cinto."
+		},
+		{
+			"id": 63,
+			"titulo": "Capítulo 6 - Desencarceradores",
+			"tema": "Alargadores",
+			"dificuldade": "médio",
+			"pergunta": "Quais são as orientações de manuseio correto dos Alargadores?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Utilizar apenas as pontas das lâminas e deixar totalmente fechado após o uso."
+				},
+				{
+					"letra": "B",
+					"texto": "Utilizar somente a superfície das ponteiras; observar se as ponteiras irão se deslocar durante o acionamento; após o uso, deixar uma pequena abertura."
+				},
+				{ "letra": "C", "texto": "Posicionar sempre a 45° e forçar até o limite máximo." },
+				{ "letra": "D", "texto": "Não há orientações específicas de manuseio." }
+			],
+			"correta": "B",
+			"explicacao": "Orientações literais de manuseio correto dos Alargadores no Manual.",
+			"fundamento": "Capítulo 6 - Desencarceradores - Alargadores."
+		},
+		{
+			"id": 64,
+			"titulo": "Capítulo 6 - Desencarceradores",
+			"tema": "Extensores",
+			"dificuldade": "médio",
+			"pergunta": "Sobre o uso dos Extensores, é CORRETO afirmar:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Devem ser utilizados isoladamente, sem necessidade de plataforma." },
+				{
+					"letra": "B",
+					"texto": "Devem ser utilizados em conjunto com a plataforma de estabilização, deixando a válvula de acionamento em fácil acesso. Durante as ações, deve-se sempre escorar ou calçar os espaços conquistados."
+				},
+				{ "letra": "C", "texto": "Servem apenas para corte de colunas." },
+				{ "letra": "D", "texto": "Não necessitam de calçamento dos espaços conquistados." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual determina o uso conjunto com plataforma de estabilização e o calçamento constante dos espaços conquistados.",
+			"fundamento": "Capítulo 6 - Desencarceradores - Extensores."
+		},
+		{
+			"id": 65,
+			"titulo": "Capítulo 6 - Desencarceradores",
+			"tema": "Motobomba",
+			"dificuldade": "difícil",
+			"pergunta": "Quais cuidados especiais devem ser observados com a Motobomba?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Nenhum cuidado especial é necessário." },
+				{
+					"letra": "B",
+					"texto": "Realizar a manutenção diária de 1º escalão e evitar posicionar em locais inclinados. A pressão de trabalho varia entre 9.000 a 11.000 psi."
+				},
+				{ "letra": "C", "texto": "Posicionar sempre em locais inclinados para melhor desempenho." },
+				{ "letra": "D", "texto": "A pressão de trabalho é sempre inferior a 5.000 psi." }
+			],
+			"correta": "B",
+			"explicacao": "Cuidados e faixa de pressão literais do Manual sobre a Motobomba.",
+			"fundamento": "Capítulo 6 - Desencarceradores - Motobomba."
+		},
+		{
+			"id": 66,
+			"titulo": "Capítulo 6 - Desencarceradores",
+			"tema": "Mangueiras",
+			"dificuldade": "médio",
+			"pergunta": "Qual a diferença entre as mangueiras tradicionais e as mangueiras coaxiais?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Não há diferença prática." },
+				{
+					"letra": "B",
+					"texto": "As mangueiras tradicionais possuem duas mangueiras distintas (alta e baixa pressão). As coaxiais possuem a mangueira de alta pressão dentro da mangueira de baixa pressão, conferindo maior segurança e rapidez na conexão."
+				},
+				{ "letra": "C", "texto": "As coaxiais são utilizadas apenas em ferramentas elétricas." },
+				{ "letra": "D", "texto": "As mangueiras tradicionais são mais seguras que as coaxiais." }
+			],
+			"correta": "B",
+			"explicacao": "Descrição literal das diferenças entre mangueiras duplas e coaxiais no Manual.",
+			"fundamento": "Capítulo 6 - Desencarceradores - Mangueiras."
+		},
+		{
+			"id": 67,
+			"titulo": "Capítulo 6 - Desencarceradores",
+			"tema": "Ferramentas de Apoio",
+			"dificuldade": "fácil",
+			"pergunta": "A alavanca Halligan é útil para quais finalidades segundo o Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas para corte de vidros temperados." },
+				{
+					"letra": "B",
+					"texto": "Entradas forçadas, criar acesso às dobradiças, perfurar vidros laminados e cortar chapas metálicas."
+				},
+				{ "letra": "C", "texto": "Somente para estabilização de veículos." },
+				{ "letra": "D", "texto": "Exclusivamente para remoção de airbags." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual lista exatamente essas utilidades da alavanca Halligan.",
+			"fundamento": "Capítulo 6 - Desencarceradores - Ferramentas de apoio - Alavanca Halligan."
+		},
+		{
+			"id": 68,
+			"titulo": "Capítulo 7 - Estabilização",
+			"tema": "Calços - Funções Específicas",
+			"dificuldade": "difícil",
+			"pergunta": "Relacione os calços às suas funções principais:\nI. Calço nº 2\nII. Calço nº 3\nIII. Calço nº 4\n\n( ) Preencher espaço entre chão e veículo\n( ) Altura mínima para giro de KED / Aumentar a altura dos calços\n( ) Largura mínima para giro de KED / Aumentar a altura dos calços\n\nA sequência correta é:",
+			"alternativas": [
+				{ "letra": "A", "texto": "III, I, II" },
+				{ "letra": "B", "texto": "I, II, III" },
+				{ "letra": "C", "texto": "II, III, I" },
+				{ "letra": "D", "texto": "III, II, I" }
+			],
+			"correta": "A",
+			"explicacao": "Conforme o Manual: nº 4 = preencher espaço; nº 2 = altura mínima para giro de KED; nº 3 = largura mínima para giro de KED.",
+			"fundamento": "Capítulo 7 - Estabilização - Materiais - Calços de madeira."
+		},
+		{
+			"id": 69,
+			"titulo": "Capítulo 7 - Estabilização",
+			"tema": "Estabilização por Posição",
+			"dificuldade": "difícil",
+			"pergunta": "Em um veículo na posição normal, a estabilização deve ser realizada em quantos pontos?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Dois pontos (apenas nas extremidades)." },
+				{ "letra": "B", "texto": "Três pontos." },
+				{ "letra": "C", "texto": "Quatro pontos." },
+				{ "letra": "D", "texto": "Seis pontos." }
+			],
+			"correta": "C",
+			"explicacao": "O Manual determina estabilização em quatro pontos para veículo na posição normal.",
+			"fundamento": "Capítulo 7 - Estabilização - Estabilização em relação aos sinistros - Veículo na posição normal."
+		},
+		{
+			"id": 70,
+			"titulo": "Capítulo 7 - Estabilização",
+			"tema": "Estabilização de Riscos",
+			"dificuldade": "médio",
+			"pergunta": "Além da estabilização do veículo, os bombeiros deverão se preocupar em neutralizar riscos específicos. Quais exemplos são citados no Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas o trânsito." },
+				{
+					"letra": "B",
+					"texto": "Princípio de incêndio; Queda de postes ou fios energizados; Queda em declives; Fluxo do Trânsito; Carga de Produtos Perigosos."
+				},
+				{ "letra": "C", "texto": "Somente a instabilidade do veículo." },
+				{ "letra": "D", "texto": "Apenas a presença de airbags." }
+			],
+			"correta": "B",
+			"explicacao": "Lista literal dos riscos específicos a serem neutralizados no Manual.",
+			"fundamento": "Capítulo 7 - Estabilização - Estabilização de Riscos."
+		},
+		{
+			"id": 71,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Rebatimento Invertido de Teto",
+			"dificuldade": "difícil",
+			"pergunta": "Quando se deve optar pelo Rebatimento Invertido de Teto e quais os principais passos?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Quando o veículo está na posição normal; corte apenas das colunas “A”." },
+				{
+					"letra": "B",
+					"texto": "Quando não for possível acessar a frente do veículo (ex.: veículo na traseira de um caminhão). Passos: Corte das colunas “C” o mais rente ao teto; Corte das colunas “B” o mais rente ao teto; Cortes de alívio imediatamente antes das colunas “A”; Rebater o teto; Conter com amarração."
+				},
+				{ "letra": "C", "texto": "Exclusivamente em veículos capotados." },
+				{ "letra": "D", "texto": "Quando houver vítimas apenas no banco dianteiro." }
+			],
+			"correta": "B",
+			"explicacao": "Descrição e indicação literais do Rebatimento Invertido de Teto no Manual.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Rebatimento Invertido de Teto."
+		},
+		{
+			"id": 72,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Rebatimento Parcial",
+			"dificuldade": "difícil",
+			"pergunta": "Em qual situação se opta pelo Rebatimento Parcial e quais os passos principais?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Quando há impossibilidade de acesso às colunas traseiras (ex.: engavetamento entre dois caminhões). Passos: Corte das colunas “A” entre nível médio e superior; Corte de alívio imediatamente antes das colunas “B”; Rebater o teto; Conter com amarração."
+				},
+				{ "letra": "B", "texto": "Em qualquer ocorrência com veículo na posição normal." },
+				{ "letra": "C", "texto": "Apenas em veículos tombados." },
+				{ "letra": "D", "texto": "Quando se deseja retirar o teto completamente." }
+			],
+			"correta": "A",
+			"explicacao": "Indicação e passos literais do Rebatimento Parcial no Manual.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Rebatimento Parcial."
+		},
+		{
+			"id": 73,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Rebatimento Angulado",
+			"dificuldade": "difícil",
+			"pergunta": "Qual a indicação do Rebatimento Angulado e quais os passos?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Para qualquer vítima no banco dianteiro." },
+				{
+					"letra": "B",
+					"texto": "Para retirada de vítimas deitadas ou semideitadas no banco traseiro (situação em que o uso do KED não é recomendado). Passos: Corte da coluna “C”; Corte reto a 90° no teto na linha entre as colunas “C”; Corte reto perpendicular ao trilho do teto após a coluna “B”; Dobrar a “orelha” formada e conter com amarração."
+				},
+				{ "letra": "C", "texto": "Exclusivamente para veículos blindados." },
+				{ "letra": "D", "texto": "Quando se deseja criar a terceira porta." }
+			],
+			"correta": "B",
+			"explicacao": "Indicação e procedimentos literais do Rebatimento Angulado no Manual.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Rebatimento Angulado."
+		},
+		{
+			"id": 74,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Retirada de Teto",
+			"dificuldade": "difícil",
+			"pergunta": "Quando deve ser executada a Retirada de Teto e qual o cuidado final importante?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Em qualquer ocorrência; o teto pode ser removido por apenas dois bombeiros."
+				},
+				{
+					"letra": "B",
+					"texto": "Quando houver vítimas no banco traseiro do veículo. Ao finalizar os cortes, deve-se atentar para que 4 bombeiros segurem o teto. Ao retirar, deve-se levantar bem o teto para evitar tocar a vítima."
+				},
+				{ "letra": "C", "texto": "Apenas em veículos capotados." },
+				{ "letra": "D", "texto": "Quando o rebatimento total não for possível por falta de ferramentas." }
+			],
+			"correta": "B",
+			"explicacao": "Indicação e cuidado final literais da Retirada de Teto no Manual.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Retirada de Teto."
+		},
+		{
+			"id": 75,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Elevação de Painel e Volante",
+			"dificuldade": "difícil",
+			"pergunta": "Qual a diferença principal entre o Rebatimento de Painel e a Elevação de Painel e Volante?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Não há diferença; são a mesma técnica." },
+				{
+					"letra": "B",
+					"texto": "Na Elevação não se faz o corte de alívio. É indicada quando não há possibilidade de empurrar o painel para a frente (ex.: veículo chocado contra um poste). O extensor é posicionado entre as pernas da vítima, entre assoalho e barra de direção."
+				},
+				{ "letra": "C", "texto": "A Elevação é utilizada apenas em veículos tombados." },
+				{ "letra": "D", "texto": "Na Elevação deve-se sempre cortar a coluna “B” antes." }
+			],
+			"correta": "B",
+			"explicacao": "Diferença e indicação literais da Elevação de Painel e Volante no Manual.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Elevação de Painel e Volante."
+		},
+		{
+			"id": 76,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Corte em “V”",
+			"dificuldade": "difícil",
+			"pergunta": "Em quais situações deve-se utilizar a técnica do corte em “V”?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Em qualquer corte de coluna com ferramenta combinada." },
+				{
+					"letra": "B",
+					"texto": "Durante a execução dos cortes nas colunas “B” com ferramenta combinada (devido ao formato das lâminas e da coluna) e em veículos blindados para evitar cortar o overlap (barra de aço de proteção balística)."
+				},
+				{ "letra": "C", "texto": "Apenas em vidros laminados." },
+				{ "letra": "D", "texto": "Somente quando se utiliza a serra-sabre." }
+			],
+			"correta": "B",
+			"explicacao": "Indicações literais do corte em “V” no Manual.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Rebatimento Angulado (observação sobre corte em “V”)."
+		},
+		{
+			"id": 77,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Proteção e Estabilização da Vítima",
+			"dificuldade": "médio",
+			"pergunta": "Considera-se protegida a vítima que esteja com quais condições, segundo o Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas com colar cervical aplicado." },
+				{
+					"letra": "B",
+					"texto": "Coberta com lona plástica transparente ou cobertor; cinto de segurança cortado (exceto em capotamento); hemorragias controladas; vias aéreas liberadas; oferta de oxigênio; estabilização da coluna cervical; protegida contra hipotermia; protegida com escudos durante uso de ferramentas."
+				},
+				{ "letra": "C", "texto": "Somente com as vias aéreas liberadas." },
+				{ "letra": "D", "texto": "Apenas quando estiver fora do veículo." }
+			],
+			"correta": "B",
+			"explicacao": "Lista completa das condições que tornam a vítima protegida, conforme o Manual.",
+			"fundamento": "Capítulo 9 - Considerações com o Paciente - Proteção e Estabilização."
+		},
+		{
+			"id": 78,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Retirada Imediata",
+			"dificuldade": "difícil",
+			"pergunta": "Em quais situações deve ser utilizada a Retirada Imediata e quais as opções de técnica?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas em vítimas estáveis; utiliza-se exclusivamente o KED." },
+				{
+					"letra": "B",
+					"texto": "Quando a vítima está em local de risco, em PCR, em asfixia postural ou para acessar vítima mais grave. Opções: Pegada do Socorrista (preferencialmente) ou Chave de Rautek."
+				},
+				{ "letra": "C", "texto": "Somente quando houver tempo suficiente para imobilização completa." },
+				{ "letra": "D", "texto": "Em qualquer ocorrência com vítima consciente." }
+			],
+			"correta": "B",
+			"explicacao": "Indicações e opções de técnica da Retirada Imediata conforme o Manual.",
+			"fundamento": "Capítulo 9 - Técnicas de Extração - Retirada Imediata."
+		},
+		{
+			"id": 79,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Retirada Rápida",
+			"dificuldade": "difícil",
+			"pergunta": "A Retirada Rápida é indicada principalmente para quais pacientes e qual o procedimento de estabilização da cabeça durante a retirada?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Pacientes estáveis; estabilização apenas com colar cervical." },
+				{
+					"letra": "B",
+					"texto": "Pacientes instáveis ou que tiveram piora durante o atendimento. Durante a retirada: apoiar com uma mão a mandíbula sobre a região mentoniana do colar; com a outra mão e antebraço estabilizar a cabeça em posição alinhada apoiando a região occipital."
+				},
+				{ "letra": "C", "texto": "Qualquer paciente; não é necessário estabilizar a cabeça." },
+				{ "letra": "D", "texto": "Apenas pacientes em PCR." }
+			],
+			"correta": "B",
+			"explicacao": "Indicação e técnica de estabilização da cabeça na Retirada Rápida, conforme o Manual.",
+			"fundamento": "Capítulo 9 - Técnicas de Extração - Retirada Rápida."
+		},
+		{
+			"id": 80,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Extração em Tombamentos",
+			"dificuldade": "difícil",
+			"pergunta": "Em veículos lateralizados (tombados), como deve ser realizada a extração de vítimas sentadas e presas no cinto?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Removidas pela frente do veículo, mantendo a posição sentada." },
+				{
+					"letra": "B",
+					"texto": "Removidas lateralmente e reposicionadas em DDH (decúbito dorsal horizontal) fora do veículo, seguindo o princípio do caminho mais curto para a posição anatômica."
+				},
+				{ "letra": "C", "texto": "Aguardar a chegada do suporte avançado sem realizar extração." },
+				{ "letra": "D", "texto": "Utilizar exclusivamente o KED antes de qualquer movimentação." }
+			],
+			"correta": "B",
+			"explicacao": "Procedimento literal para extração de vítimas sentadas presas no cinto em veículos tombados.",
+			"fundamento": "Capítulo 9 - Técnicas de Extração - Extração em Tombamentos."
+		},
+		{
+			"id": 81,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Funções - Nº 02 Auxiliar do Socorro",
+			"dificuldade": "difícil",
+			"pergunta": "Quais são as principais funções do Nº 02 – Auxiliar do Socorro na fase de Preparação e Segurança?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Realizar a análise primária da vítima e aplicar oxigênio." },
+				{
+					"letra": "B",
+					"texto": "Realizar a vistoria interna e externa do veículo (procurando testemunhas, vítimas ejetadas etc.); após autorização, iniciar estabilização do veículo; executar ações para garantir acesso seguro (quebra controlada de vidros e proteção de cantos vivos); aguardar a ordem de “ACESSO LIBERADO”."
+				},
+				{ "letra": "C", "texto": "Estacionar a viatura e sinalizar o local." },
+				{ "letra": "D", "texto": "Coordenar a extração e transmitir sinais vitais." }
+			],
+			"correta": "B",
+			"explicacao": "Funções literais do Nº 02 na fase de Preparação e Segurança conforme o Manual.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Nº 02 – Auxiliar do Socorro."
+		},
+		{
+			"id": 82,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Funções - Nº 02 Auxiliar do Socorro",
+			"dificuldade": "médio",
+			"pergunta": "Na fase de Desencarceramento, qual é a principal atribuição do Nº 02 – Auxiliar do Socorro?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Desconectar a bateria." },
+				{
+					"letra": "B",
+					"texto": "Operar a ferramenta hidráulica e identificar riscos e possíveis obstáculos que dificultem o cumprimento do plano."
+				},
+				{ "letra": "C", "texto": "Estabilizar a cervical da vítima." },
+				{ "letra": "D", "texto": "Preparar a prancha e a maca." }
+			],
+			"correta": "B",
+			"explicacao": "Atribuição principal do Nº 02 na fase de Desencarceramento.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Nº 02 – Auxiliar do Socorro - Desencarceramento."
+		},
+		{
+			"id": 83,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Funções - Nº 05 Auxiliar de Resgate",
+			"dificuldade": "difícil",
+			"pergunta": "Quais materiais o Nº 05 – Auxiliar de Resgate deve portar e quais suas ações principais na fase de Acesso?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas HT e luvas; permanece fora do veículo." },
+				{
+					"letra": "B",
+					"texto": "Materiais: puncionador de vidros, cortador de cinto, protetor de airbag, mantas/lonas e O2 portátil. Ações no Acesso: acessar o veículo, puxar freio de mão, desligar o carro, retirar a chave, destravar portas, abaixar vidros, analisar a vítima, preparar O2, cobrir a vítima e estabilizar a cervical."
+				},
+				{ "letra": "C", "texto": "Ferramentas hidráulicas; opera o cortador." },
+				{ "letra": "D", "texto": "Apenas a prancha longa; posiciona a maca." }
+			],
+			"correta": "B",
+			"explicacao": "Materiais e ações literais do Nº 05 na fase de Acesso conforme o Manual.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Nº 05 – Auxiliar de Resgate."
+		},
+		{
+			"id": 84,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Funções - Nº 06 Motorista do Resgate",
+			"dificuldade": "difícil",
+			"pergunta": "Quais são as principais funções do Nº 06 – Motorista do Resgate nas fases de Desencarceramento e Extração?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas conduzir a viatura até o hospital." },
+				{
+					"letra": "B",
+					"texto": "Desencarceramento: reveza a operação da ferramenta hidráulica; apoia na criação de espaço (retira encosto de cabeça, segura portas etc.); identifica riscos. Extração: posicionar e apoiar a prancha longa no estribo do veículo; atuar na extração; posicionar a vítima na maca; embarcar a vítima; transportar com segurança ao PS."
+				},
+				{ "letra": "C", "texto": "Somente desconectar a bateria e isolar o local." },
+				{ "letra": "D", "texto": "Realizar a análise primária e aplicar colar cervical." }
+			],
+			"correta": "B",
+			"explicacao": "Funções literais do Nº 06 nas fases de Desencarceramento e Extração.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Nº 06 – Motorista do Resgate."
+		},
+		{
+			"id": 85,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Vozes de Comando",
+			"dificuldade": "médio",
+			"pergunta": "Qual a sequência correta das principais vozes de comando executadas pelo Comandante do Socorro (Nº 01)?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "“DESENCARCERAMENTO LIBERADO!” → “ACESSO LIBERADO!” → “ESTABILIZAÇÃO LIBERADA!”"
+				},
+				{
+					"letra": "B",
+					"texto": "“ATENÇÃO EQUIPE, ESTABILIZAÇÃO LIBERADA!” → “ATENÇÃO EQUIPE! ACESSO LIBERADO!” → “ATENÇÃO EQUIPE! DESENCARCERAMENTO LIBERADO!”"
+				},
+				{ "letra": "C", "texto": "“ACESSO LIBERADO!” → “ESTABILIZAÇÃO LIBERADA!” → “EXTRAÇÃO LIBERADA!”" },
+				{ "letra": "D", "texto": "Não há vozes de comando padronizadas." }
+			],
+			"correta": "B",
+			"explicacao": "Sequência e textos literais das vozes de comando do Nº 01 no Manual.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Funções do Nº 01 – Comandante do Socorro."
+		},
+		{
+			"id": 86,
+			"titulo": "Capítulo 3 - Segurança",
+			"tema": "Segurança da Vítima",
+			"dificuldade": "médio",
+			"pergunta": "Além do cumprimento dos protocolos de APH, a proteção da vítima deve ser realizada com o uso de quais equipamentos/recursos?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas colar cervical." },
+				{
+					"letra": "B",
+					"texto": "Cobertores ou mantas transparentes; Proteção de ferragens; Guarnição de USA e UR no local da ocorrência; Poderão ser colocadas barreiras rígidas entre a vítima e ferramentas nos momentos de uso das ferramentas."
+				},
+				{ "letra": "C", "texto": "Somente luvas de procedimento." },
+				{ "letra": "D", "texto": "Apenas a estabilização do veículo." }
+			],
+			"correta": "B",
+			"explicacao": "Recursos de proteção da vítima listados literalmente no Manual.",
+			"fundamento": "Capítulo 3 - Segurança - Segurança da vítima."
+		},
+		{
+			"id": 87,
+			"titulo": "Capítulo 2 - Conceitos Básicos",
+			"tema": "Tipos de Colisões",
+			"dificuldade": "médio",
+			"pergunta": "Sobre as colisões com o veículo na posição normal, assinale a alternativa CORRETA:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Na colisão lateral a estabilização é sempre a mais difícil." },
+				{
+					"letra": "B",
+					"texto": "Na colisão frontal, devido à soma das velocidades dos veículos, as deformidades e lesões tendem a ser graves. Na colisão lateral a vítima que recebe o impacto terá lesões gravíssimas pois absorverá grande parte do impacto."
+				},
+				{ "letra": "C", "texto": "Todas as colisões na posição normal têm o mesmo padrão de lesões." },
+				{ "letra": "D", "texto": "A estabilização é desnecessária nas colisões traseiras." }
+			],
+			"correta": "B",
+			"explicacao": "Características literais das colisões frontal e lateral descritas no Manual.",
+			"fundamento": "Capítulo 2 - Conceitos Básicos - Tipos de Sinistros de Trânsito - Colisões."
+		},
+		{
+			"id": 88,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Sequência de Ações",
+			"dificuldade": "difícil",
+			"pergunta": "Qual a sequência correta de ações após a classificação do grau de encarceramento, segundo o Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Extração imediata → Avaliação → Transporte." },
+				{
+					"letra": "B",
+					"texto": "Triagem de vítimas → Avaliação e Tratamento de vítimas → Definir Planos → Liberar a vítima (alterar de TF 2 para TF 1) → Assegurar Plano Principal ou executar Plano Emergencial → Executar Plano."
+				},
+				{ "letra": "C", "texto": "Apenas Definir Planos e Executar." },
+				{ "letra": "D", "texto": "Estabilização → Desencarceramento → Extração, sem necessidade de avaliação." }
+			],
+			"correta": "B",
+			"explicacao": "Sequência literal de ações apresentada no Manual após a classificação do encarceramento.",
+			"fundamento": "Capítulo 9 - Considerações com o Paciente - Grau de Encarceramento (Classificação)."
+		},
+		{
+			"id": 89,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "Siglas de Airbags",
+			"dificuldade": "fácil",
+			"pergunta": "Quais siglas podem indicar a presença de airbags no revestimento do veículo?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas a palavra “Airbag”." },
+				{
+					"letra": "B",
+					"texto": "SRS (Sistema de Retenção Suplementar), SIPS (Side Impact Protection System), IC (Inflatable Curtain) e a escrita “Airbag”."
+				},
+				{ "letra": "C", "texto": "Somente ABS e ESP." },
+				{ "letra": "D", "texto": "Não há siglas padronizadas." }
+			],
+			"correta": "B",
+			"explicacao": "Siglas de identificação de airbags listadas no Manual.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Tipos de Airbags."
+		},
+		{
+			"id": 90,
+			"titulo": "Capítulo 7 e 8 - Integração",
+			"tema": "Estabilização e Início do Desencarceramento",
+			"dificuldade": "médio",
+			"pergunta": "Verdadeiro ou Falso:\n“Somente após a estabilização do veículo, dos riscos específicos e proteção da vítima, é que se inicia o desencarceramento.”",
+			"alternativas": [
+				{ "letra": "A", "texto": "Verdadeiro." },
+				{
+					"letra": "B",
+					"texto": "Falso – o desencarceramento pode iniciar antes da estabilização se a vítima estiver crítica."
+				},
+				{ "letra": "C", "texto": "Falso – a proteção da vítima é feita apenas após o desencarceramento." },
+				{ "letra": "D", "texto": "Falso – riscos específicos são neutralizados somente no encerramento." }
+			],
+			"correta": "A",
+			"explicacao": "Frase literal do Manual que estabelece a ordem correta das ações.",
+			"fundamento": "Capítulo 7 - Estabilização - Estabilização de Riscos."
+		},
+		{
+			"id": 91,
+			"titulo": "Capítulo 1 - Introdução",
+			"tema": "Objetivos de Capacitação",
+			"dificuldade": "fácil",
+			"pergunta": "Qual das capacidades abaixo está listada entre os Objetivos de Capacitação do Curso de Salvamento Veicular Leve?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Realizar atendimento de produtos perigosos em rodovias federais." },
+				{
+					"letra": "B",
+					"texto": "Citar e executar a estabilização do veículo nas diversas posições (normal, tombado e capotado)."
+				},
+				{ "letra": "C", "texto": "Operar exclusivamente ferramentas elétricas de corte." },
+				{ "letra": "D", "texto": "Elaborar laudos periciais de sinistros de trânsito." }
+			],
+			"correta": "B",
+			"explicacao": "Entre os Objetivos de Capacitação está a capacidade de citar e executar a estabilização do veículo nas diversas posições.",
+			"fundamento": "Capítulo 1 - Introdução - Objetivos de Capacitação."
+		},
+		{
+			"id": 92,
+			"titulo": "Capítulo 1 - Introdução",
+			"tema": "Metodologia e Materiais",
+			"dificuldade": "fácil",
+			"pergunta": "Qual metodologia de ensino é empregada no Curso de Salvamento Veicular Leve segundo o Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Método exclusivamente expositivo." },
+				{ "letra": "B", "texto": "Método de Ensino Interativo." },
+				{ "letra": "C", "texto": "Método de autoaprendizagem à distância." },
+				{ "letra": "D", "texto": "Método baseado apenas em leitura de manuais." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual estabelece o uso do Método de Ensino Interativo.",
+			"fundamento": "Capítulo 1 - Introdução - Metodologia empregada."
+		},
+		{
+			"id": 93,
+			"titulo": "Capítulo 2 - Conceitos Básicos",
+			"tema": "Tipos de Colisões - Lesões",
+			"dificuldade": "médio",
+			"pergunta": "Sobre as colisões com o veículo na posição normal, assinale a alternativa CORRETA quanto às lesões típicas:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Na colisão traseira as lesões são sempre mais graves que na frontal." },
+				{
+					"letra": "B",
+					"texto": "Na colisão frontal, devido à soma das velocidades dos veículos, as deformidades e lesões tendem a ser graves. Na colisão lateral a vítima que recebe o impacto terá lesões gravíssimas pois absorverá grande parte do impacto."
+				},
+				{ "letra": "C", "texto": "Todas as colisões na posição normal produzem o mesmo padrão de lesões." },
+				{ "letra": "D", "texto": "A colisão lateral é a que menos gera lesões graves." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual destaca a gravidade das lesões na colisão frontal (soma de velocidades) e na lateral (vítima absorve grande parte do impacto).",
+			"fundamento": "Capítulo 2 - Conceitos Básicos - Tipos de Sinistros de Trânsito - Colisões."
+		},
+		{
+			"id": 94,
+			"titulo": "Capítulo 2 - Conceitos Básicos",
+			"tema": "Extração - Definição",
+			"dificuldade": "fácil",
+			"pergunta": "Segundo o Manual, o que é Extração?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas a retirada da vítima do veículo sem qualquer cuidado." },
+				{
+					"letra": "B",
+					"texto": "O conjunto de técnicas utilizadas para retirar a vítima do veículo após a criação de espaço (desencarceramento), priorizando a não agravação de lesões."
+				},
+				{ "letra": "C", "texto": "Somente o corte das ferragens que prendem a vítima." },
+				{ "letra": "D", "texto": "O transporte da vítima até o hospital." }
+			],
+			"correta": "B",
+			"explicacao": "A Extração é definida como o conjunto de técnicas para retirar a vítima após o desencarceramento, priorizando a não agravação de lesões.",
+			"fundamento": "Capítulo 2 - Conceitos Básicos - Extração."
+		},
+		{
+			"id": 95,
+			"titulo": "Capítulo 3 - Segurança",
+			"tema": "Áreas de Atuação",
+			"dificuldade": "médio",
+			"pergunta": "Relacione as Áreas de Atuação às suas características:\nI. Área Quente\nII. Área Morna\nIII. Área Fria\n\n( ) Local onde se arma a Lona de Materiais e se limita a zona de descarte.\n( ) Primeira área de atuação; somente os envolvidos nas ações de salvamento; uso obrigatório do EPI; raio imaginário de 3 a 5 m para cada veículo.\n( ) Área delimitada por fita zebrada, onde permanecem os recursos de apoio e o público é mantido afastado.\n\nA sequência correta é:",
+			"alternativas": [
+				{ "letra": "A", "texto": "II, I, III" },
+				{ "letra": "B", "texto": "III, I, II" },
+				{ "letra": "C", "texto": "I, II, III" },
+				{ "letra": "D", "texto": "II, III, I" }
+			],
+			"correta": "A",
+			"explicacao": "Área Morna = Lona de Materiais e zona de descarte; Área Quente = primeira área com EPI obrigatório (3-5 m); Área Fria = delimitada por fita zebrada com recursos de apoio.",
+			"fundamento": "Capítulo 3 - Segurança - Isolamento e Áreas de Atuação."
+		},
+		{
+			"id": 96,
+			"titulo": "Capítulo 3 - Segurança",
+			"tema": "Fatores de Segurança da Via",
+			"dificuldade": "médio",
+			"pergunta": "Quais fatores afetam a segurança da via e devem ser considerados pelas equipes, segundo o Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas a velocidade da via." },
+				{
+					"letra": "B",
+					"texto": "Tipo e velocidade da via, condições climáticas, visibilidade, presença de curvas, aclives/declives e volume de tráfego."
+				},
+				{ "letra": "C", "texto": "Somente a presença de postes de eletricidade." },
+				{ "letra": "D", "texto": "Apenas o horário da ocorrência." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual lista diversos fatores que afetam a segurança da via, incluindo tipo/velocidade, clima, visibilidade, curvas, aclives/declives e volume de tráfego.",
+			"fundamento": "Capítulo 3 - Segurança - Segurança da Via."
+		},
+		{
+			"id": 97,
+			"titulo": "Capítulo 4 - Anatomia Veicular",
+			"tema": "Classificação dos Veículos",
+			"dificuldade": "fácil",
+			"pergunta": "De acordo com o Manual, os veículos especiais incluem quais exemplos?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas automóveis de passeio." },
+				{
+					"letra": "B",
+					"texto": "Veículos blindados, veículos de transporte de valores, ambulâncias e demais veículos com características especiais de construção ou uso."
+				},
+				{ "letra": "C", "texto": "Somente caminhões pesados." },
+				{ "letra": "D", "texto": "Apenas motocicletas e bicicletas." }
+			],
+			"correta": "B",
+			"explicacao": "Os veículos especiais abrangem blindados, transporte de valores, ambulâncias e outros com características especiais.",
+			"fundamento": "Capítulo 4 - Anatomia Veicular - Classificação dos Veículos."
+		},
+		{
+			"id": 98,
+			"titulo": "Capítulo 4 - Anatomia Veicular",
+			"tema": "Policarbonato",
+			"dificuldade": "médio",
+			"pergunta": "Sobre o policarbonato utilizado em alguns veículos modernos, é CORRETO afirmar:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Quebra-se em pequenas partes arredondadas como o vidro temperado." },
+				{
+					"letra": "B",
+					"texto": "Possui grande resistência à deformidade, não estilhaça nem se rompe após choques. Para sua retirada pode ser utilizada a serra-sabre."
+				},
+				{ "letra": "C", "texto": "É o material padrão dos para-brisas dianteiros desde a década de 90." },
+				{ "letra": "D", "texto": "Exige obrigatoriamente a técnica de afastamento da coluna “A”." }
+			],
+			"correta": "B",
+			"explicacao": "Características e técnica de retirada do policarbonato conforme o Manual.",
+			"fundamento": "Capítulo 4 - Anatomia Veicular - Policarbonato."
+		},
+		{
+			"id": 99,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "Segurança Passiva Estática - Aços",
+			"dificuldade": "difícil",
+			"pergunta": "A Segurança Passiva Estática utiliza aços de alta resistência. Quais tipos de aço são citados no Manual como exemplos de reforço estrutural?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas aço comum carbono." },
+				{
+					"letra": "B",
+					"texto": "Aços HSLA, UHSLA, Boron e Micro-Alloy, que permitem absorver a energia do impacto e deformar-se de modo programado, protegendo a célula de sobrevivência."
+				},
+				{ "letra": "C", "texto": "Somente aço inoxidável." },
+				{ "letra": "D", "texto": "Aços utilizados exclusivamente em veículos antigos." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual cita os aços HSLA, UHSLA, Boron e Micro-Alloy como componentes da Segurança Passiva Estática.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Segurança Passiva Estática."
+		},
+		{
+			"id": 100,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "Tipos de Airbags - Localização",
+			"dificuldade": "médio",
+			"pergunta": "Além dos airbags frontais e laterais de cortina, quais outros tipos de airbags o Manual menciona que podem ser encontrados em veículos modernos?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas airbags de joelho." },
+				{
+					"letra": "B",
+					"texto": "Airbags lateral de porta, lateral de assento, lateral tubular, de joelho, para pés e para pedestres."
+				},
+				{ "letra": "C", "texto": "Somente airbags de teto." },
+				{ "letra": "D", "texto": "Não existem outros tipos além dos frontais." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual lista uma variedade de airbags além dos frontais e de cortina.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Tipos de Airbags."
+		},
+		{
+			"id": 101,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "Distâncias de Segurança - Airbags",
+			"dificuldade": "fácil",
+			"pergunta": "Quais são as distâncias recomendadas de segurança em relação aos airbags, segundo o Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "10 cm, 20 cm e 30 cm." },
+				{ "letra": "B", "texto": "30 cm, 60 cm e 90 cm." },
+				{ "letra": "C", "texto": "50 cm, 100 cm e 150 cm." },
+				{ "letra": "D", "texto": "Não há distâncias específicas recomendadas." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual orienta manter as distâncias de 30, 60 e 90 cm em relação aos airbags.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Cuidados com Airbags."
+		},
+		{
+			"id": 102,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "ROPS",
+			"dificuldade": "médio",
+			"pergunta": "Em um veículo conversível envolvido em sinistro com risco de capotamento, qual sistema de proteção é ativado e como ele funciona?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Sistema ABS, que trava as rodas." },
+				{
+					"letra": "B",
+					"texto": "ROPS (Roll Over Protection System), formado por barras ou arcos de aço que são ativados durante o capotamento para proteger os ocupantes."
+				},
+				{ "letra": "C", "texto": "Apenas os airbags laterais de cortina." },
+				{ "letra": "D", "texto": "Pré-tensionadores de cinto exclusivamente." }
+			],
+			"correta": "B",
+			"explicacao": "O ROPS é o sistema específico para proteção em capotamentos em veículos conversíveis e sem teto.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - ROPS."
+		},
+		{
+			"id": 103,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "Pré-tensionadores - Tipos",
+			"dificuldade": "difícil",
+			"pergunta": "Sobre os pré-tensionadores de cinto, assinale a alternativa CORRETA:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Existe apenas o tipo carretel, localizado no teto do veículo." },
+				{
+					"letra": "B",
+					"texto": "Tipo Carretel (mais comum, geralmente na base da coluna “B”) e Tipo Fivela (localizado no plug do cinto, acionado por pistão de baixa pressão)."
+				},
+				{
+					"letra": "C",
+					"texto": "Ambos os tipos são acionados exclusivamente por ar comprimido de alta pressão."
+				},
+				{ "letra": "D", "texto": "Não há diferença de localização ou acionamento entre os tipos." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual diferencia claramente os dois tipos de pré-tensionadores quanto à localização e forma de acionamento.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Pré-Tensionadores de Cinto."
+		},
+		{
+			"id": 104,
+			"titulo": "Capítulo 6 - Desencarceradores",
+			"tema": "Regras de Segurança - Ferramentas",
+			"dificuldade": "médio",
+			"pergunta": "Quais regras gerais de segurança devem ser observadas no uso das ferramentas hidráulicas?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Não há regras específicas; basta operar a ferramenta." },
+				{
+					"letra": "B",
+					"texto": "Manter as mãos e o corpo afastados das lâminas e ponteiras; nunca posicionar qualquer parte do corpo entre a ferramenta e o veículo; verificar conexões antes do uso; interromper o trabalho se houver torção ou separação das lâminas."
+				},
+				{ "letra": "C", "texto": "Operar sempre com as mãos sobre as lâminas para maior controle." },
+				{ "letra": "D", "texto": "Utilizar a ferramenta apenas com uma mão." }
+			],
+			"correta": "B",
+			"explicacao": "Regras gerais de segurança no uso de ferramentas hidráulicas conforme o Manual.",
+			"fundamento": "Capítulo 6 - Desencarceradores - Regras gerais de segurança."
+		},
+		{
+			"id": 105,
+			"titulo": "Capítulo 6 - Desencarceradores",
+			"tema": "Motobomba - Cuidados",
+			"dificuldade": "difícil",
+			"pergunta": "Em relação à Motobomba, assinale a alternativa CORRETA:",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "A pressão de trabalho é sempre inferior a 5.000 psi e pode ser posicionada em qualquer local."
+				},
+				{
+					"letra": "B",
+					"texto": "Deve-se realizar a manutenção diária de 1º escalão e evitar posicioná-la em locais inclinados. A pressão de trabalho varia entre 9.000 a 11.000 psi."
+				},
+				{
+					"letra": "C",
+					"texto": "Não necessita de manutenção e pode funcionar indefinidamente sem supervisão."
+				},
+				{ "letra": "D", "texto": "A pressão de trabalho é fixa em 3.000 psi." }
+			],
+			"correta": "B",
+			"explicacao": "Cuidados e faixa de pressão da Motobomba literais do Manual.",
+			"fundamento": "Capítulo 6 - Desencarceradores - Motobomba."
+		},
+		{
+			"id": 106,
+			"titulo": "Capítulo 6 - Desencarceradores",
+			"tema": "Mangueiras",
+			"dificuldade": "médio",
+			"pergunta": "Qual a principal vantagem das mangueiras coaxiais em relação às mangueiras tradicionais (duplas)?",
+			"alternativas": [
+				{ "letra": "A", "texto": "São mais baratas e descartáveis." },
+				{
+					"letra": "B",
+					"texto": "Possuem a mangueira de alta pressão dentro da mangueira de baixa pressão, conferindo maior segurança e rapidez na conexão."
+				},
+				{ "letra": "C", "texto": "Podem ser utilizadas apenas com ferramentas elétricas." },
+				{ "letra": "D", "texto": "Não possuem diferença prática em relação às tradicionais." }
+			],
+			"correta": "B",
+			"explicacao": "Vantagem principal das mangueiras coaxiais descrita no Manual.",
+			"fundamento": "Capítulo 6 - Desencarceradores - Mangueiras."
+		},
+		{
+			"id": 107,
+			"titulo": "Capítulo 6 - Desencarceradores",
+			"tema": "Alavanca Halligan",
+			"dificuldade": "fácil",
+			"pergunta": "A alavanca Halligan é especialmente útil para quais finalidades no desencarceramento?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas para corte de vidros temperados." },
+				{
+					"letra": "B",
+					"texto": "Entradas forçadas, criar acesso às dobradiças, perfurar vidros laminados e cortar chapas metálicas."
+				},
+				{ "letra": "C", "texto": "Somente para estabilização de veículos tombados." },
+				{ "letra": "D", "texto": "Exclusivamente para remoção de airbags já acionados." }
+			],
+			"correta": "B",
+			"explicacao": "Usos da alavanca Halligan listados no Manual.",
+			"fundamento": "Capítulo 6 - Desencarceradores - Ferramentas de apoio - Alavanca Halligan."
+		},
+		{
+			"id": 108,
+			"titulo": "Capítulo 7 - Estabilização",
+			"tema": "Estabilização - Veículo na Posição Normal",
+			"dificuldade": "médio",
+			"pergunta": "Em um veículo na posição normal, a estabilização deve ser realizada em quantos pontos e qual o princípio fundamental?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Dois pontos; elevar o veículo o máximo possível." },
+				{
+					"letra": "B",
+					"texto": "Quatro pontos; estabilizar o veículo da maneira encontrada, preenchendo todo o espaço entre o veículo e o chão."
+				},
+				{ "letra": "C", "texto": "Seis pontos; remover todas as rodas antes de calçar." },
+				{ "letra": "D", "texto": "Um único ponto central; utilizar apenas escoras metálicas." }
+			],
+			"correta": "B",
+			"explicacao": "Estabilização em quatro pontos e princípios básicos da estabilização veicular.",
+			"fundamento": "Capítulo 7 - Estabilização - Veículo na posição normal e Princípios."
+		},
+		{
+			"id": 109,
+			"titulo": "Capítulo 7 - Estabilização",
+			"tema": "Estabilização - Veículo Tombado",
+			"dificuldade": "difícil",
+			"pergunta": "Sobre a estabilização de veículo tombado (sobre a lateral), assinale a alternativa CORRETA:",
+			"alternativas": [
+				{ "letra": "A", "texto": "É a estabilização mais simples e não requer atenção especial." },
+				{
+					"letra": "B",
+					"texto": "É uma das estabilizações mais difíceis e instáveis. Deve-se calçar pontos estratégicos (geralmente na região do teto e do assoalho) e utilizar escoras ou calços de forma a impedir o movimento de rolamento, sempre verificando a estabilidade antes de iniciar o desencarceramento."
+				},
+				{
+					"letra": "C",
+					"texto": "Não é necessário estabilizar se o veículo estiver apoiado sobre uma das laterais."
+				},
+				{ "letra": "D", "texto": "Basta colocar um único calço sob o teto." }
+			],
+			"correta": "B",
+			"explicacao": "Características e cuidados da estabilização de veículo tombado conforme o Manual.",
+			"fundamento": "Capítulo 7 - Estabilização - Estabilização em relação aos sinistros - Veículo Tombado."
+		},
+		{
+			"id": 110,
+			"titulo": "Capítulo 7 - Estabilização",
+			"tema": "Estabilização - Veículo Capotado",
+			"dificuldade": "difícil",
+			"pergunta": "Em um veículo capotado (sobre o teto), qual a preocupação principal na estabilização?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Elevar o veículo o máximo possível para facilitar o acesso." },
+				{
+					"letra": "B",
+					"texto": "Impedir o movimento de rolamento e o afundamento do teto, calçando pontos estratégicos e utilizando escoras/calços de forma a manter a estabilidade durante todo o desencarceramento e a extração."
+				},
+				{ "letra": "C", "texto": "Não é necessário estabilizar veículos capotados." },
+				{ "letra": "D", "texto": "Utilizar apenas as rodas como ponto de apoio." }
+			],
+			"correta": "B",
+			"explicacao": "Preocupações principais na estabilização de veículo capotado.",
+			"fundamento": "Capítulo 7 - Estabilização - Estabilização em relação aos sinistros - Veículo Capotado."
+		},
+		{
+			"id": 111,
+			"titulo": "Capítulo 7 - Estabilização",
+			"tema": "Calços - Funções",
+			"dificuldade": "difícil",
+			"pergunta": "Relacione os calços às suas funções principais segundo o Manual:\nI. Calço nº 1\nII. Calço nº 2\nIII. Calço nº 3\nIV. Calço nº 4\n\n( ) Preencher espaço entre chão e veículo\n( ) Base para o Extensor / Aumentar a altura dos calços\n( ) Altura mínima para giro de KED / Aumentar a altura dos calços\n( ) Largura mínima para giro de KED / Aumentar a altura dos calços\n\nA sequência correta é:",
+			"alternativas": [
+				{ "letra": "A", "texto": "IV, I, II, III" },
+				{ "letra": "B", "texto": "I, II, III, IV" },
+				{ "letra": "C", "texto": "IV, I, III, II" },
+				{ "letra": "D", "texto": "III, I, II, IV" }
+			],
+			"correta": "A",
+			"explicacao": "Funções dos calços conforme o Manual: nº 4 = preencher espaço; nº 1 = base para Extensor; nº 2 = altura mínima para KED; nº 3 = largura mínima para KED.",
+			"fundamento": "Capítulo 7 - Estabilização - Materiais - Calços de madeira."
+		},
+		{
+			"id": 112,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Rebatimento Invertido - Cenário",
+			"dificuldade": "difícil",
+			"pergunta": "Uma equipe chega a um sinistro em que o veículo está prensado na traseira de um caminhão, impossibilitando o acesso à frente. Qual técnica de rebatimento de teto deve ser empregada e quais os cortes principais?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Rebatimento Total convencional (cortes das colunas “A” e “B”)." },
+				{
+					"letra": "B",
+					"texto": "Rebatimento Invertido: Corte das colunas “C” o mais rente ao teto; Corte das colunas “B” o mais rente ao teto; Cortes de alívio imediatamente antes das colunas “A”; Rebater o teto e conter com amarração."
+				},
+				{ "letra": "C", "texto": "Apenas Retirada de Teto." },
+				{ "letra": "D", "texto": "Rebatimento Angulado exclusivo." }
+			],
+			"correta": "B",
+			"explicacao": "Indicação e passos do Rebatimento Invertido de Teto para situações de impossibilidade de acesso à frente do veículo.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Rebatimento Invertido de Teto."
+		},
+		{
+			"id": 113,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Rebatimento Parcial - Cenário",
+			"dificuldade": "difícil",
+			"pergunta": "Em um engavetamento entre dois caminhões, a equipe não consegue acessar as colunas traseiras do veículo. Qual técnica deve ser utilizada?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Rebatimento Total de Teto." },
+				{
+					"letra": "B",
+					"texto": "Rebatimento Parcial: Corte das colunas “A” entre nível médio e superior; Corte de alívio imediatamente antes das colunas “B”; Rebater o teto e conter com amarração."
+				},
+				{ "letra": "C", "texto": "Rebatimento tipo “Ostra”." },
+				{ "letra": "D", "texto": "Apenas remoção de portas." }
+			],
+			"correta": "B",
+			"explicacao": "Indicação e passos do Rebatimento Parcial para situações de impossibilidade de acesso às colunas traseiras.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Rebatimento Parcial."
+		},
+		{
+			"id": 114,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Elevação de Painel - Cenário",
+			"dificuldade": "difícil",
+			"pergunta": "Um veículo chocou-se contra um poste e o painel está deformado, prendendo as pernas da vítima. Não há possibilidade de empurrar o painel para a frente. Qual técnica deve ser empregada?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Rebatimento de Painel e Volante com corte de alívio a 45°." },
+				{
+					"letra": "B",
+					"texto": "Elevação de Painel e Volante: não se faz o corte de alívio; o extensor é posicionado entre as pernas da vítima, entre o assoalho e a barra de direção."
+				},
+				{ "letra": "C", "texto": "Apenas remoção das portas dianteiras." },
+				{ "letra": "D", "texto": "Rebatimento Total de Teto." }
+			],
+			"correta": "B",
+			"explicacao": "Indicação e diferença da Elevação de Painel e Volante em relação ao Rebatimento de Painel.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Elevação de Painel e Volante."
+		},
+		{
+			"id": 115,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Proteção de Ferragens",
+			"dificuldade": "médio",
+			"pergunta": "Após a realização dos cortes nas colunas e no teto, qual procedimento deve ser adotado em relação às ferragens expostas?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Nenhum procedimento adicional é necessário." },
+				{
+					"letra": "B",
+					"texto": "Proteger as ferragens cortadas (com cobertores, mantas ou protetores específicos) para evitar lesões à vítima e à equipe durante a extração."
+				},
+				{ "letra": "C", "texto": "Remover todas as ferragens do local imediatamente." },
+				{ "letra": "D", "texto": "Apenas sinalizar as ferragens com cones." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual determina a proteção das ferragens após os cortes.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Proteção de ferragens."
+		},
+		{
+			"id": 116,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Contraindicações do KED",
+			"dificuldade": "difícil",
+			"pergunta": "Assinale a alternativa que apresenta contraindicações ao uso do KED segundo o Manual:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Vítima estável, sentada, sem obesidade ou gestação." },
+				{
+					"letra": "B",
+					"texto": "Vítima com trauma de tórax, trauma pélvico ou de fêmur; vítimas instáveis ou críticas; obesidade ou gestação que impeça o envolvimento adequado; vítimas muito altas que não se adaptem ao dispositivo."
+				},
+				{ "letra": "C", "texto": "Qualquer vítima em veículo na posição normal." },
+				{ "letra": "D", "texto": "Vítimas em encarceramento mecânico leve." }
+			],
+			"correta": "B",
+			"explicacao": "Contraindicações do KED listadas no Manual.",
+			"fundamento": "Capítulo 9 - Técnicas de Extração - Uso do K.E.D."
+		},
+		{
+			"id": 117,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Extração em Capotamento - Particularidade",
+			"dificuldade": "difícil",
+			"pergunta": "Em veículos capotados, quando a vítima está presa no cinto de segurança, qual particularidade da extração é destacada no Manual?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "A vítima deve ser removida sempre pela lateral, mantendo a cabeça perfeitamente alinhada durante todo o movimento."
+				},
+				{
+					"letra": "B",
+					"texto": "Esta é a única situação em que se leva a vítima com a cabeça lateralizada em relação ao corpo. Assim que removida do veículo, ela deve ser reposicionada em decúbito dorsal horizontal (DDH)."
+				},
+				{ "letra": "C", "texto": "Não se deve cortar o cinto em hipótese alguma." },
+				{ "letra": "D", "texto": "A extração deve aguardar obrigatoriamente a chegada do suporte avançado." }
+			],
+			"correta": "B",
+			"explicacao": "Particularidade exclusiva da extração de vítimas presas no cinto em veículos capotados.",
+			"fundamento": "Capítulo 9 - Técnicas de Extração - Veículos Capotados."
+		},
+		{
+			"id": 118,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Proteção Completa da Vítima",
+			"dificuldade": "médio",
+			"pergunta": "Para que a vítima seja considerada protegida durante o desencarceramento, quais condições devem estar presentes?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas colar cervical aplicado." },
+				{
+					"letra": "B",
+					"texto": "Coberta com lona plástica transparente ou cobertor; cinto de segurança cortado (exceto em capotamento); hemorragias controladas; vias aéreas liberadas; oferta de oxigênio; estabilização da coluna cervical; proteção contra hipotermia; proteção com escudos durante o uso de ferramentas."
+				},
+				{ "letra": "C", "texto": "Somente vias aéreas liberadas e oxigênio." },
+				{ "letra": "D", "texto": "Apenas quando estiver fora do veículo." }
+			],
+			"correta": "B",
+			"explicacao": "Lista completa das condições que tornam a vítima protegida, conforme o Manual.",
+			"fundamento": "Capítulo 9 - Considerações com o Paciente - Proteção e Estabilização."
+		},
+		{
+			"id": 119,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Funções - Nº 01 Comandante do Socorro",
+			"dificuldade": "difícil",
+			"pergunta": "Quais são as principais atribuições do Nº 01 – Comandante do Socorro durante a ocorrência?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas operar a ferramenta hidráulica." },
+				{
+					"letra": "B",
+					"texto": "Autorizar e coordenar a estabilização; definir a vítima prioritária, o lado de acesso e a técnica a ser empregada; executar as vozes de comando “ESTABILIZAÇÃO LIBERADA”, “ACESSO LIBERADO” e “DESENCARCERAMENTO LIBERADO”; coordenar todas as fases da operação."
+				},
+				{ "letra": "C", "texto": "Somente desconectar a bateria e sinalizar o local." },
+				{ "letra": "D", "texto": "Realizar a análise primária da vítima e aplicar colar cervical." }
+			],
+			"correta": "B",
+			"explicacao": "Atribuições centrais do Comandante do Socorro (Nº 01) conforme o Manual.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Nº 01 – Comandante do Socorro."
+		},
+		{
+			"id": 120,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Funções - Nº 03 Motorista do Socorro",
+			"dificuldade": "difícil",
+			"pergunta": "Quais são as principais funções do Nº 03 – Motorista do Socorro na fase de Preparação e Segurança?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Realizar a análise primária da vítima." },
+				{
+					"letra": "B",
+					"texto": "Estacionar a viatura em 45° com as rodas para fora e sinais luminosos acesos; sinalizar o local com cones; isolar com fita zebrada; levar materiais para a lona; posicionar a lona de materiais; aguardar a ordem de “DESENCARCERAMENTO LIBERADO” para desconectar a bateria."
+				},
+				{ "letra": "C", "texto": "Operar exclusivamente a ferramenta hidráulica." },
+				{ "letra": "D", "texto": "Coordenar a extração e transmitir sinais vitais à Central." }
+			],
+			"correta": "B",
+			"explicacao": "Funções do Motorista do Socorro (Nº 03) na fase de Preparação e Segurança.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Nº 03 – Motorista do Socorro."
+		},
+		{
+			"id": 121,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Funções - Nº 04 Comandante do Resgate",
+			"dificuldade": "difícil",
+			"pergunta": "Ao acessar o interior do veículo, quais ações o Nº 04 – Comandante do Resgate deve realizar prioritariamente?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas estabilizar a cervical e aguardar o desencarceramento." },
+				{
+					"letra": "B",
+					"texto": "Puxar o freio de mão, retirar a chave do veículo, abaixar os vidros manuais, destravar as portas e proteger o airbag; buscar realizar no menor tempo possível a avaliação da vítima (XABCDE)."
+				},
+				{ "letra": "C", "texto": "Desconectar a bateria e operar a serra-sabre." },
+				{ "letra": "D", "texto": "Posicionar a lona de materiais e isolar a área fria." }
+			],
+			"correta": "B",
+			"explicacao": "Ações prioritárias do Comandante do Resgate (Nº 04) ao acessar o interior do veículo.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Nº 04 – Comandante do Resgate."
+		},
+		{
+			"id": 122,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Integração das Funções por Fase",
+			"dificuldade": "difícil",
+			"pergunta": "Durante a fase de Desencarceramento, qual é a divisão principal de responsabilidades entre os números da equipe?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas o Nº 01 opera as ferramentas; os demais observam." },
+				{
+					"letra": "B",
+					"texto": "Nº 01 coordena e autoriza; Nº 02 e Nº 06 operam as ferramentas hidráulicas e identificam riscos; Nº 03 apoia na logística e desconexão de bateria; Nº 04 e Nº 05 permanecem com a vítima realizando APH e proteção."
+				},
+				{ "letra": "C", "texto": "Todos os números operam ferramentas simultaneamente." },
+				{ "letra": "D", "texto": "Apenas o Nº 04 e o Nº 05 entram no veículo; os demais ficam na área fria." }
+			],
+			"correta": "B",
+			"explicacao": "Divisão de responsabilidades durante a fase de Desencarceramento conforme as funções descritas no Manual.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Composição da Equipe e suas Funções (integração por fase)."
+		},
+		{
+			"id": 123,
+			"titulo": "Capítulo 7 e 8 - Integração",
+			"tema": "Ordem das Ações",
+			"dificuldade": "médio",
+			"pergunta": "Verdadeiro ou Falso:\n“Somente após a estabilização do veículo, dos riscos específicos e proteção da vítima, é que se inicia o desencarceramento.”",
+			"alternativas": [
+				{ "letra": "A", "texto": "Verdadeiro." },
+				{
+					"letra": "B",
+					"texto": "Falso – o desencarceramento pode iniciar antes da estabilização se a vítima estiver crítica."
+				},
+				{ "letra": "C", "texto": "Falso – a proteção da vítima é realizada apenas após o desencarceramento." },
+				{
+					"letra": "D",
+					"texto": "Falso – riscos específicos são neutralizados somente no encerramento da ocorrência."
+				}
+			],
+			"correta": "A",
+			"explicacao": "Princípio fundamental da ordem das ações estabelecido no Manual.",
+			"fundamento": "Capítulo 7 - Estabilização - Estabilização de Riscos."
+		},
+		{
+			"id": 124,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Sequência de Ações Pós-Classificação",
+			"dificuldade": "difícil",
+			"pergunta": "Após a classificação do grau de encarceramento, qual a sequência correta de ações?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Extração imediata → Avaliação → Transporte." },
+				{
+					"letra": "B",
+					"texto": "Triagem de vítimas → Avaliação e Tratamento → Definir Planos → Liberar a vítima (alterar de TF 2 para TF 1) → Assegurar Plano Principal ou executar Plano Emergencial → Executar o Plano."
+				},
+				{ "letra": "C", "texto": "Apenas Definir Planos e Executar." },
+				{
+					"letra": "D",
+					"texto": "Estabilização → Desencarceramento → Extração, sem necessidade de reavaliação."
+				}
+			],
+			"correta": "B",
+			"explicacao": "Sequência de ações após a classificação do encarceramento conforme o Manual.",
+			"fundamento": "Capítulo 9 - Considerações com o Paciente - Grau de Encarceramento."
+		},
+		{
+			"id": 125,
+			"titulo": "Capítulo 3 e 10 - Integração",
+			"tema": "Posicionamento e Barreira de Sacrifício",
+			"dificuldade": "médio",
+			"pergunta": "O posicionamento da viatura pesada a 45° em relação à via tem como principal objetivo:",
+			"alternativas": [
+				{ "letra": "A", "texto": "Facilitar o embarque rápido da vítima." },
+				{
+					"letra": "B",
+					"texto": "Criar a “barreira de sacrifício”, formada principalmente por viaturas pesadas, para garantir a proteção física das equipes que estão trabalhando no local."
+				},
+				{ "letra": "C", "texto": "Reduzir o consumo de combustível." },
+				{ "letra": "D", "texto": "Permitir melhor visualização do sinistro pelo Comandante." }
+			],
+			"correta": "B",
+			"explicacao": "Objetivo do posicionamento a 45° conforme o Manual.",
+			"fundamento": "Capítulo 3 - Segurança - Posicionamento das viaturas."
+		},
+		{
+			"id": 126,
+			"titulo": "Capítulo 7 - Estabilização",
+			"tema": "Estabilização - Veículo Tombado",
+			"dificuldade": "fácil",
+			"pergunta": "Por que a estabilização de um veículo tombado (sobre a lateral) exige maior atenção segundo o Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Porque é a posição mais estável de todas." },
+				{
+					"letra": "B",
+					"texto": "Porque os veículos tombados são os mais instáveis, tornando a estabilização mais difícil."
+				},
+				{ "letra": "C", "texto": "Porque não é necessário estabilizar veículos tombados." },
+				{ "letra": "D", "texto": "Porque a técnica de desencarceramento é a mais demorada." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual afirma que os veículos tombados são os mais instáveis, por isso sua estabilização requer maior atenção e será mais difícil.",
+			"fundamento": "Capítulo 2 e Capítulo 7 - Tipos de Sinistros e Estabilização de Veículo Tombado."
+		},
+		{
+			"id": 127,
+			"titulo": "Capítulo 7 - Estabilização",
+			"tema": "Estabilização - Veículo Tombado",
+			"dificuldade": "difícil",
+			"pergunta": "Em um veículo tombado sobre a lateral, quais cuidados principais devem ser observados na estabilização?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Basta colocar um único calço sob o teto." },
+				{
+					"letra": "B",
+					"texto": "Calçar pontos estratégicos (geralmente na região do teto e do assoalho), utilizar escoras ou calços para impedir o movimento de rolamento e sempre verificar a estabilidade antes de iniciar o desencarceramento."
+				},
+				{ "letra": "C", "texto": "Elevar o veículo completamente antes de qualquer ação." },
+				{ "letra": "D", "texto": "Não utilizar calços; apenas escoras metálicas." }
+			],
+			"correta": "B",
+			"explicacao": "Cuidados específicos para estabilização de veículo tombado descritos no Manual.",
+			"fundamento": "Capítulo 7 - Estabilização - Veículo Tombado."
+		},
+		{
+			"id": 128,
+			"titulo": "Capítulo 7 - Estabilização",
+			"tema": "Estabilização - Veículo Capotado",
+			"dificuldade": "fácil",
+			"pergunta": "Qual a preocupação principal na estabilização de um veículo capotado (sobre o teto)?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Elevar o veículo o máximo possível." },
+				{ "letra": "B", "texto": "Impedir o movimento de rolamento e o afundamento do teto." },
+				{ "letra": "C", "texto": "Remover todas as rodas antes de calçar." },
+				{ "letra": "D", "texto": "Não é necessário estabilizar veículos capotados." }
+			],
+			"correta": "B",
+			"explicacao": "A preocupação principal é impedir o rolamento e o afundamento do teto durante todo o atendimento.",
+			"fundamento": "Capítulo 7 - Estabilização - Veículo Capotado."
+		},
+		{
+			"id": 129,
+			"titulo": "Capítulo 7 - Estabilização",
+			"tema": "Estabilização - Veículo Capotado",
+			"dificuldade": "difícil",
+			"pergunta": "Durante a estabilização de um veículo capotado, o que deve ser feito para manter a estabilidade ao longo do desencarceramento e da extração?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Utilizar apenas as rodas como ponto de apoio." },
+				{
+					"letra": "B",
+					"texto": "Calçar pontos estratégicos e utilizar escoras/calços de forma a manter a estabilidade durante todo o desencarceramento e a extração, ajustando conforme necessário."
+				},
+				{ "letra": "C", "texto": "Remover os calços assim que o teto for rebatido." },
+				{ "letra": "D", "texto": "Estabilizar apenas a parte dianteira do veículo." }
+			],
+			"correta": "B",
+			"explicacao": "É necessário manter e ajustar a estabilização durante todo o processo.",
+			"fundamento": "Capítulo 7 - Estabilização - Veículo Capotado e Princípios da estabilização."
+		},
+		{
+			"id": 130,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "Segurança Passiva Estática",
+			"dificuldade": "fácil",
+			"pergunta": "O que é a Segurança Passiva Estática segundo o Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Sistemas que evitam o acidente (freios ABS, controle de tração)." },
+				{
+					"letra": "B",
+					"texto": "A capacidade do veículo de absorver a energia do impacto e deformar-se de modo programado, protegendo a célula de sobrevivência."
+				},
+				{ "letra": "C", "texto": "Apenas os airbags e pré-tensionadores." },
+				{ "letra": "D", "texto": "Sistemas de entretenimento do veículo." }
+			],
+			"correta": "B",
+			"explicacao": "Definição literal da Segurança Passiva Estática.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Segurança Passiva Estática."
+		},
+		{
+			"id": 131,
+			"titulo": "Capítulo 5 - Tecnologias de Segurança",
+			"tema": "Segurança Passiva Estática",
+			"dificuldade": "médio",
+			"pergunta": "Quais tipos de aço de alta resistência são citados no Manual como exemplos utilizados na Segurança Passiva Estática?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas aço comum carbono." },
+				{ "letra": "B", "texto": "Aços HSLA, UHSLA, Boron e Micro-Alloy." },
+				{ "letra": "C", "texto": "Somente aço inoxidável." },
+				{ "letra": "D", "texto": "Aços utilizados exclusivamente em veículos fabricados antes de 1990." }
+			],
+			"correta": "B",
+			"explicacao": "O Manual cita explicitamente os aços HSLA, UHSLA, Boron e Micro-Alloy.",
+			"fundamento": "Capítulo 5 - Tecnologias de Segurança - Segurança Passiva Estática."
+		},
+		{
+			"id": 132,
+			"titulo": "Capítulo 6 - Desencarceradores",
+			"tema": "Motobomba",
+			"dificuldade": "fácil",
+			"pergunta": "Qual a faixa de pressão de trabalho da Motobomba segundo o Manual?",
+			"alternativas": [
+				{ "letra": "A", "texto": "3.000 a 5.000 psi." },
+				{ "letra": "B", "texto": "9.000 a 11.000 psi." },
+				{ "letra": "C", "texto": "1.000 a 2.000 psi." },
+				{ "letra": "D", "texto": "15.000 a 20.000 psi." }
+			],
+			"correta": "B",
+			"explicacao": "A pressão de trabalho da Motobomba varia entre 9.000 a 11.000 psi.",
+			"fundamento": "Capítulo 6 - Desencarceradores - Motobomba."
+		},
+		{
+			"id": 133,
+			"titulo": "Capítulo 6 - Desencarceradores",
+			"tema": "Motobomba",
+			"dificuldade": "médio",
+			"pergunta": "Quais cuidados especiais devem ser observados com a Motobomba?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Nenhum cuidado especial é necessário." },
+				{
+					"letra": "B",
+					"texto": "Realizar a manutenção diária de 1º escalão e evitar posicioná-la em locais inclinados."
+				},
+				{ "letra": "C", "texto": "Posicioná-la sempre em locais inclinados para melhor desempenho." },
+				{ "letra": "D", "texto": "Deixá-la funcionar indefinidamente sem supervisão." }
+			],
+			"correta": "B",
+			"explicacao": "Cuidados literais com a Motobomba descritos no Manual.",
+			"fundamento": "Capítulo 6 - Desencarceradores - Motobomba."
+		},
+		{
+			"id": 134,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Rebatimento Invertido",
+			"dificuldade": "médio",
+			"pergunta": "Em qual situação o Rebatimento Invertido de Teto é indicado?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Em qualquer ocorrência com veículo na posição normal." },
+				{
+					"letra": "B",
+					"texto": "Quando não for possível acessar a frente do veículo (exemplo: veículo prensado na traseira de um caminhão)."
+				},
+				{ "letra": "C", "texto": "Exclusivamente em veículos capotados." },
+				{ "letra": "D", "texto": "Quando houver vítimas apenas no banco traseiro." }
+			],
+			"correta": "B",
+			"explicacao": "Indicação específica do Rebatimento Invertido de Teto.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Rebatimento Invertido de Teto."
+		},
+		{
+			"id": 135,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Rebatimento Invertido",
+			"dificuldade": "difícil",
+			"pergunta": "Quais são os principais passos do Rebatimento Invertido de Teto?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Corte apenas das colunas “A” e rebatimento para trás." },
+				{
+					"letra": "B",
+					"texto": "Corte das colunas “C” o mais rente ao teto; Corte das colunas “B” o mais rente ao teto; Cortes de alívio imediatamente antes das colunas “A”; Rebater o teto e conter com amarração."
+				},
+				{ "letra": "C", "texto": "Apenas remoção das portas e do para-brisas." },
+				{ "letra": "D", "texto": "Corte das colunas “A” e “B” seguido de retirada completa do teto." }
+			],
+			"correta": "B",
+			"explicacao": "Passos literais do Rebatimento Invertido de Teto.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Rebatimento Invertido de Teto."
+		},
+		{
+			"id": 136,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Rebatimento Parcial",
+			"dificuldade": "médio",
+			"pergunta": "O Rebatimento Parcial é indicado em qual situação?",
+			"alternativas": [
+				{
+					"letra": "A",
+					"texto": "Quando há impossibilidade de acesso às colunas traseiras (exemplo: engavetamento entre dois caminhões)."
+				},
+				{ "letra": "B", "texto": "Em qualquer ocorrência com veículo na posição normal." },
+				{ "letra": "C", "texto": "Apenas em veículos tombados." },
+				{ "letra": "D", "texto": "Quando se deseja retirar o teto completamente." }
+			],
+			"correta": "A",
+			"explicacao": "Indicação do Rebatimento Parcial conforme o Manual.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Rebatimento Parcial."
+		},
+		{
+			"id": 137,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Elevação de Painel",
+			"dificuldade": "fácil",
+			"pergunta": "Qual a principal diferença entre o Rebatimento de Painel e a Elevação de Painel e Volante?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Não há diferença; são a mesma técnica." },
+				{
+					"letra": "B",
+					"texto": "Na Elevação não se faz o corte de alívio; é indicada quando não há possibilidade de empurrar o painel para a frente."
+				},
+				{ "letra": "C", "texto": "A Elevação é utilizada apenas em veículos tombados." },
+				{ "letra": "D", "texto": "Na Elevação deve-se sempre cortar a coluna “B” antes." }
+			],
+			"correta": "B",
+			"explicacao": "Diferença principal entre as duas técnicas.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Elevação de Painel e Volante."
+		},
+		{
+			"id": 138,
+			"titulo": "Capítulo 8 - Técnicas de Desencarceramento",
+			"tema": "Elevação de Painel",
+			"dificuldade": "difícil",
+			"pergunta": "Em um veículo chocado contra um poste, com o painel deformado prendendo as pernas da vítima e sem possibilidade de empurrar o painel para a frente, como deve ser posicionado o extensor na técnica de Elevação de Painel?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Entre o teto e o assoalho, na lateral do veículo." },
+				{ "letra": "B", "texto": "Entre as pernas da vítima, entre o assoalho e a barra de direção." },
+				{ "letra": "C", "texto": "Na coluna “A”, empurrando para a frente." },
+				{ "letra": "D", "texto": "Atrás do banco do motorista." }
+			],
+			"correta": "B",
+			"explicacao": "Posicionamento específico do extensor na Elevação de Painel e Volante.",
+			"fundamento": "Capítulo 8 - Técnicas de Desencarceramento - Elevação de Painel e Volante."
+		},
+		{
+			"id": 139,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Contraindicações do KED",
+			"dificuldade": "fácil",
+			"pergunta": "Qual das situações abaixo é uma contraindicação ao uso do KED?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Vítima estável e sentada, sem obesidade ou gestação." },
+				{ "letra": "B", "texto": "Vítima com trauma de tórax, trauma pélvico ou de fêmur." },
+				{ "letra": "C", "texto": "Vítima em encarceramento mecânico leve." },
+				{ "letra": "D", "texto": "Vítima em veículo na posição normal sem outras lesões." }
+			],
+			"correta": "B",
+			"explicacao": "Trauma de tórax, pélvico ou de fêmur são contraindicações ao uso do KED.",
+			"fundamento": "Capítulo 9 - Técnicas de Extração - Uso do K.E.D."
+		},
+		{
+			"id": 140,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Contraindicações do KED",
+			"dificuldade": "médio",
+			"pergunta": "Além de traumas específicos, quais outras situações contraindicam o uso do KED?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Nenhuma outra situação." },
+				{
+					"letra": "B",
+					"texto": "Vítimas instáveis ou críticas; obesidade ou gestação que impeça o envolvimento adequado; vítimas muito altas que não se adaptem ao dispositivo."
+				},
+				{ "letra": "C", "texto": "Apenas vítimas conscientes." },
+				{ "letra": "D", "texto": "Somente vítimas em veículos capotados." }
+			],
+			"correta": "B",
+			"explicacao": "Lista adicional de contraindicações do KED conforme o Manual.",
+			"fundamento": "Capítulo 9 - Técnicas de Extração - Uso do K.E.D."
+		},
+		{
+			"id": 141,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Extração em Capotamento",
+			"dificuldade": "fácil",
+			"pergunta": "Em veículos capotados, quando a vítima está presa no cinto, qual particularidade ocorre durante a extração?",
+			"alternativas": [
+				{ "letra": "A", "texto": "A cabeça deve permanecer perfeitamente alinhada durante todo o movimento." },
+				{
+					"letra": "B",
+					"texto": "É a única situação em que se leva a vítima com a cabeça lateralizada em relação ao corpo, reposicionando-a em DDH assim que removida do veículo."
+				},
+				{ "letra": "C", "texto": "Não se deve cortar o cinto." },
+				{ "letra": "D", "texto": "A extração deve ser adiada até a chegada do suporte avançado." }
+			],
+			"correta": "B",
+			"explicacao": "Particularidade exclusiva da extração em veículos capotados com vítima presa no cinto.",
+			"fundamento": "Capítulo 9 - Técnicas de Extração - Veículos Capotados."
+		},
+		{
+			"id": 142,
+			"titulo": "Capítulo 9 - Paciente e Extração",
+			"tema": "Proteção da Vítima",
+			"dificuldade": "médio",
+			"pergunta": "Para que a vítima seja considerada protegida durante o desencarceramento, qual das condições abaixo deve estar presente?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas colar cervical aplicado." },
+				{
+					"letra": "B",
+					"texto": "Coberta com lona plástica transparente ou cobertor; hemorragias controladas; vias aéreas liberadas; oferta de oxigênio; estabilização da coluna cervical; proteção contra hipotermia e com escudos durante o uso de ferramentas."
+				},
+				{ "letra": "C", "texto": "Somente quando estiver fora do veículo." },
+				{ "letra": "D", "texto": "Apenas com o cinto de segurança ainda afivelado." }
+			],
+			"correta": "B",
+			"explicacao": "Condições que tornam a vítima protegida segundo o Manual.",
+			"fundamento": "Capítulo 9 - Considerações com o Paciente - Proteção e Estabilização."
+		},
+		{
+			"id": 143,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Integração das Funções",
+			"dificuldade": "fácil",
+			"pergunta": "Quem é o responsável por executar as vozes de comando “ESTABILIZAÇÃO LIBERADA”, “ACESSO LIBERADO” e “DESENCARCERAMENTO LIBERADO”?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Nº 04 – Comandante do Resgate." },
+				{ "letra": "B", "texto": "Nº 01 – Comandante do Socorro." },
+				{ "letra": "C", "texto": "Nº 02 – Auxiliar do Socorro." },
+				{ "letra": "D", "texto": "Nº 03 – Motorista do Socorro." }
+			],
+			"correta": "B",
+			"explicacao": "As vozes de comando são executadas pelo Nº 01 – Comandante do Socorro.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Nº 01 – Comandante do Socorro."
+		},
+		{
+			"id": 144,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Integração das Funções",
+			"dificuldade": "difícil",
+			"pergunta": "Durante a fase de Desencarceramento, qual a divisão correta de responsabilidades entre os membros da equipe?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas o Nº 01 opera as ferramentas; os demais observam." },
+				{
+					"letra": "B",
+					"texto": "Nº 01 coordena e autoriza; Nº 02 e Nº 06 operam as ferramentas hidráulicas e identificam riscos; Nº 03 apoia na logística e desconexão de bateria; Nº 04 e Nº 05 permanecem com a vítima realizando APH e proteção."
+				},
+				{ "letra": "C", "texto": "Todos os números operam ferramentas simultaneamente." },
+				{ "letra": "D", "texto": "Apenas o Nº 04 e o Nº 05 entram no veículo; os demais ficam na área fria." }
+			],
+			"correta": "B",
+			"explicacao": "Divisão de responsabilidades durante a fase de Desencarceramento conforme o Manual.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Composição da Equipe e suas Funções."
+		},
+		{
+			"id": 145,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Funções - Nº 03",
+			"dificuldade": "médio",
+			"pergunta": "Além de estacionar a viatura e sinalizar o local, qual outra atribuição importante do Nº 03 – Motorista do Socorro na fase de Preparação e Segurança?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Realizar a análise primária da vítima." },
+				{
+					"letra": "B",
+					"texto": "Levar materiais para a lona, posicionar a lona de materiais e aguardar a ordem de “DESENCARCERAMENTO LIBERADO” para desconectar a bateria."
+				},
+				{ "letra": "C", "texto": "Operar a ferramenta hidráulica durante todo o atendimento." },
+				{ "letra": "D", "texto": "Aplicar o colar cervical na vítima." }
+			],
+			"correta": "B",
+			"explicacao": "Atribuições adicionais do Nº 03 na fase de Preparação e Segurança.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Nº 03 – Motorista do Socorro."
+		},
+		{
+			"id": 146,
+			"titulo": "Capítulo 10 - Tática de Desencarceramento",
+			"tema": "Funções - Nº 04",
+			"dificuldade": "médio",
+			"pergunta": "Ao acessar o interior do veículo, o Nº 04 – Comandante do Resgate deve realizar prioritariamente quais ações?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Apenas estabilizar a cervical e aguardar." },
+				{
+					"letra": "B",
+					"texto": "Puxar o freio de mão, retirar a chave, abaixar os vidros manuais, destravar as portas, proteger o airbag e realizar a avaliação da vítima (XABCDE) no menor tempo possível."
+				},
+				{ "letra": "C", "texto": "Desconectar a bateria e operar a serra-sabre." },
+				{ "letra": "D", "texto": "Posicionar a lona de materiais." }
+			],
+			"correta": "B",
+			"explicacao": "Ações prioritárias do Nº 04 ao acessar o veículo.",
+			"fundamento": "Capítulo 10 - Tática de Desencarceramento - Nº 04 – Comandante do Resgate."
+		},
+		{
+			"id": 147,
+			"titulo": "Capítulo 3 - Segurança",
+			"tema": "Áreas de Atuação",
+			"dificuldade": "fácil",
+			"pergunta": "Qual área de atuação possui raio imaginário de 3 a 5 metros para cada veículo e exige uso obrigatório de EPI?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Área Fria." },
+				{ "letra": "B", "texto": "Área Quente." },
+				{ "letra": "C", "texto": "Área Morna." },
+				{ "letra": "D", "texto": "Área de Descarte." }
+			],
+			"correta": "B",
+			"explicacao": "A Área Quente é a primeira área de atuação, com raio de 3 a 5 m e EPI obrigatório.",
+			"fundamento": "Capítulo 3 - Segurança - Isolamento e Áreas de Atuação."
+		},
+		{
+			"id": 148,
+			"titulo": "Capítulo 2 - Conceitos Básicos",
+			"tema": "Tipos de Colisões",
+			"dificuldade": "médio",
+			"pergunta": "Por que as lesões na colisão lateral tendem a ser gravíssimas para a vítima que recebe o impacto?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Porque a velocidade é sempre maior nas colisões laterais." },
+				{
+					"letra": "B",
+					"texto": "Porque a vítima absorverá grande parte do impacto, já que há menos estrutura de absorção de energia do lado do veículo."
+				},
+				{ "letra": "C", "texto": "Porque os airbags laterais nunca são acionados." },
+				{ "letra": "D", "texto": "Porque a estabilização é desnecessária nesse tipo de colisão." }
+			],
+			"correta": "B",
+			"explicacao": "Na colisão lateral a vítima que recebe o impacto absorve grande parte da energia.",
+			"fundamento": "Capítulo 2 - Conceitos Básicos - Tipos de Sinistros de Trânsito - Colisões."
+		},
+		{
+			"id": 149,
+			"titulo": "Capítulo 6 - Desencarceradores",
+			"tema": "Regras de Segurança - Ferramentas",
+			"dificuldade": "fácil",
+			"pergunta": "Qual regra geral de segurança deve ser observada no uso das ferramentas hidráulicas?",
+			"alternativas": [
+				{ "letra": "A", "texto": "Posicionar as mãos sobre as lâminas para maior controle." },
+				{
+					"letra": "B",
+					"texto": "Manter as mãos e o corpo afastados das lâminas e ponteiras; nunca posicionar qualquer parte do corpo entre a ferramenta e o veículo."
+				},
+				{ "letra": "C", "texto": "Operar a ferramenta com apenas uma mão." },
+				{ "letra": "D", "texto": "Não é necessário verificar as conexões antes do uso." }
+			],
+			"correta": "B",
+			"explicacao": "Regra fundamental de segurança no uso de ferramentas hidráulicas.",
+			"fundamento": "Capítulo 6 - Desencarceradores - Regras gerais de segurança."
+		},
+		{
+			"id": 150,
+			"titulo": "Capítulo 7 e 8 - Integração",
+			"tema": "Ordem das Ações",
+			"dificuldade": "fácil",
+			"pergunta": "Complete a lacuna com o princípio fundamental do Manual:\n“Somente após a estabilização do veículo, dos riscos específicos e proteção da vítima, é que se inicia o ________.”",
+			"alternativas": [
+				{ "letra": "A", "texto": "transporte" },
+				{ "letra": "B", "texto": "desencarceramento" },
+				{ "letra": "C", "texto": "isolamento da área fria" },
+				{ "letra": "D", "texto": "acionamento da Unidade de Suporte Avançado" }
+			],
+			"correta": "B",
+			"explicacao": "Princípio fundamental da ordem das ações estabelecido no Manual.",
+			"fundamento": "Capítulo 7 - Estabilização - Estabilização de Riscos."
+		}
+	]
+}
