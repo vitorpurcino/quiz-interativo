@@ -57,7 +57,7 @@ const showAlreadyLoggedInMessage = () => {
   setMessage(messageEl, `Você já está logado como ${displayName}. Redirecionando...`, 'success');
 
   setTimeout(() => {
-    window.location.replace('/pages/dashboard.html');
+    window.location.replace('./dashboard.html');
   }, 1200);
 
   return true;
@@ -65,7 +65,8 @@ const showAlreadyLoggedInMessage = () => {
 
 const logoutUser = () => {
   localStorage.removeItem(AUTH_KEY);
-  window.location.href = '/pages/login.html';
+  const inPagesDir = window.location.pathname.includes('/pages/');
+  window.location.href = inPagesDir ? './login.html' : './pages/login.html';
 };
 
 window.logoutUser = logoutUser;
@@ -172,7 +173,7 @@ const initAuthForms = () => {
     }
 
     loginForm.addEventListener('submit', async (event) => {
-      await handleAuthSubmit(event, apiUrl('/api/auth/login'), 'Login realizado com sucesso.', '/pages/dashboard.html');
+      await handleAuthSubmit(event, apiUrl('/api/auth/login'), 'Login realizado com sucesso.', './dashboard.html');
     });
   }
 
