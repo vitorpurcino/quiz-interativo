@@ -18,11 +18,11 @@ const STATIC_SUBJECTS = (window.STATIC_SUBJECTS && Array.isArray(window.STATIC_S
       'segurancaincedio.json'
     ];
 
-const API_BASE = (window.API_BASE || '').replace(/\/+$/, '');
+const APP_API_BASE = (window.API_BASE || '').replace(/\/+$/, '');
 
 function apiUrl(path) {
-  if (!API_BASE) return path;
-  return API_BASE + (path.startsWith('/') ? path : '/' + path);
+  if (!APP_API_BASE) return path;
+  return APP_API_BASE + (path.startsWith('/') ? path : '/' + path);
 }
 
 /* ============================================================
