@@ -21,6 +21,13 @@ const STATIC_SUBJECTS = (window.STATIC_SUBJECTS && Array.isArray(window.STATIC_S
     ];
 const CORES = ['#1e4fba', '#7c3aed', '#0891b2', '#059669', '#d97706', '#db2777', '#4f46e5'];
 
+const API_BASE = (window.API_BASE || '').replace(/\/+$/, '');
+
+function apiUrl(path) {
+  if (!API_BASE) return path;
+  return API_BASE + (path.startsWith('/') ? path : '/' + path);
+}
+
 const refs = {
   loader: document.getElementById('dashLoader'),
   conteudo: document.getElementById('dashConteudo'),
@@ -160,7 +167,7 @@ async function fetchJson(url) {
 async function fetchSubjectData(subjectId) {
   const staticFile = resolveFileName(subjectId);
   try {
-    const api = await fetchJson('/api/materias/' + encodeURIComponent(subjectId));
+    const api = await fetchJson(apiUrl('/api/materias/' + encodeURIComponent(subjectId)));
     return normalizeSubject(api, staticFile || subjectId + '.json');
   } catch (e) {
     if (!staticFile) throw new Error('Arquivo da matéria não encontrado: ' + subjectId);
@@ -170,7 +177,7 @@ async function fetchSubjectData(subjectId) {
 }
 async function fetchSubjectList() {
   try {
-    const payload = await fetchJson('/api/materias');
+    const payload = await fetchJson(apiUrl('/api/materias'));
     if (Array.isArray(payload) && payload.length) {
       return payload.map((s) => {
         const f = resolveFileName(s.id);

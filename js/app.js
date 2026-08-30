@@ -18,6 +18,13 @@ const STATIC_SUBJECTS = (window.STATIC_SUBJECTS && Array.isArray(window.STATIC_S
       'segurancaincedio.json'
     ];
 
+const API_BASE = (window.API_BASE || '').replace(/\/+$/, '');
+
+function apiUrl(path) {
+  if (!API_BASE) return path;
+  return API_BASE + (path.startsWith('/') ? path : '/' + path);
+}
+
 /* ============================================================
    ESTADO DA APLICAÇÃO
    ============================================================ */
@@ -998,7 +1005,7 @@ async function loadSubject(subjectId) {
   try {
     const subjectUrl = `/api/materias/${encodeURIComponent(subject.id)}`;
     const staticUrl  = buildStaticSubjectUrl(subject.fileName);
-    const { payload } = await fetchJsonWithFallback(subjectUrl, staticUrl);
+    const { payload } = await fetchJsonWithFallback(apiUrl(subjectUrl), staticUrl);
 
     state.selectedSubjectData = normalizeSubject(payload, subject.fileName);
     populateThemeFilter();
@@ -1036,12 +1043,12 @@ async function loadSubjects() {
   refs.mensagemErro.textContent = '';
 
   try {
-    const subjectUrl     = '/api/materias';
+    const subjectUrl     = apiUrl('/api/materias');
     const staticSubjects = listStaticSubjects();
 
     let subjects;
     try {
-      const { payload } = await fetchJsonWithFallback(subjectUrl, './json/materias.json');
+      const { payload } = await fetchJsonWithFallback(subjectUrl, buildStaticSubjectUrl('materias.json'));
       subjects = Array.isArray(payload) && payload.length ? payload : staticSubjects;
     } catch {
       subjects = listStaticSubjects();
