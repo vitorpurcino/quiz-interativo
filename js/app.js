@@ -58,6 +58,7 @@ const refs = {
   btnLogout:          document.getElementById('btnLogout'),
   avisoErro:          document.getElementById('avisoErro'),
   mensagemErro:       document.getElementById('mensagemErro'),
+  btnTentarNovamente: document.getElementById('btnTentarNovamente'),
   telaCarregando:     document.getElementById('telaCarregando'),
   telaQuiz:           document.getElementById('telaQuiz'),
   painelFiltros:      document.getElementById('painelFiltros'),
@@ -133,7 +134,11 @@ function mostrarModal(titulo, texto, icone = 'warning') {
     refs.modalTitulo.textContent = titulo;
     refs.modalTexto.textContent = texto;
     refs.modalOverlay.classList.remove('hidden');
-    refs.modalConfirmar.focus();
+
+    const main = document.getElementById('main');
+    const previouslyFocused = document.activeElement;
+    if (main) main.inert = true;
+    refs.modalCancelar.focus();
 
     function confirmar() {
       fecharModal();
@@ -145,14 +150,55 @@ function mostrarModal(titulo, texto, icone = 'warning') {
       resolve(false);
     }
 
-    function fecharModal() {
+    function fecharModal(restaurarFoco = true) {
       refs.modalOverlay.classList.add('hidden');
+      if (main) main.inert = false;
       refs.modalConfirmar.removeEventListener('click', confirmar);
       refs.modalCancelar.removeEventListener('click', cancelar);
+      refs.modalOverlay.removeEventListener('click', onOverlayClick);
+      document.removeEventListener('keydown', onKeydown, true);
+      if (restaurarFoco && previouslyFocused && typeof previouslyFocused.focus === 'function') {
+        previouslyFocused.focus();
+      }
+    }
+
+    function onOverlayClick(event) {
+      if (event.target === refs.modalOverlay) {
+        fecharModal();
+        resolve(false);
+      }
+    }
+
+    function onKeydown(event) {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        event.stopPropagation();
+        fecharModal();
+        resolve(false);
+        return;
+      }
+      if (event.key === 'Tab') {
+        const focusables = [refs.modalCancelar, refs.modalConfirmar];
+        const active = document.activeElement;
+        const idx = focusables.indexOf(active);
+        if (event.shiftKey) {
+          if (idx <= 0) {
+            event.preventDefault();
+            focusables[focusables.length - 1].focus();
+          }
+        } else {
+          if (idx === focusables.length - 1) {
+            event.preventDefault();
+            focusables[0].focus();
+          }
+        }
+      }
     }
 
     refs.modalConfirmar.addEventListener('click', confirmar);
     refs.modalCancelar.addEventListener('click', cancelar);
+    refs.modalOverlay.addEventListener('click', onOverlayClick);
+    document.addEventListener('keydown', onKeydown, true);
   });
 }
 
@@ -349,8 +395,24 @@ function saveProgress() {
     current.currentIndex = origIndex >= 0 ? origIndex : 0;
   }
   
-  progress.subjects[state.selectedSubjectId] = current;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+    progress.subjects[state.selectedSubjectId] = current;
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+  } catch (error) {
+    console.warn('Progresso não pôde ser salvo:', error);
+    mostrarToast('Progresso não pôde ser salvo neste navegador.', 'erro');
+  }
+}
+
+function persistProgress(progress) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+    return true;
+  } catch (error) {
+    console.warn('Progresso não pôde ser salvo:', error);
+    mostrarToast('Progresso não pôde ser salvo neste navegador.', 'erro');
+    return false;
+  }
 }
 
 function getCurrentSubjectProgress() {
@@ -518,9 +580,8 @@ function renderStreak() {
   refs.streakBadge.dataset.streak = state.streak;
   refs.streakCount.textContent    = state.streak;
 
-  if (state.streak >= 3) {
-    refs.streakBadge.title = `${state.streak} acertos consecutivos!`;
-  }
+  const plural = state.streak === 1 ? 'acerto consecutivo' : 'acertos consecutivos';
+  refs.streakBadge.title = `Sequência: ${state.streak} ${plural}`;
 }
 
 /* ============================================================
@@ -752,6 +813,20 @@ function renderFeedback() {
 
   refs.feedbackBox.appendChild(tituloEl);
   refs.feedbackBox.appendChild(corpoEl);
+
+  const total = state.activeQuestions.length;
+  const isLast = state.currentIndex >= total - 1;
+  const continuarBtn = document.createElement('button');
+  continuarBtn.type = 'button';
+  continuarBtn.className = 'feedback-continuar btn-primario';
+  continuarBtn.textContent = isLast ? 'Ver análise final' : 'Continuar →';
+  continuarBtn.setAttribute('aria-label', isLast ? 'Ir para análise final' : 'Continuar para próxima questão');
+  if (!isLast) {
+    continuarBtn.addEventListener('click', () => changeQuestion(state.currentIndex + 1));
+  } else {
+    continuarBtn.addEventListener('click', () => mostrarResultado(total, 0, 0));
+  }
+  refs.feedbackBox.appendChild(continuarBtn);
 }
 
 function renderQuestion() {
@@ -918,7 +993,9 @@ function saveAnsweredQuestion() {
 
   progress.subjects[state.selectedSubjectId] = subjectProgress;
   progress.currentSubject = state.selectedSubjectId;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+  if (!persistProgress(progress)) {
+    mostrarToast('Resposta não foi registrada. Tente recarregar a página.', 'erro');
+  }
 
   // Streak
   updateStreak(isCorrect);
@@ -1011,7 +1088,7 @@ async function resetSubjectProgress() {
   const progress = loadProgress();
   progress.subjects[state.selectedSubjectId] = { answers: {}, currentIndex: 0 };
   progress.currentSubject = state.selectedSubjectId;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+  if (!persistProgress(progress)) return;
 
   state.currentIndex    = 0;
   state.draftSelection  = null;
@@ -1131,6 +1208,10 @@ async function loadSubject(subjectId) {
 async function loadSubjects() {
   refs.avisoErro.hidden = true;
   refs.mensagemErro.textContent = '';
+  if (refs.btnTentarNovamente) {
+    refs.btnTentarNovamente.disabled = true;
+    refs.btnTentarNovamente.textContent = 'Tentando…';
+  }
 
   try {
     const subjectUrl     = apiUrl('/api/materias');
@@ -1163,6 +1244,10 @@ async function loadSubjects() {
     refs.mensagemErro.textContent = error.message;
     refs.telaCarregando.hidden  = true;
     refs.telaQuiz.hidden        = true;
+    if (refs.btnTentarNovamente) {
+      refs.btnTentarNovamente.disabled = false;
+      refs.btnTentarNovamente.textContent = 'Tentar novamente';
+    }
   }
 }
 
@@ -1173,7 +1258,11 @@ function applyTheme(theme) {
   const isDark = theme === 'dark';
   document.documentElement.classList.toggle('dark', isDark);
   state.darkMode = isDark;
-  localStorage.setItem(THEME_KEY, isDark ? 'dark' : 'light');
+  try {
+    localStorage.setItem(THEME_KEY, isDark ? 'dark' : 'light');
+  } catch (error) {
+    console.warn('Tema não pôde ser persistido:', error);
+  }
   if (refs.btnTema) refs.btnTema.innerHTML = isDark ? window.Icon('sun') : window.Icon('moon');
 }
 
@@ -1269,6 +1358,10 @@ window.addEventListener('resize', updateFocoZoom);
 refs.btnModoFoco.addEventListener('click', () => {
   document.body.classList.add('modo-foco-ativo');
   updateFocoZoom();
+  const card = document.getElementById('questionCard');
+  if (card && window.matchMedia('(max-width: 900px)').matches) {
+    requestAnimationFrame(() => { card.scrollTop = 0; });
+  }
 });
 
 refs.btnSairFoco.addEventListener('click', () => {
@@ -1387,12 +1480,7 @@ if (refs.encerrarRevisaoBtn) {
   });
 }
 
-// Fechar modal ao clicar no overlay
-refs.modalOverlay.addEventListener('click', (event) => {
-  if (event.target === refs.modalOverlay) {
-    refs.modalOverlay.classList.add('hidden');
-  }
-});
+
 
 /* ============================================================
    NAVEGAÇÃO POR TECLADO
@@ -1465,5 +1553,9 @@ function selecionarAlternativaPorTecla(letra) {
 /* ============================================================
    INICIALIZAÇÃO
    ============================================================ */
+if (refs.btnTentarNovamente) {
+  refs.btnTentarNovamente.addEventListener('click', () => loadSubjects());
+}
+
 applyTheme(state.darkMode ? 'dark' : 'light');
 loadSubjects();
