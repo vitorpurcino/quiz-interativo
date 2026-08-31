@@ -130,7 +130,7 @@ function normalizeSubject(rawPayload, fileName) {
   const rawQuestions = Array.isArray(payload.questoes) ? payload.questoes : [];
   const questions = rawQuestions.map((question, index) => normalizeQuestion(question, index));
 
-  const title = String(info.titulo || info.materia || payload.titulo || fileName.replace(/\.json$/i, '')).trim();
+  const title = String(info.nome || info.titulo || info.materia || payload.titulo || fileName.replace(/\.json$/i, '')).trim();
   const subtitle = String(info.descricao || info.subtitulo || payload.subtitulo || 'Questões de estudo').trim();
 
   return {

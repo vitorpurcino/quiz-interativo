@@ -130,7 +130,7 @@ function getSubjects() {
         const rawParsed = JSON.parse(raw);
         const parsed = normalizeKeys(rawParsed);
         const info = parsed?.informacoes || parsed?.config || {};
-        const title = info.titulo || info.materia || parsed?.titulo || fileName.replace(/\.json$/i, '');
+        const title = info.nome || info.titulo || info.materia || parsed?.titulo || fileName.replace(/\.json$/i, '');
         const subtitle = info.descricao || info.subtitulo || parsed?.subtitulo || 'Questões de estudo';
         const questions = Array.isArray(parsed?.questoes) ? parsed.questoes : [];
         const count = questions.length;

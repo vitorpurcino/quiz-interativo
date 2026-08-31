@@ -277,7 +277,7 @@ function normalizeSubject(rawPayload, fileName) {
   const rawQuestions = Array.isArray(payload.questoes) ? payload.questoes : [];
   const questions = rawQuestions.map((question, index) => normalizeQuestion(question, index));
 
-  const title = String(info.titulo || info.materia || payload.titulo || fileName.replace(/\.json$/i, '')).trim();
+  const title = String(info.nome || info.titulo || info.materia || payload.titulo || fileName.replace(/\.json$/i, '')).trim();
   const subtitle = String(info.descricao || info.subtitulo || payload.subtitulo || 'Questões de estudo').trim();
 
   return {
@@ -1028,13 +1028,31 @@ async function resetSubjectProgress() {
 /* ============================================================
    CARREGAMENTO DE MATÉRIAS
    ============================================================ */
-function listStaticSubjects() {
-  return STATIC_SUBJECTS.map((fileName) => ({
-    id:       slugify(fileName.replace(/\.json$/i, '')),
-    fileName,
-    title:    fileName.replace(/\.json$/i, '').replace(/-/g, ' '),
-    subtitle: 'Questões de estudo'
+async function listStaticSubjects() {
+  const entries = await Promise.all(STATIC_SUBJECTS.map(async (fileName) => {
+    const baseId  = slugify(fileName.replace(/\.json$/i, ''));
+    const fallback = {
+      id:       baseId,
+      fileName,
+      title:    fileName.replace(/\.json$/i, '').replace(/-/g, ' '),
+      subtitle: 'Questões de estudo'
+    };
+    try {
+      const response = await fetch(buildStaticSubjectUrl(fileName), { cache: 'no-store' });
+      if (!response.ok) return fallback;
+      const payload = await response.json();
+      const info    = payload?.informacoes || payload?.config || {};
+      const title   = String(info.nome || info.titulo || info.materia || payload?.titulo || '').trim();
+      return {
+        ...fallback,
+        title:    title || fallback.title,
+        subtitle: String(info.descricao || info.subtitulo || payload?.subtitulo || fallback.subtitle).trim()
+      };
+    } catch {
+      return fallback;
+    }
   }));
+  return entries;
 }
 
 function buildStaticSubjectUrl(fileName) {
@@ -1116,14 +1134,14 @@ async function loadSubjects() {
 
   try {
     const subjectUrl     = apiUrl('/api/materias');
-    const staticSubjects = listStaticSubjects();
+    const staticSubjects = await listStaticSubjects();
 
     let subjects;
     try {
       const { payload } = await fetchJsonWithFallback(subjectUrl, buildStaticSubjectUrl('materias.json'));
       subjects = Array.isArray(payload) && payload.length ? payload : staticSubjects;
     } catch {
-      subjects = listStaticSubjects();
+      subjects = await listStaticSubjects();
     }
 
     if (!Array.isArray(subjects) || !subjects.length) {
