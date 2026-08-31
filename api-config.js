@@ -1,16 +1,10 @@
 // Configuração de ambiente — URL base da API
-window.API_BASE = 'https://cfsbm2026.up.railway.app/';
+window.API_BASE = '';
 
 // Lista canônica de matérias (arquivos JSON em /json).
 // Single source of truth — usado por app.js e pages/dashboard.html
 window.STATIC_SUBJECTS = [
   'combateaincendio.json',
-  'comandoelideranca.json',
-  'correspondencias.json',
-  'direitopenalmilitar.json',
-  'fundamentojuridicos.json',
-  'licitacoes.json',
   'negociador.json',
-  'salvamentoveicular.json',
-  'segurancaincedio.json'
+  'salvamentoveicular.json'
 ];

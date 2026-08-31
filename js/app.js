@@ -627,7 +627,32 @@ function renderProgress() {
     refs.contadorQuestao.textContent = `Questão ${state.currentIndex + 1} de ${totalAll}`;
   }
 
-  refs.pontuacao.textContent          = `✅ ${acertos}  ❌ ${erros}`;
+  while (refs.pontuacao.firstChild) refs.pontuacao.removeChild(refs.pontuacao.firstChild);
+  const acertosSpan = document.createElement('span');
+  acertosSpan.className = 'pontuacao-grupo pontuacao-acertos';
+  acertosSpan.setAttribute('aria-label', `${acertos} acertos`);
+  const acertosIcon = document.createElement('span');
+  acertosIcon.className = 'pontuacao-icone';
+  acertosIcon.innerHTML = window.Icon('check');
+  acertosSpan.appendChild(acertosIcon);
+  acertosSpan.appendChild(document.createTextNode(String(acertos)));
+  refs.pontuacao.appendChild(acertosSpan);
+
+  const sep = document.createElement('span');
+  sep.className = 'pontuacao-separador';
+  sep.setAttribute('aria-hidden', 'true');
+  sep.textContent = '·';
+  refs.pontuacao.appendChild(sep);
+
+  const errosSpan = document.createElement('span');
+  errosSpan.className = 'pontuacao-grupo pontuacao-erros';
+  errosSpan.setAttribute('aria-label', `${erros} erros`);
+  const errosIcon = document.createElement('span');
+  errosIcon.className = 'pontuacao-icone';
+  errosIcon.innerHTML = window.Icon('x');
+  errosSpan.appendChild(errosIcon);
+  errosSpan.appendChild(document.createTextNode(String(erros)));
+  refs.pontuacao.appendChild(errosSpan);
 }
 
 function renderAlternatives() {
@@ -718,7 +743,8 @@ function renderFeedback() {
     bookIcon.className = 'feedback-fundamento-icone';
     bookIcon.innerHTML = window.Icon('book');
     const fundText = document.createElement('span');
-    fundText.textContent = ' ' + fundamento;
+    fundText.className = 'feedback-fundamento-texto';
+    fundText.textContent = fundamento;
     fundEl.appendChild(bookIcon);
     fundEl.appendChild(fundText);
     corpoEl.appendChild(fundEl);
@@ -825,22 +851,43 @@ async function changeQuestion(index) {
   const newIndex = Math.max(0, Math.min(index, total - 1));
   if (newIndex === state.currentIndex && refs.questionText.textContent !== 'Carregando…') return;
 
-  // Animação de saída
-  refs.questionCard.classList.add('saindo');
-  await new Promise((r) => setTimeout(r, 150));
-  refs.questionCard.classList.remove('saindo');
+  const swap = () => {
+    state.currentIndex = newIndex;
+    setDraftFromCurrent();
+    saveProgress();
+    renderQuestion();
+  };
 
-  state.currentIndex = newIndex;
-  setDraftFromCurrent();
-  saveProgress();
-  renderQuestion();
-
-  // Animação de entrada
-  refs.questionCard.classList.add('entrando');
-  setTimeout(() => refs.questionCard.classList.remove('entrando'), 250);
+  // Overdrive: View Transitions API. Native FLIP cross-fade between
+  // questions. Falls back to the .saindo / .entrando class animations
+  // below when the API is unavailable (Firefox without flag) or when
+  // the user prefers reduced motion.
+  if (typeof document.startViewTransition === 'function' && !prefersReducedMotion()) {
+    const direction = newIndex > state.currentIndex ? 'forward' : 'back';
+    document.documentElement.dataset.vtDirection = direction;
+    const transition = document.startViewTransition(() => {
+      swap();
+    });
+    try {
+      await transition.finished;
+    } catch (e) {
+      /* swallow AbortError when the user clicks Prev/Next rapidly */
+    }
+  } else {
+    refs.questionCard.classList.add('saindo');
+    await new Promise((r) => setTimeout(r, 150));
+    refs.questionCard.classList.remove('saindo');
+    swap();
+    refs.questionCard.classList.add('entrando');
+    setTimeout(() => refs.questionCard.classList.remove('entrando'), 250);
+  }
 
   // Verificar conclusão ao chegar na última questão
   verificarConclusao();
+}
+
+function prefersReducedMotion() {
+  return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
 /* ============================================================
@@ -861,7 +908,7 @@ function saveAnsweredQuestion() {
   const progress       = loadProgress();
   const subjectProgress = progress.subjects[state.selectedSubjectId] || { answers: {}, currentIndex: 0 };
   subjectProgress.answers = subjectProgress.answers || {};
-  
+
   const isCorrect = state.draftSelection === question.correct;
   subjectProgress.answers[questionKey(question)] = {
     selected:   state.draftSelection,
@@ -882,10 +929,35 @@ function saveAnsweredQuestion() {
     else if (state.streak >= 3) mostrarToast(`Sequência de ${state.streak}! Continue assim!`, 'sucesso');
   }
 
-  renderQuestion();
+  // Overdrive: View Transitions API morph — the selected alternative
+  // grows and translates up into the position of the feedback card,
+  // while its palette cross-fades to acerto/erro. Fallback runs the
+  // existing render path unchanged when the API is unavailable.
+  const chosenBtn = refs.alternativas.querySelector(
+    `.alternativa[data-letter="${state.draftSelection}"]`
+  );
 
-  // Verificar conclusão após última questão respondida
-  verificarConclusao();
+  const finalize = () => {
+    renderQuestion();
+    verificarConclusao();
+  };
+
+  if (
+    typeof document.startViewTransition === 'function' &&
+    chosenBtn &&
+    !prefersReducedMotion()
+  ) {
+    chosenBtn.classList.add('alternativa-alvo');
+    const transition = document.startViewTransition(() => {
+      finalize();
+    });
+    transition.finished.finally(() => {
+      const alvo = document.querySelector('.alternativa.alternativa-alvo');
+      if (alvo) alvo.classList.remove('alternativa-alvo');
+    }).catch(() => {});
+  } else {
+    finalize();
+  }
 }
 
 /* ============================================================

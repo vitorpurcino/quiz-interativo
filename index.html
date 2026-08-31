@@ -6,35 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Quiz Interativo para estudo do Curso de Formação de Sargentos Bombeiros Militares (CFSBM 2026) — Fase EAD, Módulo II." />
-  <meta name="theme-color" content="#1e4fba" />
+  <meta name="theme-color" content="#1e4fba" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0a0f1e" media="(prefers-color-scheme: dark)" />
   <title>Quiz Interativo — CFSBM 2026</title>
+
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem('quiz_interativo_theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
 
   <!-- Preconnect Google Fonts (performance) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap">
-
-  <script>
-    (() => {
-      const currentPath = window.location.pathname;
-      const isRootRoute = currentPath === '/' || (currentPath.endsWith('/') && !currentPath.endsWith('/index.html'));
-
-      const hasAuthenticatedUser = () => {
-        try {
-          const item = window.localStorage.getItem('quizAuthUser');
-          if (!item) return false;
-          const parsed = JSON.parse(item);
-          return !!parsed && typeof parsed === 'object';
-        } catch (error) {
-          return false;
-        }
-      };
-
-      if (isRootRoute && !hasAuthenticatedUser()) {
-        window.location.replace('./pages/login.html');
-      }
-    })();
-  </script>
 
   <!-- Favicon SVG embutido -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231e4fba' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><rect x='8' y='2' width='8' height='4' rx='1'/><path d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/></svg>" />
@@ -44,6 +35,8 @@
 </head>
 
 <body>
+
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
 
   <main class="container" id="main">
 
@@ -76,6 +69,7 @@
         <!-- Botão de tema -->
         <button class="btn-tema" id="btnTema" type="button" aria-label="Alternar tema claro/escuro"
           title="Alternar tema">
+          <span aria-hidden="true">☾</span>
         </button>
       </div>
     </header>
@@ -211,8 +205,7 @@
 
             <!-- Navegação -->
             <div class="navegacao" id="navegacaoContainer">
-              <button class="btn-vermelho" id="btnSairFoco" type="button" title="Sair do Modo Foco"
-                style="display: none;">Sair do Foco</button>
+              <button class="btn-vermelho" id="btnSairFoco" type="button" title="Sair do Modo Foco" hidden>Sair do Foco</button>
               <button class="btn-verde" id="btnVoltar" type="button" title="Questão anterior (←)">← Anterior</button>
               <button class="btn-primario" id="btnConfirmar" type="button">Confirmar Resposta</button>
               <button class="btn-verde" id="btnProxima" type="button" title="Próxima questão (→)">Próxima →</button>
@@ -245,6 +238,20 @@
       </div>
     </div>
   </div>
+
+  <!-- ============================================================
+         NOSCRIPT FALLBACK
+         ============================================================ -->
+  <noscript>
+    <div style="position:fixed;inset:0;display:grid;place-items:center;padding:24px;background:#f1f5f9;color:#1e293b;font-family:'Inter',system-ui,sans-serif;text-align:center;z-index:10000;">
+      <div style="max-width:420px;">
+        <h2 style="font-family:'Outfit',sans-serif;font-size:22px;margin-bottom:12px;color:#1e3a8a;">JavaScript é necessário</h2>
+        <p style="font-size:14px;line-height:1.6;color:#475569;margin:0;">
+          O Quiz Interativo CFSBM 2026 precisa de JavaScript habilitado para carregar as matérias e registrar suas respostas.
+        </p>
+      </div>
+    </div>
+  </noscript>
 
   <script src="./api-config.js"></script>
   <script src="./js/icons.js"></script>
