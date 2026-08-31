@@ -693,9 +693,9 @@ body::before { content: none; }
   flex-shrink: 0;
 }
 
-#questionDifficulty.dificil-facil   { background: var(--facil-bg);   color: var(--facil-texto);   border: 1px solid var(--facil-borda); }
-#questionDifficulty.dificil-medio   { background: var(--medio-bg);   color: var(--medio-texto);   border: 1px solid var(--medio-borda); }
-#questionDifficulty.dificil-dificil { background: var(--dificil-bg); color: var(--dificil-texto); border: 1px solid var(--dificil-borda); }
+#questionDifficulty.dificil-facil   { background: var(--facil-bg);   color: var(--facil-texto);   border: 2px solid var(--facil-borda); font-size: clamp(13px, 2vw, 15px); }
+#questionDifficulty.dificil-medio   { background: var(--medio-bg);   color: var(--medio-texto);   border: 2px solid var(--medio-borda); font-size: clamp(13px, 2vw, 15px); }
+#questionDifficulty.dificil-dificil { background: var(--dificil-bg); color: var(--dificil-texto); border: 2px solid var(--dificil-borda); font-size: clamp(13px, 2vw, 15px); }
 #questionDifficulty.dificil-default { background: var(--fundo-suave); color: var(--texto-terciario); border: 1px solid var(--borda-suave); }
 
 /* ============================================================
