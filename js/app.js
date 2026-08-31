@@ -395,7 +395,7 @@ function saveProgress() {
     current.currentIndex = origIndex >= 0 ? origIndex : 0;
   }
   
-    progress.subjects[state.selectedSubjectId] = current;
+  progress.subjects[state.selectedSubjectId] = current;
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
   } catch (error) {
